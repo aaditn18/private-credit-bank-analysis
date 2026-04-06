@@ -1,0 +1,11 @@
+# BUFN403 pipelines (semantic + keyword)
+google-genai
+python-dotenv>=1.0.0
+pandas
+numpy
+scipy
+scikit-learn
+transformers
+sentence-transformers
+beautifulsoup4
+lxml
