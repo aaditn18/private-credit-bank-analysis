@@ -1,0 +1,55 @@
+# ── Secrets ────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# ── Node / Next.js ─────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# ── SQLite database + write-ahead log artifacts ────────────────────────────
+# The DB is rebuilt from the ingestion scripts in backend/scripts/ — do not
+# commit it (~1GB) or its ephemeral WAL/SHM sidecars.
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
+*.db-journal
+
+# ── Large / proprietary data (regenerate via ingestion scripts) ────────────
+# Raw SEC filings, earnings transcripts, FFIEC Call Report CSVs, and CRSP
+# returns are bulky and redistributable from source — do not commit.
+banks/
+sec-edgar-filings/
+transcripts_final/
+Earnings Calls/
+Call Reports/
+Call_Reports/
+CRSP Monthly Returns*/
+
+# ── Runtime logs ───────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── OS / IDE / local tooling ───────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+.claude/

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900 antialiased;
+}
+
+.cite-marker {
+  @apply inline-flex items-center justify-center min-w-[1.25rem] h-[1.25rem] px-1
+    text-[10px] font-semibold rounded bg-indigo-600 text-white mx-[2px]
+    cursor-pointer hover:bg-indigo-700;
+}
+
+mark.span-highlight {
+  @apply bg-yellow-200 px-0.5 rounded;
+}

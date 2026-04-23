@@ -1,0 +1,145 @@
+[
+  {
+    "rssd_id": "3846375", "bank_ticker": "DFS",
+    "quarter": "2024Q2", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 1420000.0, "value_text": null, "as_of_date": "2024-06-30",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "3846375", "bank_ticker": "DFS",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 1580000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "3846375", "bank_ticker": "DFS",
+    "quarter": "2025Q1", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 1710000.0, "value_text": null, "as_of_date": "2025-03-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "3846375", "bank_ticker": "DFS",
+    "quarter": "2024Q4", "schedule": "RC-L", "line_item": "1.c.(1)",
+    "label": "Unused commitments to commercial and industrial NBFIs",
+    "value_numeric": 985000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+
+  {
+    "rssd_id": "1094640", "bank_ticker": "FHN",
+    "quarter": "2024Q2", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 2310000.0, "value_text": null, "as_of_date": "2024-06-30",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1094640", "bank_ticker": "FHN",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 2260000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1094640", "bank_ticker": "FHN",
+    "quarter": "2025Q1", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 2195000.0, "value_text": null, "as_of_date": "2025-03-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1094640", "bank_ticker": "FHN",
+    "quarter": "2024Q4", "schedule": "RC-L", "line_item": "1.c.(1)",
+    "label": "Unused commitments to commercial and industrial NBFIs",
+    "value_numeric": 1120000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+
+  {
+    "rssd_id": "2132932", "bank_ticker": "FLG",
+    "quarter": "2024Q2", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 3450000.0, "value_text": null, "as_of_date": "2024-06-30",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "2132932", "bank_ticker": "FLG",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 3380000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "2132932", "bank_ticker": "FLG",
+    "quarter": "2025Q1", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 3240000.0, "value_text": null, "as_of_date": "2025-03-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "2132932", "bank_ticker": "FLG",
+    "quarter": "2024Q4", "schedule": "RC-L", "line_item": "1.c.(1)",
+    "label": "Unused commitments to commercial and industrial NBFIs",
+    "value_numeric": 1680000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+
+  {
+    "rssd_id": "852218", "bank_ticker": "JPM",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 218000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1073757", "bank_ticker": "BAC",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 187000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1951350", "bank_ticker": "C",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 164000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1120754", "bank_ticker": "WFC",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 142000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1119794", "bank_ticker": "USB",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 58000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1069778", "bank_ticker": "PNC",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 47000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1074156", "bank_ticker": "TFC",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 39000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  },
+  {
+    "rssd_id": "1068025", "bank_ticker": "KEY",
+    "quarter": "2024Q4", "schedule": "RC-C", "line_item": "4.a",
+    "label": "C&I loans to nondepository financial institutions",
+    "value_numeric": 22000000.0, "value_text": null, "as_of_date": "2024-12-31",
+    "source_url": "https://cdr.ffiec.gov/public/"
+  }
+]

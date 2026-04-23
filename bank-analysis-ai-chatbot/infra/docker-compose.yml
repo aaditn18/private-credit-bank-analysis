@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: pc_analyst_pg
+    environment:
+      POSTGRES_USER: pc
+      POSTGRES_PASSWORD: pc
+      POSTGRES_DB: pc_analyst
+    ports:
+      - "5432:5432"
+    volumes:
+      - pc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pc -d pc_analyst"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pc_pgdata:

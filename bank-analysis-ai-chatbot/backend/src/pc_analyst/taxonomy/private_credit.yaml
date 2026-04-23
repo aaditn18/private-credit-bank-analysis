@@ -1,0 +1,132 @@
+# Private Credit taxonomy
+#
+# Two roles:
+#   1. Query-time synonym expansion for retrieval (the `terms` block).
+#   2. Mapping narrative concepts to Call Report / Y-9C line items so the
+#      quantitative layer can be surfaced alongside narrative quotes.
+#
+# Line item references follow FFIEC Call Report (FFIEC 031/041) conventions.
+
+version: 1
+
+concepts:
+
+  direct_lending:
+    label: Direct lending / private credit
+    synonyms:
+      - direct lending
+      - private credit
+      - middle-market lending
+      - middle market direct lending
+      - sponsor finance
+      - unitranche
+      - second lien private
+      - senior secured private
+    call_report_lines:
+      # C&I loans to nonbank financial institutions
+      - schedule: RC-C
+        line_item: "4.a"
+        mnemonic: RCON1766
+        label: C&I loans to nondepository financial institutions
+    notes: >
+      No direct Call Report line for private credit. NBFI C&I (RCON1766) is the
+      best single proxy; combine with unused commitments to nonbanks.
+
+  nbfi_exposure:
+    label: NBFI (nonbank financial institution) exposure
+    synonyms:
+      - NBFI
+      - nonbank financial institution
+      - non-bank financial institution
+      - nondepository financial institution
+      - nondepository
+      - shadow bank
+      - BDC
+      - business development company
+      - private credit fund
+      - credit fund
+    call_report_lines:
+      - schedule: RC-C
+        line_item: "4.a"
+        mnemonic: RCON1766
+        label: C&I loans to nondepository financial institutions
+      - schedule: RC-L
+        line_item: "1.c.(1)"
+        mnemonic: RCONJ457
+        label: Unused commitments to commercial and industrial NBFIs
+
+  fund_finance:
+    label: Fund finance / subscription & NAV lending
+    synonyms:
+      - fund finance
+      - subscription line
+      - subscription facility
+      - capital call facility
+      - NAV lending
+      - NAV loan
+      - NAV facility
+      - GP financing
+      - LP financing
+      - management company financing
+    call_report_lines:
+      - schedule: RC-L
+        line_item: "1.c.(1)"
+        mnemonic: RCONJ457
+        label: Unused commitments to commercial and industrial NBFIs
+
+  warehouse_lending:
+    label: Warehouse lending to credit funds
+    synonyms:
+      - warehouse facility
+      - warehouse line
+      - warehouse lending
+      - credit fund warehouse
+      - BDC warehouse
+    call_report_lines: []
+
+  sponsor_finance:
+    label: Sponsor finance
+    synonyms:
+      - sponsor finance
+      - financial sponsor
+      - private equity sponsor
+      - leveraged buyout
+      - LBO
+    call_report_lines: []
+
+  leveraged_lending:
+    label: Leveraged lending
+    synonyms:
+      - leveraged loan
+      - leveraged lending
+      - leveraged finance
+      - syndicated leveraged
+    call_report_lines:
+      - schedule: RC-C
+        line_item: "4"
+        mnemonic: RCON1763
+        label: Commercial and industrial loans (total)
+
+  capital_risk_context:
+    label: Capital / risk context for exposure sizing
+    synonyms:
+      - CET1
+      - common equity tier 1
+      - risk-weighted assets
+      - RWA
+    call_report_lines:
+      - schedule: RC-R
+        line_item: "46"
+        mnemonic: RCOA8274
+        label: Common equity tier 1 capital
+      - schedule: RC-R
+        line_item: "64"
+        mnemonic: RCOAB704
+        label: Total risk-weighted assets
+
+# Disclosure-drift flags: if the narrative in concept X says "decreasing"
+# but the mapped call-report-lines trend up, surface a warning.
+drift_rules:
+  - concept: nbfi_exposure
+    down_keywords: ["reduced", "decreased", "declined", "limited", "modest"]
+    up_keywords:   ["increased", "grew", "expanded", "higher", "up"]

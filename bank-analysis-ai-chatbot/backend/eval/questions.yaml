@@ -1,0 +1,154 @@
+# 20 hand-graded analyst questions for measuring faithfulness + citation recall.
+#
+# For each question we record:
+#   - expect_banks:  tickers we expect the decomposer to pull out
+#   - expect_concepts: taxonomy concept keys we expect to match
+#   - expect_doc_types: at least one hit should come from these doc types
+#   - must_contain_keywords: the answer markdown must contain ALL of these
+#                            (case-insensitive). Use sparingly; citations
+#                            are the primary signal.
+#
+# The runner scores each rule and emits faithfulness / citation-recall stats.
+
+version: 1
+
+questions:
+  - id: q01
+    question: "How much of DFS's investments are in private credit?"
+    expect_banks: [DFS]
+    expect_concepts: [direct_lending]
+    expect_doc_types: ["10-K", "10-Q"]
+    must_contain_keywords: []
+
+  - id: q02
+    question: "What has FHN said about direct lending to financial sponsor clients?"
+    expect_banks: [FHN]
+    expect_concepts: [direct_lending, sponsor_finance]
+    expect_doc_types: ["10-K", "10-Q"]
+    must_contain_keywords: []
+
+  - id: q03
+    question: "Compare NBFI exposure across FHN, FLG, and DFS in 2024Q4"
+    expect_banks: [FHN, FLG, DFS]
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: []
+    must_contain_keywords: ["peer"]
+
+  - id: q04
+    question: "Describe FLG's fund finance / subscription line exposure"
+    expect_banks: [FLG]
+    expect_concepts: [fund_finance]
+    expect_doc_types: ["10-K", "10-Q"]
+    must_contain_keywords: []
+
+  - id: q05
+    question: "How has DFS's NBFI C&I balance trended over the last year?"
+    expect_banks: [DFS]
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: []
+    must_contain_keywords: []
+
+  - id: q06
+    question: "Has FHN disclosed any NAV lending activity?"
+    expect_banks: [FHN]
+    expect_concepts: [fund_finance]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q07
+    question: "What does FLG say about leveraged lending risk?"
+    expect_banks: [FLG]
+    expect_concepts: [leveraged_lending]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q08
+    question: "Warehouse lending to BDCs across FHN and FLG"
+    expect_banks: [FHN, FLG]
+    expect_concepts: [warehouse_lending]
+    expect_doc_types: []
+    must_contain_keywords: []
+
+  - id: q09
+    question: "Discuss DFS's exposure to sponsor finance and private equity clients"
+    expect_banks: [DFS]
+    expect_concepts: [sponsor_finance]
+    expect_doc_types: ["10-K", "10-Q"]
+    must_contain_keywords: []
+
+  - id: q10
+    question: "2024Q4 private credit exposure ranking across all ingested banks"
+    expect_banks: []
+    expect_concepts: [direct_lending]
+    expect_doc_types: []
+    must_contain_keywords: ["peer"]
+
+  - id: q11
+    question: "Which risk factors does DFS cite for nondepository financial institution lending?"
+    expect_banks: [DFS]
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q12
+    question: "FLG 10-Q 2025 Q1 commentary on direct lending growth"
+    expect_banks: [FLG]
+    expect_concepts: [direct_lending]
+    expect_doc_types: ["10-Q"]
+    must_contain_keywords: []
+
+  - id: q13
+    question: "Does FHN's narrative match the direction of its Call Report NBFI balance?"
+    expect_banks: [FHN]
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: []
+    must_contain_keywords: []
+
+  - id: q14
+    question: "Credit fund warehouse exposure at DFS"
+    expect_banks: [DFS]
+    expect_concepts: [warehouse_lending]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q15
+    question: "CET1 capital ratio and NBFI concentration for FLG"
+    expect_banks: [FLG]
+    expect_concepts: [capital_risk_context, nbfi_exposure]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q16
+    question: "Largest private credit counterparties mentioned in DFS filings"
+    expect_banks: [DFS]
+    expect_concepts: [direct_lending]
+    expect_doc_types: ["10-K"]
+    must_contain_keywords: []
+
+  - id: q17
+    question: "Unused commitments to nonbank financial institutions peer benchmark 2024Q4"
+    expect_banks: []
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: []
+    must_contain_keywords: ["peer"]
+
+  - id: q18
+    question: "FHN comment on leveraged loan growth vs. industry"
+    expect_banks: [FHN]
+    expect_concepts: [leveraged_lending]
+    expect_doc_types: ["10-K", "10-Q"]
+    must_contain_keywords: []
+
+  - id: q19
+    question: "Any 8-K disclosures from FLG about private credit transactions?"
+    expect_banks: [FLG]
+    expect_concepts: [direct_lending]
+    expect_doc_types: ["8-K"]
+    must_contain_keywords: []
+
+  - id: q20
+    question: "Summarize aggregate NBFI C&I trend at DFS, FHN and FLG from 2024Q2 through 2025Q1"
+    expect_banks: [DFS, FHN, FLG]
+    expect_concepts: [nbfi_exposure]
+    expect_doc_types: []
+    must_contain_keywords: []
