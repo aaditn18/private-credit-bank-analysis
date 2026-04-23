@@ -22,14 +22,17 @@ from pc_analyst.db import cursor, render_sql
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CSV_DIR = REPO_ROOT / "Call Reports"
 
-# MDRM mnemonics we care about
-MNEMONICS: dict[str, str] = {
-    "RCON1766": "C&I loans to NBFIs",
-    "RCONJ457": "Unused commitments to NBFIs",
-    "RCON1763": "Total C&I loans and leases",
-    "RCON2122": "Total loans and leases",
-    "RCOA8274": "Private equity investments",
-    "RCOAB704": "Leveraged loans",
+# MDRM mnemonics we care about.
+# Each entry: canonical key → (label, [columns to try in priority order]).
+# GSIBs report consolidated (RCFD/RCFA), regionals report domestic (RCON/RCOA).
+# We try domestic first, then fall back to consolidated.
+MNEMONICS: dict[str, tuple[str, list[str]]] = {
+    "RCON1766": ("C&I loans to NBFIs",           ["RCON1766"]),
+    "RCONJ457": ("Unused commitments to NBFIs",  ["RCONJ457", "RCFDJ457"]),
+    "RCON1763": ("Total C&I loans and leases",   ["RCON1763", "RCFD1763"]),
+    "RCON2122": ("Total loans and leases",       ["RCON2122", "RCFD2122"]),
+    "RCOA8274": ("Private equity investments",   ["RCOA8274", "RCFA8274"]),
+    "RCOAB704": ("Leveraged loans",              ["RCOAB704"]),
 }
 
 
@@ -80,18 +83,23 @@ def load_one_csv(path: Path, quarter: str, rssd_map: dict[str, str]) -> tuple[in
             total += 1
             rssd = str(row.get("IDRSSD", "")).strip()
             ticker = rssd_map.get(rssd)
-            for mnemonic, label in MNEMONICS.items():
-                raw = row.get(mnemonic, "").strip()
-                try:
-                    value = float(raw) if raw not in ("", "CONF", "NA") else None
-                except ValueError:
-                    value = None
+            for canonical, (label, columns) in MNEMONICS.items():
+                # Try each column in priority order; take first non-empty
+                value = None
+                for col in columns:
+                    raw = row.get(col, "").strip()
+                    if raw not in ("", "CONF", "NA"):
+                        try:
+                            value = float(raw)
+                        except ValueError:
+                            pass
+                        break
                 rows_to_insert.append({
                     "rssd_id": rssd,
                     "bank_ticker": ticker,
                     "quarter": quarter,
                     "schedule": "CALL",
-                    "line_item": mnemonic,
+                    "line_item": canonical,
                     "label": label,
                     "value_numeric": value,
                     "as_of_date": f"{path.stem[:4]}-{path.stem[4:6]}-{path.stem[6:8]}",

@@ -54,6 +54,7 @@ class Settings(BaseSettings):
     ffiec_username: str | None = Field(default=None)
     ffiec_token: str | None = Field(default=None)
     sec_user_agent: str = Field(default="private-credit-analyst example@example.com")
+    alphavantage_api_key: str | None = Field(default=None)
 
     # HTTP ------------------------------------------------------------------
     backend_port: int = Field(default=8000)

@@ -24,6 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("pc_analyst")
 
 from .agent.loop import AgentLoop
+from .config import settings
 from .db import cursor, fetchall_dicts, fetchone_dict, render_sql
 from .mcp_tools import TOOLS
 from .retrieval.taxonomy import load_taxonomy
@@ -313,6 +314,441 @@ def resolve_citation(chunk_id: int) -> dict[str, Any]:
     if "error" in result:
         raise HTTPException(status_code=404, detail=result["error"])
     return result
+
+
+@app.get("/stock/{ticker}")
+def get_stock(ticker: str, period: str = "2y") -> list[dict[str, Any]]:
+    """Fetch stock price history, caching in DB."""
+    from datetime import datetime, timedelta
+
+    with cursor() as (handle, cur):
+        cur.execute(
+            render_sql("SELECT date, close, volume FROM stock_price WHERE bank_ticker = ? ORDER BY date"),
+            (ticker,),
+        )
+        rows = fetchall_dicts(cur)
+
+    if rows:
+        last = rows[-1]["date"]
+        last_dt = datetime.strptime(str(last)[:10], "%Y-%m-%d") if isinstance(last, str) else last
+        if (datetime.now() - last_dt).days < 7:
+            return rows
+    # If DB is empty, always try to fetch (no staleness check needed)
+
+    try:
+        import yfinance as yf
+        hist = yf.Ticker(ticker).history(period=period)
+        if hist.empty:
+            return rows
+
+        with cursor() as (handle, cur):
+            for idx, row in hist.iterrows():
+                d = idx.strftime("%Y-%m-%d")
+                c = round(float(row["Close"]), 2)
+                v = int(row["Volume"]) if row["Volume"] else None
+                if handle.backend == "postgres":
+                    cur.execute(
+                        render_sql(
+                            "INSERT INTO stock_price (bank_ticker, date, close, volume) "
+                            "VALUES (?, ?, ?, ?) ON CONFLICT (bank_ticker, date) DO UPDATE SET close=EXCLUDED.close, volume=EXCLUDED.volume"
+                        ),
+                        (ticker, d, c, v),
+                    )
+                else:
+                    cur.execute(
+                        "INSERT OR REPLACE INTO stock_price (bank_ticker, date, close, volume) VALUES (?, ?, ?, ?)",
+                        (ticker, d, c, v),
+                    )
+
+            cur.execute(
+                render_sql("SELECT date, close, volume FROM stock_price WHERE bank_ticker = ? ORDER BY date"),
+                (ticker,),
+            )
+            return fetchall_dicts(cur)
+    except Exception as e:
+        log.warning("yfinance fetch failed for %s: %s", ticker, e)
+        return rows
+
+
+@app.get("/news/{ticker}")
+def get_news(ticker: str) -> list[dict[str, Any]]:
+    """Fetch news for a bank ticker via Alpha Vantage, cache in DB."""
+    from datetime import datetime
+
+    # Check cache first
+    with cursor() as (handle, cur):
+        cur.execute(
+            render_sql("SELECT headline, url, published_at, sentiment_score FROM news_article WHERE bank_ticker = ? ORDER BY published_at DESC"),
+            (ticker,),
+        )
+        cached = fetchall_dicts(cur)
+
+    # If we have recent articles (any from last 3 days), return cache
+    if cached:
+        try:
+            latest = datetime.strptime(str(cached[0]["published_at"])[:10], "%Y-%m-%d")
+            if (datetime.now() - latest).days < 3:
+                return cached
+        except Exception:
+            pass
+
+    # Fetch from Alpha Vantage
+    api_key = settings.alphavantage_api_key
+    if not api_key:
+        return cached
+
+    try:
+        import httpx
+        resp = httpx.get(
+            "https://www.alphavantage.co/query",
+            params={"function": "NEWS_SENTIMENT", "tickers": ticker, "apikey": api_key},
+            timeout=15,
+        )
+        data = resp.json()
+        feed = data.get("feed", [])
+
+        articles = []
+        with cursor() as (handle, cur):
+            for item in feed[:25]:  # limit to 25 articles
+                # Find ticker-specific sentiment
+                sentiment = None
+                for ts in item.get("ticker_sentiment", []):
+                    if ts.get("ticker") == ticker:
+                        try:
+                            sentiment = float(ts["ticker_sentiment_score"])
+                        except (ValueError, KeyError):
+                            pass
+                        break
+                if sentiment is None:
+                    try:
+                        sentiment = float(item.get("overall_sentiment_score", 0))
+                    except (ValueError, TypeError):
+                        sentiment = 0.0
+
+                time_str = item.get("time_published", "")
+                try:
+                    pub_date = datetime.strptime(time_str[:8], "%Y%m%d").strftime("%Y-%m-%d")
+                except Exception:
+                    pub_date = datetime.now().strftime("%Y-%m-%d")
+
+                headline = item.get("title", "")
+                url = item.get("url", "")
+
+                if handle.backend == "postgres":
+                    cur.execute(
+                        render_sql(
+                            "INSERT INTO news_article (bank_ticker, headline, url, published_at, sentiment_score) "
+                            "VALUES (?, ?, ?, ?, ?) ON CONFLICT (bank_ticker, url) DO UPDATE SET sentiment_score=EXCLUDED.sentiment_score"
+                        ),
+                        (ticker, headline, url, pub_date, sentiment),
+                    )
+                else:
+                    cur.execute(
+                        "INSERT OR REPLACE INTO news_article (bank_ticker, headline, url, published_at, sentiment_score) VALUES (?, ?, ?, ?, ?)",
+                        (ticker, headline, url, pub_date, sentiment),
+                    )
+                articles.append({"headline": headline, "url": url, "published_at": pub_date, "sentiment_score": sentiment})
+
+        return articles if articles else cached
+    except Exception as e:
+        log.warning("Alpha Vantage fetch failed for %s: %s", ticker, e)
+        return cached
+
+
+@app.get("/trends")
+def get_trends() -> dict[str, Any]:
+    """Cross-bank trend data for the trends dashboard."""
+    import math
+
+    mnemonics = {"RCON1763", "RCON2122", "RCON1766", "RCONJ457", "RCOA8274"}
+
+    with cursor() as (handle, cur):
+        # All call report data
+        cur.execute(render_sql(
+            "SELECT b.ticker, b.name, b.peer_group, c.quarter, c.line_item, c.value_numeric "
+            "FROM bank b LEFT JOIN call_report_fact c ON c.bank_ticker = b.ticker "
+            "WHERE b.ticker IS NOT NULL ORDER BY b.ticker, c.quarter"
+        ))
+        cr_rows = fetchall_dicts(cur)
+
+    # Build bank metadata
+    banks: dict[str, dict] = {}
+    # Build metrics by bank by quarter
+    bank_quarter_data: dict[str, dict[str, dict[str, float | None]]] = {}
+
+    for row in cr_rows:
+        t = row["ticker"]
+        if t not in banks:
+            banks[t] = {"ticker": t, "name": row["name"], "peer_group": row["peer_group"]}
+        q = row.get("quarter")
+        li = row.get("line_item")
+        val = row.get("value_numeric")
+        if q and li in mnemonics and val is not None:
+            bank_quarter_data.setdefault(t, {}).setdefault(q, {})[li] = val
+
+    def ratio(num, den):
+        if num is None or den is None or den == 0:
+            return None
+        return num / den
+
+    # Compute ratios per bank per quarter
+    metrics_over_time: dict[str, dict[str, dict[str, float | None]]] = {}
+    for t, quarters in bank_quarter_data.items():
+        metrics_over_time[t] = {}
+        for q, d in sorted(quarters.items()):
+            total = d.get("RCON2122")
+            nbfi_loan = ratio(d.get("RCON1766"), total)
+            nbfi_commit = ratio(d.get("RCONJ457"), total)
+            # For GSIBs that lack RCON1766 (domestic NBFI loans), use commitment
+            # ratio as the best available proxy for NBFI exposure.
+            nbfi_exposure = nbfi_loan if nbfi_loan is not None else nbfi_commit
+            metrics_over_time[t][q] = {
+                "ci_ratio": ratio(d.get("RCON1763"), total),
+                "loan_scale": math.log(total) if total and total > 0 else None,
+                "nbfi_loan_ratio": nbfi_exposure,
+                "nbfi_commitment_ratio": nbfi_commit,
+                "pe_exposure": ratio(d.get("RCOA8274"), total),
+            }
+
+    # Aggregate industry trends: average NBFI ratio across banks per quarter
+    all_quarters = sorted(set(q for bq in bank_quarter_data.values() for q in bq))
+    industry_trend = []
+    for q in all_quarters:
+        nbfi_vals = []
+        ci_vals = []
+        for t in bank_quarter_data:
+            m = metrics_over_time.get(t, {}).get(q, {})
+            if m.get("nbfi_loan_ratio") is not None:
+                nbfi_vals.append(m["nbfi_loan_ratio"])
+            if m.get("ci_ratio") is not None:
+                ci_vals.append(m["ci_ratio"])
+        industry_trend.append({
+            "quarter": q,
+            "avg_nbfi_ratio": sum(nbfi_vals) / len(nbfi_vals) if nbfi_vals else None,
+            "avg_ci_ratio": sum(ci_vals) / len(ci_vals) if ci_vals else None,
+            "reporting_banks": len(nbfi_vals),
+        })
+
+    # Pullback detection: banks whose NBFI ratio decreased in latest quarter
+    pullbacks = []
+    for t, quarters in metrics_over_time.items():
+        sorted_qs = sorted(quarters.keys())
+        if len(sorted_qs) >= 2:
+            latest = quarters[sorted_qs[-1]]
+            prev = quarters[sorted_qs[-2]]
+            if latest.get("nbfi_loan_ratio") is not None and prev.get("nbfi_loan_ratio") is not None:
+                change = latest["nbfi_loan_ratio"] - prev["nbfi_loan_ratio"]
+                if change < 0:
+                    pullbacks.append({
+                        **banks.get(t, {}),
+                        "prev_quarter": sorted_qs[-2],
+                        "latest_quarter": sorted_qs[-1],
+                        "prev_ratio": prev["nbfi_loan_ratio"],
+                        "latest_ratio": latest["nbfi_loan_ratio"],
+                        "change": change,
+                    })
+    pullbacks.sort(key=lambda x: x["change"])
+
+    # Exposure ranking: all banks sorted by latest NBFI loan ratio (descending)
+    exposure_ranking = []
+    for t, quarters in metrics_over_time.items():
+        sorted_qs = sorted(quarters.keys())
+        if not sorted_qs:
+            continue
+        latest_q = sorted_qs[-1]
+        m = quarters[latest_q]
+        if m.get("nbfi_loan_ratio") is not None:
+            exposure_ranking.append({
+                **banks.get(t, {}),
+                "latest_quarter": latest_q,
+                "nbfi_ratio": m["nbfi_loan_ratio"],
+                "ci_ratio": m.get("ci_ratio"),
+                "commitment_ratio": m.get("nbfi_commitment_ratio"),
+                "pe_exposure": m.get("pe_exposure"),
+            })
+    exposure_ranking.sort(key=lambda x: x["nbfi_ratio"], reverse=True)
+    for i, item in enumerate(exposure_ranking, 1):
+        item["rank"] = i
+
+    # Quarter movers: biggest QoQ change in NBFI ratio
+    quarter_movers = []
+    for t, quarters in metrics_over_time.items():
+        sorted_qs = sorted(quarters.keys())
+        if len(sorted_qs) >= 2:
+            latest_q = sorted_qs[-1]
+            prev_q = sorted_qs[-2]
+            latest_m = quarters[latest_q]
+            prev_m = quarters[prev_q]
+            if latest_m.get("nbfi_loan_ratio") is not None and prev_m.get("nbfi_loan_ratio") is not None:
+                change = latest_m["nbfi_loan_ratio"] - prev_m["nbfi_loan_ratio"]
+                quarter_movers.append({
+                    **banks.get(t, {}),
+                    "prev_quarter": prev_q,
+                    "latest_quarter": latest_q,
+                    "prev_ratio": prev_m["nbfi_loan_ratio"],
+                    "latest_ratio": latest_m["nbfi_loan_ratio"],
+                    "change": change,
+                    "direction": "expanding" if change >= 0 else "contracting",
+                })
+    quarter_movers.sort(key=lambda x: abs(x["change"]), reverse=True)
+
+    # Peer group comparison: average metrics per peer group per quarter
+    peer_group_comparison: dict[str, dict[str, dict[str, float | None]]] = {}
+    for q in all_quarters:
+        group_nbfi: dict[str, list[float]] = {}
+        group_ci: dict[str, list[float]] = {}
+        for t in bank_quarter_data:
+            pg = banks.get(t, {}).get("peer_group", "Unknown")
+            m = metrics_over_time.get(t, {}).get(q, {})
+            if m.get("nbfi_loan_ratio") is not None:
+                group_nbfi.setdefault(pg, []).append(m["nbfi_loan_ratio"])
+            if m.get("ci_ratio") is not None:
+                group_ci.setdefault(pg, []).append(m["ci_ratio"])
+        all_groups = set(list(group_nbfi.keys()) + list(group_ci.keys()))
+        for pg in all_groups:
+            peer_group_comparison.setdefault(pg, {})[q] = {
+                "avg_nbfi_ratio": sum(group_nbfi[pg]) / len(group_nbfi[pg]) if pg in group_nbfi and group_nbfi[pg] else None,
+                "avg_ci_ratio": sum(group_ci[pg]) / len(group_ci[pg]) if pg in group_ci and group_ci[pg] else None,
+                "bank_count": len(group_nbfi.get(pg, [])),
+            }
+
+    return {
+        "banks": list(banks.values()),
+        "metrics_over_time": metrics_over_time,
+        "industry_trend": industry_trend,
+        "pullbacks": pullbacks,
+        "exposure_ranking": exposure_ranking,
+        "quarter_movers": quarter_movers,
+        "peer_group_comparison": peer_group_comparison,
+    }
+
+
+@app.get("/timeline/{ticker}")
+def get_timeline(ticker: str) -> dict[str, Any]:
+    """All timeline data for a single bank."""
+    import math
+
+    mnemonics = {"RCON1763", "RCON2122", "RCON1766", "RCONJ457", "RCOA8274"}
+
+    with cursor() as (handle, cur):
+        # Bank info
+        cur.execute(render_sql("SELECT ticker, name, peer_group FROM bank WHERE ticker = ?"), (ticker,))
+        bank = fetchone_dict(cur)
+        if not bank:
+            raise HTTPException(status_code=404, detail=f"Bank {ticker} not found")
+
+        # Filing history
+        cur.execute(render_sql(
+            "SELECT doc_type, fiscal_year, fiscal_quarter, filed_at, title "
+            "FROM document WHERE bank_ticker = ? ORDER BY fiscal_year, fiscal_quarter"
+        ), (ticker,))
+        filings = fetchall_dicts(cur)
+
+        # Call report data
+        cur.execute(render_sql(
+            "SELECT quarter, line_item, value_numeric FROM call_report_fact "
+            "WHERE bank_ticker = ? ORDER BY quarter"
+        ), (ticker,))
+        cr_rows = fetchall_dicts(cur)
+
+        # Stock prices
+        cur.execute(render_sql(
+            "SELECT date, close, volume FROM stock_price WHERE bank_ticker = ? ORDER BY date"
+        ), (ticker,))
+        stocks = fetchall_dicts(cur)
+
+        # News
+        cur.execute(render_sql(
+            "SELECT headline, url, published_at, sentiment_score FROM news_article "
+            "WHERE bank_ticker = ? ORDER BY published_at DESC LIMIT 50"
+        ), (ticker,))
+        news = fetchall_dicts(cur)
+
+    # Compute metrics by quarter
+    quarter_data: dict[str, dict[str, float | None]] = {}
+    for row in cr_rows:
+        q = row["quarter"]
+        li = row["line_item"]
+        val = row["value_numeric"]
+        if li in mnemonics and val is not None:
+            quarter_data.setdefault(q, {})[li] = val
+
+    def ratio(num, den):
+        if num is None or den is None or den == 0:
+            return None
+        return num / den
+
+    metrics_by_quarter: dict[str, dict[str, float | None]] = {}
+    for q, d in sorted(quarter_data.items()):
+        total = d.get("RCON2122")
+        nbfi_loan = ratio(d.get("RCON1766"), total)
+        nbfi_commit = ratio(d.get("RCONJ457"), total)
+        nbfi_exposure = nbfi_loan if nbfi_loan is not None else nbfi_commit
+        metrics_by_quarter[q] = {
+            "ci_ratio": ratio(d.get("RCON1763"), total),
+            "loan_scale": math.log(total) if total and total > 0 else None,
+            "nbfi_loan_ratio": nbfi_exposure,
+            "nbfi_commitment_ratio": nbfi_commit,
+            "pe_exposure": ratio(d.get("RCOA8274"), total),
+        }
+
+    return {
+        "ticker": bank["ticker"],
+        "name": bank["name"],
+        "peer_group": bank["peer_group"],
+        "filings": filings,
+        "metrics_by_quarter": metrics_by_quarter,
+        "stock_prices": stocks,
+        "news": news,
+    }
+
+
+@app.get("/findings")
+def get_findings() -> list[dict[str, Any]]:
+    """Private credit findings per bank from LLM analysis."""
+    with cursor() as (handle, cur):
+        cur.execute(render_sql(
+            "SELECT bank_ticker, bank_name, rating, mention_frequency, sentiment, "
+            "key_themes, strategic_initiatives, perceived_risks, notable_quotes, "
+            "pullback_mentions, named_competitors, risk_focus_analysis, involvement_rating "
+            "FROM pc_finding ORDER BY involvement_rating DESC, bank_ticker"
+        ))
+        rows = fetchall_dicts(cur)
+    # Parse JSON fields
+    import json as _json
+    for row in rows:
+        for field in ("key_themes", "notable_quotes"):
+            val = row.get(field)
+            if isinstance(val, str):
+                try:
+                    row[field] = _json.loads(val)
+                except Exception:
+                    pass
+    return rows
+
+
+@app.get("/findings/{ticker}")
+def get_finding(ticker: str) -> dict[str, Any]:
+    """Private credit finding for a single bank."""
+    with cursor() as (handle, cur):
+        cur.execute(render_sql(
+            "SELECT bank_ticker, bank_name, rating, mention_frequency, sentiment, "
+            "key_themes, strategic_initiatives, perceived_risks, notable_quotes, "
+            "pullback_mentions, named_competitors, risk_focus_analysis, involvement_rating "
+            "FROM pc_finding WHERE bank_ticker = ?"
+        ), (ticker,))
+        row = fetchone_dict(cur)
+    if not row:
+        raise HTTPException(status_code=404, detail=f"No findings for {ticker}")
+    import json as _json
+    for field in ("key_themes", "notable_quotes"):
+        val = row.get(field)
+        if isinstance(val, str):
+            try:
+                row[field] = _json.loads(val)
+            except Exception:
+                pass
+    return row
 
 
 if __name__ == "__main__":

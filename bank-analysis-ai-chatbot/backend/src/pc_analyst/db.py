@@ -167,16 +167,58 @@ CREATE TABLE IF NOT EXISTS reasoning_step (
     created_at TEXT DEFAULT CURRENT_TIMESTAMP,
     UNIQUE (run_id, step_index)
 );
+
+CREATE TABLE IF NOT EXISTS pc_finding (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    bank_ticker TEXT NOT NULL REFERENCES bank(ticker) ON DELETE CASCADE,
+    bank_name TEXT,
+    rating INTEGER,
+    mention_frequency TEXT,
+    sentiment TEXT,
+    key_themes TEXT,
+    strategic_initiatives TEXT,
+    perceived_risks TEXT,
+    notable_quotes TEXT,
+    pullback_mentions TEXT,
+    named_competitors TEXT,
+    risk_focus_analysis TEXT,
+    involvement_rating INTEGER,
+    UNIQUE (bank_ticker)
+);
+
+CREATE TABLE IF NOT EXISTS stock_price (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    bank_ticker TEXT NOT NULL REFERENCES bank(ticker) ON DELETE CASCADE,
+    date TEXT NOT NULL,
+    close REAL NOT NULL,
+    volume INTEGER,
+    UNIQUE (bank_ticker, date)
+);
+
+CREATE INDEX IF NOT EXISTS stock_price_ticker_idx ON stock_price (bank_ticker, date);
+
+CREATE TABLE IF NOT EXISTS news_article (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    bank_ticker TEXT NOT NULL REFERENCES bank(ticker) ON DELETE CASCADE,
+    headline TEXT NOT NULL,
+    url TEXT,
+    published_at TEXT NOT NULL,
+    sentiment_score REAL,
+    UNIQUE (bank_ticker, url)
+);
+
+CREATE INDEX IF NOT EXISTS news_article_ticker_idx ON news_article (bank_ticker, published_at);
 """
 
 
 def apply_migrations() -> None:
     """Idempotent schema setup for whichever backend is configured."""
+    migrations_dir = Path(__file__).resolve().parents[2] / "migrations"
     if settings.storage_backend == "postgres":
-        sql_file = Path(__file__).resolve().parents[2] / "migrations" / "001_init.sql"
-        sql = sql_file.read_text()
-        with cursor() as (_, cur):
-            cur.execute(sql)
+        for sql_file in sorted(migrations_dir.glob("*.sql")):
+            sql = sql_file.read_text()
+            with cursor() as (_, cur):
+                cur.execute(sql)
     else:
         with cursor() as (_, cur):
             cur.executescript(SQLITE_SCHEMA)
