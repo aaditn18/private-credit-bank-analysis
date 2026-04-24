@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from pc_analyst.banks import BANK_REGISTRY
 from pc_analyst.db import cursor, render_sql
+from pc_analyst.ingestion.pipeline import upsert_bank
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CSV_DIR = REPO_ROOT / "Call Reports"
@@ -118,6 +119,11 @@ def main() -> None:
     csv_dir: Path = args.csv_dir
     if not csv_dir.exists():
         sys.exit(f"CSV directory not found: {csv_dir}")
+
+    # Pre-populate the bank table so FK constraints are satisfied for every
+    # registry ticker, even those without RSSD IDs (no Call Report data).
+    for ticker in BANK_REGISTRY:
+        upsert_bank(ticker)
 
     rssd_map = build_rssd_map()
     print(f"RSSD→ticker map: {len(rssd_map)} entries")
