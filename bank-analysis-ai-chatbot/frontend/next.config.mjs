@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async rewrites() {
-    const backend = process.env.BACKEND_URL || 'http://localhost:8000';
-    return [
-      { source: '/api/backend/:path*', destination: `${backend}/:path*` },
-    ];
-  },
+  // Backend proxying is handled by app/api/backend/[...path]/route.ts.
+  // The built-in rewrites() proxy imposes a ~30-second timeout that was
+  // incorrectly 500'ing legitimate slow /search responses.
 };
 
 export default nextConfig;
