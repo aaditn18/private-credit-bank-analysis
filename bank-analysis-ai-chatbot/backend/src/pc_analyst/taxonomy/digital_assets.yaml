@@ -1,0 +1,114 @@
+# Digital-assets taxonomy
+#
+# Disclosure regimes are evolving fast (SAB 121 rescission, Basel crypto rules).
+# The NLP layer carries most of the signal until standardized tables exist.
+
+version: 1
+
+concepts:
+
+  crypto_custody:
+    label: Crypto custody / assets-under-custody
+    synonyms:
+      - crypto custody
+      - digital asset custody
+      - assets under custody
+      - AUC
+      - cryptocurrency custody
+      - cold storage
+      - cold wallet
+      - hot wallet
+      - qualified custodian
+      - custody of digital assets
+    call_report_lines: []
+
+  stablecoin_reserves:
+    label: Stablecoin reserves on the bank balance sheet
+    synonyms:
+      - stablecoin reserves
+      - stablecoin
+      - USDC reserves
+      - USDT
+      - tether
+      - USD coin
+      - PYUSD
+      - reserve composition
+      - reserve assets
+      - dollar-backed stablecoin
+    call_report_lines: []
+
+  fbo_deposits:
+    label: For-benefit-of (FBO) deposits tied to crypto exchanges
+    synonyms:
+      - for benefit of
+      - FBO deposit
+      - FBO account
+      - omnibus account
+      - exchange deposit
+      - customer fiat deposit
+      - segregated customer funds
+    call_report_lines: []
+
+  digital_asset_trading:
+    label: Digital-asset trading inventory & market making
+    synonyms:
+      - digital asset trading
+      - crypto trading
+      - cryptocurrency trading
+      - digital asset market making
+      - bitcoin trading
+      - ether trading
+      - trading inventory
+      - principal trading in digital assets
+    call_report_lines: []
+
+  tokenized_assets:
+    label: Tokenized real-world assets
+    synonyms:
+      - tokenized asset
+      - tokenization
+      - tokenized deposits
+      - tokenized treasury
+      - asset tokenization
+      - blockchain-based representation
+      - on-chain settlement
+    call_report_lines: []
+
+  sab121:
+    label: SAB 121 / accounting for crypto custody liabilities
+    synonyms:
+      - SAB 121
+      - SAB-121
+      - Staff Accounting Bulletin 121
+      - SAB 122
+      - rescission of SAB 121
+      - safeguarding obligation
+      - custody safeguarding liability
+    call_report_lines: []
+
+  basel_crypto:
+    label: Basel crypto-asset prudential treatment
+    synonyms:
+      - Basel crypto
+      - cryptoasset prudential
+      - Group 1 cryptoasset
+      - Group 2 cryptoasset
+      - cryptoasset risk weight
+      - 1250 percent risk weight
+    call_report_lines: []
+
+  exchange_counterparty:
+    label: Counterparty / lending exposure to crypto exchanges
+    synonyms:
+      - exchange counterparty
+      - exchange exposure
+      - lending against crypto
+      - crypto-backed loan
+      - margin against digital assets
+      - haircut
+    call_report_lines: []
+
+drift_rules:
+  - concept: crypto_custody
+    down_keywords: ["limited", "no material", "do not custody", "discontinued"]
+    up_keywords:   ["expanded", "launched custody", "growing AUC", "now offering"]

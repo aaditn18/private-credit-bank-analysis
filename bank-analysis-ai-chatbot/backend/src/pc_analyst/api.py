@@ -34,11 +34,25 @@ app = FastAPI(title="Private Credit Analyst Tool", version="0.1.0")
 
 @app.on_event("startup")
 def _warmup() -> None:
-    """Pre-load embedding + reranker models so the first request isn't slow."""
+    """Pre-load models and pre-compute anomaly results so first hits are fast."""
+    import threading
+
     from .retrieval.embeddings import embed
     from .retrieval.reranker import rerank
     embed(["warmup"])
     rerank("warmup", [("warmup text", 1.0)])
+
+    def _prewarm_anomalies() -> None:
+        try:
+            from .anomalies.engine import run_for_theme
+            from .anomalies.queries import latest_quarter_with_data
+            q = latest_quarter_with_data()
+            for theme in ("private_credit", "ai", "digital_assets"):
+                run_for_theme(theme, q)
+        except Exception:  # noqa: BLE001
+            log.exception("anomaly prewarm failed")
+
+    threading.Thread(target=_prewarm_anomalies, daemon=True).start()
 
 
 app.add_middleware(
@@ -314,6 +328,55 @@ def resolve_citation(chunk_id: int) -> dict[str, Any]:
     if "error" in result:
         raise HTTPException(status_code=404, detail=result["error"])
     return result
+
+
+@app.get("/anomalies/{theme}")
+def get_anomalies(
+    theme: str,
+    quarter: str | None = None,
+    peer_group: str | None = None,
+) -> dict[str, Any]:
+    """Run all 8 category detectors for a theme and return grouped results.
+
+    ``theme`` accepts either kebab-case (``private-credit``) or underscore
+    (``private_credit``); the engine normalizes to underscore form.
+    """
+    from .anomalies.engine import (
+        CATEGORIES,
+        group_by_category,
+        normalize_theme,
+        run_for_theme,
+    )
+    from .anomalies.queries import latest_quarter_with_data
+
+    try:
+        theme_norm = normalize_theme(theme)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    q = quarter or latest_quarter_with_data()
+    anomalies = run_for_theme(theme_norm, q)
+
+    if peer_group:
+        with cursor() as (_handle, cur):
+            cur.execute(
+                render_sql("SELECT ticker FROM bank WHERE peer_group = ?"),
+                (peer_group,),
+            )
+            allowed = {r["ticker"] for r in fetchall_dicts(cur)}
+        anomalies = [a for a in anomalies if a.bank_ticker in allowed or a.bank_ticker == "-"]
+
+    grouped = group_by_category(anomalies)
+    counts = {c: len(grouped.get(c, [])) for c in CATEGORIES}
+    return {
+        "theme": theme_norm,
+        "theme_slug": theme.replace("_", "-"),
+        "quarter": q,
+        "peer_group": peer_group,
+        "categories": grouped,
+        "counts": counts,
+        "total": sum(counts.values()),
+    }
 
 
 @app.get("/stock/{ticker}")

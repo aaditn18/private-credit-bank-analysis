@@ -14,6 +14,14 @@ from ..config import PACKAGE_ROOT
 
 TAXONOMY_PATH = PACKAGE_ROOT / "taxonomy" / "private_credit.yaml"
 
+# Theme keys used everywhere downstream. Match the YAML filename stem.
+THEMES = ("private_credit", "ai", "digital_assets")
+THEME_FILES = {
+    "private_credit": PACKAGE_ROOT / "taxonomy" / "private_credit.yaml",
+    "ai":             PACKAGE_ROOT / "taxonomy" / "ai.yaml",
+    "digital_assets": PACKAGE_ROOT / "taxonomy" / "digital_assets.yaml",
+}
+
 
 @dataclass
 class LineItem:
@@ -138,3 +146,20 @@ def iter_all_synonyms(tax: Taxonomy) -> Iterable[tuple[str, str]]:
         yield key, concept.label
         for s in concept.synonyms:
             yield key, s
+
+
+_THEME_CACHE: dict[str, Taxonomy] = {}
+
+
+def load_theme(theme: str) -> Taxonomy:
+    """Load and cache the taxonomy for a single theme."""
+    if theme not in THEME_FILES:
+        raise ValueError(f"Unknown theme: {theme!r}; expected one of {THEMES}")
+    if theme not in _THEME_CACHE:
+        _THEME_CACHE[theme] = load_taxonomy(THEME_FILES[theme])
+    return _THEME_CACHE[theme]
+
+
+def load_themes() -> dict[str, Taxonomy]:
+    """Return all theme taxonomies keyed by theme name."""
+    return {t: load_theme(t) for t in THEMES}

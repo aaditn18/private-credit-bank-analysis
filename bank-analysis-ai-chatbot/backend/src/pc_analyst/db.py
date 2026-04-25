@@ -208,6 +208,40 @@ CREATE TABLE IF NOT EXISTS news_article (
 );
 
 CREATE INDEX IF NOT EXISTS news_article_ticker_idx ON news_article (bank_ticker, published_at);
+
+CREATE TABLE IF NOT EXISTS chunk_topic (
+    chunk_id INTEGER PRIMARY KEY REFERENCES chunk(id) ON DELETE CASCADE,
+    theme TEXT NOT NULL,                 -- 'private_credit' | 'ai' | 'digital_assets' | 'none'
+    confidence REAL NOT NULL,
+    keyword_score REAL NOT NULL,
+    cosine_score REAL NOT NULL,
+    classified_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS chunk_topic_theme_idx ON chunk_topic (theme);
+
+CREATE TABLE IF NOT EXISTS filing_event (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    document_id INTEGER NOT NULL REFERENCES document(id) ON DELETE CASCADE,
+    item_code TEXT NOT NULL,
+    item_label TEXT NOT NULL,
+    excerpt TEXT NOT NULL,
+    extracted_at TEXT DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (document_id, item_code, excerpt)
+);
+
+CREATE INDEX IF NOT EXISTS filing_event_doc_idx ON filing_event (document_id);
+CREATE INDEX IF NOT EXISTS filing_event_code_idx ON filing_event (item_code);
+
+CREATE TABLE IF NOT EXISTS chunk_sentiment (
+    chunk_id INTEGER PRIMARY KEY REFERENCES chunk(id) ON DELETE CASCADE,
+    positive_count INTEGER NOT NULL,
+    negative_count INTEGER NOT NULL,
+    uncertainty_count INTEGER NOT NULL,
+    litigious_count INTEGER NOT NULL,
+    total_words INTEGER NOT NULL,
+    net_sentiment REAL NOT NULL
+);
 """
 
 

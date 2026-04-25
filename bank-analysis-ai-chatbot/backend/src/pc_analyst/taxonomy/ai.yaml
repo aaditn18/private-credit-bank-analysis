@@ -1,0 +1,124 @@
+# AI exposure taxonomy
+#
+# Banks rarely break out AI exposure in standardized tables yet, so the NLP
+# layer does most of the work here. The synonyms below feed both retrieval
+# and the topic classifier that routes chunks to the AI anomalies page.
+
+version: 1
+
+concepts:
+
+  ai_lending:
+    label: AI-related lending exposure
+    synonyms:
+      - AI lending
+      - AI-related lending
+      - AI infrastructure financing
+      - lending to AI companies
+      - AI customer financing
+      - AI-driven borrower
+    call_report_lines: []
+
+  ai_infra_finance:
+    label: AI / data-center infrastructure finance
+    synonyms:
+      - data center financing
+      - data center lending
+      - data center REIT
+      - hyperscaler financing
+      - hyperscale
+      - cloud infrastructure financing
+      - colocation financing
+    call_report_lines: []
+
+  gpu_financing:
+    label: GPU-backed financing
+    synonyms:
+      - GPU financing
+      - GPU-backed loan
+      - GPU-secured
+      - chip financing
+      - accelerator financing
+      - NVIDIA-backed
+      - compute financing
+    call_report_lines: []
+
+  data_center_lending:
+    label: Data-center loan exposure
+    synonyms:
+      - data center loan
+      - data center exposure
+      - server farm loan
+      - hyperscaler loan
+    call_report_lines: []
+
+  ai_capex:
+    label: AI capital expenditure / capitalized AI development
+    synonyms:
+      - AI capex
+      - AI capital expenditure
+      - AI investment
+      - capitalized AI
+      - AI development costs
+      - AI software capitalization
+      - generative AI investment
+    call_report_lines: []
+
+  ai_vendor_concentration:
+    label: AI vendor / model-provider concentration
+    synonyms:
+      - AI vendor
+      - third-party AI
+      - AI model provider
+      - AI partnership
+      - foundation model provider
+      - large language model provider
+      - LLM vendor
+      - OpenAI
+      - Anthropic
+    call_report_lines: []
+
+  ai_governance:
+    label: AI governance & risk framework
+    synonyms:
+      - AI governance
+      - AI policy
+      - responsible AI
+      - AI risk framework
+      - AI oversight
+      - AI ethics
+      - AI principles
+    call_report_lines: []
+
+  model_risk:
+    label: Model risk (AI / ML models)
+    synonyms:
+      - model risk
+      - model validation
+      - model governance
+      - model risk management
+      - hallucination
+      - hallucinations
+      - bias in AI
+      - explainability
+      - black-box model
+      - generative AI risk
+    call_report_lines: []
+
+  ai_talent_capacity:
+    label: AI talent / hiring & capacity
+    synonyms:
+      - AI hiring
+      - AI talent
+      - data scientist
+      - machine learning engineer
+      - chief AI officer
+      - AI center of excellence
+    call_report_lines: []
+
+# Drift rules let disclosure-NLP catch "we are exploring AI" → quantitative
+# AI capex jumping; or vice versa.
+drift_rules:
+  - concept: ai_capex
+    down_keywords: ["exploring", "evaluating", "considering", "early stages", "pilot"]
+    up_keywords:   ["deploying", "scaling", "rolled out", "in production", "broad rollout"]
