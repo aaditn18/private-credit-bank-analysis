@@ -36,7 +36,7 @@ from pipeline_core import (
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
-BANKS_ROOT = REPO_ROOT / "banks"
+BANKS_ROOT = REPO_ROOT / "sec-edgar-filings"
 OUTPUT_DIR = SCRIPT_DIR / "output"
 
 BANKS = {
@@ -192,7 +192,7 @@ def run_presentation(phase2_csv: Path, output_dir: Path) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Keyword-match pipeline from banks/ 10-Ks.")
+    parser = argparse.ArgumentParser(description="Keyword-match pipeline from sec-edgar-filings/ 10-Ks.")
     parser.add_argument(
         "--banks-root",
         type=Path,

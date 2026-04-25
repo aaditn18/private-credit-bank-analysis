@@ -27,7 +27,7 @@ from sentence_transformers import SentenceTransformer
 from google import genai
 
 # ── Config ───────────────────────────────────────────────────────────────────
-ROOT_DIR = Path("banks")
+ROOT_DIR = Path(__file__).resolve().parent.parent / "sec-edgar-filings"
 OUTPUT_DIR = Path("private_credit_output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

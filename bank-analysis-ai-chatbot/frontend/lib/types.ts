@@ -68,6 +68,7 @@ export type AnomalySentiment = 'positive' | 'negative' | 'inconclusive';
 export interface AnomalyHistoryPoint {
   quarter: string;
   value: number;
+  peer_value?: number | null;
 }
 
 export interface Anomaly {

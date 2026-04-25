@@ -6,9 +6,12 @@ from __future__ import annotations
 
 import re
 
+from ..anchors import has_theme_anchor
 from ..engine import Anomaly, Citation
 from ..queries import topic_tagged_chunks
-from ..severity import severity
+from ..severity import nlp_magnitude, severity
+
+MIN_NLP_CONFIDENCE = 0.10
 
 CATEGORY = "structural"
 
@@ -40,13 +43,15 @@ PC_STRUCT_RE = re.compile(
 
 
 def _surface(theme: str, regex_match_fn, headline: str) -> list[Anomaly]:
-    chunks = topic_tagged_chunks(theme, min_confidence=0.05, limit=400)
+    chunks = topic_tagged_chunks(theme, min_confidence=MIN_NLP_CONFIDENCE, limit=400)
     out: list[Anomaly] = []
     seen: set[tuple[str, str]] = set()
     for c in chunks:
         text = (c["text"] or "").strip()
         ticker = c["bank_ticker"]
         if not ticker:
+            continue
+        if not has_theme_anchor(text, theme):
             continue
         if not regex_match_fn(text):
             continue
@@ -61,7 +66,7 @@ def _surface(theme: str, regex_match_fn, headline: str) -> list[Anomaly]:
                 category=CATEGORY,
                 bank_ticker=ticker,
                 severity=severity(
-                    min(c["confidence"] * 4, 3.0),
+                    nlp_magnitude(c["confidence"], theme, cap=3.2),
                     category=CATEGORY,
                     theme=theme,
                 ),

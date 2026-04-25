@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import re
 
+from ..anchors import anchor_near
 from ..engine import Anomaly, Citation
 from ..queries import (
     all_banks,
@@ -19,7 +20,7 @@ from ..queries import (
     topic_tagged_chunks,
     topic_tagged_chunks_grouped_by_bank,
 )
-from ..severity import severity
+from ..severity import nlp_magnitude, severity
 
 CATEGORY = "credit_quality"
 
@@ -31,12 +32,22 @@ PC_DISTRESS = re.compile(
     re.IGNORECASE,
 )
 
-# Generic credit-quality language for AI / DA narrative.
+# Tighter credit-distress vocabulary for AI / DA narrative. The looser regex
+# kept matching "Federal Reserve", "AML reserves", "reserve composition" etc.
 GENERIC_DISTRESS = re.compile(
-    r"\b(non[\s-]?accrual|charge[\s-]?off|impair|reserve|provision|"
-    r"deteriorat|watch[\s-]?list|covenant)",
+    r"\b("
+    r"non[\s-]?accrual|charge[\s-]?off(?:s)?|"
+    r"loan[\s-]?loss|allowance for (?:credit|loan) loss(?:es)?|"
+    r"provision for (?:credit|loan) loss(?:es)?|"
+    r"impair(?:ment|ed)?|writedown|write[\s-]down|"
+    r"deteriorat\w+|watchlist|special mention|substandard|criticized|classified loan|"
+    r"non[\s-]?performing|past due|delinquen\w+|"
+    r"covenant (?:breach|default|violation)|cov(?:enant)?[\s-]?lite default"
+    r")\b",
     re.IGNORECASE,
 )
+
+MIN_NLP_CONFIDENCE = 0.10
 
 
 def _ratio(num, den):
@@ -127,7 +138,7 @@ def _detect_pc(quarter: str) -> list[Anomaly]:
 
 
 def _detect_nlp(theme: str) -> list[Anomaly]:
-    """Per-bank scan: pick the best credit-quality chunk for each bank."""
+    """Per-bank scan: pick the highest-confidence credit-quality chunk per bank."""
     grouped = topic_tagged_chunks_grouped_by_bank(theme, per_bank=40)
     out: list[Anomaly] = []
     headline = {
@@ -135,31 +146,36 @@ def _detect_nlp(theme: str) -> list[Anomaly]:
         "digital_assets": "Digital-asset credit-quality language",
     }.get(theme, "Credit-quality language")
     for ticker, chunks in grouped.items():
+        scored: list[tuple[dict, str]] = []
         for c in chunks:
-            text = (c["text"] or "").strip()
-            if not GENERIC_DISTRESS.search(text):
+            if c["confidence"] < MIN_NLP_CONFIDENCE:
                 continue
-            excerpt = text[:280] + ("…" if len(text) > 280 else "")
-            out.append(
-                Anomaly(
-                    theme=theme,
-                    category=CATEGORY,
-                    bank_ticker=ticker,
-                    severity=severity(min(c["confidence"] * 4, 2.5), category=CATEGORY, theme=theme),
-                    headline=headline,
-                    detail=excerpt,
-                    citations=[
-                        Citation(
-                            kind="chunk",
-                            ref_id=c["chunk_id"],
-                            label=c.get("section_header") or c.get("doc_type"),
-                            bank_ticker=ticker,
-                            document_id=c.get("document_id"),
-                        )
-                    ],
-                )
+            ok, window = anchor_near(c["text"], theme, GENERIC_DISTRESS, max_chars=300)
+            if ok and window:
+                scored.append((c, window))
+        if not scored:
+            continue
+        c, window = max(scored, key=lambda pair: pair[0]["confidence"])
+        excerpt = window[:340] + ("…" if len(window) > 340 else "")
+        out.append(
+            Anomaly(
+                theme=theme,
+                category=CATEGORY,
+                bank_ticker=ticker,
+                severity=severity(nlp_magnitude(c["confidence"], theme, cap=3.2), category=CATEGORY, theme=theme),
+                headline=headline,
+                detail=excerpt,
+                citations=[
+                    Citation(
+                        kind="chunk",
+                        ref_id=c["chunk_id"],
+                        label=c.get("section_header") or c.get("doc_type"),
+                        bank_ticker=ticker,
+                        document_id=c.get("document_id"),
+                    )
+                ],
             )
-            break
+        )
     return out
 
 

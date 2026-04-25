@@ -10,9 +10,12 @@ from __future__ import annotations
 
 import re
 
+from ..anchors import anchor_near
 from ..engine import Anomaly, Citation
-from ..queries import topic_tagged_chunks
-from ..severity import severity
+from ..queries import topic_tagged_chunks_grouped_by_bank
+from ..severity import nlp_magnitude, severity
+
+MIN_NLP_CONFIDENCE = 0.10
 
 CATEGORY = "valuation_marks"
 
@@ -39,30 +42,31 @@ def detect(theme: str, quarter: str | None) -> list[Anomaly]:
     pat = PATTERNS.get(theme)
     if not pat:
         return []
-    chunks = topic_tagged_chunks(theme, min_confidence=0.05, limit=300)
-    out: list[Anomaly] = []
-    seen: set[tuple[str, str]] = set()
     headline = {
         "private_credit": "Level 3 / fair-value language in PC narrative",
         "ai": "AI intangible / impairment language",
         "digital_assets": "Digital-asset fair-value language",
     }[theme]
-    for c in chunks:
-        text = (c["text"] or "").strip()
-        ticker = c["bank_ticker"]
-        if not ticker or not pat.search(text):
+    grouped = topic_tagged_chunks_grouped_by_bank(theme, per_bank=40)
+    out: list[Anomaly] = []
+    for ticker, chunks in grouped.items():
+        scored: list[tuple[dict, str]] = []
+        for c in chunks:
+            if c["confidence"] < MIN_NLP_CONFIDENCE:
+                continue
+            ok, window = anchor_near(c["text"], theme, pat, max_chars=300)
+            if ok and window:
+                scored.append((c, window))
+        if not scored:
             continue
-        key = (ticker, text[:120])
-        if key in seen:
-            continue
-        seen.add(key)
-        excerpt = text[:300] + ("…" if len(text) > 300 else "")
+        c, window = max(scored, key=lambda pair: pair[0]["confidence"])
+        excerpt = window[:340] + ("…" if len(window) > 340 else "")
         out.append(
             Anomaly(
                 theme=theme,
                 category=CATEGORY,
                 bank_ticker=ticker,
-                severity=severity(min(c["confidence"] * 4, 2.5), category=CATEGORY, theme=theme),
+                severity=severity(nlp_magnitude(c["confidence"], theme, cap=3.2), category=CATEGORY, theme=theme),
                 headline=headline,
                 detail=excerpt,
                 citations=[
@@ -76,6 +80,4 @@ def detect(theme: str, quarter: str | None) -> list[Anomaly]:
                 ],
             )
         )
-        if len(out) >= 25:
-            break
     return out

@@ -10,10 +10,18 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime
 
+from ..anchors import has_theme_anchor
 from ..engine import Anomaly, Citation
 from ..item_codes import item_label, item_weight
 from ..queries import filing_events
 from ..severity import severity
+
+# Item codes whose meaning is *intrinsically* material regardless of whether
+# the excerpt mentions the theme directly (impairments, bankruptcy, non-reliance
+# on prior financials). For routine codes (5.02 officer change, 8.01 other,
+# 1.01 material agreement) we still require a theme anchor in the excerpt so a
+# generic officer departure doesn't show up under AI/DA.
+ALWAYS_MATERIAL_CODES = {"1.03", "2.06", "4.02"}
 
 CATEGORY = "events_8k"
 
@@ -59,6 +67,12 @@ def detect(theme: str, quarter: str | None) -> list[Anomaly]:
         if key in seen_excerpts:
             continue
         seen_excerpts.add(key)
+
+        # Filter routine codes that need a theme-anchor in the excerpt itself
+        # to be considered theme-relevant. Material codes (impairment,
+        # bankruptcy, restated financials) are kept regardless.
+        if code not in ALWAYS_MATERIAL_CODES and not has_theme_anchor(excerpt, theme):
+            continue
 
         cluster_size = clusters.get((ticker, y or 0, code), 1)
         weight = item_weight(theme, code)

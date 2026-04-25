@@ -250,7 +250,7 @@ def append_banks_10k_excerpts_phase1(
             continue
         extracted = extract_relevant_context_phase1(text, window=window)
         if extracted:
-            dossier += f"Source: banks/{ticker}/10-K/{d.name}\n{extracted}\n\n"
+            dossier += f"Source: sec-edgar-filings/{ticker}/10-K/{d.name}\n{extracted}\n\n"
     return dossier
 
 
@@ -262,7 +262,7 @@ def append_banks_10k_excerpts_phase2(
     window: int = 1000,
     max_dirs: int = 2,
 ) -> str:
-    dossier += "### SEC FILINGS EXCERPTS (from banks/) ###\n"
+    dossier += "### SEC FILINGS EXCERPTS (from sec-edgar-filings/) ###\n"
     for d in latest_n_10k_dirs(banks_root, ticker, n=max_dirs):
         text = load_filing_text(d)
         if not text:
@@ -270,7 +270,7 @@ def append_banks_10k_excerpts_phase2(
         cleaned = clean_sec_text_phase2(text)
         extracted = extract_relevant_context_phase2(cleaned, window=window)
         if extracted:
-            dossier += f"Source: banks/{ticker}/10-K/{d.name}\n{extracted}\n\n"
+            dossier += f"Source: sec-edgar-filings/{ticker}/10-K/{d.name}\n{extracted}\n\n"
     return dossier
 
 
@@ -406,8 +406,8 @@ def build_dossier_phase1(
     search_roots = [script_dir, repo_root]
 
     if print_steps:
-        print("    -> Scanning banks/ 10-K filings...")
-    dossier += "### SEC FILINGS EXCERPTS (from banks/) ###\n"
+        print("    -> Scanning sec-edgar-filings/ 10-K filings...")
+    dossier += "### SEC FILINGS EXCERPTS (from sec-edgar-filings/) ###\n"
     dossier = append_banks_10k_excerpts_phase1(dossier, ticker, banks_root, window=1000)
 
     if print_steps:
@@ -442,7 +442,7 @@ def build_dossier_phase2(
     dossier = append_transcripts_phase2(dossier, ticker, search_roots)
 
     if print_steps:
-        print("    -> Scanning banks/ 10-K filings...")
+        print("    -> Scanning sec-edgar-filings/ 10-K filings...")
     dossier = append_banks_10k_excerpts_phase2(dossier, ticker, banks_root, window=1000)
 
     if print_steps:
@@ -456,10 +456,10 @@ def build_dossier_phase2(
 def write_presentation_files(df: pd.DataFrame, md_path: Path, json_path: Path) -> None:
     df = df.fillna("None")
 
-    md_content = "# Private Credit Deep-Dive Findings (banks/ pipeline)\n\n"
+    md_content = "# Private Credit Deep-Dive Findings (sec-edgar-filings/ pipeline)\n\n"
     md_content += (
         "Phase 1 (exploratory) and Phase 2 (deep-dive) from keyword windows on dossiers "
-        "sourced from `banks/` 10-Ks and optional transcripts / SEC / call-report CSV.\n\n---\n\n"
+        "sourced from `sec-edgar-filings/` 10-Ks and optional transcripts / SEC / call-report CSV.\n\n---\n\n"
     )
 
     for _, row in df.iterrows():

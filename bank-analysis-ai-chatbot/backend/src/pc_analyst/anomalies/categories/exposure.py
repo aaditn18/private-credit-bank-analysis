@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import re
 
+from ..anchors import anchor_near
 from ..engine import Anomaly, Citation
 from ..queries import (
     all_banks,
@@ -19,7 +20,7 @@ from ..queries import (
     quarters_descending,
     topic_tagged_chunks_grouped_by_bank,
 )
-from ..severity import severity
+from ..severity import nlp_magnitude, severity
 from ..stats import cohort_zscore, median, rolling_zscore
 
 CATEGORY = "exposure"
@@ -27,12 +28,22 @@ CATEGORY = "exposure"
 # PC mnemonics + which ratio each ticker computes against RCON2122 (total loans).
 PC_MNEMONICS = ["RCON1766", "RCONJ457", "RCON1763", "RCON2122"]
 
-# Exposure-mentioning regexes for AI/DA NLP surfacing.
+# Quantified exposure language: dollar amount with magnitude unit, OR
+# percent-of-portfolio framing, OR explicit "exposure to / concentration in".
 EXPOSURE_LANG = re.compile(
-    r"\b(billion|million|exposure|concentration|portfolio|book|outstanding|"
-    r"committed|undrawn|approximately|\$\d)",
+    r"("
+    r"\$\s?\d[\d.,]*\s*(?:million|billion|trillion|bn|mm)\b"
+    r"|\b\d+(?:\.\d+)?\s*%\s*of\s+(?:our|the|total)\s+(?:loans?|portfolio|book|exposure|deposits?|assets?|commitments?)"
+    r"|\b(?:exposure|concentration)\s+(?:to|in|of)\b"
+    r"|\boutstanding\s+(?:loans?|commitments?|balances?)\b"
+    r"|\bundrawn\s+commitments?\b"
+    r")",
     re.IGNORECASE,
 )
+
+# Minimum classifier confidence for an NLP tile. Below this the topic tag is
+# noisy enough that a single stray keyword may have triggered it.
+MIN_NLP_CONFIDENCE = 0.10
 
 
 def _ratio(num, den):
@@ -80,6 +91,12 @@ def _detect_pc(quarter: str) -> list[Anomaly]:
     cohort_values = [series[t].get(quarter) for t in series]
     peer_median = median(cohort_values)
 
+    # Peer median per quarter so the sparkline can show a comparison line.
+    peer_med_by_q: dict[str, float | None] = {}
+    for q in qs:
+        vals = [series[t].get(q) for t in series if series[t].get(q) is not None]
+        peer_med_by_q[q] = median(vals) if vals else None
+
     out: list[Anomaly] = []
     for b in banks:
         t = b["ticker"]
@@ -122,7 +139,11 @@ def _detect_pc(quarter: str) -> list[Anomaly]:
                 detail = f"Latest NBFI {src_label} for {t}."
 
         history = [
-            {"quarter": q, "value": series[t][q]}
+            {
+                "quarter": q,
+                "value": series[t][q],
+                "peer_value": peer_med_by_q.get(q),
+            }
             for q in sorted(qs)
             if series[t].get(q) is not None
         ]
@@ -146,44 +167,50 @@ def _detect_pc(quarter: str) -> list[Anomaly]:
 
 
 def _detect_nlp(theme: str) -> list[Anomaly]:
-    """Per-bank scan: pick the best exposure-language chunk for each bank."""
-    grouped = topic_tagged_chunks_grouped_by_bank(theme, per_bank=40)
+    """Per-bank scan: pick the highest-confidence chunk that contains both a
+    theme-anchor word and quantified exposure language."""
+    grouped = topic_tagged_chunks_grouped_by_bank(theme, per_bank=60)
     out: list[Anomaly] = []
     for ticker, chunks in grouped.items():
+        scored: list[tuple[dict, str]] = []
         for c in chunks:
-            text = (c["text"] or "").strip()
-            if not EXPOSURE_LANG.search(text):
+            if c["confidence"] < MIN_NLP_CONFIDENCE:
                 continue
-            excerpt = text[:280] + ("…" if len(text) > 280 else "")
-            sev = severity(
-                min(c["confidence"] * 5, 3.0),
-                category=CATEGORY,
+            ok, window = anchor_near(c["text"], theme, EXPOSURE_LANG, max_chars=300)
+            if ok and window:
+                scored.append((c, window))
+        if not scored:
+            continue
+        c, window = max(scored, key=lambda pair: pair[0]["confidence"])
+        excerpt = window[:340] + ("…" if len(window) > 340 else "")
+        sev = severity(
+            nlp_magnitude(c["confidence"], theme),
+            category=CATEGORY,
+            theme=theme,
+        )
+        out.append(
+            Anomaly(
                 theme=theme,
+                category=CATEGORY,
+                bank_ticker=ticker,
+                severity=sev,
+                headline=_nlp_headline(theme),
+                detail=excerpt,
+                metric_value=None,
+                peer_median=None,
+                z_score=None,
+                quarter=None,
+                citations=[
+                    Citation(
+                        kind="chunk",
+                        ref_id=c["chunk_id"],
+                        label=c.get("section_header") or c.get("doc_type"),
+                        bank_ticker=ticker,
+                        document_id=c.get("document_id"),
+                    )
+                ],
             )
-            out.append(
-                Anomaly(
-                    theme=theme,
-                    category=CATEGORY,
-                    bank_ticker=ticker,
-                    severity=sev,
-                    headline=_nlp_headline(theme),
-                    detail=excerpt,
-                    metric_value=None,
-                    peer_median=None,
-                    z_score=None,
-                    quarter=None,
-                    citations=[
-                        Citation(
-                            kind="chunk",
-                            ref_id=c["chunk_id"],
-                            label=c.get("section_header") or c.get("doc_type"),
-                            bank_ticker=ticker,
-                            document_id=c.get("document_id"),
-                        )
-                    ],
-                )
-            )
-            break
+        )
     return out
 
 

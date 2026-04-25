@@ -69,43 +69,95 @@ function MetricChip({ a }: { a: Anomaly }) {
 
 function HistorySparkline({ a }: { a: Anomaly }) {
   if (!a.history || a.history.length < 2) return null;
+  const hasPeer = a.history.some(
+    (p) => p.peer_value !== null && p.peer_value !== undefined,
+  );
   const data = a.history.map((p) => ({
     quarter: p.quarter,
     value: Number((p.value * 100).toFixed(3)),
+    peer:
+      p.peer_value === null || p.peer_value === undefined
+        ? null
+        : Number((p.peer_value * 100).toFixed(3)),
   }));
+  const allValues = data
+    .flatMap((d) => [d.value, d.peer])
+    .filter((v): v is number => typeof v === 'number');
+  const minY = Math.min(...allValues);
+  const maxY = Math.max(...allValues);
+  const padding = (maxY - minY) * 0.1 || maxY * 0.1 || 1;
+
   return (
-    <div className="mt-3 h-20 -mx-1">
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 4, right: 8, left: 4, bottom: 0 }}>
-          <XAxis
-            dataKey="quarter"
-            tick={{ fontSize: 9, fill: '#737373' }}
-            axisLine={false}
-            tickLine={false}
-            interval={Math.max(0, Math.ceil(data.length / 4) - 1)}
-          />
-          <YAxis hide domain={['dataMin', 'dataMax']} />
-          <Tooltip
-            cursor={{ stroke: '#a3a3a3', strokeWidth: 1 }}
-            contentStyle={{
-              fontSize: 11,
-              padding: '4px 6px',
-              borderRadius: 4,
-              border: '1px solid #e5e5e5',
-            }}
-            formatter={(v: number) => [`${v.toFixed(2)}%`, 'NBFI']}
-          />
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#6366f1"
-            strokeWidth={1.6}
-            dot={{ r: 2, fill: '#6366f1' }}
-            activeDot={{ r: 3 }}
-            isAnimationActive={false}
-          />
-        </LineChart>
-      </ResponsiveContainer>
+    <div className="mt-3">
+      <div className="h-24 -mx-1">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data} margin={{ top: 4, right: 8, left: 4, bottom: 0 }}>
+            <XAxis
+              dataKey="quarter"
+              tick={{ fontSize: 9, fill: '#737373' }}
+              axisLine={false}
+              tickLine={false}
+              interval={Math.max(0, Math.ceil(data.length / 4) - 1)}
+            />
+            <YAxis
+              hide
+              domain={[Math.max(0, minY - padding), maxY + padding]}
+            />
+            <Tooltip
+              cursor={{ stroke: '#a3a3a3', strokeWidth: 1 }}
+              contentStyle={{
+                fontSize: 11,
+                padding: '4px 6px',
+                borderRadius: 4,
+                border: '1px solid #e5e5e5',
+              }}
+              formatter={(v: number, name: string) => [
+                `${v.toFixed(2)}%`,
+                name === 'value' ? a.bank_ticker : 'Peer median',
+              ]}
+            />
+            {hasPeer && (
+              <Line
+                type="monotone"
+                dataKey="peer"
+                stroke="#a3a3a3"
+                strokeWidth={1.6}
+                strokeDasharray="4 3"
+                dot={false}
+                activeDot={{ r: 3 }}
+                isAnimationActive={false}
+                connectNulls
+              />
+            )}
+            <Line
+              type="monotone"
+              dataKey="value"
+              stroke="#6366f1"
+              strokeWidth={1.8}
+              dot={{ r: 2, fill: '#6366f1' }}
+              activeDot={{ r: 3 }}
+              isAnimationActive={false}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+      {hasPeer && (
+        <div className="flex items-center gap-4 mt-1 px-1 text-[10px] text-neutral-500">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block w-4 h-0.5 bg-indigo-500" />
+            {a.bank_ticker}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span
+              className="inline-block w-4 h-0"
+              style={{
+                borderTop: '2px dashed #a3a3a3',
+              }}
+            />
+            Peer median
+          </span>
+        </div>
+      )}
     </div>
   );
 }

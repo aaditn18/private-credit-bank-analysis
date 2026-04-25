@@ -52,6 +52,8 @@ const ALL_SEVERITIES: AnomalySeverity[] = ['high', 'medium', 'low'];
 
 const ALL_SENTIMENTS: AnomalySentiment[] = ['negative', 'positive', 'inconclusive'];
 
+const DEFAULT_CATEGORIES: AnomalyCategoryKey[] = ['exposure', 'credit_quality'];
+
 export default function AnomaliesPage() {
   const params = useParams<{ theme: string }>();
   const router = useRouter();
@@ -66,7 +68,7 @@ export default function AnomaliesPage() {
     () => new Set(ALL_SEVERITIES),
   );
   const [catFilter, setCatFilter] = useState<Set<AnomalyCategoryKey>>(
-    () => new Set(CATEGORY_ORDER),
+    () => new Set(DEFAULT_CATEGORIES),
   );
   const [sentFilter, setSentFilter] = useState<Set<AnomalySentiment>>(
     () => new Set(ALL_SENTIMENTS),
