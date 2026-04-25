@@ -3,19 +3,169 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
+  --bg-app: #0a0a0a;
+  --bg-elev-1: #111114;
+  --bg-elev-2: #17171b;
+  --bg-elev-3: #1f1f24;
+  --border-soft: #1f1f24;
+  --border-strong: #2a2a30;
+  --text-primary: #f5f5f5;
+  --text-secondary: #c4c4c8;
+  --text-muted: #8a8a92;
+  --text-faint: #5a5a62;
+  --accent: #8b8cf7;
+  --accent-strong: #a5a6ff;
+
+  /* shadcn tokens (consumed by components/ui/*.tsx and tailwind.config.js) */
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --card: #17171b;
+  --card-foreground: #f5f5f5;
+  --popover: #17171b;
+  --popover-foreground: #f5f5f5;
+  --primary: #8b8cf7;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1f1f24;
+  --secondary-foreground: #f5f5f5;
+  --muted: #17171b;
+  --muted-foreground: #8a8a92;
+  --destructive: #f43f5e;
+  --destructive-foreground: #fff;
+  --border: #1f1f24;
+  --input: #1f1f24;
+  --ring: #8b8cf7;
+}
+
+html, body {
+  background: var(--bg-app);
+  color: var(--text-primary);
 }
 
 body {
-  @apply bg-neutral-50 text-neutral-900 antialiased;
+  @apply antialiased;
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.06) 0%, transparent 35%),
+    radial-gradient(circle at 100% 0%, rgba(168, 85, 247, 0.04) 0%, transparent 40%);
+  background-attachment: fixed;
 }
 
+/* ---- Global remap: legacy light-mode utility classes → dark surfaces ---- */
+@layer utilities {
+  .bg-white { background-color: var(--bg-elev-2) !important; }
+  .bg-neutral-50 { background-color: var(--bg-elev-1) !important; }
+  .bg-neutral-100 { background-color: var(--bg-elev-2) !important; }
+  .bg-neutral-200 { background-color: var(--bg-elev-3) !important; }
+  .bg-neutral-300 { background-color: var(--border-strong) !important; }
+  .bg-neutral-700 { background-color: #2f2f35 !important; }
+  .bg-neutral-900 { background-color: #050507 !important; }
+
+  .hover\:bg-white:hover { background-color: var(--bg-elev-3) !important; }
+  .hover\:bg-neutral-50:hover { background-color: var(--bg-elev-2) !important; }
+  .hover\:bg-neutral-100:hover { background-color: var(--bg-elev-3) !important; }
+
+  .text-neutral-900 { color: var(--text-primary) !important; }
+  .text-neutral-800 { color: var(--text-primary) !important; }
+  .text-neutral-700 { color: var(--text-secondary) !important; }
+  .text-neutral-600 { color: var(--text-secondary) !important; }
+  .text-neutral-500 { color: var(--text-muted) !important; }
+  .text-neutral-400 { color: var(--text-muted) !important; }
+  .text-neutral-300 { color: var(--text-faint) !important; }
+
+  .hover\:text-neutral-900:hover { color: var(--text-primary) !important; }
+  .hover\:text-neutral-700:hover { color: var(--text-primary) !important; }
+
+  .border-neutral-50 { border-color: var(--border-soft) !important; }
+  .border-neutral-100 { border-color: var(--border-soft) !important; }
+  .border-neutral-200 { border-color: var(--border-soft) !important; }
+  .border-neutral-300 { border-color: var(--border-strong) !important; }
+  .border-neutral-400 { border-color: var(--border-strong) !important; }
+  .border-neutral-700 { border-color: #3a3a42 !important; }
+
+  .divide-neutral-100 > :not([hidden]) ~ :not([hidden]),
+  .divide-neutral-200 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--border-soft) !important;
+  }
+
+  /* Indigo accents — bump to a slightly cooler shade that pops on black */
+  .text-indigo-600 { color: var(--accent-strong) !important; }
+  .text-indigo-700 { color: var(--accent-strong) !important; }
+  .border-indigo-300 { border-color: rgba(139, 140, 247, 0.45) !important; }
+  .bg-indigo-100 { background-color: rgba(139, 140, 247, 0.12) !important; }
+  .hover\:bg-indigo-50:hover { background-color: rgba(139, 140, 247, 0.10) !important; }
+  .hover\:bg-indigo-200:hover { background-color: rgba(139, 140, 247, 0.20) !important; }
+  .text-indigo-100 { color: rgba(199, 200, 255, 0.95) !important; }
+
+  /* Severity / status surfaces stay readable */
+  .bg-rose-100 { background-color: rgba(244, 63, 94, 0.16) !important; }
+  .bg-amber-100 { background-color: rgba(245, 158, 11, 0.16) !important; }
+  .bg-emerald-100 { background-color: rgba(16, 185, 129, 0.16) !important; }
+  .text-rose-700, .text-rose-800 { color: #fda4af !important; }
+  .text-amber-700, .text-amber-800 { color: #fcd34d !important; }
+  .text-emerald-700, .text-emerald-800 { color: #6ee7b7 !important; }
+  .border-rose-200 { border-color: rgba(244, 63, 94, 0.35) !important; }
+  .border-amber-200 { border-color: rgba(245, 158, 11, 0.35) !important; }
+  .border-emerald-200 { border-color: rgba(16, 185, 129, 0.35) !important; }
+
+  /* Inputs and form surfaces */
+  input, textarea, select {
+    background-color: var(--bg-elev-2);
+    color: var(--text-primary);
+    border-color: var(--border-strong);
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--text-faint);
+  }
+}
+
+/* ---- Component-level polish ---- */
 .cite-marker {
   @apply inline-flex items-center justify-center min-w-[1.25rem] h-[1.25rem] px-1
-    text-[10px] font-semibold rounded bg-indigo-600 text-white mx-[2px]
-    cursor-pointer hover:bg-indigo-700;
+    text-[10px] font-semibold rounded text-white mx-[2px]
+    cursor-pointer transition-colors;
+  background-color: rgba(99, 102, 241, 0.85);
+}
+.cite-marker:hover {
+  background-color: rgb(129, 132, 255);
 }
 
 mark.span-highlight {
-  @apply bg-yellow-200 px-0.5 rounded;
+  @apply px-0.5 rounded;
+  background-color: rgba(250, 204, 21, 0.25);
+  color: #fef08a;
+}
+
+/* Subtle scrollbar in dark mode */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+  border: 2px solid var(--bg-app);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a42;
+}
+
+/* Recharts: lift tick + grid contrast on dark bg */
+.recharts-cartesian-axis-tick text {
+  fill: var(--text-muted) !important;
+}
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-soft) !important;
+}
+.recharts-default-tooltip {
+  background-color: var(--bg-elev-3) !important;
+  border-color: var(--border-strong) !important;
+  color: var(--text-primary) !important;
+}
+.recharts-tooltip-label,
+.recharts-tooltip-item {
+  color: var(--text-primary) !important;
 }

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { RankingsPanel } from '@/components/RankingsPanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
-import { ChatBot } from '@/components/ChatBot';
+// ChatBot is now mounted globally on PC routes via ChatBotMount in layout.tsx
 
 type Theme = 'private_credit' | 'digital_assets' | 'ai_usage';
 
@@ -25,34 +25,37 @@ const THEME_META: Record<Theme, { label: string; blurb: string }> = {
 export default function HomePage() {
   const [theme, setTheme] = useState<Theme>('private_credit');
 
-  const themeBtn = (t: Theme) => (
-    <button
-      key={t}
-      onClick={() => setTheme(t)}
-      className={`flex-1 text-left px-5 py-3 border-b-2 transition-colors ${
-        theme === t
-          ? 'border-indigo-600 bg-white'
-          : 'border-transparent bg-neutral-50 hover:bg-white'
-      }`}
-    >
-      <div
-        className={`text-sm font-semibold ${
-          theme === t ? 'text-indigo-600' : 'text-neutral-700'
+  const themeBtn = (t: Theme) => {
+    const active = theme === t;
+    return (
+      <button
+        key={t}
+        onClick={() => setTheme(t)}
+        className={`flex-1 text-left px-5 py-4 border-b-2 transition-all ${
+          active
+            ? 'border-indigo-400 bg-white/[0.04]'
+            : 'border-transparent hover:bg-white/[0.025]'
         }`}
       >
-        {THEME_META[t].label}
-      </div>
-      <div className="text-[11px] text-neutral-400 mt-0.5 leading-tight">
-        {THEME_META[t].blurb}
-      </div>
-    </button>
-  );
+        <div
+          className={`text-sm font-semibold tracking-tight ${
+            active ? 'text-indigo-300' : 'text-neutral-300'
+          }`}
+        >
+          {THEME_META[t].label}
+        </div>
+        <div className="text-[11px] text-neutral-500 mt-1 leading-snug">
+          {THEME_META[t].blurb}
+        </div>
+      </button>
+    );
+  };
 
   return (
     <>
       <div className="space-y-6">
-        <div className="rounded-xl border border-neutral-200 overflow-hidden bg-neutral-50">
-          <div className="flex">
+        <div className="rounded-xl border border-white/5 overflow-hidden bg-white/[0.02] shadow-2xl shadow-black/40">
+          <div className="flex divide-x divide-white/5">
             {(Object.keys(THEME_META) as Theme[]).map(themeBtn)}
           </div>
         </div>
@@ -85,8 +88,6 @@ export default function HomePage() {
           />
         )}
       </div>
-
-      <ChatBot />
     </>
   );
 }

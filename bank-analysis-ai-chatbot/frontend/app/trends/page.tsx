@@ -129,11 +129,15 @@ function Skeleton() {
 }
 
 // ── Insight box ───────────────────────────────────────────────────────────────
+// Matches the AnomalyCard citation chip aesthetic: translucent indigo bg
+// (remapped from bg-indigo-100 in globals.css) + hairline indigo-300 border
+// + accent-strong text (text-indigo-700). The -50/-800 Tailwind defaults
+// are not remapped and render as bright pastel blocks on the dark surface.
 
 function Insight({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mt-3 px-4 py-3 bg-indigo-50/60 border border-indigo-100 rounded-lg">
-      <p className="text-xs text-indigo-800 leading-relaxed">{children}</p>
+    <div className="mt-3 px-4 py-3 bg-indigo-100 border border-indigo-300 rounded-lg">
+      <p className="text-xs text-indigo-700 leading-relaxed">{children}</p>
     </div>
   );
 }
@@ -260,9 +264,9 @@ export default function TrendsPage() {
 
   if (error || !data) {
     return (
-      <div className="rounded-xl border border-red-200 bg-red-50 px-6 py-8 text-center">
-        <h2 className="text-lg font-semibold text-red-800 mb-1">Error loading trends</h2>
-        <p className="text-sm text-red-600">{error ?? 'Unknown error'}</p>
+      <div className="rounded-xl border border-rose-200 bg-rose-100 px-6 py-8 text-center">
+        <h2 className="text-lg font-semibold text-rose-700 mb-1">Error loading trends</h2>
+        <p className="text-sm text-rose-700">{error ?? 'Unknown error'}</p>
       </div>
     );
   }

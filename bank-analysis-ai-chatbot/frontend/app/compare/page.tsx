@@ -664,9 +664,21 @@ export default function ComparePage() {
               <div className="lg:col-span-2">
                 <ResponsiveContainer width="100%" height={360}>
                   <RadarChart data={radarData}>
-                    <PolarGrid stroke="#e5e7eb" />
-                    <PolarAngleAxis dataKey="metric" tick={{ fontSize: 11, fill: '#6b7280' }} />
-                    <PolarRadiusAxis angle={30} domain={[0, 1]} tick={{ fontSize: 10, fill: '#9ca3af' }} />
+                    <PolarGrid stroke="#2a2a30" />
+                    <PolarAngleAxis dataKey="metric" tick={{ fontSize: 11, fill: '#8a8a92' }} />
+                    {/*
+                      PolarRadiusAxis draws a radial line + numeric ticks at a fixed
+                      angle. Concentric grid polygons already imply the 0→1 scale,
+                      and the diagonal line was clipping its "1" label into a
+                      garbled squiggle. Keep the domain enforced via the grid; hide
+                      the visible radial axis.
+                    */}
+                    <PolarRadiusAxis
+                      angle={30}
+                      domain={[0, 1]}
+                      axisLine={false}
+                      tick={false}
+                    />
                     {selected.map((t, i) => (
                       <Radar
                         key={t}

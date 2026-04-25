@@ -17,6 +17,7 @@ interface BankRow {
   peer_group: string;
   raw: Record<string, number | null>;
   norm: Record<string, number>;
+  sources?: Record<string, string>;
 }
 
 interface RankingsData {
@@ -27,13 +28,21 @@ interface RankingsData {
 
 // ── default weights (must sum to 100) ─────────────────────────────────────────
 
+// Tuned for "private credit relevance":
+//   nbfi_loan_ratio       — most direct signal of actual private-credit lending activity
+//   nbfi_commitment_ratio — forward-looking + the fallback metric for confidential filers
+//   nbfi_growth           — direction matters; ramping > running off
+//   ci_ratio              — relevance prior; banks with no C&I aren't doing private credit
+//   pe_exposure           — weak proxy for sponsor relationships
+//   loan_scale            — capacity matters but doesn't define relevance; tiebreaker only
+// Must sum to 100.
 const DEFAULT_WEIGHTS: Record<string, number> = {
-  ci_ratio: 20,
-  loan_scale: 10,
-  nbfi_loan_ratio: 30,
-  nbfi_commitment_ratio: 20,
+  nbfi_loan_ratio: 35,
+  nbfi_commitment_ratio: 25,
+  nbfi_growth: 15,
+  ci_ratio: 10,
   pe_exposure: 10,
-  nbfi_growth: 10,
+  loan_scale: 5,
 };
 
 // ── formatters ────────────────────────────────────────────────────────────────
@@ -59,7 +68,14 @@ function scoreColor(s: number): string {
 function peerBadge(pg: string): string {
   if (pg === 'GSIB') return 'bg-purple-100 text-purple-700';
   if (pg === 'trust-ib') return 'bg-blue-100 text-blue-700';
+  if (pg === 'regional') return 'bg-emerald-100 text-emerald-700';
   return 'bg-neutral-100 text-neutral-600';
+}
+
+function peerLabel(pg: string): string {
+  if (pg === 'trust-ib') return 'IB';
+  if (pg === 'regional') return 'REG';
+  return pg;
 }
 
 // ── subcomponents ─────────────────────────────────────────────────────────────
@@ -230,7 +246,7 @@ export function RankingsPanel() {
                 : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50'
             }`}
           >
-            {pg === 'all' ? 'All banks' : pg === 'trust-ib' ? 'Trust / IB' : pg}
+            {pg === 'all' ? 'All banks' : pg === 'trust-ib' ? 'Trust / IB' : pg === 'regional' ? 'Regional' : pg}
           </button>
         ))}
       </div>
@@ -254,21 +270,32 @@ export function RankingsPanel() {
             {ranked.map((bank, i) => (
               <tr
                 key={bank.ticker}
-                className={`border-b border-neutral-50 hover:bg-neutral-50 transition-colors ${
-                  i < 3 ? 'bg-indigo-50/30' : ''
-                }`}
+                onClick={() => { window.location.href = `/timeline/${bank.ticker}`; }}
+                className="border-b border-neutral-50 hover:bg-neutral-50 transition-colors cursor-pointer"
+                title={`Open ${bank.ticker} timeline`}
               >
                 <td className="px-6 py-2.5 text-xs text-neutral-400 font-mono">{i + 1}</td>
                 <td className="px-2 py-2.5">
                   <div className="flex items-center gap-2">
-                    <span className="font-semibold text-neutral-800 text-sm">{bank.ticker}</span>
+                    <a
+                      href={`/timeline/${bank.ticker}`}
+                      className="font-semibold text-neutral-800 text-sm hover:text-indigo-600 transition-colors"
+                      title={`Open ${bank.ticker} timeline`}
+                    >
+                      {bank.ticker}
+                    </a>
                     <span
                       className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${peerBadge(bank.peer_group)}`}
                     >
-                      {bank.peer_group === 'trust-ib' ? 'IB' : bank.peer_group}
+                      {peerLabel(bank.peer_group)}
                     </span>
                   </div>
-                  <div className="text-[11px] text-neutral-400 truncate max-w-[160px]">{bank.name}</div>
+                  <a
+                    href={`/timeline/${bank.ticker}`}
+                    className="block text-[11px] text-neutral-400 truncate max-w-[160px] hover:text-indigo-600 transition-colors"
+                  >
+                    {bank.name}
+                  </a>
                 </td>
                 <td className="px-3 py-2.5">
                   <div className="flex items-center gap-2">
@@ -287,21 +314,36 @@ export function RankingsPanel() {
                   const raw = bank.raw[m.key];
                   const norm = bank.norm[m.key];
                   const missing = raw === null || raw === undefined;
+                  const source = bank.sources?.[m.key];
+                  const isProxy = source === 'commitment_proxy';
                   return (
                     <td key={m.key} className="px-3 py-2.5 text-xs tabular-nums">
                       {missing ? (
-                        <span className="text-neutral-300">—</span>
+                        <span
+                          className="text-neutral-300"
+                          title="Not reported by this bank for this quarter (FFIEC confidentiality threshold)"
+                        >
+                          n/r
+                        </span>
                       ) : (
                         <span
-                          className={
+                          className={`inline-flex items-baseline gap-0.5 ${
                             norm > 0.66
                               ? 'text-emerald-600 font-medium'
                               : norm > 0.33
                               ? 'text-neutral-600'
                               : 'text-rose-500'
-                          }
+                          }`}
                         >
                           {fmtRaw(m.key, raw)}
+                          {isProxy && (
+                            <sup
+                              className="text-[9px] text-amber-500 font-semibold ml-0.5"
+                              title="Proxy: RCON1766 is confidential at this bank's scale, so the RCONJ457 (NBFI commitments) ratio is shown instead — same fallback used by the anomaly engine."
+                            >
+                              (c)
+                            </sup>
+                          )}
                         </span>
                       )}
                     </td>
@@ -314,8 +356,10 @@ export function RankingsPanel() {
       </div>
 
       <p className="px-6 py-3 text-[11px] text-neutral-400 border-t border-neutral-100">
-        — = metric not reported (FFIEC "CONF"). Score = weighted average of 0–1 normalized metrics.
-        NBFI Loan Ratio and PE Exposure are reported by ~28% of banks; others score 0 on those dimensions.
+        <span className="font-medium">n/r</span> = not reported (FFIEC confidentiality threshold). &nbsp;
+        <span className="text-amber-500 font-semibold">(c)</span> = commitment-line proxy: RCON1766 (NBFI loans held) is confidential
+        for ~66% of banks, so RCONJ457 (NBFI commitments) is substituted — same fallback used by the
+        anomaly engine. &nbsp; Score = weighted average of 0–1 normalized metrics.
       </p>
     </section>
   );

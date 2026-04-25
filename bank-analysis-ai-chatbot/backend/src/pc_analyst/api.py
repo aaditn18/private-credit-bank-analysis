@@ -183,7 +183,7 @@ def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
         {
             "key": "nbfi_loan_ratio",
             "label": "NBFI Loan Ratio",
-            "description": "C&I loans to non-bank financial institutions as % of total loans (FFIEC RCON1766). Direct measure of how much the bank lends to private credit funds and NBFIs.",
+            "description": "C&I loans to non-bank financial institutions as % of total loans (FFIEC RCON1766). For banks that don't break out RCON1766 (most large banks), the commitment line RCONJ457 is shown as a proxy with a '(c)' badge — same fallback used by the anomaly engine.",
             "higher_is_better": True,
             "mnemonic_num": "RCON1766",
             "mnemonic_den": "RCON2122",
@@ -207,7 +207,7 @@ def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
         {
             "key": "nbfi_growth",
             "label": "NBFI Loan Growth (QoQ)",
-            "description": "Quarter-over-quarter change in the NBFI loan ratio. Positive = bank is growing its private credit lending book.",
+            "description": "Quarter-over-quarter change in the NBFI loan ratio. Positive = bank is growing its private credit lending book. For banks where RCON1766 is confidential, growth is computed from the RCONJ457 commitment ratio with a '(c)' badge.",
             "higher_is_better": True,
             "mnemonic_num": "RCON1766",
             "mnemonic_den": "RCON2122",
@@ -269,14 +269,33 @@ def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
         return num / den
 
     bank_raw: dict[str, dict[str, float | None]] = {}
+    bank_sources: dict[str, dict[str, str]] = {}
     for t, d in bank_data.items():
         total = d.get("RCON2122")
         prev_total = prev_data.get(t, {}).get("RCON2122")
+
+        # NBFI ratio: prefer the direct held-loans line (RCON1766). When that's
+        # confidential (true for ~66% of banks), fall back to the commitment
+        # line RCONJ457 — the same proxy the anomaly engine uses. We tag the
+        # source so the UI can show a "(c)" badge for proxy values.
         nbfi_cur = ratio(d.get("RCON1766"), total)
-        nbfi_prev = ratio(prev_data.get(t, {}).get("RCON1766"), prev_total)
-        growth = None
-        if nbfi_cur is not None and nbfi_prev is not None and nbfi_prev > 0:
-            growth = (nbfi_cur - nbfi_prev) / nbfi_prev
+        nbfi_src = "loan"
+        if nbfi_cur is None:
+            nbfi_cur = ratio(d.get("RCONJ457"), total)
+            nbfi_src = "commitment_proxy" if nbfi_cur is not None else "missing"
+
+        nbfi_prev_loan = ratio(prev_data.get(t, {}).get("RCON1766"), prev_total)
+        nbfi_prev_commit = ratio(prev_data.get(t, {}).get("RCONJ457"), prev_total)
+        # Growth must be derived from the same source in both quarters to be meaningful.
+        if nbfi_src == "loan" and nbfi_prev_loan is not None and nbfi_prev_loan > 0:
+            growth = (nbfi_cur - nbfi_prev_loan) / nbfi_prev_loan
+            growth_src = "loan"
+        elif nbfi_src == "commitment_proxy" and nbfi_prev_commit is not None and nbfi_prev_commit > 0:
+            growth = (nbfi_cur - nbfi_prev_commit) / nbfi_prev_commit
+            growth_src = "commitment_proxy"
+        else:
+            growth = None
+            growth_src = "missing"
 
         bank_raw[t] = {
             "ci_ratio": ratio(d.get("RCON1763"), total),
@@ -285,6 +304,10 @@ def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
             "nbfi_commitment_ratio": ratio(d.get("RCONJ457"), total),
             "pe_exposure": ratio(d.get("RCOA8274"), total),
             "nbfi_growth": growth,
+        }
+        bank_sources[t] = {
+            "nbfi_loan_ratio": nbfi_src,
+            "nbfi_growth": growth_src,
         }
 
     # Min-max normalize each metric across banks that have values
@@ -312,7 +335,12 @@ def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
     for t, meta in bank_meta.items():
         raw = bank_raw.get(t, {})
         norm = {k: normalize(k, raw.get(k)) for k in metric_keys}
-        banks_out.append({**meta, "raw": raw, "norm": norm})
+        banks_out.append({
+            **meta,
+            "raw": raw,
+            "norm": norm,
+            "sources": bank_sources.get(t, {}),
+        })
 
     return {
         "quarter": quarter,

@@ -63,11 +63,19 @@ supported.
 
 ```bash
 git clone <repo-url> BUFN403
-cd BUFN403
-cp bank-analysis-ai-chatbot/.env.example .env       # at REPO ROOT, not backend/
+cd BUFN403/bank-analysis-ai-chatbot
+cp .env.example .env                                # inside bank-analysis-ai-chatbot/
 ```
 
-Edit `.env` (lives at the **repo root**, one level above `bank-analysis-ai-chatbot/`):
+> **Heads up — there are two possible `.env` files in this repo, for two different things.**
+> The chatbot backend (this project) reads **`bank-analysis-ai-chatbot/.env`** (loaded by `pc_analyst.config`,
+> which sets `REPO_ROOT = backend/..` = the chatbot project root). The outer `BUFN403/.env` only exists
+> if you are running the legacy `Keyword_match_method/` or `Semantic_similarity_method/` pipelines, which
+> pick up `GEMINI_API_KEY` from there. **Anything you see referenced below — `ANTHROPIC_API_KEY`,
+> `GEMINI_API_KEY`, `FFIEC_*`, `ALPHAVANTAGE_API_KEY` — goes in `bank-analysis-ai-chatbot/.env`,
+> NOT the outer `BUFN403/.env`.**
+
+Edit `bank-analysis-ai-chatbot/.env`:
 
 ```bash
 # Required for LLM-backed answers (chat + synthesis). Omit to fall back to the
@@ -96,6 +104,11 @@ SEC_USER_AGENT="Your Name your.email@example.com"
 Default settings (no need to set unless overriding):
 `STORAGE_BACKEND=sqlite`, `EMBEDDING_MODEL=local`, `LLM_PROVIDER=none`,
 `SQLITE_PATH=bank-analysis-ai-chatbot/backend/pc_analyst.db`.
+
+The backend resolves the env file at startup via `pc_analyst.config.Settings`
+(`backend/src/pc_analyst/config.py`), which points pydantic-settings at
+`<chatbot-project-root>/.env`. If you put your keys in `BUFN403/.env` instead,
+the chatbot will silently see no keys and fall back to the extractive synthesizer.
 
 **TL;DR for keys:** only `GEMINI_API_KEY` (or `ANTHROPIC_API_KEY`) is needed for the
 chatbot to generate answers. Everything else is optional and degrades gracefully —

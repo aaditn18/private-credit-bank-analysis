@@ -19,10 +19,13 @@ const SEV_COLOR: Record<AnomalySeverity, string> = {
   low: '#94a3b8',
 };
 
+// Use the -100 family so dark-mode remaps in globals.css kick in
+// (rgba translucent over the dark surface). -50 is not remapped and
+// renders as harsh light pastel blocks against the black background.
 const SEV_BG: Record<AnomalySeverity, string> = {
-  high: 'bg-rose-50 border-rose-200 text-rose-700',
-  medium: 'bg-amber-50 border-amber-200 text-amber-700',
-  low: 'bg-neutral-50 border-neutral-200 text-neutral-600',
+  high: 'bg-rose-100 border-rose-200 text-rose-700',
+  medium: 'bg-amber-100 border-amber-200 text-amber-700',
+  low: 'bg-white/[0.04] border-white/10 text-neutral-400',
 };
 
 interface Props {

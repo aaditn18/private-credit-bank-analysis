@@ -162,12 +162,17 @@ materials in the provided tool results. Every factual claim MUST end with a
 citation marker like [1]. Never invent a citation. If the retrieved materials
 are insufficient, say so plainly.
 
-Structure:
-- Brief answer (2-4 sentences) with inline [n] citations.
+Structure (scale with the question — single-bank questions stay brief,
+multi-bank or multi-topic comparisons can run longer with sub-sections):
+- Lead answer with inline [n] citations.
 - If Call Report facts are present, include a 'Quantitative' section.
 - If peer_comparison is present, include a 'Peer context' section.
+- For compare-style questions, give each bank its own sub-section, then a
+  short 'Side-by-side' or 'Bottom line' summary.
 - Flag any contradiction between narrative and numeric evidence as a
   'Disclosure drift' bullet.
+
+Always finish your final sentence — do not stop mid-thought.
 """
 
 
@@ -210,11 +215,13 @@ def anthropic_synthesize(question: str, tool_results: list[dict[str, Any]]) -> S
 
     resp = client.messages.create(
         model=settings.anthropic_model,
-        max_tokens=1200,
+        max_tokens=4000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_message}],
     )
     answer = "".join(block.text for block in resp.content if block.type == "text")
+    if getattr(resp, "stop_reason", None) == "max_tokens":
+        answer += "\n\n_[response truncated — raise max_tokens]_"
     return Synthesis(
         answer_markdown=answer,
         citations=citations,
@@ -265,7 +272,7 @@ def gemini_synthesize(question: str, tool_results: list[dict[str, Any]]) -> Synt
     payload = json.dumps({
         "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": [{"role": "user", "parts": [{"text": user_message}]}],
-        "generationConfig": {"maxOutputTokens": 1200},
+        "generationConfig": {"maxOutputTokens": 4000},
     }).encode()
 
     url = (
@@ -273,10 +280,13 @@ def gemini_synthesize(question: str, tool_results: list[dict[str, Any]]) -> Synt
         f"{settings.gemini_model}:generateContent?key={settings.gemini_api_key}"
     )
     req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
+    with urllib.request.urlopen(req, timeout=60) as resp:
         data = json.loads(resp.read())
 
-    answer = data["candidates"][0]["content"]["parts"][0]["text"]
+    candidate = data["candidates"][0]
+    answer = candidate["content"]["parts"][0]["text"]
+    if candidate.get("finishReason") == "MAX_TOKENS":
+        answer += "\n\n_[response truncated — raise maxOutputTokens]_"
     return Synthesis(answer_markdown=answer, citations=citations, provider="gemini", model=settings.gemini_model)
 
 

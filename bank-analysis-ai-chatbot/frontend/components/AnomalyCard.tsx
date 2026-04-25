@@ -30,10 +30,13 @@ const SEVERITY_LABEL: Record<AnomalySeverity, string> = {
   low: 'Low',
 };
 
+// Use the -100 family because globals.css remaps it to translucent
+// rgba() backgrounds that read well on the dark surface; -50 is not
+// remapped and blasts out as bright pastels on black.
 const SENTIMENT_STYLES: Record<AnomalySentiment, string> = {
-  positive: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  negative: 'bg-rose-50 text-rose-700 border-rose-200',
-  inconclusive: 'bg-neutral-50 text-neutral-500 border-neutral-200',
+  positive: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+  negative: 'bg-rose-100 text-rose-700 border-rose-200',
+  inconclusive: 'bg-white/[0.04] text-neutral-500 border-white/10',
 };
 
 const SENTIMENT_LABEL: Record<AnomalySentiment, string> = {
@@ -54,7 +57,7 @@ function MetricChip({ a }: { a: Anomaly }) {
   return (
     <div className="text-xs text-neutral-600 mt-2 flex items-center gap-2">
       {value && (
-        <span className="px-2 py-0.5 rounded bg-neutral-100 font-mono">
+        <span className="px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 font-mono text-neutral-200">
           {value}
         </span>
       )}
@@ -265,7 +268,7 @@ export function AnomalyCard({ anomaly }: { anomaly: Anomaly }) {
           {anomaly.citations.map((c, idx) => (
             <span
               key={idx}
-              className="text-xs px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-mono"
+              className="text-xs px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 border border-indigo-300 font-mono"
               title={c.kind}
             >
               {c.label || c.kind}
