@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/" className="hover:text-neutral-900 transition-colors">Home</a>
                 <a href="/trends" className="hover:text-neutral-900 transition-colors">Trends</a>
                 <a href="/anomalies/private-credit" className="hover:text-neutral-900 transition-colors">Anomalies</a>
+                <a href="/compare" className="hover:text-neutral-900 transition-colors">Compare</a>
                 <span className="text-neutral-300">|</span>
                 <span className="text-xs">cite-backed &middot; auditable trace</span>
               </nav>
