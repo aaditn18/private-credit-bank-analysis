@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { ChatBotMount } from '@/components/ChatBotMount';
+import { HeaderSectorNav } from '@/components/HeaderSectorNav';
 
 export const metadata: Metadata = {
   title: 'Bank Analysis',
@@ -29,16 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </div>
                 </div>
               </div>
-              <nav className="flex items-center gap-1 text-sm">
-                <NavLink href="/">Home</NavLink>
-                <NavLink href="/trends">Trends</NavLink>
-                <NavLink href="/anomalies/private-credit">Anomalies</NavLink>
-                <NavLink href="/compare">Compare</NavLink>
-                <span className="ml-3 hidden md:inline-flex items-center gap-1.5 text-[11px] text-neutral-500 px-2.5 py-1 rounded-full border border-white/5 bg-white/[0.03]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  cite-backed · auditable
-                </span>
-              </nav>
+              <HeaderSectorNav />
+              <span className="ml-3 hidden md:inline-flex items-center gap-1.5 text-[11px] text-neutral-500 px-2.5 py-1 rounded-full border border-white/5 bg-white/[0.03]">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                cite-backed · auditable
+              </span>
             </div>
           </header>
           <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">{children}</main>
@@ -56,13 +52,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a
-      href={href}
-      className="px-3 py-1.5 rounded-md text-neutral-400 hover:text-white hover:bg-white/[0.06] transition-colors"
-    >
-      {children}
-    </a>
-  );
-}

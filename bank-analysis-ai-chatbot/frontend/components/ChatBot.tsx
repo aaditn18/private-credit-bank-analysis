@@ -15,6 +15,38 @@ interface ChatMessage {
   resp?: SearchResponse | null;
 }
 
+// We persist chat state to sessionStorage so it survives:
+//   - client-side navigation between PC routes (handled by ChatBotMount
+//     keeping us mounted, but state stays even if React ever drops us)
+//   - hard refresh within the same tab
+//   - users dipping into a non-PC sector (chatbot hides via `visible`,
+//     state stays resident)
+// We deliberately use sessionStorage (not localStorage) so chats don't
+// leak across browser tabs / windows or persist forever.
+const STORAGE_KEY_MESSAGES = 'chatbot:v1:messages';
+const STORAGE_KEY_OPEN = 'chatbot:v1:open';
+const STORAGE_KEY_INPUT = 'chatbot:v1:input';
+
+function readSession<T>(key: string, fallback: T): T {
+  if (typeof window === 'undefined') return fallback;
+  try {
+    const raw = window.sessionStorage.getItem(key);
+    if (raw == null) return fallback;
+    return JSON.parse(raw) as T;
+  } catch {
+    return fallback;
+  }
+}
+
+function writeSession(key: string, value: unknown): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.sessionStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* quota exceeded or storage disabled — silently drop */
+  }
+}
+
 let nextId = 1;
 
 const SUGGESTIONS = [
@@ -24,12 +56,56 @@ const SUGGESTIONS = [
   'Which mid-size regional banks are growing their NBFI lending the fastest?',
 ];
 
-export function ChatBot() {
+export function ChatBot({ visible = true }: { visible?: boolean } = {}) {
+  // Hydrate from sessionStorage. We can't read it during the very first
+  // render on the server (it doesn't exist), so we start empty and fill in
+  // a useEffect — this avoids an SSR/CSR mismatch that would log an error
+  // and force a re-render anyway.
+  const [hydrated, setHydrated] = useState(false);
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const abortRef = useRef<AbortController | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  // First-mount hydrate. Runs once per page-load (not per route change —
+  // ChatBotMount keeps us mounted across PC routes).
+  useEffect(() => {
+    const persistedMessages = readSession<ChatMessage[]>(STORAGE_KEY_MESSAGES, []);
+    // Drop any in-flight assistant turns. If the user refreshed mid-request
+    // there's no Promise alive to resolve them; surface the interruption
+    // explicitly rather than leaving a forever-spinning bubble.
+    const cleaned = persistedMessages.map((m) =>
+      m.loading
+        ? {
+            ...m,
+            loading: false,
+            error: m.error ?? 'Request interrupted by navigation or refresh.',
+          }
+        : m,
+    );
+    setMessages(cleaned);
+    if (cleaned.length) {
+      // Resume the id counter past anything we just hydrated so new turns
+      // don't collide with persisted ones.
+      nextId = Math.max(...cleaned.map((m) => m.id), 0) + 1;
+    }
+    setOpen(readSession<boolean>(STORAGE_KEY_OPEN, false));
+    setInput(readSession<string>(STORAGE_KEY_INPUT, ''));
+    setHydrated(true);
+  }, []);
+
+  // Persist on every change. Skipped until after hydration so we don't
+  // overwrite valid stored state with an empty initial render.
+  useEffect(() => {
+    if (hydrated) writeSession(STORAGE_KEY_MESSAGES, messages);
+  }, [messages, hydrated]);
+  useEffect(() => {
+    if (hydrated) writeSession(STORAGE_KEY_OPEN, open);
+  }, [open, hydrated]);
+  useEffect(() => {
+    if (hydrated) writeSession(STORAGE_KEY_INPUT, input);
+  }, [input, hydrated]);
 
   const anyLoading = messages.some((m) => m.loading);
 
@@ -77,6 +153,12 @@ export function ChatBot() {
     abortRef.current?.abort();
     setMessages([]);
   }
+
+  // When the user is on a non-PC route (DA / AI sector), we keep the
+  // component mounted (state survives) but hide the visible UI. We don't
+  // unmount because that would either drop in-memory state or force every
+  // navigation to round-trip through sessionStorage.
+  if (!visible) return null;
 
   // ── Minimized floating bubble ─────────────────────────────────────────────
   if (!open) {

@@ -76,6 +76,7 @@ _CACHE_RULES: tuple[tuple[str, int, int], ...] = (
     # path-prefix,                      max-age, stale-while-revalidate
     ("/banks",                          3600,    600),
     ("/concepts",                       3600,    600),
+    ("/overview",                       600,     600),
     ("/rankings",                       300,     600),
     ("/trends",                         300,     600),
     ("/findings",                       1800,    600),  # /findings and /findings/{ticker}
@@ -905,6 +906,147 @@ def get_finding(ticker: str) -> dict[str, Any]:
             except Exception:
                 pass
     return row
+
+
+@app.get("/overview")
+@cached(ttl=600)
+def get_overview() -> dict[str, Any]:
+    """Cross-sector landing data — combines PC / DA / AI signals into one payload.
+
+    Returns:
+      - ``themes``: per-theme sector totals (chunk count, banks engaged,
+        anomaly counts by severity for the latest quarter).
+      - ``mentions_by_quarter``: time series of how many chunks per quarter
+        are tagged for each theme — feeds the home-page stacked area chart.
+      - ``multi_theme_banks``: top 15 banks ranked by sum of theme tags,
+        with per-theme tag counts so the UI can render colored chips.
+      - ``latest_quarter``: the quarter the anomaly counts refer to.
+    """
+    from .anomalies.engine import normalize_theme, run_for_theme
+    from .anomalies.queries import latest_quarter_with_data
+
+    themes = ("private_credit", "ai", "digital_assets")
+    latest_q = latest_quarter_with_data()
+
+    with cursor() as (_handle, cur):
+        # Per-theme totals: chunks tagged + distinct banks touched.
+        cur.execute(
+            render_sql(
+                """
+                SELECT ct.theme               AS theme,
+                       COUNT(*)               AS chunk_count,
+                       COUNT(DISTINCT d.bank_ticker) AS bank_count
+                FROM chunk_topic ct
+                JOIN chunk c    ON c.id = ct.chunk_id
+                JOIN document d ON d.id = c.document_id
+                WHERE ct.theme IN ('private_credit', 'ai', 'digital_assets')
+                GROUP BY ct.theme
+                """
+            )
+        )
+        totals_rows = fetchall_dicts(cur)
+        totals = {r["theme"]: r for r in totals_rows}
+
+        # Time series — chunks per (theme, quarter) using the document's
+        # fiscal_year/quarter (filings only — transcripts share these fields).
+        cur.execute(
+            render_sql(
+                """
+                SELECT ct.theme         AS theme,
+                       d.fiscal_year    AS fiscal_year,
+                       d.fiscal_quarter AS fiscal_quarter,
+                       COUNT(*)         AS n
+                FROM chunk_topic ct
+                JOIN chunk c    ON c.id = ct.chunk_id
+                JOIN document d ON d.id = c.document_id
+                WHERE ct.theme IN ('private_credit', 'ai', 'digital_assets')
+                  AND d.fiscal_year IS NOT NULL
+                  AND d.fiscal_quarter IS NOT NULL
+                GROUP BY ct.theme, d.fiscal_year, d.fiscal_quarter
+                ORDER BY d.fiscal_year, d.fiscal_quarter, ct.theme
+                """
+            )
+        )
+        series_rows = fetchall_dicts(cur)
+
+        # Per-bank theme intensity — how many chunks of each theme each bank
+        # has. Used for the "multi-theme banks" tile.
+        cur.execute(
+            render_sql(
+                """
+                SELECT d.bank_ticker AS ticker,
+                       b.name        AS name,
+                       b.peer_group  AS peer_group,
+                       ct.theme      AS theme,
+                       COUNT(*)      AS n
+                FROM chunk_topic ct
+                JOIN chunk c    ON c.id = ct.chunk_id
+                JOIN document d ON d.id = c.document_id
+                JOIN bank b     ON b.ticker = d.bank_ticker
+                WHERE ct.theme IN ('private_credit', 'ai', 'digital_assets')
+                GROUP BY d.bank_ticker, b.name, b.peer_group, ct.theme
+                """
+            )
+        )
+        per_bank_rows = fetchall_dicts(cur)
+
+    # Pivot quarterly time series → list of {quarter, private_credit, ai,
+    # digital_assets} rows for easy charting.
+    by_q: dict[str, dict[str, Any]] = {}
+    for r in series_rows:
+        q = f"{r['fiscal_year']}Q{r['fiscal_quarter']}"
+        by_q.setdefault(q, {"quarter": q, "private_credit": 0, "ai": 0, "digital_assets": 0})
+        by_q[q][r["theme"]] = int(r["n"] or 0)
+    mentions_by_quarter = sorted(by_q.values(), key=lambda x: x["quarter"])
+
+    # Anomaly counts per theme for the latest quarter, by severity.
+    theme_summaries: dict[str, dict[str, Any]] = {}
+    for theme in themes:
+        try:
+            anomalies = run_for_theme(normalize_theme(theme), latest_q)
+        except Exception:  # noqa: BLE001
+            anomalies = []
+        sev_counts = {"high": 0, "medium": 0, "low": 0}
+        for a in anomalies:
+            sev = getattr(a, "severity", None) or "low"
+            if sev in sev_counts:
+                sev_counts[sev] += 1
+        t_total = totals.get(theme) or {}
+        theme_summaries[theme] = {
+            "theme": theme,
+            "chunk_count": int(t_total.get("chunk_count") or 0),
+            "bank_count": int(t_total.get("bank_count") or 0),
+            "anomaly_total": len(anomalies),
+            "anomaly_severity": sev_counts,
+        }
+
+    # Multi-theme banks: pivot per-bank rows into {ticker, themes:{...}}.
+    bank_pivot: dict[str, dict[str, Any]] = {}
+    for r in per_bank_rows:
+        t = r["ticker"]
+        if t not in bank_pivot:
+            bank_pivot[t] = {
+                "ticker": t,
+                "name": r.get("name"),
+                "peer_group": r.get("peer_group"),
+                "themes": {"private_credit": 0, "ai": 0, "digital_assets": 0},
+                "total": 0,
+            }
+        n = int(r.get("n") or 0)
+        bank_pivot[t]["themes"][r["theme"]] = n
+        bank_pivot[t]["total"] += n
+    # Surface banks active in 2+ themes first; within that, by total tag count.
+    def _multi_theme_score(b: dict[str, Any]) -> tuple[int, int]:
+        themes_present = sum(1 for v in b["themes"].values() if v > 0)
+        return (themes_present, b["total"])
+    multi_theme_banks = sorted(bank_pivot.values(), key=_multi_theme_score, reverse=True)[:15]
+
+    return {
+        "latest_quarter": latest_q,
+        "themes": theme_summaries,
+        "mentions_by_quarter": mentions_by_quarter,
+        "multi_theme_banks": multi_theme_banks,
+    }
 
 
 if __name__ == "__main__":
