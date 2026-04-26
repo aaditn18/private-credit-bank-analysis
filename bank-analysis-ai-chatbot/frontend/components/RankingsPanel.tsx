@@ -109,6 +109,11 @@ function WeightSlider({
   );
 }
 
+function SortArrow({ active, dir }: { active: boolean; dir: 'asc' | 'desc' }) {
+  if (!active) return <span className="opacity-25">↕</span>;
+  return <span className="text-indigo-500">{dir === 'desc' ? '↓' : '↑'}</span>;
+}
+
 // ── main component ────────────────────────────────────────────────────────────
 
 export function RankingsPanel() {
@@ -118,6 +123,8 @@ export function RankingsPanel() {
   const [weights, setWeights] = useState<Record<string, number>>(DEFAULT_WEIGHTS);
   const [peerFilter, setPeerFilter] = useState<string>('all');
   const [showWeights, setShowWeights] = useState(false);
+  const [sortKey, setSortKey] = useState<string | null>(null);
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
   function changeWeight(key: string, newVal: number) {
     setWeights((prev) => {
@@ -158,9 +165,18 @@ export function RankingsPanel() {
       .finally(() => setLoading(false));
   }, []);
 
+  function handleSortClick(key: string) {
+    if (sortKey === key) {
+      setSortDir((d) => (d === 'desc' ? 'asc' : 'desc'));
+    } else {
+      setSortKey(key);
+      setSortDir('desc');
+    }
+  }
+
   const ranked = useMemo(() => {
-    if (!data) return [];
-    return data.banks
+    if (!data || !data.banks) return [];
+    const withScore = data.banks
       .filter((b) => peerFilter === 'all' || b.peer_group === peerFilter)
       .map((b) => {
         const score = data.metrics.reduce((sum, m) => {
@@ -169,9 +185,21 @@ export function RankingsPanel() {
           return sum + w * norm;
         }, 0);
         return { ...b, score };
-      })
-      .sort((a, b) => b.score - a.score);
-  }, [data, weights, peerFilter]);
+      });
+
+    if (!sortKey) return withScore.sort((a, b) => b.score - a.score);
+
+    return withScore.sort((a, b) => {
+      const aVal = sortKey === 'score' ? a.score : a.raw[sortKey];
+      const bVal = sortKey === 'score' ? b.score : b.raw[sortKey];
+      const aNull = aVal === null || aVal === undefined;
+      const bNull = bVal === null || bVal === undefined;
+      if (aNull && bNull) return 0;
+      if (aNull) return 1;
+      if (bNull) return -1;
+      return sortDir === 'desc' ? bVal - aVal : aVal - bVal;
+    });
+  }, [data, weights, peerFilter, sortKey, sortDir]);
 
   if (loading) {
     return (
@@ -258,10 +286,24 @@ export function RankingsPanel() {
             <tr className="text-left text-xs text-neutral-400 border-b border-neutral-100">
               <th className="px-6 py-2 font-medium w-8">#</th>
               <th className="px-2 py-2 font-medium">Bank</th>
-              <th className="px-3 py-2 font-medium">Score</th>
+              <th className="px-3 py-2 font-medium">
+                <button
+                  onClick={() => handleSortClick('score')}
+                  className="flex items-center gap-1 hover:text-neutral-700 transition-colors"
+                >
+                  Score
+                  <SortArrow active={sortKey === 'score'} dir={sortDir} />
+                </button>
+              </th>
               {data.metrics.map((m) => (
                 <th key={m.key} className="px-3 py-2 font-medium whitespace-nowrap">
-                  {m.label}
+                  <button
+                    onClick={() => handleSortClick(m.key)}
+                    className="flex items-center gap-1 hover:text-neutral-700 transition-colors"
+                  >
+                    {m.label}
+                    <SortArrow active={sortKey === m.key} dir={sortDir} />
+                  </button>
                 </th>
               ))}
             </tr>
