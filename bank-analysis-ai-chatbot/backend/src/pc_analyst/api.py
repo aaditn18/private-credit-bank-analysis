@@ -24,6 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("pc_analyst")
 
 from .agent.loop import AgentLoop
+from .cache import cached, invalidate as cache_invalidate, stats as cache_stats
 from .config import settings
 from .db import cursor, fetchall_dicts, fetchone_dict, render_sql
 from .mcp_tools import TOOLS
@@ -63,6 +64,62 @@ app.add_middleware(
 )
 
 
+# ── Cache-Control headers ────────────────────────────────────────────────────
+# Map (path-prefix, max-age seconds). The first matching prefix wins. We set
+# `public` so the Next.js proxy and the browser can both reuse responses,
+# and `stale-while-revalidate` so even after expiry the user gets an instant
+# response while the cache refreshes in the background.
+#
+# Values mirror the in-memory @cached TTLs below — the browser cache is just
+# a second layer in front of the same data.
+_CACHE_RULES: tuple[tuple[str, int, int], ...] = (
+    # path-prefix,                      max-age, stale-while-revalidate
+    ("/banks",                          3600,    600),
+    ("/concepts",                       3600,    600),
+    ("/rankings",                       300,     600),
+    ("/trends",                         300,     600),
+    ("/findings",                       1800,    600),  # /findings and /findings/{ticker}
+    ("/timeline/",                      300,     600),
+    ("/anomalies/",                     300,     600),
+    # /stock and /news already cache to SQLite at the data layer; let the
+    # browser hold them for a few minutes too.
+    ("/stock/",                         600,     300),
+    ("/news/",                          600,     300),
+)
+
+
+@app.middleware("http")
+async def add_cache_headers(request: Request, call_next):
+    response = await call_next(request)
+    if request.method != "GET" or response.status_code >= 400:
+        return response
+    path = request.url.path
+    for prefix, max_age, swr in _CACHE_RULES:
+        if path == prefix or path.startswith(prefix):
+            response.headers["Cache-Control"] = (
+                f"public, max-age={max_age}, stale-while-revalidate={swr}"
+            )
+            break
+    return response
+
+
+@app.post("/admin/cache/invalidate")
+def admin_cache_invalidate(prefix: str = "") -> dict[str, Any]:
+    """Drop in-memory cache entries. Pass ``?prefix=...`` to scope the flush.
+
+    The populate / ingest scripts should hit this after writing if the user
+    can't wait for the TTL to lapse. Open route on purpose — the API is
+    bound to localhost in this project.
+    """
+    n = cache_invalidate(prefix)
+    return {"invalidated": n, "remaining": cache_stats()}
+
+
+@app.get("/admin/cache/stats")
+def admin_cache_stats() -> dict[str, Any]:
+    return cache_stats()
+
+
 @app.exception_handler(Exception)
 async def catch_all(request: Request, exc: Exception) -> JSONResponse:
     """Log the full traceback so 500s are visible in the backend log."""
@@ -81,6 +138,7 @@ def health() -> dict[str, str]:
 
 
 @app.get("/banks")
+@cached(ttl=3600)
 def list_banks() -> list[dict[str, Any]]:
     with cursor() as (handle, cur):
         cur.execute(render_sql("SELECT ticker, name, peer_group FROM bank ORDER BY ticker"))
@@ -88,6 +146,7 @@ def list_banks() -> list[dict[str, Any]]:
 
 
 @app.get("/concepts")
+@cached(ttl=3600)
 def list_concepts() -> list[dict[str, Any]]:
     tax = load_taxonomy()
     return [
@@ -160,6 +219,7 @@ def get_run(run_id: int) -> dict[str, Any]:
 
 
 @app.get("/rankings")
+@cached(ttl=300)
 def get_rankings(quarter: str = "2025Q4") -> dict[str, Any]:
     import math
 
@@ -359,6 +419,7 @@ def resolve_citation(chunk_id: int) -> dict[str, Any]:
 
 
 @app.get("/anomalies/{theme}")
+@cached(ttl=300)
 def get_anomalies(
     theme: str,
     quarter: str | None = None,
@@ -547,6 +608,7 @@ def get_news(ticker: str) -> list[dict[str, Any]]:
 
 
 @app.get("/trends")
+@cached(ttl=300)
 def get_trends() -> dict[str, Any]:
     """Cross-bank trend data for the trends dashboard."""
     import math
@@ -715,6 +777,7 @@ def get_trends() -> dict[str, Any]:
 
 
 @app.get("/timeline/{ticker}")
+@cached(ttl=300)
 def get_timeline(ticker: str) -> dict[str, Any]:
     """All timeline data for a single bank."""
     import math
@@ -795,6 +858,7 @@ def get_timeline(ticker: str) -> dict[str, Any]:
 
 
 @app.get("/findings")
+@cached(ttl=1800)
 def get_findings() -> list[dict[str, Any]]:
     """Private credit findings per bank from LLM analysis."""
     with cursor() as (handle, cur):
@@ -819,6 +883,7 @@ def get_findings() -> list[dict[str, Any]]:
 
 
 @app.get("/findings/{ticker}")
+@cached(ttl=1800)
 def get_finding(ticker: str) -> dict[str, Any]:
     """Private credit finding for a single bank."""
     with cursor() as (handle, cur):

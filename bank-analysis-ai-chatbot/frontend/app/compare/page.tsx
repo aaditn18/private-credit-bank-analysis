@@ -43,6 +43,8 @@ interface TimelineMetricSet {
   nbfi_commitment_ratio: number | null;
   pe_exposure: number | null;
   loan_scale: number | null;
+  // Derived QoQ on the frontend (not in backend timeline payload)
+  nbfi_growth?: number | null;
 }
 
 interface TimelineData {
@@ -52,6 +54,43 @@ interface TimelineData {
   filings: TimelineFiling[];
   metrics_by_quarter: Record<string, TimelineMetricSet>;
   stock_prices: { date: string; close: number; volume: number | null }[];
+}
+
+// Mirror of /rankings response (only the fields we use here).
+interface RankingsBank {
+  ticker: string;
+  name: string;
+  peer_group: string;
+  raw: Record<string, number | null>;
+  norm: Record<string, number>;
+}
+interface RankingsResponse {
+  quarter: string;
+  prev_quarter: string;
+  metrics: { key: string; label: string; higher_is_better: boolean }[];
+  banks: RankingsBank[];
+}
+
+// Mirror of /trends response (only the fields we use here).
+interface TrendsResponse {
+  banks: { ticker: string; name: string; peer_group: string }[];
+  metrics_over_time: Record<
+    string,
+    Record<
+      string,
+      {
+        ci_ratio: number | null;
+        loan_scale: number | null;
+        nbfi_loan_ratio: number | null;
+        nbfi_commitment_ratio: number | null;
+        pe_exposure: number | null;
+      }
+    >
+  >;
+  peer_group_comparison: Record<
+    string,
+    Record<string, { avg_nbfi_ratio: number | null; avg_ci_ratio: number | null; bank_count: number }>
+  >;
 }
 
 type FindingThemes = string[] | string | null;
@@ -82,21 +121,60 @@ interface FindingData {
 const MAX_BANKS = 4;
 const MIN_BANKS = 2;
 
+// METRICS now mirrors the 6-metric set used by RankingsPanel so the radar /
+// bars / trends chart all reflect the same composite the home page scores on.
+//
+// `pct: true` metrics fit on a single percent y-axis (used for the grouped
+// bar chart). `loan_scale` (log of total loans) and `nbfi_growth` (QoQ delta)
+// don't share that axis — they're shown alongside the bars as a small KPI
+// strip.
 const METRICS = [
-  { key: 'ci_ratio', label: 'C&I', fmt: (v: number) => `${(v * 100).toFixed(2)}%` },
-  { key: 'nbfi_loan_ratio', label: 'NBFI loans', fmt: (v: number) => `${(v * 100).toFixed(2)}%` },
-  { key: 'nbfi_commitment_ratio', label: 'NBFI commits', fmt: (v: number) => `${(v * 100).toFixed(2)}%` },
-  { key: 'pe_exposure', label: 'PE exposure', fmt: (v: number) => `${(v * 100).toFixed(2)}%` },
+  { key: 'ci_ratio', label: 'C&I', fmt: (v: number) => `${(v * 100).toFixed(2)}%`, pct: true },
+  { key: 'nbfi_loan_ratio', label: 'NBFI loans', fmt: (v: number) => `${(v * 100).toFixed(2)}%`, pct: true },
+  { key: 'nbfi_commitment_ratio', label: 'NBFI commits', fmt: (v: number) => `${(v * 100).toFixed(2)}%`, pct: true },
+  { key: 'pe_exposure', label: 'PE exposure', fmt: (v: number) => `${(v * 100).toFixed(2)}%`, pct: true },
+  {
+    key: 'loan_scale',
+    label: 'Loan scale',
+    // RCON2122 is reported in thousands — exp(log(thousands)) gives thousands;
+    // divide by 1e6 to render as billions.
+    fmt: (v: number) => `$${(Math.exp(v) / 1e6).toFixed(1)}B`,
+    pct: false,
+  },
+  {
+    key: 'nbfi_growth',
+    label: 'NBFI QoQ',
+    fmt: (v: number) => `${v >= 0 ? '+' : ''}${(v * 100).toFixed(1)}%`,
+    pct: false,
+  },
 ] as const;
 
 type MetricKey = (typeof METRICS)[number]['key'];
+
+// Default composite weights — matches RankingsPanel.tsx so the rank we display
+// on /compare is exactly what /home shows under the default weights toggle.
+const DEFAULT_WEIGHTS: Record<string, number> = {
+  nbfi_loan_ratio: 35,
+  nbfi_commitment_ratio: 25,
+  nbfi_growth: 15,
+  ci_ratio: 10,
+  pe_exposure: 10,
+  loan_scale: 5,
+};
 
 const COLORS = ['#6366f1', '#10b981', '#f59e0b', '#ef4444'] as const;
 
 function peerBadge(pg: string): string {
   if (pg === 'GSIB') return 'bg-purple-100 text-purple-700';
   if (pg === 'trust-ib') return 'bg-blue-100 text-blue-700';
+  if (pg === 'regional') return 'bg-emerald-100 text-emerald-700';
   return 'bg-neutral-100 text-neutral-600';
+}
+
+function peerLabel(pg: string): string {
+  if (pg === 'trust-ib') return 'Trust / IB';
+  if (pg === 'regional') return 'Regional';
+  return pg;
 }
 
 function parseMaybeJson<T>(val: unknown): T | null {
@@ -237,6 +315,15 @@ export default function ComparePage() {
   const [winnerMarkdown, setWinnerMarkdown] = useState<string | null>(null);
   const abortWinner = useRef<AbortController | null>(null);
 
+  // Cross-bank context: rankings (composite rank tile) + trends (per-metric
+  // line chart). These are global, not per-ticker, so we fetch once on mount.
+  const [rankings, setRankings] = useState<RankingsResponse | null>(null);
+  const [trends, setTrends] = useState<TrendsResponse | null>(null);
+
+  // Metric trends section state.
+  const [trendMetric, setTrendMetric] = useState<MetricKey>('nbfi_loan_ratio');
+  const [showPeerMedian, setShowPeerMedian] = useState(false);
+
   // Read initial state from URL (?banks=JPM,BAC)
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -273,6 +360,31 @@ export default function ComparePage() {
       .then((d: Bank[]) => setBanks(d))
       .catch((e) => setBanksError(e instanceof Error ? e.message : String(e)))
       .finally(() => setBanksLoading(false));
+  }, []);
+
+  // Load /rankings (composite rank tile) — once per mount. Failures here
+  // shouldn't kill the page; the rank tile just won't render.
+  useEffect(() => {
+    fetch('/api/backend/rankings')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: RankingsResponse | null) => {
+        if (d) setRankings(d);
+      })
+      .catch(() => {
+        /* swallow */
+      });
+  }, []);
+
+  // Load /trends (multi-quarter metric chart) — once per mount.
+  useEffect(() => {
+    fetch('/api/backend/trends')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: TrendsResponse | null) => {
+        if (d) setTrends(d);
+      })
+      .catch(() => {
+        /* swallow */
+      });
   }, []);
 
   // Ensure we have timeline + findings for selected tickers
@@ -343,8 +455,31 @@ export default function ComparePage() {
   const latestMetricsByBank = useMemo(() => {
     const out: Record<string, TimelineMetricSet | null> = {};
     for (const t of selected) {
+      const tl = timelines[t];
       const q = latestQByBank[t];
-      out[t] = q ? timelines[t]?.metrics_by_quarter?.[q] ?? null : null;
+      if (!tl || !q) {
+        out[t] = null;
+        continue;
+      }
+      const cur = tl.metrics_by_quarter?.[q] ?? null;
+      // Derive nbfi_growth = QoQ % change in nbfi_loan_ratio. The backend
+      // /timeline payload doesn't include it; /rankings does, but using the
+      // timeline-derived value here keeps the radar consistent with the
+      // bank-specific quarter shown in the sidebar.
+      const sortedQs = Object.keys(tl.metrics_by_quarter ?? {}).sort();
+      const idx = sortedQs.indexOf(q);
+      const prevQ = idx > 0 ? sortedQs[idx - 1] : null;
+      const prev = prevQ ? tl.metrics_by_quarter?.[prevQ] : null;
+      let nbfi_growth: number | null = null;
+      if (
+        cur?.nbfi_loan_ratio != null &&
+        prev?.nbfi_loan_ratio != null &&
+        prev.nbfi_loan_ratio > 0
+      ) {
+        nbfi_growth =
+          (cur.nbfi_loan_ratio - prev.nbfi_loan_ratio) / prev.nbfi_loan_ratio;
+      }
+      out[t] = cur ? { ...cur, nbfi_growth } : null;
     }
     return out;
   }, [selected, timelines, latestQByBank]);
@@ -384,8 +519,10 @@ export default function ComparePage() {
   }, [selected, latestMetricsByBank]);
 
   const metricsBarData = useMemo(() => {
-    // Grouped bars for latest quarter values (not normalized).
-    return METRICS.map((metric) => {
+    // Grouped bars only for percent-of-loans metrics — loan_scale (log) and
+    // nbfi_growth (signed delta) don't share the same y-axis, so they get
+    // their own KPI strip below.
+    return METRICS.filter((m) => m.pct).map((metric) => {
       const row: Record<string, string | number | null> = { metric: metric.label };
       for (const t of selected) {
         const m = latestMetricsByBank[t];
@@ -395,6 +532,133 @@ export default function ComparePage() {
       return row;
     });
   }, [selected, latestMetricsByBank]);
+
+  // ── Composite ranking (B) ───────────────────────────────────────────────
+  // Score every bank in /rankings under the default weights, then sort to
+  // get rank position. Mirrors RankingsPanel.tsx logic exactly.
+  const compositeRanking = useMemo(() => {
+    if (!rankings) return null;
+    const weightSum = Object.values(DEFAULT_WEIGHTS).reduce((a, b) => a + b, 0);
+    type Scored = {
+      ticker: string;
+      peer_group: string;
+      name: string;
+      score: number;
+      rank: number;
+      peerRank: number;
+    };
+    const scored: Scored[] = rankings.banks.map((b) => {
+      let score = 0;
+      for (const m of rankings.metrics) {
+        const w = (DEFAULT_WEIGHTS[m.key] ?? 0) / weightSum;
+        const raw = b.norm[m.key] ?? 0;
+        const norm = m.higher_is_better ? raw : 1 - raw;
+        score += w * norm;
+      }
+      return {
+        ticker: b.ticker,
+        peer_group: b.peer_group,
+        name: b.name,
+        score,
+        rank: 0,
+        peerRank: 0,
+      };
+    });
+    scored.sort((a, b) => b.score - a.score);
+    scored.forEach((s, i) => {
+      s.rank = i + 1;
+    });
+    // Peer-group ranks
+    const byPeer: Record<string, Scored[]> = {};
+    for (const s of scored) (byPeer[s.peer_group] ??= []).push(s);
+    for (const pg of Object.keys(byPeer)) {
+      byPeer[pg].sort((a, b) => b.score - a.score);
+      byPeer[pg].forEach((s, i) => {
+        s.peerRank = i + 1;
+      });
+    }
+    return {
+      total: scored.length,
+      byTicker: Object.fromEntries(scored.map((s) => [s.ticker, s])) as Record<
+        string,
+        Scored
+      >,
+      peerSizes: Object.fromEntries(
+        Object.entries(byPeer).map(([pg, arr]) => [pg, arr.length]),
+      ) as Record<string, number>,
+    };
+  }, [rankings]);
+
+  // ── Metric trends over time (C) ─────────────────────────────────────────
+  const trendChartData = useMemo(() => {
+    if (!trends) return [];
+    // Union of quarters that any selected bank reports for the chosen metric.
+    const allQuarters = new Set<string>();
+    for (const t of selected) {
+      const m = trends.metrics_over_time[t] ?? {};
+      Object.keys(m).forEach((q) => allQuarters.add(q));
+    }
+    const quarters = Array.from(allQuarters).sort();
+
+    // Per-quarter peer-group medians, for the optional overlay.
+    const peerGroupOf: Record<string, string> = {};
+    for (const b of trends.banks) peerGroupOf[b.ticker] = b.peer_group;
+
+    function valFor(t: string, q: string): number | null {
+      if (trendMetric === 'nbfi_growth') {
+        const series = trends?.metrics_over_time?.[t];
+        if (!series) return null;
+        const sortedQs = Object.keys(series).sort();
+        const idx = sortedQs.indexOf(q);
+        if (idx <= 0) return null;
+        const prevQ = sortedQs[idx - 1];
+        const cur = series[q]?.nbfi_loan_ratio;
+        const prev = series[prevQ]?.nbfi_loan_ratio;
+        if (cur != null && prev != null && prev > 0) return (cur - prev) / prev;
+        return null;
+      }
+      return ((trends?.metrics_over_time?.[t]?.[q] as any) ?? {})[trendMetric] ?? null;
+    }
+
+    return quarters.map((q) => {
+      const row: Record<string, string | number | null> = { quarter: q };
+      for (const t of selected) row[t] = valFor(t, q);
+
+      if (showPeerMedian) {
+        // Group by peer of the selected banks; compute median across that peer
+        // group at this quarter.
+        const peerGroups = Array.from(
+          new Set(selected.map((t) => peerGroupOf[t]).filter(Boolean)),
+        );
+        for (const pg of peerGroups) {
+          const peers = (trends?.banks ?? [])
+            .filter((b) => b.peer_group === pg)
+            .map((b) => valFor(b.ticker, q))
+            .filter((v): v is number => v != null);
+          if (peers.length) {
+            peers.sort((a, b) => a - b);
+            const mid = Math.floor(peers.length / 2);
+            const median =
+              peers.length % 2 === 0 ? (peers[mid - 1] + peers[mid]) / 2 : peers[mid];
+            row[`__peer_${pg}`] = median;
+          } else {
+            row[`__peer_${pg}`] = null;
+          }
+        }
+      }
+      return row;
+    });
+  }, [trends, selected, trendMetric, showPeerMedian]);
+
+  const trendPeerKeys = useMemo(() => {
+    if (!showPeerMedian || !trends) return [] as string[];
+    const peers = new Set<string>();
+    for (const t of selected) {
+      const pg = trends.banks.find((b) => b.ticker === t)?.peer_group;
+      if (pg) peers.add(pg);
+    }
+    return Array.from(peers);
+  }, [showPeerMedian, trends, selected]);
 
   const stockOverlayData = useMemo(() => {
     // Pivot all selected stock series onto a single date axis.
@@ -542,7 +806,7 @@ export default function ComparePage() {
                   <span className="text-sm font-semibold text-neutral-800">{t}</span>
                   {meta?.peer_group && (
                     <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${peerBadge(meta.peer_group)}`}>
-                      {meta.peer_group === 'trust-ib' ? 'Trust / IB' : meta.peer_group}
+                      {peerLabel(meta.peer_group)}
                     </span>
                   )}
                   {isLoading && <span className="text-[11px] text-neutral-400">loading…</span>}
@@ -597,7 +861,7 @@ export default function ComparePage() {
                               <span className="text-xs font-normal text-neutral-500">{b.name}</span>
                             </div>
                             <div className="text-[11px] text-neutral-400">
-                              {b.peer_group === 'trust-ib' ? 'Trust / IB' : b.peer_group}
+                              {peerLabel(b.peer_group)}
                             </div>
                           </div>
                           <span className="text-xs text-indigo-600">Add</span>
@@ -626,6 +890,93 @@ export default function ComparePage() {
           </div>
         </div>
       </section>
+
+      {/* Composite ranking position (B) */}
+      {compositeRanking && selected.length >= 1 && (
+        <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-neutral-100">
+            <h3 className="font-semibold text-neutral-900 text-base">
+              Composite ranking position
+            </h3>
+            <p className="text-xs text-neutral-400 mt-0.5">
+              Where each selected bank sits in the live PC composite ranking (
+              {compositeRanking.total} banks total). Default weights: 35% NBFI loans,
+              25% commits, 15% growth, 10% C&amp;I, 10% PE, 5% scale — same as the
+              home-page rankings panel.
+            </p>
+          </div>
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {selected.map((t, i) => {
+              const entry = compositeRanking.byTicker[t];
+              const meta = banks.find((b) => b.ticker === t);
+              if (!entry) {
+                return (
+                  <div
+                    key={t}
+                    className="rounded-lg border border-dashed border-neutral-200 px-4 py-3 text-xs text-neutral-400"
+                  >
+                    {t}: not in current rankings
+                  </div>
+                );
+              }
+              const peerSize = compositeRanking.peerSizes[entry.peer_group] ?? 0;
+              return (
+                <div
+                  key={t}
+                  className="rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span
+                      className="w-2 h-2 rounded-full"
+                      style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                    />
+                    <span className="text-sm font-bold text-neutral-900">{t}</span>
+                    {meta?.peer_group && (
+                      <span
+                        className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${peerBadge(meta.peer_group)}`}
+                      >
+                        {peerLabel(meta.peer_group)}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-baseline gap-2 mt-2">
+                    <span className="text-2xl font-bold text-neutral-900 tabular-nums">
+                      #{entry.rank}
+                    </span>
+                    <span className="text-xs text-neutral-500">
+                      of {compositeRanking.total}
+                    </span>
+                  </div>
+                  <div className="mt-1 flex items-center gap-2 text-[11px] text-neutral-500">
+                    <span className="font-mono">
+                      Score {(entry.score * 100).toFixed(0)}
+                    </span>
+                    <span>·</span>
+                    <span>
+                      Peer #{entry.peerRank}/{peerSize}
+                    </span>
+                  </div>
+                  {/* Score bar */}
+                  <div className="mt-2 h-1.5 w-full bg-neutral-200 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full"
+                      style={{
+                        width: `${Math.max(2, entry.score * 100)}%`,
+                        backgroundColor: COLORS[i % COLORS.length],
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          {!rankings && (
+            <div className="px-6 pb-4 text-[11px] text-neutral-400">
+              Rankings data still loading…
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Winner summary */}
       {(winnerError || winnerMarkdown) && (
@@ -774,136 +1125,414 @@ export default function ComparePage() {
         <div className="px-6 py-4 border-b border-neutral-100">
           <h3 className="font-semibold text-neutral-900 text-base">Call Report metric comparison</h3>
           <p className="text-xs text-neutral-400 mt-0.5">
-            Grouped bars show latest-quarter metric values per bank (percent-of-loans ratios).
+            Grouped bars show latest-quarter percent-of-loans ratios per bank.
+            Loan scale (size) and NBFI QoQ growth are shown as KPI cards below — they
+            don&apos;t share the percent axis but are part of the same composite.
           </p>
         </div>
-        <div className="p-6">
+        <div className="p-6 space-y-6">
           {!canRenderCharts ? (
             <div className="flex items-center justify-center h-48 text-sm text-neutral-400">
               Select at least {MIN_BANKS} banks to compare.
             </div>
           ) : (
-            <ResponsiveContainer width="100%" height={320}>
-              <BarChart data={metricsBarData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+            <>
+              <ResponsiveContainer width="100%" height={320}>
+                <BarChart data={metricsBarData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
+                  <XAxis dataKey="metric" tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={{ stroke: '#e5e5e5' }} tickLine={false} />
+                  <YAxis
+                    tickFormatter={(v: number) => `${(v * 100).toFixed(1)}%`}
+                    tick={{ fontSize: 11, fill: '#a3a3a3' }}
+                    axisLine={false}
+                    tickLine={false}
+                    width={56}
+                  />
+                  <Tooltip
+                    formatter={(v, name) => {
+                      if (typeof v !== 'number') return [v as any, name];
+                      return [`${(v * 100).toFixed(3)}%`, String(name)];
+                    }}
+                    contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
+                  />
+                  <Legend wrapperStyle={{ fontSize: 11 }} />
+                  {selected.map((t, i) => (
+                    <Bar key={t} dataKey={t} fill={COLORS[i % COLORS.length]} radius={[3, 3, 0, 0]} />
+                  ))}
+                </BarChart>
+              </ResponsiveContainer>
+
+              {/* Scale & growth KPI strip — the two non-percent metrics */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {(['loan_scale', 'nbfi_growth'] as const).map((mkey) => {
+                  const meta = METRICS.find((m) => m.key === mkey)!;
+                  return (
+                    <div
+                      key={mkey}
+                      className="rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3"
+                    >
+                      <div className="text-[11px] uppercase tracking-wide text-neutral-500 font-semibold">
+                        {meta.label}
+                      </div>
+                      <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        {selected.map((t, i) => {
+                          const m = latestMetricsByBank[t];
+                          const v = m ? safeNum((m as any)[mkey] as number | null) : null;
+                          return (
+                            <div
+                              key={t}
+                              className="flex items-center gap-2 rounded-md bg-white border border-neutral-100 px-2 py-1.5"
+                            >
+                              <span
+                                className="w-2 h-2 rounded-full shrink-0"
+                                style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                              />
+                              <div className="min-w-0">
+                                <div className="text-xs font-semibold text-neutral-700 leading-tight">
+                                  {t}
+                                </div>
+                                <div className="text-[11px] text-neutral-500 font-mono leading-tight">
+                                  {v == null ? '—' : meta.fmt(v)}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      {/* Metric trends over time (C) */}
+      <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+        <div className="px-6 py-4 border-b border-neutral-100 flex items-center justify-between gap-4 flex-wrap">
+          <div>
+            <h3 className="font-semibold text-neutral-900 text-base">
+              Metric trends over time
+            </h3>
+            <p className="text-xs text-neutral-400 mt-0.5">
+              One line per selected bank, charted across all reporting quarters. Toggle
+              metric to see how each bank&apos;s ratio has moved.
+            </p>
+          </div>
+          <div className="flex items-center gap-2 flex-wrap">
+            <select
+              value={trendMetric}
+              onChange={(e) => setTrendMetric(e.target.value as MetricKey)}
+              className="text-sm px-2 py-1.5 rounded-lg border border-neutral-200 bg-white"
+            >
+              {METRICS.map((m) => (
+                <option key={m.key} value={m.key}>
+                  {m.label}
+                </option>
+              ))}
+            </select>
+            <label className="flex items-center gap-2 text-xs text-neutral-600 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={showPeerMedian}
+                onChange={(e) => setShowPeerMedian(e.target.checked)}
+                className="rounded border-neutral-300"
+              />
+              Peer-group median overlay
+            </label>
+          </div>
+        </div>
+        <div className="p-6">
+          {!trends ? (
+            <div className="flex items-center justify-center h-48 text-sm text-neutral-400">
+              Loading trends…
+            </div>
+          ) : selected.length < 1 || trendChartData.length === 0 ? (
+            <div className="flex items-center justify-center h-48 text-sm text-neutral-400">
+              No trend data for the current selection.
+            </div>
+          ) : (
+            <ResponsiveContainer width="100%" height={340}>
+              <LineChart data={trendChartData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
-                <XAxis dataKey="metric" tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={{ stroke: '#e5e5e5' }} tickLine={false} />
+                <XAxis
+                  dataKey="quarter"
+                  tick={{ fontSize: 11, fill: '#a3a3a3' }}
+                  axisLine={{ stroke: '#e5e5e5' }}
+                  tickLine={false}
+                />
                 <YAxis
-                  tickFormatter={(v: number) => `${(v * 100).toFixed(1)}%`}
+                  tickFormatter={(v: number) => {
+                    const meta = METRICS.find((m) => m.key === trendMetric)!;
+                    if (meta.pct) return `${(v * 100).toFixed(1)}%`;
+                    if (trendMetric === 'nbfi_growth')
+                      return `${v >= 0 ? '+' : ''}${(v * 100).toFixed(0)}%`;
+                    if (trendMetric === 'loan_scale')
+                      return `$${(Math.exp(v) / 1e6).toFixed(0)}B`;
+                    return String(v);
+                  }}
                   tick={{ fontSize: 11, fill: '#a3a3a3' }}
                   axisLine={false}
                   tickLine={false}
-                  width={56}
+                  width={64}
+                  domain={['auto', 'auto']}
                 />
                 <Tooltip
                   formatter={(v, name) => {
                     if (typeof v !== 'number') return [v as any, name];
-                    return [`${(v * 100).toFixed(3)}%`, String(name)];
+                    const meta = METRICS.find((m) => m.key === trendMetric)!;
+                    return [meta.fmt(v), String(name)];
                   }}
                   contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
                 />
                 <Legend wrapperStyle={{ fontSize: 11 }} />
                 {selected.map((t, i) => (
-                  <Bar key={t} dataKey={t} fill={COLORS[i % COLORS.length]} radius={[3, 3, 0, 0]} />
+                  <Line
+                    key={t}
+                    type="monotone"
+                    dataKey={t}
+                    stroke={COLORS[i % COLORS.length]}
+                    strokeWidth={2}
+                    dot={false}
+                    connectNulls
+                  />
                 ))}
-              </BarChart>
+                {trendPeerKeys.map((pg, i) => (
+                  <Line
+                    key={`__peer_${pg}`}
+                    type="monotone"
+                    dataKey={`__peer_${pg}`}
+                    name={`${peerLabel(pg)} median`}
+                    stroke="#9ca3af"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 4"
+                    dot={false}
+                    connectNulls
+                  />
+                ))}
+              </LineChart>
             </ResponsiveContainer>
           )}
         </div>
       </section>
 
-      {/* Strategy + quotes */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-neutral-100">
-            <h3 className="font-semibold text-neutral-900 text-base">Strategy initiatives</h3>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              From `pc_finding.strategic_initiatives` (LLM-extracted narrative).
-            </p>
-          </div>
-          <div className="p-6 space-y-4">
-            {selected.map((t, i) => {
-              const f = findings[t];
-              return (
-                <div key={t} className="rounded-lg border border-neutral-200 overflow-hidden">
-                  <div className="px-3 py-2 bg-neutral-50 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
-                    <span className="text-sm font-semibold text-neutral-800">{t}</span>
+      {/* Strategy + quotes (F) ─────────────────────────────────────────────
+          These two panels read from the `pc_finding` table — an LLM-extracted
+          narrative layer (strategic_initiatives, notable_quotes, key_themes).
+          That table is currently EMPTY in this database: the schema and the
+          /findings endpoint exist, but no script writes to it. Until someone
+          builds `backend/scripts/populate_findings.py` to run an LLM over each
+          bank's filings + transcripts, every selected bank's findings payload
+          will come back null and these panels would just show "no data" rows.
+          We detect that case explicitly and surface a single clear banner
+          instead of N rows of placeholder text. */}
+      {(() => {
+        // findings[t] === undefined → still loading
+        // findings[t] === null → endpoint returned 404 / no row in pc_finding
+        // findings[t] is an object → pipeline produced a row (fields may be
+        // sparse if the LLM judged evidence insufficient — that's correct
+        // behavior, not a missing-pipeline signal)
+        const allLoaded = selected.every((t) => findings[t] !== undefined);
+        // Only the "all 404" case means populate_findings.py never ran. A row
+        // with empty strings is the model's honest answer — render the
+        // default panels so the user sees the per-bank "No strategy
+        // initiatives" placeholders instead of a misleading global banner.
+        const allMissing = selected.every((t) => findings[t] === null);
+        const pipelineNotRun = allLoaded && allMissing && selected.length > 0;
+
+        if (pipelineNotRun) {
+          return (
+            <section className="rounded-xl border border-amber-200 bg-amber-50 shadow-sm overflow-hidden">
+              <div className="px-6 py-5">
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 h-8 w-8 rounded-lg bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700 font-bold">
+                    !
                   </div>
-                  <div className="px-3 py-3 text-sm text-neutral-700 whitespace-pre-wrap">
-                    {f?.strategic_initiatives?.trim()
-                      ? f.strategic_initiatives.trim()
-                      : 'No strategy initiatives found yet for this bank (or findings not generated).'}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-amber-900 text-base">
+                      Strategy &amp; quote face-off — pipeline not yet run
+                    </h3>
+                    <p className="text-sm text-amber-800 mt-1 leading-relaxed">
+                      These two panels read from the{' '}
+                      <code className="font-mono text-[12px] bg-amber-100 px-1 py-0.5 rounded">
+                        pc_finding
+                      </code>{' '}
+                      table — an LLM-extracted narrative layer (strategic
+                      initiatives, key themes, and notable quotes) that turns
+                      each bank&apos;s filings and earnings-call transcripts into
+                      structured comparison fields. The schema and the{' '}
+                      <code className="font-mono text-[12px] bg-amber-100 px-1 py-0.5 rounded">
+                        /findings/&#123;ticker&#125;
+                      </code>{' '}
+                      endpoint exist, but no row has been written for any of the{' '}
+                      {selected.length} bank{selected.length === 1 ? '' : 's'}{' '}
+                      currently selected.
+                    </p>
+                    <div className="mt-3 rounded-lg bg-white border border-amber-200 px-4 py-3 text-[13px] text-neutral-700 leading-relaxed">
+                      <div className="font-semibold text-neutral-900 mb-1">
+                        To turn this on
+                      </div>
+                      Build{' '}
+                      <code className="font-mono text-[12px] bg-neutral-100 px-1 py-0.5 rounded">
+                        backend/scripts/populate_findings.py
+                      </code>{' '}
+                      that, for each bank: pulls the most recent 10-K / 10-Q /
+                      earnings-call chunks, prompts an LLM to extract{' '}
+                      <span className="font-mono text-[12px]">
+                        strategic_initiatives
+                      </span>
+                      ,{' '}
+                      <span className="font-mono text-[12px]">key_themes</span>,
+                      and{' '}
+                      <span className="font-mono text-[12px]">
+                        notable_quotes
+                      </span>
+                      , and upserts one row per ticker into{' '}
+                      <code className="font-mono text-[12px] bg-neutral-100 px-1 py-0.5 rounded">
+                        pc_finding
+                      </code>
+                      . Once any row exists, the panels below auto-populate.
+                    </div>
+                    <p className="text-[11px] text-amber-700 mt-3">
+                      Numeric comparisons (radar, bars, composite rank, metric
+                      trends, stock overlay) are unaffected — they don&apos;t
+                      depend on this pipeline.
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </section>
+              </div>
+            </section>
+          );
+        }
 
-        <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-neutral-100">
-            <h3 className="font-semibold text-neutral-900 text-base">Key quote face-off</h3>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              Same topic, different language. Topic list comes from `pc_finding.key_themes`.
-            </p>
-          </div>
-          <div className="p-6 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-medium text-neutral-500">Topic</span>
-              <select
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                className="text-sm px-2 py-1.5 rounded-lg border border-neutral-200"
-              >
-                {quoteTopics.length === 0 ? (
-                  <option value="">No topics available</option>
-                ) : (
-                  quoteTopics.map((t) => (
-                    <option key={t} value={t}>
-                      {t}
-                    </option>
-                  ))
-                )}
-              </select>
-            </div>
+        // Default render: at least one selected bank has findings data.
+        return (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+              <div className="px-6 py-4 border-b border-neutral-100">
+                <h3 className="font-semibold text-neutral-900 text-base">
+                  Strategy initiatives
+                </h3>
+                <p className="text-xs text-neutral-400 mt-0.5">
+                  From <code className="font-mono">pc_finding.strategic_initiatives</code>{' '}
+                  (LLM-extracted narrative).
+                </p>
+              </div>
+              <div className="p-6 space-y-4">
+                {selected.map((t, i) => {
+                  const f = findings[t];
+                  return (
+                    <div
+                      key={t}
+                      className="rounded-lg border border-neutral-200 overflow-hidden"
+                    >
+                      <div className="px-3 py-2 bg-neutral-50 flex items-center gap-2">
+                        <span
+                          className="w-2 h-2 rounded-full"
+                          style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                        />
+                        <span className="text-sm font-semibold text-neutral-800">
+                          {t}
+                        </span>
+                      </div>
+                      <div className="px-3 py-3 text-sm text-neutral-700 whitespace-pre-wrap">
+                        {f?.strategic_initiatives?.trim()
+                          ? f.strategic_initiatives.trim()
+                          : 'No strategy initiatives found yet for this bank.'}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
 
-            {selected.map((t, i) => {
-              const f = findings[t];
-              const quotes = parseMaybeJson<any>(f?.notable_quotes);
-              let best: string | null = null;
-              if (Array.isArray(quotes)) {
-                const candidates = quotes
-                  .map((q) => {
-                    if (typeof q === 'string') return { text: q, topic: '' };
-                    if (q && typeof q === 'object') return { text: String(q.quote ?? ''), topic: String(q.topic ?? '') };
-                    return { text: '', topic: '' };
-                  })
-                  .filter((q) => q.text.trim().length > 0);
-                const topicLower = topic.trim().toLowerCase();
-                best =
-                  candidates.find((c) => c.topic.trim().toLowerCase() === topicLower)?.text ??
-                  candidates.find((c) => topicLower && c.text.toLowerCase().includes(topicLower))?.text ??
-                  candidates[0]?.text ??
-                  null;
-              } else if (typeof quotes === 'string' && quotes.trim()) {
-                best = quotes.trim();
-              }
-
-              return (
-                <div key={t} className="rounded-lg border border-neutral-200 overflow-hidden">
-                  <div className="px-3 py-2 bg-neutral-50 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
-                    <span className="text-sm font-semibold text-neutral-800">{t}</span>
-                  </div>
-                  <div className="px-3 py-3 text-sm text-neutral-700 whitespace-pre-wrap">
-                    {best ?? 'No quote available for this bank yet.'}
-                  </div>
+            <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+              <div className="px-6 py-4 border-b border-neutral-100">
+                <h3 className="font-semibold text-neutral-900 text-base">
+                  Key quote face-off
+                </h3>
+                <p className="text-xs text-neutral-400 mt-0.5">
+                  Same topic, different language. Topic list from{' '}
+                  <code className="font-mono">pc_finding.key_themes</code>.
+                </p>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-medium text-neutral-500">Topic</span>
+                  <select
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    className="text-sm px-2 py-1.5 rounded-lg border border-neutral-200"
+                  >
+                    {quoteTopics.length === 0 ? (
+                      <option value="">No topics available</option>
+                    ) : (
+                      quoteTopics.map((t) => (
+                        <option key={t} value={t}>
+                          {t}
+                        </option>
+                      ))
+                    )}
+                  </select>
                 </div>
-              );
-            })}
+
+                {selected.map((t, i) => {
+                  const f = findings[t];
+                  const quotes = parseMaybeJson<any>(f?.notable_quotes);
+                  let best: string | null = null;
+                  if (Array.isArray(quotes)) {
+                    const candidates = quotes
+                      .map((q) => {
+                        if (typeof q === 'string') return { text: q, topic: '' };
+                        if (q && typeof q === 'object')
+                          return {
+                            text: String(q.quote ?? ''),
+                            topic: String(q.topic ?? ''),
+                          };
+                        return { text: '', topic: '' };
+                      })
+                      .filter((q) => q.text.trim().length > 0);
+                    const topicLower = topic.trim().toLowerCase();
+                    best =
+                      candidates.find(
+                        (c) => c.topic.trim().toLowerCase() === topicLower,
+                      )?.text ??
+                      candidates.find(
+                        (c) =>
+                          topicLower && c.text.toLowerCase().includes(topicLower),
+                      )?.text ??
+                      candidates[0]?.text ??
+                      null;
+                  } else if (typeof quotes === 'string' && quotes.trim()) {
+                    best = quotes.trim();
+                  }
+
+                  return (
+                    <div
+                      key={t}
+                      className="rounded-lg border border-neutral-200 overflow-hidden"
+                    >
+                      <div className="px-3 py-2 bg-neutral-50 flex items-center gap-2">
+                        <span
+                          className="w-2 h-2 rounded-full"
+                          style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                        />
+                        <span className="text-sm font-semibold text-neutral-800">
+                          {t}
+                        </span>
+                      </div>
+                      <div className="px-3 py-3 text-sm text-neutral-700 whitespace-pre-wrap">
+                        {best ?? 'No quote available for this bank yet.'}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
+        );
+      })()}
     </div>
   );
 }
