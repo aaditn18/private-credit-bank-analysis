@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 // ── types ──────────────────────────────────────────────────────────────────────
 
@@ -187,24 +187,66 @@ export function RankingsPanel() {
         return { ...b, score };
       });
 
-    if (!sortKey) return withScore.sort((a, b) => b.score - a.score);
+    const isAllMissing = (b: typeof withScore[0]) =>
+      data.metrics.every((m) => b.raw[m.key] === null || b.raw[m.key] === undefined);
+
+    if (!sortKey) {
+      return withScore.sort((a, b) => {
+        if (isAllMissing(a) && isAllMissing(b)) return 0;
+        if (isAllMissing(a)) return 1;
+        if (isAllMissing(b)) return -1;
+        return b.score - a.score;
+      });
+    }
 
     return withScore.sort((a, b) => {
       const aVal = sortKey === 'score' ? a.score : a.raw[sortKey];
       const bVal = sortKey === 'score' ? b.score : b.raw[sortKey];
-      const aNull = aVal === null || aVal === undefined;
-      const bNull = bVal === null || bVal === undefined;
+      const aNull = sortKey === 'score' ? isAllMissing(a) : (aVal === null || aVal === undefined);
+      const bNull = sortKey === 'score' ? isAllMissing(b) : (bVal === null || bVal === undefined);
       if (aNull && bNull) return 0;
       if (aNull) return 1;
       if (bNull) return -1;
-      return sortDir === 'desc' ? bVal - aVal : aVal - bVal;
+      return sortDir === 'desc' ? (bVal as number) - (aVal as number) : (aVal as number) - (bVal as number);
     });
   }, [data, weights, peerFilter, sortKey, sortDir]);
 
   if (loading) {
     return (
-      <section className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
-        <div className="h-4 w-40 bg-neutral-100 rounded animate-pulse" />
+      <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+        <div className="px-6 py-4 border-b border-neutral-100">
+          <div className="h-4 w-32 bg-neutral-100 rounded animate-pulse mb-1.5" />
+          <div className="h-3 w-48 bg-neutral-100 rounded animate-pulse" />
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-neutral-100">
+                {['w-6', 'w-32', 'w-16', 'w-24', 'w-24', 'w-24', 'w-24', 'w-24', 'w-24'].map((w, i) => (
+                  <th key={i} className="px-3 py-2">
+                    <div className={`h-3 ${w} bg-neutral-100 rounded animate-pulse`} />
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from({ length: 8 }).map((_, i) => (
+                <tr key={i} className="border-b border-neutral-50">
+                  <td className="px-6 py-2.5"><div className="h-3 w-4 bg-neutral-100 rounded animate-pulse" /></td>
+                  <td className="px-2 py-2.5">
+                    <div className="h-3 w-12 bg-neutral-100 rounded animate-pulse mb-1" />
+                    <div className="h-2.5 w-24 bg-neutral-100 rounded animate-pulse" />
+                  </td>
+                  {Array.from({ length: 7 }).map((_, j) => (
+                    <td key={j} className="px-3 py-2.5">
+                      <div className="h-3 w-16 bg-neutral-100 rounded animate-pulse" />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     );
   }
@@ -263,33 +305,43 @@ export function RankingsPanel() {
       )}
 
       {/* peer filter */}
-      <div className="flex gap-2 px-6 pt-4 pb-2 flex-wrap">
-        {peerGroups.map((pg) => (
+      <div className="flex items-center justify-between px-6 pt-4 pb-2 flex-wrap gap-2">
+        <div className="flex gap-2 flex-wrap">
+          {peerGroups.map((pg) => (
+            <button
+              key={pg}
+              onClick={() => setPeerFilter(pg)}
+              className={`text-xs px-3 py-1 rounded-full border font-medium capitalize transition-colors ${
+                peerFilter === pg
+                  ? 'bg-indigo-600 border-indigo-600 text-white'
+                  : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50'
+              }`}
+            >
+              {pg === 'all' ? 'All banks' : pg === 'trust-ib' ? 'Trust / IB' : pg === 'regional' ? 'Regional' : pg}
+            </button>
+          ))}
+        </div>
+        {sortKey && (
           <button
-            key={pg}
-            onClick={() => setPeerFilter(pg)}
-            className={`text-xs px-3 py-1 rounded-full border font-medium capitalize transition-colors ${
-              peerFilter === pg
-                ? 'bg-indigo-600 border-indigo-600 text-white'
-                : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50'
-            }`}
+            onClick={() => { setSortKey(null); setSortDir('desc'); }}
+            className="text-xs text-indigo-500 hover:text-indigo-700 flex items-center gap-1 transition-colors"
           >
-            {pg === 'all' ? 'All banks' : pg === 'trust-ib' ? 'Trust / IB' : pg === 'regional' ? 'Regional' : pg}
+            <span>✕</span> Reset sort
           </button>
-        ))}
+        )}
       </div>
 
       {/* table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto overflow-y-auto max-h-[600px]">
         <table className="w-full text-sm">
-          <thead>
+          <thead className="sticky top-0 z-10 bg-white">
             <tr className="text-left text-xs text-neutral-400 border-b border-neutral-100">
               <th className="px-6 py-2 font-medium w-8">#</th>
               <th className="px-2 py-2 font-medium">Bank</th>
               <th className="px-3 py-2 font-medium">
                 <button
                   onClick={() => handleSortClick('score')}
-                  className="flex items-center gap-1 hover:text-neutral-700 transition-colors"
+                  className={`flex items-center gap-1 transition-colors hover:text-neutral-700 ${sortKey === 'score' ? 'text-indigo-500' : ''}`}
                 >
                   Score
                   <SortArrow active={sortKey === 'score'} dir={sortDir} />
@@ -299,7 +351,7 @@ export function RankingsPanel() {
                 <th key={m.key} className="px-3 py-2 font-medium whitespace-nowrap">
                   <button
                     onClick={() => handleSortClick(m.key)}
-                    className="flex items-center gap-1 hover:text-neutral-700 transition-colors"
+                    className={`flex items-center gap-1 transition-colors hover:text-neutral-700 ${sortKey === m.key ? 'text-indigo-500' : ''}`}
                   >
                     {m.label}
                     <SortArrow active={sortKey === m.key} dir={sortDir} />
@@ -309,11 +361,23 @@ export function RankingsPanel() {
             </tr>
           </thead>
           <tbody>
-            {ranked.map((bank, i) => (
+            {ranked.map((bank, i) => {
+              const allMissing = data.metrics.every((m) => bank.raw[m.key] === null || bank.raw[m.key] === undefined);
+              const prevAllMissing = i > 0 && data.metrics.every((m) => ranked[i - 1].raw[m.key] === null || ranked[i - 1].raw[m.key] === undefined);
+              const showDivider = allMissing && !prevAllMissing;
+              return (
+              <React.Fragment key={bank.ticker}>
+                {showDivider && (
+                  <tr key={`divider-${bank.ticker}`}>
+                    <td colSpan={3 + data.metrics.length} className="px-6 py-1.5 text-[10px] text-neutral-400 bg-neutral-50 border-y border-neutral-100 font-medium tracking-wide uppercase">
+                      Not reported — below FFIEC disclosure threshold
+                    </td>
+                  </tr>
+                )}
               <tr
                 key={bank.ticker}
                 onClick={() => { window.location.href = `/timeline/${bank.ticker}`; }}
-                className="border-b border-neutral-50 hover:bg-neutral-50 transition-colors cursor-pointer"
+                className={`border-b border-neutral-50 hover:bg-neutral-50 transition-colors cursor-pointer ${allMissing ? 'opacity-40' : ''}`}
                 title={`Open ${bank.ticker} timeline`}
               >
                 <td className="px-6 py-2.5 text-xs text-neutral-400 font-mono">{i + 1}</td>
@@ -392,7 +456,9 @@ export function RankingsPanel() {
                   );
                 })}
               </tr>
-            ))}
+              </React.Fragment>
+              );
+            })}
           </tbody>
         </table>
       </div>
