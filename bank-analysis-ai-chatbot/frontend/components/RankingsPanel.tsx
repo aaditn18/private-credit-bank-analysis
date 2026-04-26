@@ -174,6 +174,29 @@ export function RankingsPanel() {
     }
   }
 
+  const defaultRankedOrder = useMemo(() => {
+    if (!data || !data.banks) return {} as Record<string, number>;
+    const withScore = data.banks
+      .filter((b) => peerFilter === 'all' || b.peer_group === peerFilter)
+      .map((b) => {
+        const score = data.metrics.reduce((sum, m) => {
+          const w = (DEFAULT_WEIGHTS[m.key] ?? 0) / 100;
+          const norm = m.higher_is_better ? b.norm[m.key] : 1 - b.norm[m.key];
+          return sum + w * norm;
+        }, 0);
+        return { ticker: b.ticker, score, raw: b.raw };
+      });
+    const isAllMissing = (b: typeof withScore[0]) =>
+      data.metrics.every((m) => b.raw[m.key] === null || b.raw[m.key] === undefined);
+    withScore.sort((a, b) => {
+      if (isAllMissing(a) && isAllMissing(b)) return 0;
+      if (isAllMissing(a)) return 1;
+      if (isAllMissing(b)) return -1;
+      return b.score - a.score;
+    });
+    return Object.fromEntries(withScore.map((b, i) => [b.ticker, i + 1]));
+  }, [data, peerFilter]);
+
   const ranked = useMemo(() => {
     if (!data || !data.banks) return [];
     const withScore = data.banks
@@ -267,29 +290,32 @@ export function RankingsPanel() {
             Ranked by private credit relevance · {data.quarter} Call Report data
           </p>
         </div>
-        <button
-          onClick={() => setShowWeights((v) => !v)}
-          className="text-xs px-3 py-1.5 rounded-lg border border-indigo-200 text-indigo-600
-            hover:bg-indigo-50 font-medium"
-        >
-          {showWeights ? 'Hide weights' : 'Adjust weights'}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setWeights(DEFAULT_WEIGHTS)}
+            className="text-xs px-3 py-1.5 rounded-lg border border-neutral-200 text-neutral-500
+              hover:bg-neutral-50 font-medium"
+          >
+            Restore weights
+          </button>
+          <button
+            onClick={() => setShowWeights((v) => !v)}
+            className="text-xs px-3 py-1.5 rounded-lg border border-indigo-200 text-indigo-600
+              hover:bg-indigo-50 font-medium"
+          >
+            {showWeights ? 'Hide weights' : 'Adjust weights'}
+          </button>
+        </div>
       </div>
 
       {/* weight sliders */}
       {showWeights && (
         <div className="px-6 py-5 bg-neutral-50 border-b border-neutral-100">
-          <div className="flex items-center justify-between mb-4">
+          <div className="mb-4">
             <p className="text-xs text-neutral-500">
               Adjust how each metric is weighted. Weights always sum to{' '}
               <span className="font-semibold text-indigo-600">100%</span>.
             </p>
-            <button
-              onClick={() => setWeights(DEFAULT_WEIGHTS)}
-              className="text-xs text-neutral-400 hover:text-neutral-600 underline"
-            >
-              Reset
-            </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-5">
             {data.metrics.map((m) => (
@@ -341,6 +367,7 @@ export function RankingsPanel() {
               <th className="px-3 py-2 font-medium">
                 <button
                   onClick={() => handleSortClick('score')}
+                  title="Weighted composite of all metrics, normalized 0–100. Adjust weights above to change how each metric contributes."
                   className={`flex items-center gap-1 transition-colors hover:text-neutral-700 ${sortKey === 'score' ? 'text-indigo-500' : ''}`}
                 >
                   Score
@@ -351,6 +378,7 @@ export function RankingsPanel() {
                 <th key={m.key} className="px-3 py-2 font-medium whitespace-nowrap">
                   <button
                     onClick={() => handleSortClick(m.key)}
+                    title={m.description}
                     className={`flex items-center gap-1 transition-colors hover:text-neutral-700 ${sortKey === m.key ? 'text-indigo-500' : ''}`}
                   >
                     {m.label}
@@ -380,7 +408,21 @@ export function RankingsPanel() {
                 className={`border-b border-neutral-50 hover:bg-neutral-50 transition-colors cursor-pointer ${allMissing ? 'opacity-40' : ''}`}
                 title={`Open ${bank.ticker} timeline`}
               >
-                <td className="px-6 py-2.5 text-xs text-neutral-400 font-mono">{i + 1}</td>
+                <td className="px-6 py-2.5 text-xs text-neutral-400 font-mono">
+                  <div className="flex items-center gap-1">
+                    <span>{i + 1}</span>
+                    {(() => {
+                      const defaultPos = defaultRankedOrder[bank.ticker];
+                      const change = defaultPos - (i + 1);
+                      if (!change) return null;
+                      return (
+                        <span className={`text-[10px] font-semibold ${change > 0 ? 'text-emerald-500' : 'text-rose-400'}`}>
+                          {change > 0 ? `▲${change}` : `▼${Math.abs(change)}`}
+                        </span>
+                      );
+                    })()}
+                  </div>
+                </td>
                 <td className="px-2 py-2.5">
                   <div className="flex items-center gap-2">
                     <a
