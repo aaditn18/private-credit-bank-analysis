@@ -1,5 +1,8 @@
 # Private Credit Analyst Tool
 
+> **Documentation as-acquired: 2026-04-26.**
+> Reflects the codebase and data state on this date — SEC filings through the latest available filing, FFIEC Call Reports through 2025Q4, earnings-call transcripts through 2026Q1.
+
 A vertical search + AI-overview tool focused on private credit / NBFI exposure across
 US banks, tailored for **risk analysts**. Combines narrative documents (10-K/Q, 8-K,
 prepared remarks) with FFIEC Call Report structured data, delivers span-level citations,
