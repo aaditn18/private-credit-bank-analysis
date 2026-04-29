@@ -114,10 +114,14 @@ function HistorySparkline({ a }: { a: Anomaly }) {
                 borderRadius: 4,
                 border: '1px solid #e5e5e5',
               }}
-              formatter={(v: number, name: string) => [
-                `${v.toFixed(2)}%`,
-                name === 'value' ? a.bank_ticker : 'Peer median',
-              ]}
+              formatter={(value, name) => {
+                const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                const metricName = String(name);
+                return [
+                  `${numericValue.toFixed(2)}%`,
+                  metricName === 'value' ? a.bank_ticker : 'Peer median',
+                ];
+              }}
             />
             {hasPeer && (
               <Line
@@ -192,7 +196,10 @@ function PeerComparisonBar({ a }: { a: Anomaly }) {
               borderRadius: 4,
               border: '1px solid #e5e5e5',
             }}
-            formatter={(v: number) => [`${v.toFixed(2)}%`, 'Value']}
+            formatter={(value) => {
+              const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+              return [`${numericValue.toFixed(2)}%`, 'Value'];
+            }}
           />
           <Bar dataKey="value" radius={[2, 2, 2, 2]}>
             <Cell fill="#6366f1" />

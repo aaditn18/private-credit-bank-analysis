@@ -368,10 +368,14 @@ export function TrendsPanel() {
                     width={55}
                   />
                   <Tooltip
-                    formatter={(value: number) => [`${(value * 100).toFixed(3)}%`, 'NBFI Loan Ratio']}
-                    labelFormatter={(label: string) => {
-                      const entry = filteredExposure.find((e) => e.ticker === label);
-                      return entry ? `${entry.name} (${entry.peer_group})` : label;
+                    formatter={(value) => {
+                      const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                      return [`${(numericValue * 100).toFixed(3)}%`, 'NBFI Loan Ratio'];
+                    }}
+                    labelFormatter={(label) => {
+                      const ticker = String(label ?? '');
+                      const entry = filteredExposure.find((e) => e.ticker === ticker);
+                      return entry ? `${entry.name} (${entry.peer_group})` : ticker;
                     }}
                     contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
                   />
@@ -432,10 +436,14 @@ export function TrendsPanel() {
                       width={55}
                     />
                     <Tooltip
-                      formatter={(value: number, name: string) => [
-                        `${(value * 100).toFixed(3)}%`,
-                        name === 'avg_nbfi_ratio' ? 'Avg NBFI Ratio' : 'Avg C&I Ratio',
-                      ]}
+                      formatter={(value, name) => {
+                        const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                        const metricName = String(name);
+                        return [
+                          `${(numericValue * 100).toFixed(3)}%`,
+                          metricName === 'avg_nbfi_ratio' ? 'Avg NBFI Ratio' : 'Avg C&I Ratio',
+                        ];
+                      }}
                       contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
                     />
                     <Legend
@@ -491,7 +499,10 @@ export function TrendsPanel() {
                       width={55}
                     />
                     <Tooltip
-                      formatter={(value: number, name: string) => [`${(value * 100).toFixed(3)}%`, peerLabel(name)]}
+                      formatter={(value, name) => {
+                        const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                        return [`${(numericValue * 100).toFixed(3)}%`, peerLabel(String(name))];
+                      }}
                       contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
                     />
                     <Legend formatter={(value: string) => <span className="text-xs text-neutral-600">{peerLabel(value)}</span>} />

@@ -1,0 +1,5701 @@
+{
+  "generated_at": "2026-04-29T06:02:37.610617Z",
+  "records": [
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ALLY-2023Q4-AI-7e6cc3c960",
+            "ALLY-2023Q4-AI-809e7d90ba",
+            "ALLY-2023Q4-AI-f75fcd7f50",
+            "ALLY-2024Q4-AI-097fa4d9dc",
+            "ALLY-2024Q4-AI-2a4a437eec",
+            "ALLY-2024Q4-AI-9f00aaf4bf"
+          ],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 100.0,
+          "peer_percentile": 100.0,
+          "raw_value": 40.5
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ALLY-2023Q4-AI-06b00b2dd3",
+            "ALLY-2023Q4-AI-1e83504ed8",
+            "ALLY-2023Q4-AI-2ba32f76f8",
+            "ALLY-2023Q4-AI-32c6d0c9b3",
+            "ALLY-2023Q4-AI-58d18bb9e6",
+            "ALLY-2023Q4-AI-5f46f514a7",
+            "ALLY-2023Q4-AI-721f7db639",
+            "ALLY-2023Q4-AI-7e6cc3c960",
+            "ALLY-2023Q4-AI-809e7d90ba",
+            "ALLY-2023Q4-AI-839717c1a4",
+            "ALLY-2023Q4-AI-8fbf86fa6d",
+            "ALLY-2023Q4-AI-9d41e3b9d3",
+            "ALLY-2023Q4-AI-a93deeebac",
+            "ALLY-2023Q4-AI-a9ceedf694",
+            "ALLY-2023Q4-AI-b9612661df",
+            "ALLY-2023Q4-AI-ba4f54a19b",
+            "ALLY-2023Q4-AI-bc180dad50",
+            "ALLY-2023Q4-AI-bc4d09b6bc",
+            "ALLY-2023Q4-AI-d6f9f433f7",
+            "ALLY-2023Q4-AI-dca30a85d1",
+            "ALLY-2023Q4-AI-f70da0e8e9",
+            "ALLY-2023Q4-AI-f75fcd7f50",
+            "ALLY-2024Q1-AI-36b14da118",
+            "ALLY-2024Q1-AI-84278ef4dc",
+            "ALLY-2024Q3-AI-6138259c3e",
+            "ALLY-2024Q3-AI-8133651df7",
+            "ALLY-2024Q4-AI-097fa4d9dc",
+            "ALLY-2024Q4-AI-2a4a437eec",
+            "ALLY-2024Q4-AI-3a683ee96b",
+            "ALLY-2024Q4-AI-40a49e29e6",
+            "ALLY-2024Q4-AI-471444c53a",
+            "ALLY-2024Q4-AI-50dfebbddb",
+            "ALLY-2024Q4-AI-633c2a6fcc",
+            "ALLY-2024Q4-AI-7c13fb09d0",
+            "ALLY-2024Q4-AI-9f00aaf4bf",
+            "ALLY-2024Q4-AI-bf5092b133",
+            "ALLY-2024Q4-AI-c37e219c0f",
+            "ALLY-2024Q4-AI-eb8d01d181",
+            "ALLY-2024Q4-AI-f057be744d",
+            "ALLY-2024Q4-AI-f0b4db9d8d",
+            "ALLY-2024Q4-AI-fd98414f8a",
+            "ALLY-2025Q1-AI-e3f4b92681"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 172.25
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ALLY-2023Q4-AI-06b00b2dd3",
+            "ALLY-2024Q4-AI-eb8d01d181"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 100.0,
+          "peer_percentile": 96.05,
+          "raw_value": 11.25
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ALLY-2023Q4-AI-809e7d90ba",
+            "ALLY-2023Q4-AI-b9612661df",
+            "ALLY-2024Q4-AI-eb8d01d181"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 15.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ALLY-2024Q4-AI-7a9c3c3bcc"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 3.75,
+          "peer_percentile": 7.89,
+          "raw_value": 0.375
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "ALLY"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ASB-2024Q4-AI-197fe4cf59",
+            "ASB-2024Q4-AI-409fa6b562",
+            "ASB-2024Q4-AI-4b911476b0",
+            "ASB-2024Q4-AI-5910635cd2",
+            "ASB-2024Q4-AI-84e052bcb6",
+            "ASB-2024Q4-AI-8eb5780cca",
+            "ASB-2025Q4-AI-1a459d4c32",
+            "ASB-2025Q4-AI-360eba0563",
+            "ASB-2025Q4-AI-412cb43c7c",
+            "ASB-2025Q4-AI-5274c4e3ec",
+            "ASB-2025Q4-AI-557fbe6f6d",
+            "ASB-2025Q4-AI-60f23b8204",
+            "ASB-2025Q4-AI-9a807b9f4a",
+            "ASB-2025Q4-AI-b963527f48",
+            "ASB-2025Q4-AI-c017c910f3",
+            "ASB-2025Q4-AI-f26bb4121c",
+            "ASB-2025Q4-AI-ff13841bb8",
+            "ASB-2025Q4-AI-ffd606def9"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 43.875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ASB-2025Q4-AI-ffd606def9"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 45.0,
+          "peer_percentile": 72.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ASB-2024Q4-AI-197fe4cf59",
+            "ASB-2024Q4-AI-409fa6b562",
+            "ASB-2024Q4-AI-418b2f9d6f",
+            "ASB-2024Q4-AI-4b911476b0",
+            "ASB-2024Q4-AI-5910635cd2",
+            "ASB-2024Q4-AI-84e052bcb6",
+            "ASB-2024Q4-AI-dbac7636e6",
+            "ASB-2025Q4-AI-1a459d4c32",
+            "ASB-2025Q4-AI-360eba0563",
+            "ASB-2025Q4-AI-412cb43c7c",
+            "ASB-2025Q4-AI-5274c4e3ec",
+            "ASB-2025Q4-AI-557fbe6f6d",
+            "ASB-2025Q4-AI-9a807b9f4a",
+            "ASB-2025Q4-AI-b963527f48",
+            "ASB-2025Q4-AI-ff13841bb8",
+            "ASB-2025Q4-AI-ffd606def9"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 42.625
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ASB-2024Q4-AI-418b2f9d6f",
+            "ASB-2024Q4-AI-49aeffa563",
+            "ASB-2024Q4-AI-4bb680ab7e",
+            "ASB-2024Q4-AI-84e052bcb6",
+            "ASB-2024Q4-AI-dbac7636e6",
+            "ASB-2025Q4-AI-1a459d4c32",
+            "ASB-2025Q4-AI-360eba0563",
+            "ASB-2025Q4-AI-557fbe6f6d",
+            "ASB-2025Q4-AI-60f23b8204",
+            "ASB-2025Q4-AI-a0fe1ad2e0",
+            "ASB-2025Q4-AI-c017c910f3",
+            "ASB-2025Q4-AI-dd1d2dff4d",
+            "ASB-2025Q4-AI-f64772a45f",
+            "ASB-2025Q4-AI-ff13841bb8"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 15.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "ASB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2024Q4-AI-c2188e2160"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 77.62,
+          "peer_percentile": 82.89,
+          "raw_value": 7.7625
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2023Q2-AI-3afaffb2cf",
+            "AXP-2024Q1-AI-5231846b38",
+            "AXP-2024Q1-AI-7a7d4f744d",
+            "AXP-2024Q2-AI-cba4edc5a2",
+            "AXP-2024Q3-AI-bd2abdeec6",
+            "AXP-2024Q4-AI-0c8e36bf48",
+            "AXP-2024Q4-AI-0d2423e1da",
+            "AXP-2024Q4-AI-2945e5c7dc",
+            "AXP-2024Q4-AI-30e9238d11",
+            "AXP-2024Q4-AI-37001aaeef",
+            "AXP-2024Q4-AI-3bd167266a",
+            "AXP-2024Q4-AI-3e82b34431",
+            "AXP-2024Q4-AI-4a32fdb001",
+            "AXP-2024Q4-AI-551d8e5b8d",
+            "AXP-2024Q4-AI-570f21e273",
+            "AXP-2024Q4-AI-854f4130e9",
+            "AXP-2024Q4-AI-8aa7128dea",
+            "AXP-2024Q4-AI-958c879f2a",
+            "AXP-2024Q4-AI-96ecb0dafb",
+            "AXP-2024Q4-AI-a87594c6a2",
+            "AXP-2024Q4-AI-ac9514a908",
+            "AXP-2024Q4-AI-b63d16d9cb",
+            "AXP-2024Q4-AI-c2188e2160",
+            "AXP-2024Q4-AI-c95f4cec26",
+            "AXP-2024Q4-AI-d46b662d8f",
+            "AXP-2024Q4-AI-e218723d54",
+            "AXP-2025Q1-AI-93792136ba",
+            "AXP-2025Q1-AI-9d52d6aae9",
+            "AXP-2025Q2-AI-5e078fec04",
+            "AXP-2025Q4-AI-24ea6726c0",
+            "AXP-2025Q4-AI-467c1a1c1a",
+            "AXP-2025Q4-AI-5d87e3189d",
+            "AXP-2025Q4-AI-609ce6d175",
+            "AXP-2025Q4-AI-8bfa0f670f",
+            "AXP-2025Q4-AI-90b0b2f465",
+            "AXP-2025Q4-AI-926a8066b6",
+            "AXP-2025Q4-AI-b692a2e9bf",
+            "AXP-2025Q4-AI-ca734dd73f",
+            "AXP-2025Q4-AI-d232c3612d",
+            "AXP-2025Q4-AI-d6850b1c7a",
+            "AXP-2025Q4-AI-e8951c452f",
+            "AXP-2025Q4-AI-efe538d03a",
+            "AXP-2025Q4-AI-fb8a0b99c4"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 150.0875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2025Q4-AI-90b0b2f465"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 51.75,
+          "peer_percentile": 78.95,
+          "raw_value": 5.175
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2025Q3-AI-e595a48031",
+            "AXP-2025Q4-AI-770e559892"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 79.5,
+          "peer_percentile": 78.95,
+          "raw_value": 7.95
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2023Q2-AI-3afaffb2cf",
+            "AXP-2024Q1-AI-5231846b38",
+            "AXP-2024Q1-AI-7a7d4f744d",
+            "AXP-2024Q2-AI-cba4edc5a2",
+            "AXP-2024Q3-AI-bd2abdeec6",
+            "AXP-2024Q4-AI-0c8e36bf48",
+            "AXP-2024Q4-AI-30e9238d11",
+            "AXP-2024Q4-AI-37001aaeef",
+            "AXP-2024Q4-AI-4a32fdb001",
+            "AXP-2024Q4-AI-570f21e273",
+            "AXP-2024Q4-AI-8aa7128dea",
+            "AXP-2024Q4-AI-a87594c6a2",
+            "AXP-2024Q4-AI-ac9514a908",
+            "AXP-2024Q4-AI-b63d16d9cb",
+            "AXP-2025Q1-AI-93792136ba",
+            "AXP-2025Q1-AI-9d52d6aae9",
+            "AXP-2025Q2-AI-5e078fec04",
+            "AXP-2025Q4-AI-af8450ee6c",
+            "AXP-2025Q4-AI-b692a2e9bf",
+            "AXP-2025Q4-AI-ca734dd73f",
+            "AXP-2025Q4-AI-d232c3612d",
+            "AXP-2025Q4-AI-d6850b1c7a",
+            "AXP-2025Q4-AI-e8951c452f",
+            "AXP-2025Q4-AI-fb8a0b99c4"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 99.275
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "AXP-2024Q1-AI-5231846b38",
+            "AXP-2024Q2-AI-cba4edc5a2",
+            "AXP-2024Q3-AI-bd2abdeec6",
+            "AXP-2024Q4-AI-37001aaeef",
+            "AXP-2024Q4-AI-4a32fdb001",
+            "AXP-2024Q4-AI-ac9514a908",
+            "AXP-2025Q2-AI-e4e853e90a",
+            "AXP-2025Q4-AI-4c8539d0ba",
+            "AXP-2025Q4-AI-56858d05c4",
+            "AXP-2025Q4-AI-613251230b",
+            "AXP-2025Q4-AI-af8450ee6c",
+            "AXP-2025Q4-AI-ca734dd73f",
+            "AXP-2025Q4-AI-d232c3612d",
+            "AXP-2025Q4-AI-d6850b1c7a",
+            "AXP-2025Q4-AI-e67fc00b01",
+            "AXP-2025Q4-AI-efe538d03a"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 41.175
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "AXP"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BAC-2023Q4-AI-226399248f"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 67.5,
+          "peer_percentile": 66.67,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BAC-2023Q4-AI-0ef6cd115b",
+            "BAC-2023Q4-AI-16378d7032",
+            "BAC-2023Q4-AI-1abcbb1c41",
+            "BAC-2023Q4-AI-20a394edaa",
+            "BAC-2023Q4-AI-226399248f",
+            "BAC-2023Q4-AI-24174f028d",
+            "BAC-2023Q4-AI-328cd0dd89",
+            "BAC-2023Q4-AI-33c3ea6a37",
+            "BAC-2023Q4-AI-6bd985e375",
+            "BAC-2023Q4-AI-74141d92c9",
+            "BAC-2023Q4-AI-bcc7a38a5c",
+            "BAC-2023Q4-AI-c28d262287",
+            "BAC-2023Q4-AI-c699f368a1",
+            "BAC-2023Q4-AI-db4940b3d6",
+            "BAC-2024Q4-AI-054b53ee8c",
+            "BAC-2024Q4-AI-084668e3b7",
+            "BAC-2024Q4-AI-1ff825c30f",
+            "BAC-2024Q4-AI-21c9d3c381",
+            "BAC-2024Q4-AI-24f261997d",
+            "BAC-2024Q4-AI-413d6fc3a4",
+            "BAC-2024Q4-AI-608afe65e4",
+            "BAC-2024Q4-AI-70df61731a",
+            "BAC-2024Q4-AI-72c9dc1fce",
+            "BAC-2024Q4-AI-7910eb2287",
+            "BAC-2024Q4-AI-8e547e4555",
+            "BAC-2024Q4-AI-941c82e87c",
+            "BAC-2024Q4-AI-a04ec99f97",
+            "BAC-2024Q4-AI-b1db5afd58",
+            "BAC-2024Q4-AI-bbfbe4f747",
+            "BAC-2024Q4-AI-c295c9377a",
+            "BAC-2024Q4-AI-ca1abdb74c",
+            "BAC-2024Q4-AI-cffaf32e12",
+            "BAC-2024Q4-AI-d4b3d0d47c",
+            "BAC-2024Q4-AI-e9782fbd6a",
+            "BAC-2024Q4-AI-f38f66dcef"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 57.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BAC-2023Q4-AI-16378d7032",
+            "BAC-2023Q4-AI-328cd0dd89",
+            "BAC-2023Q4-AI-b740525c1d",
+            "BAC-2023Q4-AI-c28d262287",
+            "BAC-2024Q4-AI-054b53ee8c",
+            "BAC-2024Q4-AI-084668e3b7",
+            "BAC-2024Q4-AI-70df61731a",
+            "BAC-2024Q4-AI-72c9dc1fce",
+            "BAC-2024Q4-AI-7910eb2287",
+            "BAC-2024Q4-AI-8e547e4555",
+            "BAC-2024Q4-AI-c295c9377a",
+            "BAC-2024Q4-AI-d4b3d0d47c",
+            "BAC-2024Q4-AI-e9782fbd6a"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 23.25
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BAC-2023Q4-AI-20a394edaa",
+            "BAC-2023Q4-AI-882d7394c0",
+            "BAC-2023Q4-AI-b740525c1d",
+            "BAC-2024Q4-AI-1ff825c30f",
+            "BAC-2024Q4-AI-3b331cf8bf",
+            "BAC-2024Q4-AI-70df61731a",
+            "BAC-2024Q4-AI-72c9dc1fce",
+            "BAC-2024Q4-AI-a04ec99f97",
+            "BAC-2024Q4-AI-a696cc40f2",
+            "BAC-2024Q4-AI-b1db5afd58",
+            "BAC-2024Q4-AI-bbfbe4f747",
+            "BAC-2024Q4-AI-cde30262df",
+            "BAC-2024Q4-AI-cffaf32e12",
+            "BAC-2024Q4-AI-d4b3d0d47c",
+            "BAC-2024Q4-AI-e9782fbd6a",
+            "BAC-2024Q4-AI-f0163db12c",
+            "BAC-2024Q4-AI-f38f66dcef"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 83.33,
+          "raw_value": 20.625
+        }
+      ],
+      "peer_group": "GSIB",
+      "ticker": "BAC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BK-2023Q2-AI-938e06a7ea",
+            "BK-2024Q1-AI-79743c4f8a",
+            "BK-2024Q3-AI-6bf078228e",
+            "BK-2024Q3-AI-ea2290c95b",
+            "BK-2024Q4-AI-aa27a22c66",
+            "BK-2024Q4-AI-f2cf34ccc9",
+            "BK-2025Q1-AI-27f1e2a2a9",
+            "BK-2025Q1-AI-84d33a5bcb",
+            "BK-2025Q2-AI-20c8a5b829",
+            "BK-2025Q2-AI-e057b3ad20"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 23.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BK-2024Q3-AI-6bf078228e",
+            "BK-2024Q3-AI-ea2290c95b",
+            "BK-2025Q2-AI-20c8a5b829"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 15.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BK-2024Q4-AI-aa27a22c66",
+            "BK-2025Q1-AI-27f1e2a2a9",
+            "BK-2025Q2-AI-e057b3ad20"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 50.0,
+          "peer_percentile": 50.0,
+          "raw_value": 5.0
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "BK"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BKU-2023Q3-AI-29b960431f",
+            "BKU-2023Q4-AI-1ecb776a57",
+            "BKU-2023Q4-AI-6b542c29b0",
+            "BKU-2023Q4-AI-ddfb9b783e",
+            "BKU-2024Q2-AI-9265d4e228",
+            "BKU-2024Q4-AI-0b6c632dfb",
+            "BKU-2024Q4-AI-2c00d5a6c0",
+            "BKU-2024Q4-AI-2fcd9d8de2",
+            "BKU-2024Q4-AI-3783eacbe8",
+            "BKU-2025Q2-AI-f3d66001d4"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 14.1625
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BKU-2024Q4-AI-2c00d5a6c0"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 11.25,
+          "peer_percentile": 25.0,
+          "raw_value": 1.125
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BKU-2023Q4-AI-d0d6ddda7e",
+            "BKU-2024Q4-AI-0b6c632dfb",
+            "BKU-2024Q4-AI-2c00d5a6c0"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 18.75,
+          "peer_percentile": 28.95,
+          "raw_value": 1.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "BKU"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BOKF-2023Q2-AI-50520f24ca",
+            "BOKF-2023Q2-AI-cf4a47332e",
+            "BOKF-2023Q3-AI-70927bdd29",
+            "BOKF-2023Q3-AI-946018daa1",
+            "BOKF-2023Q3-AI-f7ca9fdb42",
+            "BOKF-2024Q1-AI-5c6725405b",
+            "BOKF-2024Q1-AI-5f27954141",
+            "BOKF-2024Q1-AI-830b061edd",
+            "BOKF-2024Q1-AI-84fe8ffaf9",
+            "BOKF-2024Q2-AI-c7685a0255",
+            "BOKF-2024Q4-AI-0ec558f79a",
+            "BOKF-2024Q4-AI-2291c5db05",
+            "BOKF-2024Q4-AI-232756b09d",
+            "BOKF-2024Q4-AI-43dddffadb",
+            "BOKF-2025Q1-AI-30706117bc",
+            "BOKF-2025Q2-AI-25764a417e",
+            "BOKF-2025Q3-AI-b281c07616",
+            "BOKF-2025Q3-AI-c32681b750",
+            "BOKF-2025Q4-AI-33ccbbef58",
+            "BOKF-2025Q4-AI-6d6cb180b8",
+            "BOKF-2025Q4-AI-c26e8e8c37",
+            "BOKF-2025Q4-AI-cdc9be7151",
+            "BOKF-2025Q4-AI-f976f20ed8"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 130.0875
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BOKF-2025Q4-AI-ca95c73991"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 45.0,
+          "peer_percentile": 71.05,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BOKF-2024Q4-AI-0ec558f79a",
+            "BOKF-2024Q4-AI-232756b09d",
+            "BOKF-2025Q4-AI-6d6cb180b8",
+            "BOKF-2025Q4-AI-c26e8e8c37",
+            "BOKF-2025Q4-AI-f976f20ed8"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 10.875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BOKF-2025Q4-AI-6ff744b50a",
+            "BOKF-2025Q4-AI-79f3320807",
+            "BOKF-2025Q4-AI-cdc9be7151"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 18.75,
+          "peer_percentile": 28.95,
+          "raw_value": 1.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "BOKF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BPOP-2023Q2-AI-e7574a7968",
+            "BPOP-2023Q3-AI-03447a48a5",
+            "BPOP-2023Q3-AI-77483647b2",
+            "BPOP-2023Q4-AI-5423300247",
+            "BPOP-2023Q4-AI-575514c295",
+            "BPOP-2023Q4-AI-58c1744223",
+            "BPOP-2023Q4-AI-6095329023",
+            "BPOP-2024Q4-AI-65b3981936",
+            "BPOP-2025Q1-AI-54025cd403",
+            "BPOP-2025Q1-AI-bbe309dadc"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 33.4625
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BPOP-2023Q4-AI-bbb6725a8c",
+            "BPOP-2024Q4-AI-4d9f255434"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 75.0,
+          "peer_percentile": 88.16,
+          "raw_value": 7.5
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BPOP-2023Q3-AI-77483647b2",
+            "BPOP-2023Q4-AI-6095329023"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 90.0,
+          "peer_percentile": 84.21,
+          "raw_value": 9.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BPOP-2024Q4-AI-65b3981936"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 11.25,
+          "peer_percentile": 25.0,
+          "raw_value": 1.125
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "BPOP-2024Q4-AI-44f34b7467",
+            "BPOP-2024Q4-AI-4e68755c60"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 7.5,
+          "peer_percentile": 13.16,
+          "raw_value": 0.75
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "BPOP"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "C-2024Q4-AI-018631318f",
+            "C-2024Q4-AI-148947c29e",
+            "C-2024Q4-AI-15c6382d68",
+            "C-2024Q4-AI-58a8f49467",
+            "C-2024Q4-AI-783c4a06dc",
+            "C-2024Q4-AI-78e70249c1",
+            "C-2024Q4-AI-83cabc88da",
+            "C-2024Q4-AI-90bce13c14",
+            "C-2024Q4-AI-9d43f92ef7",
+            "C-2024Q4-AI-a52383fd5f",
+            "C-2024Q4-AI-ab1a62b963",
+            "C-2024Q4-AI-b0f043b6a4",
+            "C-2024Q4-AI-c39cef8884",
+            "C-2024Q4-AI-d102af0f1c",
+            "C-2024Q4-AI-d1e459d0ba",
+            "C-2024Q4-AI-f31733e2fb",
+            "C-2024Q4-AI-f509f2546d",
+            "C-2025Q1-AI-1700a1fa19",
+            "C-2025Q1-AI-d715109a7b",
+            "C-2025Q4-AI-0876f5eaba",
+            "C-2025Q4-AI-0acfb5f84f",
+            "C-2025Q4-AI-17fde0b725",
+            "C-2025Q4-AI-3bd2c05d21",
+            "C-2025Q4-AI-3e124b7a5d",
+            "C-2025Q4-AI-847211c113",
+            "C-2025Q4-AI-a10fb9fac4",
+            "C-2025Q4-AI-ab13ec40c9",
+            "C-2025Q4-AI-b227771833",
+            "C-2025Q4-AI-c4f062a314",
+            "C-2025Q4-AI-ed7e587ac4",
+            "C-2025Q4-AI-f1c469e2cd"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 41.375
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "C-2024Q4-AI-83cabc88da",
+            "C-2025Q3-AI-5936c464a4"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 80.0,
+          "peer_percentile": 100.0,
+          "raw_value": 8.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "C-2025Q1-AI-1700a1fa19",
+            "C-2025Q3-AI-5936c464a4"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 100.0,
+          "raw_value": 12.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "C-2024Q4-AI-a52383fd5f",
+            "C-2024Q4-AI-c39cef8884",
+            "C-2024Q4-AI-d102af0f1c",
+            "C-2025Q1-AI-d715109a7b",
+            "C-2025Q4-AI-0876f5eaba",
+            "C-2025Q4-AI-17fde0b725",
+            "C-2025Q4-AI-3e124b7a5d",
+            "C-2025Q4-AI-847211c113",
+            "C-2025Q4-AI-ab13ec40c9",
+            "C-2025Q4-AI-f1c469e2cd"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 18.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "C-2024Q4-AI-148947c29e",
+            "C-2024Q4-AI-9d43f92ef7",
+            "C-2024Q4-AI-a52383fd5f",
+            "C-2024Q4-AI-f31733e2fb",
+            "C-2024Q4-AI-f509f2546d",
+            "C-2025Q4-AI-0876f5eaba",
+            "C-2025Q4-AI-3e124b7a5d",
+            "C-2025Q4-AI-dd10864b78"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 60.0,
+          "peer_percentile": 33.33,
+          "raw_value": 6.0
+        }
+      ],
+      "peer_group": "GSIB",
+      "ticker": "C"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2023Q2-AI-2e296f2e9c",
+            "CFG-2023Q3-AI-2c11291fb9",
+            "CFG-2024Q4-AI-02e9947df0",
+            "CFG-2025Q1-AI-7ee34b39ef",
+            "CFG-2025Q2-AI-0fb5a16742",
+            "CFG-2025Q2-AI-fe5ed23f16",
+            "CFG-2025Q3-AI-c1d690c76e",
+            "CFG-2025Q4-AI-ebf56bb012"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 54.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2023Q2-AI-2e296f2e9c",
+            "CFG-2023Q3-AI-2c11291fb9",
+            "CFG-2024Q4-AI-02e9947df0",
+            "CFG-2024Q4-AI-13dcefe46e",
+            "CFG-2024Q4-AI-5971ce0817",
+            "CFG-2024Q4-AI-c3a10e12a1",
+            "CFG-2024Q4-AI-d4cafd13ff",
+            "CFG-2024Q4-AI-fc0d01c0af",
+            "CFG-2025Q1-AI-7ee34b39ef",
+            "CFG-2025Q2-AI-0fb5a16742",
+            "CFG-2025Q2-AI-e90415cd8e",
+            "CFG-2025Q2-AI-fe5ed23f16",
+            "CFG-2025Q3-AI-c1d690c76e",
+            "CFG-2025Q4-AI-528586386a",
+            "CFG-2025Q4-AI-a4aaba23f2",
+            "CFG-2025Q4-AI-c1ced66742",
+            "CFG-2025Q4-AI-ebf56bb012"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 84.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2025Q1-AI-7ee34b39ef",
+            "CFG-2025Q4-AI-abdb6e0685"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 100.0,
+          "peer_percentile": 96.05,
+          "raw_value": 11.25
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2024Q4-AI-66e9300a03",
+            "CFG-2024Q4-AI-c86d3d9de5"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 90.0,
+          "peer_percentile": 84.21,
+          "raw_value": 9.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2024Q4-AI-d4cafd13ff",
+            "CFG-2025Q4-AI-528586386a",
+            "CFG-2025Q4-AI-a4aaba23f2"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 12.375
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFG-2024Q4-AI-13dcefe46e",
+            "CFG-2024Q4-AI-7de2b13abf",
+            "CFG-2024Q4-AI-e7db907862",
+            "CFG-2025Q4-AI-eec8ad6fe2"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 37.5,
+          "peer_percentile": 44.74,
+          "raw_value": 3.75
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "CFG"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFR-2024Q4-AI-d39a6a13f5"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 5.0,
+          "peer_percentile": 60.53,
+          "raw_value": 0.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFR-2023Q2-AI-5dbc575b3c",
+            "CFR-2024Q1-AI-400af4b1db",
+            "CFR-2024Q2-AI-a6d5e22445",
+            "CFR-2024Q3-AI-5b6cb0029e",
+            "CFR-2024Q4-AI-4db82ff3a3",
+            "CFR-2024Q4-AI-4f83d76510",
+            "CFR-2024Q4-AI-7b52150c9e",
+            "CFR-2024Q4-AI-890bd98919",
+            "CFR-2024Q4-AI-af620bc795",
+            "CFR-2025Q4-AI-0ce31e21af",
+            "CFR-2025Q4-AI-11ecabde7e",
+            "CFR-2025Q4-AI-2d99d8d69f",
+            "CFR-2025Q4-AI-46bca44f84",
+            "CFR-2025Q4-AI-83405358d6",
+            "CFR-2025Q4-AI-ea9fdbd8a5",
+            "CFR-2025Q4-AI-ff6fcabea4"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 54.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFR-2024Q4-AI-4db82ff3a3"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 67.5,
+          "peer_percentile": 56.58,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CFR-2024Q4-AI-c1359807b0",
+            "CFR-2024Q4-AI-d06b0a37fb",
+            "CFR-2025Q4-AI-2cbb91eeee",
+            "CFR-2025Q4-AI-2d99d8d69f",
+            "CFR-2025Q4-AI-44a8cfab99",
+            "CFR-2025Q4-AI-7f3dee594c"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 37.5,
+          "peer_percentile": 44.74,
+          "raw_value": 3.75
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "CFR"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CMA-2023Q4-AI-a8bfff6159",
+            "CMA-2023Q4-AI-b691dc7039",
+            "CMA-2023Q4-AI-c0f251b649",
+            "CMA-2024Q3-AI-9ad526fab6",
+            "CMA-2024Q4-AI-555eb83424",
+            "CMA-2024Q4-AI-c12fb81b6f",
+            "CMA-2024Q4-AI-c8dc4d1c75",
+            "CMA-2024Q4-AI-e20d04767b",
+            "CMA-2024Q4-AI-f35426d966",
+            "CMA-2025Q1-AI-17dbf94d68"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 37.4375
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CMA-2023Q4-AI-a8bfff6159",
+            "CMA-2024Q4-AI-c12fb81b6f"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 90.0,
+          "peer_percentile": 68.42,
+          "raw_value": 9.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "CMA-2024Q4-AI-56cf3dbc3e",
+            "CMA-2025Q3-AI-cbb29ea055"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 59.25,
+          "peer_percentile": 65.79,
+          "raw_value": 5.925
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "CMA"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COF-2025Q4-AI-631fb4abd7"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 77.62,
+          "peer_percentile": 82.89,
+          "raw_value": 7.7625
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COF-2024Q4-AI-143842dff5",
+            "COF-2024Q4-AI-2450f77a73",
+            "COF-2024Q4-AI-54a195acd3",
+            "COF-2024Q4-AI-717ee3aff8",
+            "COF-2024Q4-AI-76117639cc",
+            "COF-2024Q4-AI-8f98a88d2e",
+            "COF-2024Q4-AI-945c44b5be",
+            "COF-2024Q4-AI-b68d18519d",
+            "COF-2024Q4-AI-d796964665",
+            "COF-2024Q4-AI-ef4b93865b",
+            "COF-2025Q2-AI-0460a28ac2",
+            "COF-2025Q2-AI-077dda4761",
+            "COF-2025Q2-AI-07c859ca83",
+            "COF-2025Q2-AI-17cdb8db01",
+            "COF-2025Q2-AI-29193f1ff3",
+            "COF-2025Q2-AI-2aec5e1f47",
+            "COF-2025Q2-AI-6dc886333a",
+            "COF-2025Q2-AI-7757205497",
+            "COF-2025Q2-AI-f03d4a1758",
+            "COF-2025Q2-AI-f2af378d15",
+            "COF-2025Q2-AI-fd23ffee19",
+            "COF-2025Q4-AI-0f1f8c0ded",
+            "COF-2025Q4-AI-2afffd0409",
+            "COF-2025Q4-AI-5ce87ca76d",
+            "COF-2025Q4-AI-631fb4abd7",
+            "COF-2025Q4-AI-7b85d7385d",
+            "COF-2025Q4-AI-9634bccd0c",
+            "COF-2025Q4-AI-9d2251cff5",
+            "COF-2025Q4-AI-bd9ffa0156",
+            "COF-2025Q4-AI-d0168ab944",
+            "COF-2025Q4-AI-f24378858c"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 50.775
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COF-2024Q4-AI-76117639cc",
+            "COF-2024Q4-AI-945c44b5be",
+            "COF-2024Q4-AI-b68d18519d",
+            "COF-2024Q4-AI-ef4b93865b",
+            "COF-2025Q2-AI-0460a28ac2",
+            "COF-2025Q2-AI-077dda4761",
+            "COF-2025Q2-AI-6dc886333a",
+            "COF-2025Q2-AI-fd23ffee19",
+            "COF-2025Q4-AI-0f1f8c0ded",
+            "COF-2025Q4-AI-1a4b5a1f0e",
+            "COF-2025Q4-AI-2afffd0409",
+            "COF-2025Q4-AI-7b85d7385d",
+            "COF-2025Q4-AI-9634bccd0c"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 13.875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COF-2024Q4-AI-143842dff5",
+            "COF-2024Q4-AI-945c44b5be",
+            "COF-2024Q4-AI-b14eb48f9f",
+            "COF-2024Q4-AI-ef4b93865b",
+            "COF-2025Q2-AI-0460a28ac2",
+            "COF-2025Q2-AI-1a19dfaeed",
+            "COF-2025Q2-AI-6dc886333a",
+            "COF-2025Q2-AI-fd23ffee19",
+            "COF-2025Q4-AI-0f1f8c0ded",
+            "COF-2025Q4-AI-1a4b5a1f0e",
+            "COF-2025Q4-AI-2afffd0409",
+            "COF-2025Q4-AI-571f19b908",
+            "COF-2025Q4-AI-6004131808",
+            "COF-2025Q4-AI-a33ddb8e9c",
+            "COF-2025Q4-AI-d0bebaaec5"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 13.5
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "COF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COLB-2024Q4-AI-ff6582f17c"
+          ],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 67.5,
+          "peer_percentile": 97.37,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COLB-2023Q4-AI-2dd726441b",
+            "COLB-2023Q4-AI-84b07b4fef",
+            "COLB-2023Q4-AI-930cb54f32",
+            "COLB-2023Q4-AI-adb93a8d0a",
+            "COLB-2023Q4-AI-e7709a4f85",
+            "COLB-2024Q4-AI-0a86a82a05",
+            "COLB-2024Q4-AI-0ce2213256",
+            "COLB-2024Q4-AI-1bbbd06cd2",
+            "COLB-2024Q4-AI-28d3dfc6ea",
+            "COLB-2024Q4-AI-511c53a90e",
+            "COLB-2024Q4-AI-6d18074cff"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 36.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COLB-2024Q4-AI-ff6582f17c"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 67.5,
+          "peer_percentile": 73.68,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COLB-2023Q4-AI-930cb54f32",
+            "COLB-2023Q4-AI-adb93a8d0a",
+            "COLB-2023Q4-AI-e7709a4f85",
+            "COLB-2024Q4-AI-0ce2213256",
+            "COLB-2024Q4-AI-28d3dfc6ea",
+            "COLB-2024Q4-AI-511c53a90e",
+            "COLB-2024Q4-AI-6d18074cff"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 24.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "COLB-2023Q4-AI-40a33a6e6f",
+            "COLB-2023Q4-AI-e7709a4f85",
+            "COLB-2024Q4-AI-0a86a82a05",
+            "COLB-2024Q4-AI-28d3dfc6ea",
+            "COLB-2024Q4-AI-6d18074cff"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 48.75,
+          "peer_percentile": 59.21,
+          "raw_value": 4.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "COLB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "DFS-2022Q3-AI-848a693cef",
+            "DFS-2023Q4-AI-23182c5a55",
+            "DFS-2023Q4-AI-5240e4d853",
+            "DFS-2023Q4-AI-7237ab862c",
+            "DFS-2023Q4-AI-7335830a6d",
+            "DFS-2023Q4-AI-7f71813037",
+            "DFS-2023Q4-AI-9a1e2a8851",
+            "DFS-2023Q4-AI-c096de3053",
+            "DFS-2024Q3-AI-478cb6efaf",
+            "DFS-2024Q4-AI-1d84f710ba",
+            "DFS-2024Q4-AI-3fcab31ffb",
+            "DFS-2024Q4-AI-625d2136d3",
+            "DFS-2024Q4-AI-7e0ff2d545",
+            "DFS-2024Q4-AI-b39b821f5b"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 35.2125
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "DFS-2023Q4-AI-23182c5a55",
+            "DFS-2024Q4-AI-305ada381d"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 75.0,
+          "peer_percentile": 88.16,
+          "raw_value": 7.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "DFS-2023Q4-AI-7335830a6d"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 45.0,
+          "peer_percentile": 47.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "DFS-2023Q4-AI-2365de7737",
+            "DFS-2023Q4-AI-2c49770607",
+            "DFS-2023Q4-AI-c240e141a4",
+            "DFS-2024Q4-AI-516d0d33f7"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 41.25,
+          "peer_percentile": 53.95,
+          "raw_value": 4.125
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "DFS"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "EWBC-2023Q3-AI-53360ae930",
+            "EWBC-2023Q4-AI-4c12dbc41f",
+            "EWBC-2023Q4-AI-7a1e8ef032",
+            "EWBC-2024Q4-AI-60d21fd6a8",
+            "EWBC-2024Q4-AI-abe3db3785",
+            "EWBC-2024Q4-AI-d64904b251",
+            "EWBC-2024Q4-AI-ead4d942f2"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 11.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "EWBC-2024Q4-AI-da8cbcb4d7"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 3.75,
+          "peer_percentile": 7.89,
+          "raw_value": 0.375
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "EWBC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FCNCA-2025Q2-AI-9c73da8c54"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 45.0,
+          "peer_percentile": 69.74,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FCNCA-2023Q2-AI-670057076d",
+            "FCNCA-2023Q4-AI-3019960c74",
+            "FCNCA-2023Q4-AI-be2b36ed35",
+            "FCNCA-2023Q4-AI-c4251a80af",
+            "FCNCA-2023Q4-AI-d33d4d217e",
+            "FCNCA-2024Q4-AI-26fe2ea8e9",
+            "FCNCA-2024Q4-AI-44552147d9",
+            "FCNCA-2024Q4-AI-4a3fa51f78",
+            "FCNCA-2024Q4-AI-4c0af25d2e",
+            "FCNCA-2024Q4-AI-571570e457",
+            "FCNCA-2024Q4-AI-5f663dcf2c",
+            "FCNCA-2024Q4-AI-671135296a",
+            "FCNCA-2024Q4-AI-a48b1c348e",
+            "FCNCA-2024Q4-AI-aead8e44ff",
+            "FCNCA-2024Q4-AI-d8070af205",
+            "FCNCA-2024Q4-AI-da58e58d11",
+            "FCNCA-2024Q4-AI-fe8fe1900d",
+            "FCNCA-2025Q2-AI-9c73da8c54"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 51.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FCNCA-2023Q4-AI-3019960c74",
+            "FCNCA-2024Q4-AI-26fe2ea8e9",
+            "FCNCA-2024Q4-AI-4a3fa51f78",
+            "FCNCA-2024Q4-AI-4c0af25d2e",
+            "FCNCA-2024Q4-AI-aead8e44ff",
+            "FCNCA-2024Q4-AI-d8070af205"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 27.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "FCNCA"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FHN-2023Q4-AI-1aaa6204ca",
+            "FHN-2024Q4-AI-767de45c84"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 15.525
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FHN-2023Q2-AI-6fa9c00d3f",
+            "FHN-2023Q2-AI-cf7b949bd3",
+            "FHN-2023Q4-AI-0f26e079b4",
+            "FHN-2023Q4-AI-1aaa6204ca",
+            "FHN-2023Q4-AI-91fc2796de",
+            "FHN-2023Q4-AI-a84daf095a",
+            "FHN-2023Q4-AI-c2ccead020",
+            "FHN-2023Q4-AI-eeb1dac81f",
+            "FHN-2023Q4-AI-fb04fbdc06",
+            "FHN-2024Q3-AI-3d4a59659b",
+            "FHN-2024Q4-AI-1847a8cfff",
+            "FHN-2024Q4-AI-577556f72a",
+            "FHN-2024Q4-AI-6db4bf30aa",
+            "FHN-2024Q4-AI-767de45c84",
+            "FHN-2024Q4-AI-87b527bf1e",
+            "FHN-2024Q4-AI-aa0fca300e",
+            "FHN-2024Q4-AI-bae340f4a7",
+            "FHN-2024Q4-AI-ceba02c5ad",
+            "FHN-2024Q4-AI-ef437f01b8",
+            "FHN-2025Q1-AI-b376da813a",
+            "FHN-2025Q2-AI-2a128555a1",
+            "FHN-2025Q3-AI-61488fe0e1"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 125.225
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FHN-2025Q1-AI-b376da813a"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 77.62,
+          "peer_percentile": 65.79,
+          "raw_value": 7.7625
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FHN-2023Q4-AI-1be2b350d8",
+            "FHN-2023Q4-AI-af3d421093",
+            "FHN-2023Q4-AI-c6daa62d28",
+            "FHN-2024Q4-AI-6711120e1b",
+            "FHN-2024Q4-AI-9413093f05",
+            "FHN-2024Q4-AI-aa0fca300e"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 52.5,
+          "peer_percentile": 63.16,
+          "raw_value": 5.25
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "FHN"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FITB-2023Q4-AI-0879b56d53",
+            "FITB-2026Q1-AI-5eb34a4dcc"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 60.0,
+          "peer_percentile": 73.68,
+          "raw_value": 6.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FITB-2023Q2-AI-7e3fcbb672",
+            "FITB-2023Q3-AI-98c77d2a3e",
+            "FITB-2023Q4-AI-396e9696a7",
+            "FITB-2023Q4-AI-56949a55a3",
+            "FITB-2023Q4-AI-6feac8210d",
+            "FITB-2023Q4-AI-913afc1051",
+            "FITB-2023Q4-AI-ab3c5486b2",
+            "FITB-2024Q4-AI-3c79d62a1a",
+            "FITB-2024Q4-AI-44eb57f3d7",
+            "FITB-2024Q4-AI-8874fe6707",
+            "FITB-2024Q4-AI-93d852d09e",
+            "FITB-2024Q4-AI-c1d3d21ddf",
+            "FITB-2024Q4-AI-c8166c2129",
+            "FITB-2025Q1-AI-5e9bbbd26f",
+            "FITB-2025Q1-AI-74c8225fd6",
+            "FITB-2025Q2-AI-27b23646ce",
+            "FITB-2025Q3-AI-cdf327d9d7"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 63.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FITB-2024Q4-AI-8874fe6707"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 67.5,
+          "peer_percentile": 56.58,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FITB-2024Q4-AI-1f41ec5127",
+            "FITB-2024Q4-AI-2d34c02e0d",
+            "FITB-2024Q4-AI-3134216168",
+            "FITB-2024Q4-AI-93d852d09e",
+            "FITB-2024Q4-AI-d420039e6a",
+            "FITB-2025Q1-AI-74c8225fd6"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 40.0,
+          "peer_percentile": 50.0,
+          "raw_value": 4.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "FITB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FLG-2023Q4-AI-3ff51e4d0a",
+            "FLG-2023Q4-AI-5349cdf8dc",
+            "FLG-2023Q4-AI-a34b482ca1",
+            "FLG-2024Q4-AI-3ac41db3dc",
+            "FLG-2024Q4-AI-9f65dac92c",
+            "FLG-2024Q4-AI-c5c8796f1d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 82.5,
+          "peer_percentile": 5.26,
+          "raw_value": 8.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FLG-2024Q4-AI-3ac41db3dc"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 7.5,
+          "peer_percentile": 21.05,
+          "raw_value": 0.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FLG-2023Q4-AI-16ff83ad06"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 3.75,
+          "peer_percentile": 7.89,
+          "raw_value": 0.375
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "FLG"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FNB-2023Q2-AI-ddfaacd2e9",
+            "FNB-2023Q2-AI-fea1dbe292",
+            "FNB-2023Q4-AI-0ea5095ed3",
+            "FNB-2023Q4-AI-31edfbf762",
+            "FNB-2023Q4-AI-562f5165db",
+            "FNB-2023Q4-AI-74a01e33d3",
+            "FNB-2023Q4-AI-ac7d8afe59",
+            "FNB-2024Q4-AI-caf0f77984",
+            "FNB-2024Q4-AI-cf117456f1",
+            "FNB-2024Q4-AI-e214be2c47",
+            "FNB-2025Q1-AI-63257b4fba",
+            "FNB-2025Q2-AI-6f54f6ae9a",
+            "FNB-2025Q2-AI-d96e124fd3",
+            "FNB-2025Q3-AI-a90c1c99af"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 20.25
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FNB-2023Q4-AI-4c3eb5dc24"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 45.0,
+          "peer_percentile": 72.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FNB-2023Q4-AI-4c3eb5dc24",
+            "FNB-2023Q4-AI-79bc5c7692",
+            "FNB-2024Q4-AI-df98a8d0d3"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 13.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "FNB-2023Q4-AI-64eb0bef5f",
+            "FNB-2023Q4-AI-c2e7974d19",
+            "FNB-2024Q4-AI-090c539bcc",
+            "FNB-2024Q4-AI-194a6df77d"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 22.5,
+          "peer_percentile": 35.53,
+          "raw_value": 2.25
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "FNB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "GS-2023Q2-AI-34b2712b82",
+            "GS-2023Q2-AI-4ee79bbb4c",
+            "GS-2023Q2-AI-6a25281c96",
+            "GS-2023Q2-AI-e9f357646b",
+            "GS-2023Q3-AI-31225163c9",
+            "GS-2023Q3-AI-6925aba59a",
+            "GS-2023Q3-AI-c41c9f53cf",
+            "GS-2023Q3-AI-c97e72fe90",
+            "GS-2023Q4-AI-3de1864f9d",
+            "GS-2023Q4-AI-6c3ca5a8d4",
+            "GS-2023Q4-AI-c0cbb1322d",
+            "GS-2023Q4-AI-da902b8eb9",
+            "GS-2024Q1-AI-e922e44e51",
+            "GS-2024Q3-AI-bf3d2e6dfb",
+            "GS-2024Q3-AI-feb5d0413d",
+            "GS-2024Q4-AI-066095ea11",
+            "GS-2024Q4-AI-0a4bdc5a53",
+            "GS-2024Q4-AI-4b40207262",
+            "GS-2024Q4-AI-9caff0b41d",
+            "GS-2024Q4-AI-9ea889079d",
+            "GS-2025Q1-AI-2f7615628d",
+            "GS-2025Q1-AI-4c499ba7c1",
+            "GS-2025Q2-AI-806058f849",
+            "GS-2025Q2-AI-fe1cda6a50",
+            "GS-2025Q3-AI-9f83f9436d"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 75.0,
+          "raw_value": 166.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "GS-2023Q2-AI-34b2712b82",
+            "GS-2023Q2-AI-4ee79bbb4c",
+            "GS-2023Q2-AI-6a25281c96",
+            "GS-2023Q2-AI-b8e08582ad",
+            "GS-2023Q2-AI-e9f357646b",
+            "GS-2023Q3-AI-31225163c9",
+            "GS-2023Q3-AI-6925aba59a",
+            "GS-2023Q3-AI-c41c9f53cf",
+            "GS-2023Q3-AI-c97e72fe90",
+            "GS-2023Q4-AI-2c379d301f",
+            "GS-2023Q4-AI-3971e247c8",
+            "GS-2023Q4-AI-3de1864f9d",
+            "GS-2023Q4-AI-6c3ca5a8d4",
+            "GS-2023Q4-AI-813bc3dcc6",
+            "GS-2023Q4-AI-9d6591c200",
+            "GS-2023Q4-AI-a82e8cf18c",
+            "GS-2023Q4-AI-c0cbb1322d",
+            "GS-2023Q4-AI-da902b8eb9",
+            "GS-2023Q4-AI-e732512979",
+            "GS-2024Q1-AI-0fbba2c014",
+            "GS-2024Q1-AI-aeed476b5b",
+            "GS-2024Q1-AI-d7db97c722",
+            "GS-2024Q1-AI-e922e44e51",
+            "GS-2024Q2-AI-df80043017",
+            "GS-2024Q3-AI-bf3d2e6dfb",
+            "GS-2024Q3-AI-feb5d0413d",
+            "GS-2024Q4-AI-066095ea11",
+            "GS-2024Q4-AI-0a4bdc5a53",
+            "GS-2024Q4-AI-3fefdb3832",
+            "GS-2024Q4-AI-4b40207262",
+            "GS-2024Q4-AI-77d6a8e647",
+            "GS-2024Q4-AI-7e5421228d",
+            "GS-2024Q4-AI-93a9aeb9a1",
+            "GS-2024Q4-AI-9caff0b41d",
+            "GS-2024Q4-AI-9ea889079d",
+            "GS-2024Q4-AI-a6aedc660b",
+            "GS-2024Q4-AI-c0b1a61abf",
+            "GS-2025Q1-AI-2f7615628d",
+            "GS-2025Q1-AI-4c499ba7c1",
+            "GS-2025Q1-AI-66b9fbb46c",
+            "GS-2025Q1-AI-b28b434a86",
+            "GS-2025Q1-AI-c184713a39",
+            "GS-2025Q2-AI-405760e891",
+            "GS-2025Q2-AI-806058f849",
+            "GS-2025Q2-AI-b63c714c11",
+            "GS-2025Q2-AI-fe1cda6a50",
+            "GS-2025Q3-AI-7676fd6a2c",
+            "GS-2025Q3-AI-9f83f9436d",
+            "GS-2025Q3-AI-e72c59949f"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 285.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "GS-2023Q3-AI-6925aba59a",
+            "GS-2023Q4-AI-3de1864f9d"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 100.0,
+          "peer_percentile": 100.0,
+          "raw_value": 13.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "GS-2024Q1-AI-0fbba2c014",
+            "GS-2024Q4-AI-c0b1a61abf"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 13.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "GS"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "HBAN-2023Q2-AI-08b713dece",
+            "HBAN-2023Q3-AI-c6b2731dec",
+            "HBAN-2024Q3-AI-1194a923d3",
+            "HBAN-2024Q4-AI-97f14b3b4c",
+            "HBAN-2024Q4-AI-fb0fc9f529",
+            "HBAN-2025Q4-AI-b52abdb980",
+            "HBAN-2025Q4-AI-d5ae59554a"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 34.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "HBAN-2023Q2-AI-08b713dece",
+            "HBAN-2023Q2-AI-2e768e167b",
+            "HBAN-2023Q3-AI-c6b2731dec",
+            "HBAN-2024Q2-AI-4f82ad56eb",
+            "HBAN-2024Q3-AI-06fb395be8",
+            "HBAN-2024Q3-AI-1194a923d3",
+            "HBAN-2024Q3-AI-baf60e2434",
+            "HBAN-2024Q4-AI-289f8cf529",
+            "HBAN-2024Q4-AI-704be7c37f",
+            "HBAN-2024Q4-AI-796d8dcca6",
+            "HBAN-2024Q4-AI-95b7f47c65",
+            "HBAN-2024Q4-AI-97f14b3b4c",
+            "HBAN-2024Q4-AI-bb00b2ba40",
+            "HBAN-2024Q4-AI-d39d1221ad",
+            "HBAN-2024Q4-AI-dd77b08c58",
+            "HBAN-2024Q4-AI-fb0fc9f529",
+            "HBAN-2025Q1-AI-5775d0404d",
+            "HBAN-2025Q2-AI-643463319e",
+            "HBAN-2025Q2-AI-ad16e5789e",
+            "HBAN-2025Q2-AI-b43ab01fdf",
+            "HBAN-2025Q3-AI-8d66856c1b",
+            "HBAN-2025Q4-AI-1db32942a1",
+            "HBAN-2025Q4-AI-1f95dc8f28",
+            "HBAN-2025Q4-AI-3efc5ee470",
+            "HBAN-2025Q4-AI-74b3eeb30b",
+            "HBAN-2025Q4-AI-824e5635f6",
+            "HBAN-2025Q4-AI-af2c409cdd",
+            "HBAN-2025Q4-AI-b52abdb980",
+            "HBAN-2025Q4-AI-cd7b8b927a",
+            "HBAN-2025Q4-AI-d5ae59554a"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 106.375
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "HBAN-2023Q2-AI-2e768e167b"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 67.5,
+          "peer_percentile": 82.89,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "HBAN-2024Q4-AI-704be7c37f",
+            "HBAN-2024Q4-AI-796d8dcca6",
+            "HBAN-2024Q4-AI-d39d1221ad",
+            "HBAN-2024Q4-AI-dd77b08c58",
+            "HBAN-2025Q4-AI-1f95dc8f28",
+            "HBAN-2025Q4-AI-824e5635f6",
+            "HBAN-2025Q4-AI-af2c409cdd"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 75.0,
+          "peer_percentile": 63.16,
+          "raw_value": 7.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "HBAN-2024Q4-AI-289f8cf529",
+            "HBAN-2024Q4-AI-d39d1221ad",
+            "HBAN-2024Q4-AI-dd77b08c58",
+            "HBAN-2025Q4-AI-824e5635f6",
+            "HBAN-2025Q4-AI-af2c409cdd"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 48.75,
+          "peer_percentile": 59.21,
+          "raw_value": 4.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "HBAN"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2024Q4-AI-54e122c4b3",
+            "JPM-2024Q4-AI-9a8cdbab80",
+            "JPM-2025Q4-AI-8d36b2d8e1",
+            "JPM-2025Q4-AI-ac2b64c4c2"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 100.0,
+          "raw_value": 24.75
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2024Q4-AI-f225719245",
+            "JPM-2025Q4-AI-05c74fb783"
+          ],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 100.0,
+          "peer_percentile": 100.0,
+          "raw_value": 11.25
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2023Q2-AI-46e2329734",
+            "JPM-2023Q2-AI-68d9a30f16",
+            "JPM-2023Q2-AI-75fcb369f0",
+            "JPM-2023Q2-AI-87c8bc26c8",
+            "JPM-2023Q2-AI-e9191283db",
+            "JPM-2024Q1-AI-35247f1491",
+            "JPM-2024Q1-AI-5ef4f86127",
+            "JPM-2024Q1-AI-60691e5e86",
+            "JPM-2024Q1-AI-7ef3c19306",
+            "JPM-2024Q2-AI-a11b2ec25e",
+            "JPM-2024Q4-AI-134974a989",
+            "JPM-2024Q4-AI-1937355925",
+            "JPM-2024Q4-AI-2a1d2a1e58",
+            "JPM-2024Q4-AI-36dd9e034d",
+            "JPM-2024Q4-AI-54e122c4b3",
+            "JPM-2024Q4-AI-6f84cc035c",
+            "JPM-2024Q4-AI-83cbca1f62",
+            "JPM-2024Q4-AI-8b664cd5dc",
+            "JPM-2024Q4-AI-9a8cdbab80",
+            "JPM-2024Q4-AI-a617c75404",
+            "JPM-2024Q4-AI-dba96f20a0",
+            "JPM-2024Q4-AI-e0dd8a0f7c",
+            "JPM-2024Q4-AI-f225719245",
+            "JPM-2024Q4-AI-fd5f47cafc",
+            "JPM-2025Q2-AI-32bfd37ad3",
+            "JPM-2025Q2-AI-9fb88e7e73",
+            "JPM-2025Q2-AI-d3b71f7e1e",
+            "JPM-2025Q4-AI-05c74fb783",
+            "JPM-2025Q4-AI-0d26beac5b",
+            "JPM-2025Q4-AI-1d7be19437",
+            "JPM-2025Q4-AI-689961e881",
+            "JPM-2025Q4-AI-6d693cfa09",
+            "JPM-2025Q4-AI-88d33dd066",
+            "JPM-2025Q4-AI-8d36b2d8e1",
+            "JPM-2025Q4-AI-ac2b64c4c2",
+            "JPM-2025Q4-AI-da0c5504a5",
+            "JPM-2025Q4-AI-df3597b34d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 169.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2025Q4-AI-2be3ea1f42"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 67.5,
+          "peer_percentile": 66.67,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2024Q1-AI-60691e5e86",
+            "JPM-2024Q4-AI-4893c831bf",
+            "JPM-2024Q4-AI-9a8cdbab80",
+            "JPM-2025Q4-AI-689961e881",
+            "JPM-2025Q4-AI-6d693cfa09",
+            "JPM-2025Q4-AI-88d33dd066",
+            "JPM-2025Q4-AI-da0c5504a5"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 29.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "JPM-2025Q4-AI-2be3ea1f42",
+            "JPM-2025Q4-AI-689961e881",
+            "JPM-2025Q4-AI-6d693cfa09",
+            "JPM-2025Q4-AI-722f659040",
+            "JPM-2025Q4-AI-88d33dd066",
+            "JPM-2025Q4-AI-da0c5504a5"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 83.33,
+          "raw_value": 26.75
+        }
+      ],
+      "peer_group": "GSIB",
+      "ticker": "JPM"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "KEY-2024Q4-AI-064510e74a",
+            "KEY-2024Q4-AI-7262528277",
+            "KEY-2025Q2-AI-c93b0733c6",
+            "KEY-2025Q2-AI-d422519bad",
+            "KEY-2025Q4-AI-0183d2d7bf",
+            "KEY-2025Q4-AI-90b7874ad8",
+            "KEY-2025Q4-AI-c60b7a6dcc",
+            "KEY-2025Q4-AI-d2300c0da5"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 47.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "KEY-2023Q2-AI-d492d48dc3",
+            "KEY-2024Q4-AI-064510e74a",
+            "KEY-2024Q4-AI-1c7b6acd9c",
+            "KEY-2024Q4-AI-3262ba8d04",
+            "KEY-2024Q4-AI-4c32449221",
+            "KEY-2024Q4-AI-7262528277",
+            "KEY-2024Q4-AI-800e459752",
+            "KEY-2024Q4-AI-8b71070ba2",
+            "KEY-2024Q4-AI-99f47e1cb4",
+            "KEY-2024Q4-AI-9fa13d69dc",
+            "KEY-2024Q4-AI-d317f0d9e4",
+            "KEY-2024Q4-AI-e9488196ee",
+            "KEY-2024Q4-AI-ff4b7a7a3e",
+            "KEY-2025Q2-AI-92b57bb76b",
+            "KEY-2025Q2-AI-c93b0733c6",
+            "KEY-2025Q2-AI-d422519bad",
+            "KEY-2025Q3-AI-6e8ca81756",
+            "KEY-2025Q4-AI-00c9ef6bce",
+            "KEY-2025Q4-AI-0183d2d7bf",
+            "KEY-2025Q4-AI-45339f2d71",
+            "KEY-2025Q4-AI-4618642d9b",
+            "KEY-2025Q4-AI-4c255e1dc0",
+            "KEY-2025Q4-AI-55d971b157",
+            "KEY-2025Q4-AI-581681b4bb",
+            "KEY-2025Q4-AI-6313adfc79",
+            "KEY-2025Q4-AI-73755db3c0",
+            "KEY-2025Q4-AI-90b7874ad8",
+            "KEY-2025Q4-AI-967089cedd",
+            "KEY-2025Q4-AI-c367f1faaa",
+            "KEY-2025Q4-AI-c60b7a6dcc",
+            "KEY-2025Q4-AI-d2300c0da5",
+            "KEY-2025Q4-AI-dd47828c0d",
+            "KEY-2025Q4-AI-e6aa4311f3"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 85.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "KEY-2024Q4-AI-1c7b6acd9c",
+            "KEY-2024Q4-AI-d317f0d9e4",
+            "KEY-2024Q4-AI-e9488196ee",
+            "KEY-2025Q4-AI-45339f2d71",
+            "KEY-2025Q4-AI-4c255e1dc0",
+            "KEY-2025Q4-AI-55d971b157",
+            "KEY-2025Q4-AI-73755db3c0"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 71.25,
+          "peer_percentile": 60.53,
+          "raw_value": 7.125
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "KEY-2024Q4-AI-800e459752",
+            "KEY-2024Q4-AI-d317f0d9e4",
+            "KEY-2024Q4-AI-e9488196ee",
+            "KEY-2025Q4-AI-0183d2d7bf",
+            "KEY-2025Q4-AI-45339f2d71",
+            "KEY-2025Q4-AI-4c255e1dc0",
+            "KEY-2025Q4-AI-55d971b157",
+            "KEY-2025Q4-AI-73755db3c0"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 13.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "KEY"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MS-2023Q2-AI-105e5bdf84",
+            "MS-2023Q2-AI-a1a7c62899",
+            "MS-2024Q1-AI-a9535bc3fd",
+            "MS-2024Q1-AI-d9794e9b7a",
+            "MS-2024Q2-AI-0c01079928",
+            "MS-2024Q3-AI-255b8a432b",
+            "MS-2024Q4-AI-09a21b5b7d",
+            "MS-2024Q4-AI-1f226ec559",
+            "MS-2024Q4-AI-268ed92db0",
+            "MS-2024Q4-AI-3036ec0a95",
+            "MS-2024Q4-AI-7785ed0ee4",
+            "MS-2024Q4-AI-8a43aa276d",
+            "MS-2024Q4-AI-96b11a671e",
+            "MS-2024Q4-AI-9cac34ed4c",
+            "MS-2024Q4-AI-a0da3fcace",
+            "MS-2024Q4-AI-b4aa32c757",
+            "MS-2024Q4-AI-b513ebe56a",
+            "MS-2024Q4-AI-d41b41d659",
+            "MS-2024Q4-AI-d93a098ef9",
+            "MS-2024Q4-AI-e16d143a24",
+            "MS-2025Q1-AI-1d847bf24e",
+            "MS-2025Q1-AI-b2382a161b",
+            "MS-2025Q4-AI-11885ea999",
+            "MS-2025Q4-AI-1f17674f04",
+            "MS-2025Q4-AI-2aa3d7753c",
+            "MS-2025Q4-AI-2f6d52e969",
+            "MS-2025Q4-AI-60177cc74f",
+            "MS-2025Q4-AI-7fa51bf803",
+            "MS-2025Q4-AI-8431b8e82c",
+            "MS-2025Q4-AI-8923f057bf",
+            "MS-2025Q4-AI-9c31360ad8",
+            "MS-2025Q4-AI-b1451e85d0",
+            "MS-2025Q4-AI-c8ee9853f4",
+            "MS-2025Q4-AI-d77c60132b",
+            "MS-2025Q4-AI-e7202cac99",
+            "MS-2025Q4-AI-e822e934de",
+            "MS-2025Q4-AI-ea7402389b"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 31.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MS-2025Q1-AI-1d847bf24e",
+            "MS-2025Q4-AI-795ee62ca1",
+            "MS-2025Q4-AI-8431b8e82c",
+            "MS-2025Q4-AI-b1451e85d0"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 30.0,
+          "peer_percentile": 0.0,
+          "raw_value": 3.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MS-2024Q4-AI-0f567fc3c3",
+            "MS-2024Q4-AI-20887a2f4a",
+            "MS-2024Q4-AI-d7f4038708",
+            "MS-2025Q1-AI-1d847bf24e",
+            "MS-2025Q4-AI-11885ea999",
+            "MS-2025Q4-AI-2aa3d7753c",
+            "MS-2025Q4-AI-5f29bf3fc1",
+            "MS-2025Q4-AI-8431b8e82c",
+            "MS-2025Q4-AI-ff17a72ee9"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 56.25,
+          "peer_percentile": 66.67,
+          "raw_value": 5.625
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "MS"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MTB-2024Q1-AI-51b7bd52ba",
+            "MTB-2024Q4-AI-117619b167",
+            "MTB-2024Q4-AI-1e95b45284",
+            "MTB-2024Q4-AI-28dfb15881",
+            "MTB-2024Q4-AI-3c520cd990",
+            "MTB-2024Q4-AI-6670eeacae",
+            "MTB-2024Q4-AI-735ee19c51",
+            "MTB-2024Q4-AI-7c20b70918",
+            "MTB-2024Q4-AI-82e8a06bde",
+            "MTB-2024Q4-AI-9eba5af025",
+            "MTB-2024Q4-AI-ac58c4d306",
+            "MTB-2024Q4-AI-cd53cf2d20",
+            "MTB-2024Q4-AI-d7f142f8d2",
+            "MTB-2024Q4-AI-fa9589acf9",
+            "MTB-2025Q1-AI-1f1d279335",
+            "MTB-2025Q4-AI-2e67b85f99",
+            "MTB-2025Q4-AI-421845ac51",
+            "MTB-2025Q4-AI-66791d3a6f",
+            "MTB-2025Q4-AI-b3c62d94c5",
+            "MTB-2025Q4-AI-cfef5da0d3",
+            "MTB-2025Q4-AI-ebf881cdcc",
+            "MTB-2025Q4-AI-f9e958fd51"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 41.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MTB-2024Q4-AI-117619b167",
+            "MTB-2024Q4-AI-d7f142f8d2",
+            "MTB-2024Q4-AI-fa9589acf9",
+            "MTB-2025Q4-AI-ebf881cdcc"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 45.0,
+          "peer_percentile": 47.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "MTB-2024Q4-AI-28dfb15881",
+            "MTB-2024Q4-AI-3c520cd990",
+            "MTB-2024Q4-AI-d7f142f8d2",
+            "MTB-2024Q4-AI-df5dca059a",
+            "MTB-2024Q4-AI-fa9589acf9",
+            "MTB-2025Q4-AI-c5d97f35f1",
+            "MTB-2025Q4-AI-ebf881cdcc"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 60.0,
+          "peer_percentile": 71.05,
+          "raw_value": 6.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "MTB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "NTRS-2023Q4-AI-1235443a64",
+            "NTRS-2023Q4-AI-4944d0614e",
+            "NTRS-2023Q4-AI-8ff017f192",
+            "NTRS-2023Q4-AI-cb0b968206",
+            "NTRS-2024Q4-AI-92aa51c64d",
+            "NTRS-2024Q4-AI-d67782207f",
+            "NTRS-2024Q4-AI-e70194831b"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 75.0,
+          "raw_value": 39.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "NTRS-2023Q4-AI-0954365a05",
+            "NTRS-2023Q4-AI-1235443a64",
+            "NTRS-2023Q4-AI-1b16d4c337",
+            "NTRS-2023Q4-AI-408630b031",
+            "NTRS-2023Q4-AI-4944d0614e",
+            "NTRS-2023Q4-AI-70c59be8ae",
+            "NTRS-2023Q4-AI-7c812f815c",
+            "NTRS-2023Q4-AI-82b34c072a",
+            "NTRS-2023Q4-AI-8ff017f192",
+            "NTRS-2023Q4-AI-bbaedf5276",
+            "NTRS-2023Q4-AI-bda14af4d1",
+            "NTRS-2023Q4-AI-cb0b968206",
+            "NTRS-2023Q4-AI-d8687bed88",
+            "NTRS-2024Q4-AI-2acd5d347c",
+            "NTRS-2024Q4-AI-33fad7854c",
+            "NTRS-2024Q4-AI-41ba6d05f9",
+            "NTRS-2024Q4-AI-4306370ab5",
+            "NTRS-2024Q4-AI-4df74913f6",
+            "NTRS-2024Q4-AI-574d6abf29",
+            "NTRS-2024Q4-AI-5d561a0060",
+            "NTRS-2024Q4-AI-6b101bc772",
+            "NTRS-2024Q4-AI-92aa51c64d",
+            "NTRS-2024Q4-AI-a6ab5c9bd8",
+            "NTRS-2024Q4-AI-d67782207f",
+            "NTRS-2024Q4-AI-e671b92429",
+            "NTRS-2024Q4-AI-e70194831b"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 106.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "NTRS-2024Q4-AI-4306370ab5"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 45.0,
+          "peer_percentile": 100.0,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "NTRS-2023Q4-AI-7c812f815c",
+            "NTRS-2023Q4-AI-bbaedf5276",
+            "NTRS-2024Q4-AI-11dc2c2960",
+            "NTRS-2024Q4-AI-41ba6d05f9",
+            "NTRS-2024Q4-AI-4306370ab5",
+            "NTRS-2024Q4-AI-4df74913f6",
+            "NTRS-2024Q4-AI-574d6abf29",
+            "NTRS-2024Q4-AI-5d561a0060",
+            "NTRS-2024Q4-AI-695c9514fb",
+            "NTRS-2024Q4-AI-742d79e693"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 29.25
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "NTRS-2023Q4-AI-0954365a05",
+            "NTRS-2023Q4-AI-b4c440470e",
+            "NTRS-2023Q4-AI-f63f99669f",
+            "NTRS-2024Q4-AI-11dc2c2960",
+            "NTRS-2024Q4-AI-420c1c078f",
+            "NTRS-2024Q4-AI-4df74913f6",
+            "NTRS-2024Q4-AI-574d6abf29",
+            "NTRS-2024Q4-AI-6007c057d5",
+            "NTRS-2024Q4-AI-695c9514fb",
+            "NTRS-2024Q4-AI-d3868ef9f1"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 97.5,
+          "peer_percentile": 91.67,
+          "raw_value": 9.75
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "NTRS"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ONB-2024Q4-AI-27409d7fdc",
+            "ONB-2024Q4-AI-8fde8c8138",
+            "ONB-2024Q4-AI-c2ab1c13f7",
+            "ONB-2025Q4-AI-21d4983df4",
+            "ONB-2025Q4-AI-372a29ef96",
+            "ONB-2025Q4-AI-6bdf22fd92",
+            "ONB-2025Q4-AI-880a6de10d",
+            "ONB-2025Q4-AI-b3231092ab",
+            "ONB-2025Q4-AI-b63aed1d18",
+            "ONB-2025Q4-AI-ca5b6bae68",
+            "ONB-2025Q4-AI-e9fc78f8a3",
+            "ONB-2025Q4-AI-f70774a1e6"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 29.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ONB-2025Q4-AI-21d4983df4",
+            "ONB-2025Q4-AI-880a6de10d",
+            "ONB-2025Q4-AI-b3231092ab",
+            "ONB-2025Q4-AI-f88464de1d"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 37.5,
+          "peer_percentile": 40.79,
+          "raw_value": 3.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ONB-2024Q4-AI-10ffd6df6e",
+            "ONB-2024Q4-AI-bd58bd4b58",
+            "ONB-2025Q4-AI-b3231092ab",
+            "ONB-2025Q4-AI-ec15dea39e",
+            "ONB-2025Q4-AI-f44e7f71e3",
+            "ONB-2025Q4-AI-f70774a1e6",
+            "ONB-2025Q4-AI-f88464de1d"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 41.25,
+          "peer_percentile": 53.95,
+          "raw_value": 4.125
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "ONB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PB-2023Q4-AI-736f362a00",
+            "PB-2024Q4-AI-67d88bb4ad",
+            "PB-2024Q4-AI-85f7bb4835",
+            "PB-2024Q4-AI-acfc4beaa5",
+            "PB-2024Q4-AI-bfe9282bbc",
+            "PB-2024Q4-AI-d39cfa5728",
+            "PB-2025Q1-AI-6a21a5b1a9"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 45.0,
+          "peer_percentile": 2.63,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PB-2024Q4-AI-85f7bb4835",
+            "PB-2024Q4-AI-acfc4beaa5",
+            "PB-2024Q4-AI-d39cfa5728"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 22.5,
+          "peer_percentile": 31.58,
+          "raw_value": 2.25
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PB-2023Q4-AI-0248e4ee8a",
+            "PB-2024Q4-AI-0d99e98214",
+            "PB-2024Q4-AI-2baccbee0b",
+            "PB-2024Q4-AI-30ce3cb5b6",
+            "PB-2024Q4-AI-85f7bb4835",
+            "PB-2024Q4-AI-acfc4beaa5",
+            "PB-2024Q4-AI-ce9d74e713",
+            "PB-2024Q4-AI-d39cfa5728",
+            "PB-2025Q1-AI-6a21a5b1a9"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 63.75,
+          "peer_percentile": 76.32,
+          "raw_value": 6.375
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "PB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNC-2024Q4-AI-916da0f892"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 67.5,
+          "peer_percentile": 77.63,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNC-2024Q4-AI-1487d42339",
+            "PNC-2024Q4-AI-20bccf92eb",
+            "PNC-2024Q4-AI-306f415eff",
+            "PNC-2024Q4-AI-37ef9544a2",
+            "PNC-2024Q4-AI-39376dc43d",
+            "PNC-2024Q4-AI-44ba3c5f71",
+            "PNC-2024Q4-AI-7111948202",
+            "PNC-2024Q4-AI-73cc51f1b4",
+            "PNC-2024Q4-AI-7bb32b344a",
+            "PNC-2025Q4-AI-043d1b8f7b",
+            "PNC-2025Q4-AI-362df25e26",
+            "PNC-2025Q4-AI-39d6d0512b",
+            "PNC-2025Q4-AI-40f39c98a0",
+            "PNC-2025Q4-AI-44423762dd",
+            "PNC-2025Q4-AI-7f87c251ef",
+            "PNC-2025Q4-AI-97426aa74c",
+            "PNC-2025Q4-AI-b788901597",
+            "PNC-2025Q4-AI-c093b1f7c3",
+            "PNC-2025Q4-AI-d45a0df07d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 32.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNC-2025Q3-AI-05685d58f4",
+            "PNC-2025Q3-AI-3682c25c41",
+            "PNC-2025Q3-AI-be477f588f",
+            "PNC-2025Q4-AI-170151a74f"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 15.675
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNC-2025Q4-AI-2ca2e73ea2",
+            "PNC-2025Q4-AI-40f39c98a0"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 22.5,
+          "peer_percentile": 31.58,
+          "raw_value": 2.25
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNC-2025Q3-AI-05685d58f4",
+            "PNC-2025Q3-AI-3682c25c41",
+            "PNC-2025Q4-AI-0091a779d9",
+            "PNC-2025Q4-AI-170151a74f",
+            "PNC-2025Q4-AI-2ca2e73ea2",
+            "PNC-2025Q4-AI-40f39c98a0",
+            "PNC-2025Q4-AI-b146efc190"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 16.25
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "PNC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNFP-2024Q4-AI-02083f9a8b"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 67.5,
+          "peer_percentile": 77.63,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNFP-2023Q2-AI-5a10b19fbe",
+            "PNFP-2023Q2-AI-6721de44a0",
+            "PNFP-2023Q2-AI-97e0acd4be",
+            "PNFP-2023Q3-AI-5fabfa9b99",
+            "PNFP-2023Q3-AI-c584d4c5bd",
+            "PNFP-2023Q4-AI-282035abc7",
+            "PNFP-2023Q4-AI-4338620daf",
+            "PNFP-2023Q4-AI-6a181b50f6",
+            "PNFP-2023Q4-AI-82b68ee9db",
+            "PNFP-2023Q4-AI-eb1e207dde",
+            "PNFP-2023Q4-AI-ed7e1e4094",
+            "PNFP-2024Q1-AI-3f27983ee3",
+            "PNFP-2024Q4-AI-02083f9a8b",
+            "PNFP-2024Q4-AI-0466168703",
+            "PNFP-2024Q4-AI-a26a438f09",
+            "PNFP-2024Q4-AI-c36cbd5fb8",
+            "PNFP-2024Q4-AI-f775b75197",
+            "PNFP-2025Q2-AI-7a60a250f2"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 78.2
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNFP-2024Q4-AI-02083f9a8b"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 67.5,
+          "peer_percentile": 82.89,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNFP-2023Q2-AI-97e0acd4be",
+            "PNFP-2023Q3-AI-c584d4c5bd",
+            "PNFP-2023Q4-AI-6a181b50f6",
+            "PNFP-2023Q4-AI-eb1e207dde",
+            "PNFP-2024Q1-AI-3f27983ee3"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 32.9625
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "PNFP-2023Q4-AI-d38b46067b",
+            "PNFP-2024Q4-AI-c36cbd5fb8"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 15.0,
+          "peer_percentile": 19.74,
+          "raw_value": 1.5
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "PNFP"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RF-2024Q4-AI-fbde5b5e5a"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 15.0,
+          "peer_percentile": 65.79,
+          "raw_value": 1.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RF-2023Q4-AI-4338019c9d",
+            "RF-2023Q4-AI-73ae45b0df",
+            "RF-2023Q4-AI-8ac63337ff",
+            "RF-2023Q4-AI-aa1069d1dd",
+            "RF-2023Q4-AI-aa663ebae9",
+            "RF-2023Q4-AI-ab4404f1cf",
+            "RF-2023Q4-AI-db22516fde",
+            "RF-2024Q4-AI-0e9ff424e8",
+            "RF-2024Q4-AI-12975d2c85",
+            "RF-2024Q4-AI-1d111149e2",
+            "RF-2024Q4-AI-2b439c5eb8",
+            "RF-2024Q4-AI-6933c4f5ed",
+            "RF-2024Q4-AI-7ef08dfebb",
+            "RF-2024Q4-AI-f9f332d2b0",
+            "RF-2024Q4-AI-fbde5b5e5a",
+            "RF-2025Q3-AI-a5ccfd3b1d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 36.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RF-2023Q4-AI-ff04fc84e8",
+            "RF-2024Q4-AI-654efc9363"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 100.0,
+          "peer_percentile": 96.05,
+          "raw_value": 13.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RF-2023Q4-AI-8ac63337ff",
+            "RF-2023Q4-AI-db22516fde",
+            "RF-2024Q4-AI-2b439c5eb8"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 33.75,
+          "peer_percentile": 36.84,
+          "raw_value": 3.375
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RF-2023Q4-AI-aa1069d1dd",
+            "RF-2024Q4-AI-6933c4f5ed"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 18.75,
+          "peer_percentile": 28.95,
+          "raw_value": 1.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "RF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RJF-2023Q3-AI-c4371049e8",
+            "RJF-2024Q4-AI-1f82c77f7e",
+            "RJF-2024Q4-AI-ad6cac766c",
+            "RJF-2024Q4-AI-dd3655ffec",
+            "RJF-2025Q4-AI-3fc932fc0a",
+            "RJF-2025Q4-AI-c0c194fe9d",
+            "RJF-2025Q4-AI-cc9ddd2afa"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 75.0,
+          "raw_value": 41.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RJF-2023Q3-AI-011535d24e",
+            "RJF-2023Q3-AI-6bdd706008",
+            "RJF-2023Q3-AI-8c18ab4549",
+            "RJF-2023Q3-AI-c4371049e8",
+            "RJF-2023Q3-AI-f5ed2f81ee",
+            "RJF-2024Q2-AI-497db7f7f8",
+            "RJF-2024Q2-AI-b52234c7d1",
+            "RJF-2024Q2-AI-cbc8b71424",
+            "RJF-2024Q3-AI-2918bbf8b6",
+            "RJF-2024Q3-AI-5cddf6c686",
+            "RJF-2024Q3-AI-6e9d9ed1e1",
+            "RJF-2024Q3-AI-cb5e893afd",
+            "RJF-2024Q4-AI-09519bc3f4",
+            "RJF-2024Q4-AI-1f82c77f7e",
+            "RJF-2024Q4-AI-47ca2e86d6",
+            "RJF-2024Q4-AI-678e8fdaba",
+            "RJF-2024Q4-AI-7ab165c2ca",
+            "RJF-2024Q4-AI-7ee1497327",
+            "RJF-2024Q4-AI-a49a5d92e5",
+            "RJF-2024Q4-AI-ad6cac766c",
+            "RJF-2024Q4-AI-dd3655ffec",
+            "RJF-2024Q4-AI-f788b7b303",
+            "RJF-2025Q2-AI-3a67ee149f",
+            "RJF-2025Q2-AI-437aadfc45",
+            "RJF-2025Q2-AI-76b972be46",
+            "RJF-2025Q2-AI-ac3d0246b7",
+            "RJF-2025Q3-AI-518af37666",
+            "RJF-2025Q4-AI-3fc932fc0a",
+            "RJF-2025Q4-AI-45ea540cd4",
+            "RJF-2025Q4-AI-52d2431bf2",
+            "RJF-2025Q4-AI-774d92c90b",
+            "RJF-2025Q4-AI-7f0b1427db",
+            "RJF-2025Q4-AI-a588774f28",
+            "RJF-2025Q4-AI-a9817cc292",
+            "RJF-2025Q4-AI-c0c194fe9d",
+            "RJF-2025Q4-AI-c0ffb49166",
+            "RJF-2025Q4-AI-cc9ddd2afa",
+            "RJF-2025Q4-AI-f563d2f7bc"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 178.875
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RJF-2024Q4-AI-47ca2e86d6",
+            "RJF-2024Q4-AI-678e8fdaba",
+            "RJF-2024Q4-AI-7ab165c2ca",
+            "RJF-2025Q4-AI-c0ffb49166",
+            "RJF-2025Q4-AI-f563d2f7bc"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 22.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "RJF-2024Q4-AI-47ca2e86d6",
+            "RJF-2024Q4-AI-7ab165c2ca",
+            "RJF-2024Q4-AI-f788b7b303",
+            "RJF-2025Q4-AI-c0ffb49166"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 97.5,
+          "peer_percentile": 91.67,
+          "raw_value": 9.75
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "RJF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SCHW-2024Q4-AI-8a5096b13e"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 67.5,
+          "peer_percentile": 33.33,
+          "raw_value": 6.75
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SCHW-2023Q4-AI-10e47f004f",
+            "SCHW-2023Q4-AI-4030fd72f5",
+            "SCHW-2023Q4-AI-4d69d97e9e",
+            "SCHW-2023Q4-AI-5351590f25",
+            "SCHW-2023Q4-AI-5774917087",
+            "SCHW-2023Q4-AI-5cf4fa4e7a",
+            "SCHW-2023Q4-AI-8df35a3543",
+            "SCHW-2023Q4-AI-a2fe41c6c5",
+            "SCHW-2024Q4-AI-0dd18b0b18",
+            "SCHW-2024Q4-AI-353bc6e508",
+            "SCHW-2024Q4-AI-4bd6971e4d",
+            "SCHW-2024Q4-AI-595c2c0056",
+            "SCHW-2024Q4-AI-626903a7d2",
+            "SCHW-2024Q4-AI-8a5096b13e",
+            "SCHW-2024Q4-AI-ec956c5020",
+            "SCHW-2024Q4-AI-f687c4e2dc"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 48.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SCHW-2023Q4-AI-5351590f25",
+            "SCHW-2023Q4-AI-8df35a3543",
+            "SCHW-2024Q4-AI-f687c4e2dc"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 90.0,
+          "peer_percentile": 16.67,
+          "raw_value": 9.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SCHW-2023Q4-AI-5774917087"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 7.5,
+          "peer_percentile": 33.33,
+          "raw_value": 0.75
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "SCHW"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SF-2023Q4-AI-215ce6db5e",
+            "SF-2023Q4-AI-331419e27d",
+            "SF-2023Q4-AI-62e68c70ca",
+            "SF-2023Q4-AI-b90f6167b8",
+            "SF-2023Q4-AI-e04597fdde",
+            "SF-2023Q4-AI-ff710cc0d5",
+            "SF-2024Q4-AI-1f8f0774ec",
+            "SF-2024Q4-AI-3ae1677224",
+            "SF-2024Q4-AI-584de441c8",
+            "SF-2024Q4-AI-6618072c7f",
+            "SF-2024Q4-AI-a55cb01bbd",
+            "SF-2024Q4-AI-d45d58b0e0",
+            "SF-2024Q4-AI-e2a0f8a72d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 32.625
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SF-2023Q3-AI-6827c69cd7",
+            "SF-2023Q3-AI-c8f1569ddc",
+            "SF-2023Q3-AI-d2755ed280",
+            "SF-2023Q4-AI-388bed3d9f",
+            "SF-2023Q4-AI-52c98f0e1c",
+            "SF-2023Q4-AI-f79ac10f88"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 100.0,
+          "peer_percentile": 96.05,
+          "raw_value": 27.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SF-2023Q3-AI-10bb492cfe",
+            "SF-2023Q3-AI-16fc173b1b"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 75.0,
+          "peer_percentile": 76.32,
+          "raw_value": 7.5
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SF-2024Q4-AI-1f8f0774ec",
+            "SF-2024Q4-AI-3ae1677224",
+            "SF-2024Q4-AI-584de441c8",
+            "SF-2024Q4-AI-d45d58b0e0",
+            "SF-2024Q4-AI-e2a0f8a72d"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 16.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SF-2024Q4-AI-584de441c8",
+            "SF-2024Q4-AI-6618072c7f",
+            "SF-2024Q4-AI-d45d58b0e0"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 26.25,
+          "peer_percentile": 39.47,
+          "raw_value": 2.625
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "SF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SNV-2023Q4-AI-27dd663daf",
+            "SNV-2023Q4-AI-50e25ff74f",
+            "SNV-2023Q4-AI-a163ea171b",
+            "SNV-2023Q4-AI-e70f8c7575",
+            "SNV-2024Q4-AI-054dc9b830",
+            "SNV-2024Q4-AI-1a391c7fcd",
+            "SNV-2024Q4-AI-1f03909329",
+            "SNV-2024Q4-AI-2e52ddbebb",
+            "SNV-2024Q4-AI-977627a78b",
+            "SNV-2024Q4-AI-9de26bc831",
+            "SNV-2024Q4-AI-b1daae1459",
+            "SNV-2024Q4-AI-f7e39832b2",
+            "SNV-2024Q4-AI-f97d3f009a",
+            "SNV-2025Q1-AI-c20d0324f3",
+            "SNV-2025Q2-AI-87969157c1"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 30.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SNV-2023Q4-AI-a163ea171b",
+            "SNV-2023Q4-AI-ff29ba3fc7",
+            "SNV-2024Q4-AI-054dc9b830",
+            "SNV-2024Q4-AI-b1daae1459",
+            "SNV-2024Q4-AI-f97d3f009a"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 48.75,
+          "peer_percentile": 52.63,
+          "raw_value": 4.875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SNV-2024Q4-AI-054dc9b830",
+            "SNV-2024Q4-AI-1f03909329"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 15.0,
+          "peer_percentile": 19.74,
+          "raw_value": 1.5
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "SNV"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SOFI-2023Q2-AI-3910e95eee",
+            "SOFI-2023Q2-AI-423c67d7c3",
+            "SOFI-2023Q2-AI-7ddfb536c2",
+            "SOFI-2023Q3-AI-9f9fda4c45",
+            "SOFI-2024Q1-AI-0e4e782b0e",
+            "SOFI-2024Q1-AI-1612a220bb",
+            "SOFI-2024Q1-AI-1b994f00a1",
+            "SOFI-2024Q1-AI-37fdc7f13c",
+            "SOFI-2024Q1-AI-4c4d6a5576",
+            "SOFI-2024Q1-AI-5e6b7d0e89",
+            "SOFI-2024Q1-AI-b04a70df47",
+            "SOFI-2024Q1-AI-cc1153f67e",
+            "SOFI-2024Q2-AI-090de0e664",
+            "SOFI-2024Q2-AI-8430090530",
+            "SOFI-2024Q2-AI-a2120ac447",
+            "SOFI-2024Q2-AI-fddddc3c6d",
+            "SOFI-2024Q3-AI-5bf273f516",
+            "SOFI-2024Q4-AI-29555c8ee5",
+            "SOFI-2024Q4-AI-529d45afaf",
+            "SOFI-2024Q4-AI-8ff94ba3a1",
+            "SOFI-2024Q4-AI-a78b95a214",
+            "SOFI-2024Q4-AI-cac834173e",
+            "SOFI-2024Q4-AI-e3d3d3c3e7",
+            "SOFI-2025Q1-AI-a7603066dd",
+            "SOFI-2025Q3-AI-ed523220b7",
+            "SOFI-2025Q4-AI-153297cc68",
+            "SOFI-2025Q4-AI-18601d31b2",
+            "SOFI-2025Q4-AI-189ecb5e7b",
+            "SOFI-2025Q4-AI-1949e7eaab",
+            "SOFI-2025Q4-AI-3f2b43aaa6",
+            "SOFI-2025Q4-AI-4d9d570253",
+            "SOFI-2025Q4-AI-a0f27a7224",
+            "SOFI-2025Q4-AI-f8a22d8f4a"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 57.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SOFI-2024Q2-AI-8430090530",
+            "SOFI-2025Q3-AI-ed523220b7"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 90.0,
+          "peer_percentile": 84.21,
+          "raw_value": 9.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SOFI-2023Q2-AI-423c67d7c3",
+            "SOFI-2024Q1-AI-1612a220bb",
+            "SOFI-2024Q1-AI-1b994f00a1",
+            "SOFI-2024Q1-AI-37fdc7f13c",
+            "SOFI-2024Q1-AI-4c4d6a5576",
+            "SOFI-2024Q1-AI-b04a70df47",
+            "SOFI-2024Q2-AI-090de0e664",
+            "SOFI-2024Q2-AI-fddddc3c6d",
+            "SOFI-2024Q4-AI-29555c8ee5",
+            "SOFI-2024Q4-AI-529d45afaf",
+            "SOFI-2024Q4-AI-cac834173e",
+            "SOFI-2024Q4-AI-e0a677b43c",
+            "SOFI-2025Q4-AI-153297cc68",
+            "SOFI-2025Q4-AI-189ecb5e7b",
+            "SOFI-2025Q4-AI-1949e7eaab",
+            "SOFI-2025Q4-AI-3f2b43aaa6",
+            "SOFI-2025Q4-AI-4d9d570253",
+            "SOFI-2025Q4-AI-7d39ab7ebd"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 18.375
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SOFI-2024Q1-AI-37fdc7f13c",
+            "SOFI-2024Q2-AI-090de0e664",
+            "SOFI-2024Q4-AI-529d45afaf",
+            "SOFI-2025Q4-AI-1949e7eaab",
+            "SOFI-2025Q4-AI-3f2b43aaa6",
+            "SOFI-2025Q4-AI-7d39ab7ebd"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 60.0,
+          "peer_percentile": 71.05,
+          "raw_value": 6.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "SOFI"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SSB-2024Q4-AI-13c540af69",
+            "SSB-2024Q4-AI-1954a71367",
+            "SSB-2024Q4-AI-2e8d3ba85d",
+            "SSB-2024Q4-AI-2f804a2e5f",
+            "SSB-2024Q4-AI-3074284355",
+            "SSB-2024Q4-AI-399f59e48e",
+            "SSB-2024Q4-AI-57f2aa67fd",
+            "SSB-2024Q4-AI-5e89d400c1",
+            "SSB-2024Q4-AI-6539308f58",
+            "SSB-2024Q4-AI-71078ea1b1",
+            "SSB-2024Q4-AI-a976c00ba4",
+            "SSB-2024Q4-AI-e8ee403893",
+            "SSB-2024Q4-AI-eb89ffac71",
+            "SSB-2024Q4-AI-f96b5205d2",
+            "SSB-2025Q4-AI-0cdd779e11",
+            "SSB-2025Q4-AI-3d772fb52b",
+            "SSB-2025Q4-AI-440052c947",
+            "SSB-2025Q4-AI-50b707a579",
+            "SSB-2025Q4-AI-868fda19d0",
+            "SSB-2025Q4-AI-9f673a3362",
+            "SSB-2025Q4-AI-c9c076f1ec",
+            "SSB-2025Q4-AI-d6396f7af8"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 32.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SSB-2024Q4-AI-1954a71367"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 45.0,
+          "peer_percentile": 72.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SSB-2024Q4-AI-3074284355",
+            "SSB-2024Q4-AI-57f2aa67fd",
+            "SSB-2024Q4-AI-5c63d624ca",
+            "SSB-2024Q4-AI-6539308f58",
+            "SSB-2024Q4-AI-71078ea1b1",
+            "SSB-2025Q4-AI-0cdd779e11",
+            "SSB-2025Q4-AI-9f673a3362",
+            "SSB-2025Q4-AI-c9c076f1ec"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 11.625
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SSB-2024Q4-AI-3074284355",
+            "SSB-2024Q4-AI-5c3bdf8605",
+            "SSB-2024Q4-AI-5c63d624ca",
+            "SSB-2024Q4-AI-6539308f58",
+            "SSB-2024Q4-AI-71078ea1b1",
+            "SSB-2024Q4-AI-f1d39448a6",
+            "SSB-2025Q4-AI-3986a95e11",
+            "SSB-2025Q4-AI-ba9a0118bc",
+            "SSB-2025Q4-AI-c9c076f1ec",
+            "SSB-2025Q4-AI-fcef27dd15"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 78.75,
+          "peer_percentile": 78.95,
+          "raw_value": 7.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "SSB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2024Q4-AI-4421c96e68",
+            "STT-2024Q4-AI-7170a3cd79",
+            "STT-2024Q4-AI-a99f103598",
+            "STT-2024Q4-AI-fd7e352f6e",
+            "STT-2025Q4-AI-2e5a5fc93b",
+            "STT-2025Q4-AI-85d83cbbb3",
+            "STT-2025Q4-AI-a59bd67f49"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 75.0,
+          "raw_value": 47.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2023Q2-AI-10a5681d66",
+            "STT-2023Q2-AI-bee980cf5d",
+            "STT-2023Q3-AI-59e62c8c30",
+            "STT-2024Q1-AI-29f9527d5b",
+            "STT-2024Q1-AI-fa0db45ee2",
+            "STT-2024Q2-AI-4783b86f0b",
+            "STT-2024Q2-AI-6275f126f6",
+            "STT-2024Q4-AI-0351d370d0",
+            "STT-2024Q4-AI-2e8d8fd1ec",
+            "STT-2024Q4-AI-4421c96e68",
+            "STT-2024Q4-AI-5d0ffec55b",
+            "STT-2024Q4-AI-67a852867d",
+            "STT-2024Q4-AI-7084fc277c",
+            "STT-2024Q4-AI-7170a3cd79",
+            "STT-2024Q4-AI-9cebeac64d",
+            "STT-2024Q4-AI-a99f103598",
+            "STT-2024Q4-AI-c7126e91dc",
+            "STT-2024Q4-AI-c9d13d8752",
+            "STT-2024Q4-AI-ea1bc38053",
+            "STT-2024Q4-AI-f532280494",
+            "STT-2024Q4-AI-fd7e352f6e",
+            "STT-2025Q1-AI-00b82a1ecd",
+            "STT-2025Q3-AI-2742463051",
+            "STT-2025Q4-AI-0c346255fe",
+            "STT-2025Q4-AI-110034775f",
+            "STT-2025Q4-AI-2e5a5fc93b",
+            "STT-2025Q4-AI-48474a092b",
+            "STT-2025Q4-AI-85d83cbbb3",
+            "STT-2025Q4-AI-a59bd67f49",
+            "STT-2025Q4-AI-d8a82c797a",
+            "STT-2025Q4-AI-e5694de55a",
+            "STT-2025Q4-AI-e75ed058c2"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 50.0,
+          "raw_value": 138.875
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2025Q4-AI-110034775f"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 45.0,
+          "peer_percentile": 83.33,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2025Q4-AI-d8a82c797a"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 20.0,
+          "peer_percentile": 83.33,
+          "raw_value": 2.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2024Q4-AI-7170a3cd79",
+            "STT-2024Q4-AI-c7126e91dc",
+            "STT-2024Q4-AI-ea1bc38053",
+            "STT-2025Q4-AI-110034775f",
+            "STT-2025Q4-AI-85d83cbbb3",
+            "STT-2025Q4-AI-e5694de55a"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 66.67,
+          "raw_value": 27.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "STT-2025Q4-AI-9af1d41faa"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 3.75,
+          "peer_percentile": 16.67,
+          "raw_value": 0.375
+        }
+      ],
+      "peer_group": "trust-ib",
+      "ticker": "STT"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SYF-2025Q4-AI-aea0f6408b",
+            "SYF-2025Q4-AI-d746945280"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 82.5,
+          "peer_percentile": 86.84,
+          "raw_value": 8.25
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SYF-2024Q4-AI-1bde1b8c4d",
+            "SYF-2024Q4-AI-223c7f499e",
+            "SYF-2024Q4-AI-2440e9c182",
+            "SYF-2024Q4-AI-33de691ef2",
+            "SYF-2024Q4-AI-777b1b560d",
+            "SYF-2024Q4-AI-8093f043e8",
+            "SYF-2024Q4-AI-9c7f7bd3a3",
+            "SYF-2024Q4-AI-f06026978b",
+            "SYF-2025Q3-AI-83e2e4bd7c",
+            "SYF-2025Q4-AI-1287799f5f",
+            "SYF-2025Q4-AI-25363b0834",
+            "SYF-2025Q4-AI-371a6bcadc",
+            "SYF-2025Q4-AI-89940f88b4",
+            "SYF-2025Q4-AI-92ea38bfb5",
+            "SYF-2025Q4-AI-b2548eb35e",
+            "SYF-2025Q4-AI-c7fd048611",
+            "SYF-2025Q4-AI-d50543495d",
+            "SYF-2025Q4-AI-d746945280",
+            "SYF-2025Q4-AI-dfa49f5ff4"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 50.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SYF-2024Q4-AI-16fccf0631",
+            "SYF-2025Q4-AI-4dbfea2097",
+            "SYF-2025Q4-AI-5c4519a91a"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 12.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "SYF-2024Q4-AI-33de691ef2",
+            "SYF-2024Q4-AI-4e352a733d",
+            "SYF-2024Q4-AI-777b1b560d",
+            "SYF-2024Q4-AI-8093f043e8",
+            "SYF-2025Q4-AI-0b3c0860ff",
+            "SYF-2025Q4-AI-1287799f5f",
+            "SYF-2025Q4-AI-1b7aad36ac",
+            "SYF-2025Q4-AI-5a226c8c53",
+            "SYF-2025Q4-AI-aea0f6408b",
+            "SYF-2025Q4-AI-bbd2cf132b",
+            "SYF-2025Q4-AI-c7fd048611"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 32.75
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "SYF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "TFC-2023Q4-AI-1895932f22",
+            "TFC-2023Q4-AI-f3f264cda6",
+            "TFC-2024Q4-AI-05d6b7aa89",
+            "TFC-2024Q4-AI-a345de4c8b"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 18.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "TFC-2023Q2-AI-f188aa850b",
+            "TFC-2023Q3-AI-31f3ae7079",
+            "TFC-2023Q3-AI-d7736fede5",
+            "TFC-2023Q4-AI-1895932f22",
+            "TFC-2023Q4-AI-343924ee07",
+            "TFC-2023Q4-AI-62c37f9366",
+            "TFC-2023Q4-AI-8d9371a8bd",
+            "TFC-2023Q4-AI-8df0b24fd4",
+            "TFC-2023Q4-AI-a030fb9dc4",
+            "TFC-2023Q4-AI-d3fa15d5ce",
+            "TFC-2023Q4-AI-d8a2581c6b",
+            "TFC-2023Q4-AI-f3f264cda6",
+            "TFC-2024Q1-AI-5e8c570a2a",
+            "TFC-2024Q1-AI-60652857ce",
+            "TFC-2024Q2-AI-509d95f5da",
+            "TFC-2024Q3-AI-7e90f3d817",
+            "TFC-2024Q3-AI-b022dda22e",
+            "TFC-2024Q4-AI-05d6b7aa89",
+            "TFC-2024Q4-AI-1dfb98a13d",
+            "TFC-2024Q4-AI-2576f05dae",
+            "TFC-2024Q4-AI-2ac0975d99",
+            "TFC-2024Q4-AI-45b687dc26",
+            "TFC-2024Q4-AI-4a62b3a260",
+            "TFC-2024Q4-AI-4a7ff61d93",
+            "TFC-2024Q4-AI-557f09b0d1",
+            "TFC-2024Q4-AI-5b9d410459",
+            "TFC-2024Q4-AI-61527b9adf",
+            "TFC-2024Q4-AI-a17d6c8fd8",
+            "TFC-2024Q4-AI-a345de4c8b",
+            "TFC-2024Q4-AI-c0476f21a5",
+            "TFC-2024Q4-AI-dad4a5a63a",
+            "TFC-2025Q1-AI-60c2844586",
+            "TFC-2025Q2-AI-1540064266",
+            "TFC-2025Q3-AI-6b338be13d",
+            "TFC-2025Q3-AI-d36774f4cf"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 166.375
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "TFC-2023Q2-AI-f188aa850b",
+            "TFC-2024Q2-AI-509d95f5da",
+            "TFC-2024Q3-AI-b022dda22e",
+            "TFC-2024Q4-AI-4a62b3a260",
+            "TFC-2025Q2-AI-1540064266"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 100.0,
+          "peer_percentile": 85.53,
+          "raw_value": 33.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "TFC-2023Q4-AI-3368efc69e",
+            "TFC-2023Q4-AI-8d9371a8bd",
+            "TFC-2023Q4-AI-e7d11dfa29",
+            "TFC-2023Q4-AI-ea6ae1fce5",
+            "TFC-2024Q4-AI-2576f05dae",
+            "TFC-2024Q4-AI-5b9d410459",
+            "TFC-2024Q4-AI-70db8e528a",
+            "TFC-2024Q4-AI-c0a010c280"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 60.0,
+          "peer_percentile": 71.05,
+          "raw_value": 6.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "TFC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "UMBF-2023Q2-AI-2917f02e8f",
+            "UMBF-2023Q2-AI-75310ff194",
+            "UMBF-2023Q4-AI-0c86e672e7",
+            "UMBF-2023Q4-AI-0d33e4c808",
+            "UMBF-2023Q4-AI-47012f97c4",
+            "UMBF-2023Q4-AI-b18f01f5df",
+            "UMBF-2023Q4-AI-cb88438f7f",
+            "UMBF-2023Q4-AI-df446e3d89",
+            "UMBF-2024Q4-AI-5b7129f3aa",
+            "UMBF-2025Q1-AI-c9a19c6d5d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 13.1
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "UMBF-2023Q2-AI-7962eb4906",
+            "UMBF-2023Q3-AI-7ce528d3e6",
+            "UMBF-2023Q4-AI-39f17cbb87",
+            "UMBF-2024Q1-AI-228c926482",
+            "UMBF-2024Q1-AI-fe4eee565c",
+            "UMBF-2024Q2-AI-d1dc9175e0",
+            "UMBF-2024Q3-AI-1d7e7ad7cc",
+            "UMBF-2024Q4-AI-11268b5429",
+            "UMBF-2025Q1-AI-680eca522f",
+            "UMBF-2025Q1-AI-8c20a22201",
+            "UMBF-2025Q2-AI-c3993cbca1",
+            "UMBF-2025Q3-AI-f871e99705"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 100.0,
+          "peer_percentile": 94.74,
+          "raw_value": 37.9
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "UMBF-2023Q4-AI-0d33e4c808",
+            "UMBF-2023Q4-AI-df446e3d89",
+            "UMBF-2024Q4-AI-5b7129f3aa"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 22.5,
+          "peer_percentile": 35.53,
+          "raw_value": 2.25
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "UMBF"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "USB-2023Q2-AI-2fd9e0fcf7",
+            "USB-2024Q1-AI-dc833a7179",
+            "USB-2025Q2-AI-4a9f212767",
+            "USB-2025Q3-AI-791d71c3ae"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 18.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "USB-2025Q4-AI-ae6b98b81a"
+          ],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 45.0,
+          "peer_percentile": 72.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "USB"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "VLY-2023Q4-AI-73d98211e3"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 10.0,
+          "peer_percentile": 63.16,
+          "raw_value": 1.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "VLY-2023Q4-AI-5999998d8e",
+            "VLY-2023Q4-AI-73d98211e3",
+            "VLY-2023Q4-AI-aeedce432c",
+            "VLY-2023Q4-AI-b05690c2f9",
+            "VLY-2024Q4-AI-0066bce3d0",
+            "VLY-2024Q4-AI-2751b89ca7",
+            "VLY-2024Q4-AI-31b4af99a7",
+            "VLY-2024Q4-AI-701ceca60e",
+            "VLY-2024Q4-AI-727eb1e0bf",
+            "VLY-2024Q4-AI-8bd7d86a1b",
+            "VLY-2024Q4-AI-9a6cf7f505",
+            "VLY-2024Q4-AI-bf5a67a9ac",
+            "VLY-2024Q4-AI-c2a6492ea6",
+            "VLY-2024Q4-AI-d0964b7fce",
+            "VLY-2024Q4-AI-df2855dce0",
+            "VLY-2024Q4-AI-e1dede038a",
+            "VLY-2024Q4-AI-eff66c703d",
+            "VLY-2025Q2-AI-7a9c7d532e",
+            "VLY-2025Q2-AI-a81474039b",
+            "VLY-2025Q3-AI-404208911a"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 19.2
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "VLY-2024Q4-AI-727eb1e0bf",
+            "VLY-2024Q4-AI-9a6cf7f505",
+            "VLY-2024Q4-AI-bf5a67a9ac",
+            "VLY-2024Q4-AI-c2a6492ea6"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 37.5,
+          "peer_percentile": 40.79,
+          "raw_value": 3.75
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "VLY-2023Q4-AI-04e9dc8184",
+            "VLY-2023Q4-AI-b05690c2f9",
+            "VLY-2024Q4-AI-727eb1e0bf",
+            "VLY-2024Q4-AI-bf5a67a9ac",
+            "VLY-2024Q4-AI-c2a6492ea6",
+            "VLY-2024Q4-AI-d0964b7fce",
+            "VLY-2024Q4-AI-e1dede038a",
+            "VLY-2024Q4-AI-ef9c535b49",
+            "VLY-2025Q2-AI-7a9c7d532e",
+            "VLY-2025Q2-AI-a81474039b",
+            "VLY-2025Q3-AI-404208911a"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 12.325
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "VLY"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WAL-2023Q2-AI-48aa626941",
+            "WAL-2024Q4-AI-720a7049f4",
+            "WAL-2024Q4-AI-83684be05d",
+            "WAL-2025Q4-AI-0221041460",
+            "WAL-2025Q4-AI-279107fb96",
+            "WAL-2025Q4-AI-2a6b17eea5",
+            "WAL-2025Q4-AI-4a1affea50",
+            "WAL-2025Q4-AI-6a3df5af7d"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 10.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WAL-2025Q4-AI-0221041460",
+            "WAL-2025Q4-AI-279107fb96",
+            "WAL-2025Q4-AI-2a6b17eea5",
+            "WAL-2025Q4-AI-6a3df5af7d"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 45.0,
+          "peer_percentile": 47.37,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WAL-2024Q4-AI-51c1fd1c1b",
+            "WAL-2024Q4-AI-da9fd5768a",
+            "WAL-2025Q4-AI-634cd7d2ad",
+            "WAL-2025Q4-AI-6a3df5af7d",
+            "WAL-2025Q4-AI-bb464a6101"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 37.5,
+          "peer_percentile": 44.74,
+          "raw_value": 3.75
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "WAL"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WBS-2023Q4-AI-69bcd15050",
+            "WBS-2023Q4-AI-afae4650cd",
+            "WBS-2023Q4-AI-cef6156c84",
+            "WBS-2024Q1-AI-34555bf2c2",
+            "WBS-2024Q1-AI-e39d4299ee",
+            "WBS-2024Q2-AI-dd269a52f8",
+            "WBS-2024Q3-AI-a588cc0993",
+            "WBS-2024Q3-AI-c9a1977197",
+            "WBS-2024Q4-AI-1694d7f2e4",
+            "WBS-2024Q4-AI-377d729369",
+            "WBS-2024Q4-AI-39f4f06e45",
+            "WBS-2024Q4-AI-61ece8f143",
+            "WBS-2024Q4-AI-9f36472be5",
+            "WBS-2024Q4-AI-b18c2df540",
+            "WBS-2024Q4-AI-b30b2b27b9",
+            "WBS-2024Q4-AI-c1185957b0",
+            "WBS-2025Q1-AI-09856ecf62",
+            "WBS-2025Q1-AI-70c7ae9c20",
+            "WBS-2025Q2-AI-331b0479f5"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 19.125
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WBS-2024Q4-AI-b18c2df540",
+            "WBS-2024Q4-AI-c1185957b0"
+          ],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 22.5,
+          "peer_percentile": 31.58,
+          "raw_value": 2.25
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WBS-2023Q4-AI-c397c180bb",
+            "WBS-2023Q4-AI-cef6156c84",
+            "WBS-2024Q1-AI-e39d4299ee",
+            "WBS-2024Q2-AI-c6fb8e0332",
+            "WBS-2024Q3-AI-a588cc0993",
+            "WBS-2024Q4-AI-1af29f0854",
+            "WBS-2024Q4-AI-377d729369",
+            "WBS-2024Q4-AI-3c547db87b",
+            "WBS-2024Q4-AI-7b06f39f72",
+            "WBS-2024Q4-AI-9f36472be5",
+            "WBS-2024Q4-AI-b18c2df540",
+            "WBS-2024Q4-AI-b30b2b27b9",
+            "WBS-2024Q4-AI-c1185957b0",
+            "WBS-2025Q1-AI-09856ecf62",
+            "WBS-2025Q1-AI-70c7ae9c20"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 100.0,
+          "peer_percentile": 90.79,
+          "raw_value": 14.875
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "WBS"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WFC-2024Q1-AI-6beda8b43e",
+            "WFC-2024Q3-AI-14ae98ddda",
+            "WFC-2025Q3-AI-bc7ec8c4be"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 30.0,
+          "peer_percentile": 0.0,
+          "raw_value": 3.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        }
+      ],
+      "peer_group": "GSIB",
+      "ticker": "WFC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "WTFC-2023Q4-AI-d41a073ee9",
+            "WTFC-2024Q4-AI-56b4c270e2"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 11.25,
+          "peer_percentile": 15.79,
+          "raw_value": 1.125
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "WTFC"
+    },
+    {
+      "factors": [
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ZION-2023Q4-AI-ee786ed98f"
+          ],
+          "factor_id": "board_governance",
+          "factor_name": "Board Governance",
+          "normalized_value": 45.0,
+          "peer_percentile": 69.74,
+          "raw_value": 4.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "strategic_implementation",
+          "factor_name": "Strategic Implementation",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "high",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ZION-2023Q4-AI-853857a857",
+            "ZION-2023Q4-AI-a3d292e300",
+            "ZION-2023Q4-AI-a6879dd441",
+            "ZION-2023Q4-AI-ee786ed98f",
+            "ZION-2024Q4-AI-081ef402a0",
+            "ZION-2024Q4-AI-0ccfa2d541",
+            "ZION-2024Q4-AI-0f10d3b8e4",
+            "ZION-2024Q4-AI-0f6d2ca646",
+            "ZION-2024Q4-AI-1153368c37",
+            "ZION-2024Q4-AI-23f73af3c0",
+            "ZION-2024Q4-AI-5884754a78",
+            "ZION-2024Q4-AI-7ae8cebbff",
+            "ZION-2024Q4-AI-aec6bc4d73",
+            "ZION-2024Q4-AI-c8dfc2d145",
+            "ZION-2024Q4-AI-e5364ff132",
+            "ZION-2025Q1-AI-69e0f87e27",
+            "ZION-2025Q1-AI-ddc0ed805e",
+            "ZION-2025Q2-AI-56d704d4e1"
+          ],
+          "factor_id": "risk_management",
+          "factor_name": "Risk Management",
+          "normalized_value": 100.0,
+          "peer_percentile": 53.95,
+          "raw_value": 62.375
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "leadership_acumen",
+          "factor_name": "Leadership Acumen",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ZION-2025Q1-AI-2cb9fadf8c"
+          ],
+          "factor_id": "growth_profitability",
+          "factor_name": "Growth & Profitability",
+          "normalized_value": 5.0,
+          "peer_percentile": 68.42,
+          "raw_value": 0.5
+        },
+        {
+          "confidence": "low",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [],
+          "factor_id": "compliance",
+          "factor_name": "Compliance",
+          "normalized_value": 0.0,
+          "peer_percentile": 0.0,
+          "raw_value": 0.0
+        },
+        {
+          "confidence": "medium",
+          "direction": "higher_is_stronger",
+          "evidence_ids": [
+            "ZION-2023Q2-AI-b42e8955dd",
+            "ZION-2023Q4-AI-356466c7c1",
+            "ZION-2024Q4-AI-0f10d3b8e4"
+          ],
+          "factor_id": "strategic_risk",
+          "factor_name": "Strategic Risk",
+          "normalized_value": 16.25,
+          "peer_percentile": 23.68,
+          "raw_value": 1.625
+        }
+      ],
+      "peer_group": "regional",
+      "ticker": "ZION"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

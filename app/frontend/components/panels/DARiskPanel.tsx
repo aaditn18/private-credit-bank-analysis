@@ -405,7 +405,10 @@ function SafetyView() {
             <YAxis domain={[0, 75]} tick={{ fontSize: 9, fill: '#6b7280' }} tickLine={false} axisLine={false} width={28} />
             <Tooltip
               contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-              formatter={(v: number, name: string) => [v.toFixed(1), name]}
+              formatter={(value, name) => {
+                const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                return [numericValue.toFixed(1), String(name)];
+              }}
             />
             <Legend wrapperStyle={{ fontSize: 10, paddingTop: 8 }} />
             <Bar dataKey="R1" stackId="a" fill="#3b82f6" fillOpacity={0.85} name="R1 Financial" />
@@ -435,7 +438,10 @@ function SafetyView() {
             <YAxis domain={[0, 25]} tick={{ fontSize: 9, fill: '#6b7280' }} tickLine={false} axisLine={false} width={24} />
             <Tooltip
               contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-              formatter={(v: number) => [v.toFixed(1), 'R4 Footprint']}
+              formatter={(value) => {
+                const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                return [numericValue.toFixed(1), 'R4 Footprint'];
+              }}
             />
             <Bar dataKey="r4" radius={[3,3,0,0]}>
               {[...RISK_BANKS].sort((a,b) => b.bubbleSizeR4 - a.bubbleSizeR4).map((b, i) => (
@@ -471,7 +477,10 @@ function SafetyView() {
             <YAxis domain={[1, 11]} tick={{ fontSize: 9, fill: '#6b7280' }} tickLine={false} axisLine={false} width={28} />
             <Tooltip
               contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 10 }}
-              formatter={(v: number, name: string) => [v.toFixed(2), name]}
+              formatter={(value, name) => {
+                const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                return [numericValue.toFixed(2), String(name)];
+              }}
             />
             {visibleSeries.map(s => (
               <Line
@@ -599,10 +608,16 @@ function WeightsView() {
               <YAxis type="category" dataKey="ticker" tick={{ fontSize: 10, fill: '#9ca3af', fontFamily: 'monospace' }} tickLine={false} axisLine={false} width={36} />
               <Tooltip
                 contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-                formatter={(v: number) => [v.toFixed(1), 'Weighted Composite']}
+                formatter={(value) => {
+                  const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                  return [numericValue.toFixed(1), 'Weighted Composite'];
+                }}
               />
               <Bar dataKey="comp" radius={[0, 3, 3, 0]}>
-                <LabelList dataKey="comp" position="right" formatter={(v: number) => v.toFixed(1)} style={{ fontSize: 9, fill: '#9ca3af', fontFamily: 'monospace' }} />
+                <LabelList dataKey="comp" position="right" formatter={(value) => {
+                  const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                  return numericValue.toFixed(1);
+                }} style={{ fontSize: 9, fill: '#9ca3af', fontFamily: 'monospace' }} />
                 {composites.filter(b => !['WFC','TFC','BMO','TD'].includes(b.ticker)).map((b, i) => (
                   <Cell key={i} fill={`${b.color}bb`} stroke={b.color} strokeWidth={0.5} />
                 ))}

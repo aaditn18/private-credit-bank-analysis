@@ -166,7 +166,10 @@ function BankProfileView() {
               <YAxis tick={{ fontSize: 9, fill: '#6b7280' }} tickLine={false} axisLine={false} width={28} />
               <Tooltip
                 contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-                formatter={(v: number) => [v.toFixed(2), 'NLP Score']}
+                formatter={(value) => {
+                  const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                  return [numericValue.toFixed(2), 'NLP Score'];
+                }}
               />
               <Line type="monotone" dataKey="score" stroke="#f59e0b" strokeWidth={1.5}
                 dot={{ r: 3, fill: '#f59e0b' }} />

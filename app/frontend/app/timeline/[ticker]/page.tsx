@@ -365,7 +365,11 @@ export default function TimelinePage() {
                     width={55}
                   />
                   <Tooltip
-                    formatter={(value: number, name: string) => [fmtPct(value), METRIC_LABELS[name] ?? name]}
+                    formatter={(value, name) => {
+                      const metricName = String(name);
+                      const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                      return [fmtPct(numericValue), METRIC_LABELS[metricName] ?? metricName];
+                    }}
                     contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e5e5' }}
                   />
                   <Legend formatter={(value: string) => <span className="text-xs text-neutral-600">{METRIC_LABELS[value] ?? value}</span>} />
