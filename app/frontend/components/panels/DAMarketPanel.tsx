@@ -190,7 +190,10 @@ export function DAMarketPanel() {
                     tickFormatter={v => `$${v}B`} />
                   <Tooltip
                     contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-                    formatter={(v: number) => [`$${v}B`, 'Market Cap']}
+                    formatter={(value) => {
+                      const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                      return [`$${numericValue}B`, 'Market Cap'];
+                    }}
                   />
                   <Bar dataKey="value" radius={[4, 4, 0, 0]}>
                     {STABLECOIN_SCENARIOS.map((s, i) => <Cell key={i} fill={s.color} />)}
@@ -221,10 +224,11 @@ export function DAMarketPanel() {
                       props.payload.name as string,
                     ]}
                   />
-                  <Scatter data={scatterData} shape={(props: Record<string, unknown>) => {
-                    const cx = props.cx as number;
-                    const cy = props.cy as number;
-                    const cluster = props.cluster as string;
+                  <Scatter data={scatterData} shape={(props) => {
+                    const cx = Number(props.cx ?? 0);
+                    const cy = Number(props.cy ?? 0);
+                    const payload = props.payload as { cluster?: string } | undefined;
+                    const cluster = String(payload?.cluster ?? 'E');
                     return (
                       <circle cx={cx} cy={cy} r={6}
                         fill={`${clusterColor(cluster as 'A'|'B'|'C'|'D'|'E')}bb`}

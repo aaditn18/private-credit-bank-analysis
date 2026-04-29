@@ -174,7 +174,10 @@ export function DAOverviewPanel() {
               />
               <Tooltip
                 contentStyle={{ background: '#111', border: '1px solid #374151', borderRadius: 6, fontSize: 11 }}
-                formatter={(v: number, _n, props) => [`${v} banks`, props.payload.desc]}
+                formatter={(value, _name, props) => {
+                  const numericValue = typeof value === 'number' ? value : Number(value ?? 0);
+                  return [`${numericValue} banks`, props.payload.desc];
+                }}
                 labelFormatter={l => (l as string).replace('\n', ' · ')}
               />
               <Bar dataKey="count" radius={[4, 4, 0, 0]}>
