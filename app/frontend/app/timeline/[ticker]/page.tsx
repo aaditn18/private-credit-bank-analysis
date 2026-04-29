@@ -14,6 +14,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { StockPriceChart } from '@/components/StockPriceChart';
+import { AIBankProfileSection } from '@/components/ai/AIBankProfileSection';
 
 // ── types ──────────────────────────────────────────────────────────────────────
 
@@ -258,12 +259,15 @@ export default function TimelinePage() {
 
   if (error || !data) {
     return (
-      <div className="rounded-xl border border-red-200 bg-red-50 px-6 py-8 text-center">
-        <h2 className="text-lg font-semibold text-red-800 mb-1">Error loading timeline</h2>
-        <p className="text-sm text-red-600">{error ?? 'Unknown error'}</p>
-        <a href="/trends" className="inline-block mt-4 text-sm text-indigo-600 hover:text-indigo-800 underline">
-          Back to trends
-        </a>
+      <div className="space-y-6">
+        <div className="rounded-xl border border-red-200 bg-red-50 px-6 py-8 text-center">
+          <h2 className="text-lg font-semibold text-red-800 mb-1">Error loading timeline</h2>
+          <p className="text-sm text-red-600">{error ?? 'Unknown error'}</p>
+          <a href="/trends" className="inline-block mt-4 text-sm text-indigo-600 hover:text-indigo-800 underline">
+            Back to trends
+          </a>
+        </div>
+        <AIBankProfileSection ticker={ticker} />
       </div>
     );
   }
@@ -307,6 +311,8 @@ export default function TimelinePage() {
           ))}
         </div>
       )}
+
+      <AIBankProfileSection ticker={data.ticker} />
 
       {/* Stock Price Chart */}
       <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">

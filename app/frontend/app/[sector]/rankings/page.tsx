@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { RankingsPanel } from '@/components/RankingsPanel';
 import { DALeaderboardPanel } from '@/components/panels/DALeaderboardPanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
+import { AIRankingsPanel } from '@/components/ai/AIRankingsPanel';
+import { aiMethodology, aiQuadrants, getAIBankBundles } from '@/lib/ai-data';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
 
@@ -40,6 +42,15 @@ export default async function SectorRankingsPage(
 
   if (sector === 'private-credit') return <RankingsPanel />;
   if (sector === 'digital-assets') return <DALeaderboardPanel />;
+  if (sector === 'ai') {
+    return (
+      <AIRankingsPanel
+        bundles={getAIBankBundles()}
+        quadrants={aiQuadrants.records}
+        methodology={aiMethodology}
+      />
+    );
+  }
 
   const meta = COMING_SOON[sector];
   return (

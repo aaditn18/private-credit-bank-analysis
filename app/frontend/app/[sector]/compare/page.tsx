@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { ComparePanel } from '@/components/panels/ComparePanel';
 import { DAComparePanel } from '@/components/panels/DAComparePanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
+import { AIComparePanel } from '@/components/ai/AIComparePanel';
+import { getAIBankBundles } from '@/lib/ai-data';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
 
@@ -13,6 +15,7 @@ export default async function SectorComparePage(
 
   if (sector === 'private-credit') return <ComparePanel />;
   if (sector === 'digital-assets') return <DAComparePanel />;
+  if (sector === 'ai') return <AIComparePanel bundles={getAIBankBundles()} />;
 
   const label = sector === 'ai' ? 'AI Usage comparison' : 'Digital Assets comparison';
   return (

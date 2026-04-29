@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { TrendsPanel } from '@/components/panels/TrendsPanel';
 import { DATrendsPanel } from '@/components/panels/DATrendsPanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
+import { AITrendsPanel } from '@/components/ai/AITrendsPanel';
+import { getAIBankBundles } from '@/lib/ai-data';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
 
@@ -13,6 +15,7 @@ export default async function SectorTrendsPage(
 
   if (sector === 'private-credit') return <TrendsPanel />;
   if (sector === 'digital-assets') return <DATrendsPanel />;
+  if (sector === 'ai') return <AITrendsPanel bundles={getAIBankBundles()} />;
 
   const label = sector === 'ai' ? 'AI Usage trends' : 'Digital Assets trends';
   return (
