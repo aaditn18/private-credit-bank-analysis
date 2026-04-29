@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { ComparePanel } from '@/components/panels/ComparePanel';
+import { DAComparePanel } from '@/components/panels/DAComparePanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
@@ -11,6 +12,7 @@ export default async function SectorComparePage(
   if (!VALID.includes(sector as (typeof VALID)[number])) notFound();
 
   if (sector === 'private-credit') return <ComparePanel />;
+  if (sector === 'digital-assets') return <DAComparePanel />;
 
   const label = sector === 'ai' ? 'AI Usage comparison' : 'Digital Assets comparison';
   return (

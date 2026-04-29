@@ -3,24 +3,34 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const TABS: { key: 'rankings' | 'trends' | 'anomalies' | 'compare'; label: string }[] = [
-  { key: 'rankings', label: 'Rankings' },
-  { key: 'trends', label: 'Trends' },
+type TabKey = 'rankings' | 'trends' | 'market' | 'anomalies' | 'compare';
+
+const BASE_TABS: { key: TabKey; label: string }[] = [
+  { key: 'rankings',  label: 'Rankings'  },
+  { key: 'trends',    label: 'Trends'    },
   { key: 'anomalies', label: 'Anomalies' },
-  { key: 'compare', label: 'Compare' },
+  { key: 'compare',   label: 'Compare'   },
 ];
 
-// Active-tab nav for the sector hub. Reads the current pathname so it
-// re-highlights instantly on client-side navigation between sub-tabs.
+// Digital Assets gets an extra Market tab between Trends and Anomalies.
+const DA_TABS: { key: TabKey; label: string }[] = [
+  { key: 'rankings',  label: 'Rankings'  },
+  { key: 'trends',    label: 'Trends'    },
+  { key: 'market',    label: 'Market'    },
+  { key: 'anomalies', label: 'Anomalies' },
+  { key: 'compare',   label: 'Compare'   },
+];
+
 export function SectorTabs({ sector }: { sector: string }) {
   const path = usePathname() || '';
+  const tabs = sector === 'digital-assets' ? DA_TABS : BASE_TABS;
   const active =
-    TABS.find((t) => path.endsWith(`/${t.key}`) || path.endsWith(`/${t.key}/`))?.key ??
+    tabs.find((t) => path.endsWith(`/${t.key}`) || path.endsWith(`/${t.key}/`))?.key ??
     'rankings';
 
   return (
     <nav className="flex flex-wrap items-center gap-1 border-b border-white/10">
-      {TABS.map((t) => {
+      {tabs.map((t) => {
         const isActive = t.key === active;
         return (
           <Link

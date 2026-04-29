@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { RankingsPanel } from '@/components/RankingsPanel';
+import { DALeaderboardPanel } from '@/components/panels/DALeaderboardPanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
@@ -38,6 +39,7 @@ export default async function SectorRankingsPage(
   if (!VALID.includes(sector as (typeof VALID)[number])) notFound();
 
   if (sector === 'private-credit') return <RankingsPanel />;
+  if (sector === 'digital-assets') return <DALeaderboardPanel />;
 
   const meta = COMING_SOON[sector];
   return (

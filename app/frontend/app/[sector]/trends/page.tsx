@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { TrendsPanel } from '@/components/panels/TrendsPanel';
+import { DATrendsPanel } from '@/components/panels/DATrendsPanel';
 import { ComingSoonPanel } from '@/components/ComingSoonPanel';
 
 const VALID = ['private-credit', 'ai', 'digital-assets'] as const;
@@ -11,6 +12,7 @@ export default async function SectorTrendsPage(
   if (!VALID.includes(sector as (typeof VALID)[number])) notFound();
 
   if (sector === 'private-credit') return <TrendsPanel />;
+  if (sector === 'digital-assets') return <DATrendsPanel />;
 
   const label = sector === 'ai' ? 'AI Usage trends' : 'Digital Assets trends';
   return (
