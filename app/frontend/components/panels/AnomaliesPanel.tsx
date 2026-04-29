@@ -59,10 +59,12 @@ export function AnomaliesPanel({ slug }: { slug: ThemeSlug }) {
       return;
     }
     let cancelled = false;
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15_000);
     setLoading(true);
     setError(null);
     setData(null);
-    fetch(`/api/backend/anomalies/${slug}`)
+    fetch(`/api/backend/anomalies/${slug}`, { signal: controller.signal })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return (await res.json()) as AnomaliesResponse;
@@ -71,13 +73,18 @@ export function AnomaliesPanel({ slug }: { slug: ThemeSlug }) {
         if (!cancelled) setData(json);
       })
       .catch((err) => {
-        if (!cancelled) setError(err.message);
+        if (!cancelled) {
+          setError(err instanceof DOMException && err.name === 'AbortError' ? 'Request timed out after 15 seconds' : err.message);
+        }
       })
       .finally(() => {
+        window.clearTimeout(timeout);
         if (!cancelled) setLoading(false);
       });
     return () => {
       cancelled = true;
+      controller.abort();
+      window.clearTimeout(timeout);
     };
   }, [slug]);
 

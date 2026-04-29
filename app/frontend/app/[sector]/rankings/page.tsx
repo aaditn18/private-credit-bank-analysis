@@ -43,10 +43,11 @@ export default async function SectorRankingsPage(
   if (sector === 'private-credit') return <RankingsPanel />;
   if (sector === 'digital-assets') return <DALeaderboardPanel />;
   if (sector === 'ai') {
+    const bundles = getAIBankBundles();
     return (
       <AIRankingsPanel
-        bundles={getAIBankBundles()}
-        quadrants={aiQuadrants.records}
+        bundles={bundles}
+        quadrants={bundles.map((bundle) => bundle.quadrant).filter((record) => record !== null)}
         methodology={aiMethodology}
       />
     );
