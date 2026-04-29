@@ -205,7 +205,6 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Static AI anomaly review</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          AI anomalies are generated from Team 1 static JSON, so this tab does not wait on the backend anomaly API.
           Flags highlight severe evidence gaps, low-confidence rows, strategic-risk disclosure concentration, governance gaps, and generic-only disclosures.
         </p>
       </section>
