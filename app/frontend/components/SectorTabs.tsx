@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-type TabKey = 'rankings' | 'trends' | 'market' | 'anomalies' | 'compare';
+type TabKey = 'rankings' | 'trends' | 'market' | 'risk' | 'anomalies' | 'compare';
 
 const BASE_TABS: { key: TabKey; label: string }[] = [
   { key: 'rankings',  label: 'Rankings'  },
@@ -12,11 +12,12 @@ const BASE_TABS: { key: TabKey; label: string }[] = [
   { key: 'compare',   label: 'Compare'   },
 ];
 
-// Digital Assets gets an extra Market tab between Trends and Anomalies.
+// Digital Assets gets Market + Risk tabs (Team 6 risk analysis).
 const DA_TABS: { key: TabKey; label: string }[] = [
   { key: 'rankings',  label: 'Rankings'  },
   { key: 'trends',    label: 'Trends'    },
   { key: 'market',    label: 'Market'    },
+  { key: 'risk',      label: 'Risk'      },
   { key: 'anomalies', label: 'Anomalies' },
   { key: 'compare',   label: 'Compare'   },
 ];
