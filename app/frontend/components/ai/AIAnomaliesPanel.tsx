@@ -26,7 +26,7 @@ interface AIAnomaly {
 }
 
 const KIND_LABEL: Record<AIAnomalyKind, string> = {
-  missing_evidence: 'Missing Evidence',
+  missing_evidence: 'Evidence Gaps',
   low_confidence: 'Low Confidence',
   strategic_risk: 'Strategic Risk Signal',
   governance_gap: 'Governance Gap',
@@ -39,6 +39,29 @@ const SEVERITY_CLASS = {
   low: 'border-white/10 bg-white/[0.04] text-neutral-300',
 } as const;
 
+function severeEvidenceGaps(bundle: AIBankBundle): string[] {
+  const quadrant = bundle.quadrant;
+  if (!quadrant) return [];
+
+  return quadrant.missing_evidence.filter((gap) => {
+    const normalized = gap.toLowerCase();
+    const deploymentGap =
+      normalized.includes('no deployment evidence') ||
+      normalized.includes('no deployment evidence excerpts') ||
+      normalized.includes('no pilot or deployment evidence') ||
+      normalized.includes('no production deployment evidence');
+    const governanceGap =
+      normalized.includes('no board-level oversight evidence') ||
+      normalized.includes('no board-level ai governance evidence') ||
+      normalized.includes('no explicit board-level') ||
+      normalized.includes('no direct evidence of board-level');
+
+    if (deploymentGap && quadrant.deployment_stage === 'insufficient_evidence') return true;
+    if (governanceGap && quadrant.governance_maturity === 'insufficient_evidence') return true;
+    return false;
+  });
+}
+
 function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
   const anomalies: AIAnomaly[] = [];
   const quadrant = bundle.quadrant;
@@ -48,7 +71,8 @@ function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
     .toReversed()
     .find((quarter) => quarter.disclosure_posture === 'generic');
 
-  if (quadrant?.missing_evidence.length) {
+  const severeGaps = severeEvidenceGaps(bundle);
+  if (quadrant && severeGaps.length > 0) {
     anomalies.push({
       id: `${bundle.score.ticker}-missing`,
       ticker: bundle.score.ticker,
@@ -56,7 +80,7 @@ function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
       kind: 'missing_evidence',
       severity: quadrant.confidence === 'low' ? 'high' : 'medium',
       title: `${bundle.score.ticker} has unresolved AI placement evidence gaps`,
-      detail: quadrant.missing_evidence.join('; '),
+      detail: severeGaps.join('; '),
       evidenceIds: quadrant.evidence_ids,
     });
   }
@@ -182,7 +206,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Static AI anomaly review</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
           AI anomalies are generated from Team 1 static JSON, so this tab does not wait on the backend anomaly API.
-          Flags highlight evidence gaps, low-confidence rows, strategic-risk disclosure concentration, governance gaps, and generic-only disclosures.
+          Flags highlight severe evidence gaps, low-confidence rows, strategic-risk disclosure concentration, governance gaps, and generic-only disclosures.
         </p>
       </section>
 
