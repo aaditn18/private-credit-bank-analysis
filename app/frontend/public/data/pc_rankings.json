@@ -1,0 +1,1255 @@
+{
+  "quarter": "2025Q4",
+  "prev_quarter": "2025Q3",
+  "metrics": [
+    {
+      "key": "ci_ratio",
+      "label": "C&I Concentration",
+      "description": "C&I loans as % of total loans.",
+      "higher_is_better": true
+    },
+    {
+      "key": "loan_scale",
+      "label": "Loan Book Scale",
+      "description": "Log-normalized total loan balance.",
+      "higher_is_better": true
+    },
+    {
+      "key": "nbfi_loan_ratio",
+      "label": "NBFI Loan Ratio",
+      "description": "C&I loans to non-bank financial institutions as % of total loans (RCON1766). Falls back to RCONJ457 when confidential.",
+      "higher_is_better": true
+    },
+    {
+      "key": "nbfi_commitment_ratio",
+      "label": "NBFI Commitment Pipeline",
+      "description": "Unused loan commitments to NBFIs as % of total loans (RCONJ457).",
+      "higher_is_better": true
+    },
+    {
+      "key": "pe_exposure",
+      "label": "Private Equity Exposure",
+      "description": "PE/equity investment holdings as % of total loans (RCOA8274).",
+      "higher_is_better": true
+    },
+    {
+      "key": "nbfi_growth",
+      "label": "NBFI Loan Growth (QoQ)",
+      "description": "Quarter-over-quarter change in the NBFI loan ratio.",
+      "higher_is_better": true
+    }
+  ],
+  "banks": [
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "peer_group": "GSIB",
+      "raw": {
+        "ci_ratio": 0.12860171705860396,
+        "loan_scale": 21.01556224694894,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.22191660759264228,
+        "loan_scale": 1.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America Corporation",
+      "peer_group": "GSIB",
+      "raw": {
+        "ci_ratio": 0.22154771166242812,
+        "loan_scale": 20.773447413604742,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.43786079637059216,
+        "loan_scale": 0.9411476845341504,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc.",
+      "peer_group": "GSIB",
+      "raw": {
+        "ci_ratio": 0.11313956427235505,
+        "loan_scale": 20.01920936587843,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.18599292896163372,
+        "loan_scale": 0.7578104849581486,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "WFC",
+      "name": "Wells Fargo & Company",
+      "peer_group": "GSIB",
+      "raw": {
+        "ci_ratio": 0.18324963779749984,
+        "loan_scale": 20.624837901990528,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.34888174431169183,
+        "loan_scale": 0.9050242726062574,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "GS",
+      "name": "The Goldman Sachs Group",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": 0.07896326645560134,
+        "loan_scale": 19.20983331714564,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.10659012156869574,
+        "loan_scale": 0.5610705583184293,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": 0.03361212549573959,
+        "loan_scale": 18.439188415508106,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0012244693264971658,
+        "loan_scale": 0.3737452456274711,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "BK",
+      "name": "The Bank of New York Mellon",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": 0.054020234291799786,
+        "loan_scale": 17.441450212304336,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.04863923439778343,
+        "loan_scale": 0.1312189919641874,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corporation",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": 0.03308509339518984,
+        "loan_scale": 17.52798446093184,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.15225339464197046,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "NTRS",
+      "name": "Northern Trust Corporation",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": 0.09151539765260955,
+        "loan_scale": 17.505000950417372,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.13575286064449893,
+        "loan_scale": 0.14666665386848302,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "RJF",
+      "name": "Raymond James Financial",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "SCHW",
+      "name": "The Charles Schwab Corporation",
+      "peer_group": "trust-ib",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "USB",
+      "name": "U.S. Bancorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.21216279402753807,
+        "loan_scale": 19.79085856350709,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.41605653859646724,
+        "loan_scale": 0.7023038756669578,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "PNC",
+      "name": "The PNC Financial Services Group",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.2940755687531177,
+        "loan_scale": 19.605713090926777,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.6063669200611298,
+        "loan_scale": 0.6572994469466406,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "TFC",
+      "name": "Truist Financial",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.22465138265185536,
+        "loan_scale": 19.614657756391797,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.44507164732659393,
+        "loan_scale": 0.6594736808273688,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One Financial",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "AXP",
+      "name": "American Express Company",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "MTB",
+      "name": "M&T Bank Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.2372747736509119,
+        "loan_scale": 18.747670391169464,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.4743999464161599,
+        "loan_scale": 0.4487298233850072,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "RF",
+      "name": "Regions Financial Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.27312921985372907,
+        "loan_scale": 18.381139179331758,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.5577016457777313,
+        "loan_scale": 0.3596348670405246,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "CFG",
+      "name": "Citizens Financial Group",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.17638383653337053,
+        "loan_scale": 18.78607149465665,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.3329302243929193,
+        "loan_scale": 0.45806421163973965,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "HBAN",
+      "name": "Huntington Bancshares",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.2714070989757921,
+        "loan_scale": 18.82505968906568,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.5537005912132094,
+        "loan_scale": 0.46754130763221063,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "FITB",
+      "name": "Fifth Third Bancorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.3204679028101807,
+        "loan_scale": 18.627833115168492,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.6676850133496237,
+        "loan_scale": 0.41960025261744094,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "KEY",
+      "name": "KeyCorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.31904090101853627,
+        "loan_scale": 18.49600029969932,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.6643696177202066,
+        "loan_scale": 0.3875548535909672,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "ALLY",
+      "name": "Ally Financial Inc.",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.23224678170761795,
+        "loan_scale": 18.74135745696023,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.46271826345602074,
+        "loan_scale": 0.4471953003222719,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "SYF",
+      "name": "Synchrony Financial",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "DFS",
+      "name": "Discover Financial Services",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "FHN",
+      "name": "First Horizon Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.23511915455425575,
+        "loan_scale": 17.983254021961486,
+        "nbfi_loan_ratio": 0.23681486007405592,
+        "nbfi_commitment_ratio": 0.14519292860861546,
+        "pe_exposure": 0.12744105645778978,
+        "nbfi_growth": -0.002772675780492375
+      },
+      "norm": {
+        "ci_ratio": 0.46939173256976663,
+        "loan_scale": 0.26291851770621916,
+        "nbfi_loan_ratio": 0.4704571791808537,
+        "nbfi_commitment_ratio": 0.18682449558437422,
+        "pe_exposure": 0.09764011643539457,
+        "nbfi_growth": 0.3687965287013427
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "FLG",
+      "name": "Flagstar Financial",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.16513165074811564,
+        "loan_scale": 17.926329551779776,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.30678768708689885,
+        "loan_scale": 0.24908154278573727,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "CMA",
+      "name": "Comerica Incorporated",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.4635018373224749,
+        "loan_scale": 17.734409867331852,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 1.0,
+        "loan_scale": 0.20243046545509547,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "ZION",
+      "name": "Zions Bancorporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.23946049984738552,
+        "loan_scale": 17.92831787967221,
+        "nbfi_loan_ratio": 0.2394618905984492,
+        "nbfi_commitment_ratio": 0.16755641193097523,
+        "pe_exposure": 0.13093602209690738,
+        "nbfi_growth": 0.025030586767305418
+      },
+      "norm": {
+        "ci_ratio": 0.4794781089814222,
+        "loan_scale": 0.24956485766057898,
+        "nbfi_loan_ratio": 0.4838224445940419,
+        "nbfi_commitment_ratio": 0.25160869062431274,
+        "pe_exposure": 0.13401692842693408,
+        "nbfi_growth": 0.5551834603177098
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "SNV",
+      "name": "Synovus Financial Corp.",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.2279203622439207,
+        "loan_scale": 17.6161962891096,
+        "nbfi_loan_ratio": 0.2279203622439207,
+        "nbfi_commitment_ratio": 0.18027292322016295,
+        "pe_exposure": 0.13309032079336405,
+        "nbfi_growth": 0.09138368851719018
+      },
+      "norm": {
+        "ci_ratio": 0.4526665646670253,
+        "loan_scale": 0.17369557671743402,
+        "nbfi_loan_ratio": 0.4255474876902234,
+        "nbfi_commitment_ratio": 0.2884468224891562,
+        "pe_exposure": 0.15643961486982813,
+        "nbfi_growth": 1.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "CFR",
+      "name": "Cullen/Frost Bankers",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.25321109768295574,
+        "loan_scale": 16.901623289276337,
+        "nbfi_loan_ratio": 0.2538340702983348,
+        "nbfi_commitment_ratio": 0.2754383567957574,
+        "pe_exposure": 0.21413685563639703,
+        "nbfi_growth": -0.057785903506697746
+      },
+      "norm": {
+        "ci_ratio": 0.5114252811804044,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.5563897967589871,
+        "nbfi_commitment_ratio": 0.5641290997512781,
+        "pe_exposure": 1.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "WAL",
+      "name": "Western Alliance Bancorporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.1797382386546969,
+        "loan_scale": 17.947320399235622,
+        "nbfi_loan_ratio": 0.1808131046251521,
+        "nbfi_commitment_ratio": 0.08070117273152655,
+        "pe_exposure": 0.12440980420194349,
+        "nbfi_growth": 0.06724094331800703
+      },
+      "norm": {
+        "ci_ratio": 0.34072360643173016,
+        "loan_scale": 0.2541839149093433,
+        "nbfi_loan_ratio": 0.18769567783752686,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.06608979382973652,
+        "nbfi_growth": 0.8381523682432747
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "EWBC",
+      "name": "East West Bancorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.15039516636494155,
+        "loan_scale": 17.814490240552708,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.27254997540144527,
+        "loan_scale": 0.22189608564168178,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "WTFC",
+      "name": "Wintrust Financial Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "PNFP",
+      "name": "Pinnacle Financial Partners",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.3122787178697137,
+        "loan_scale": 17.485496702227582,
+        "nbfi_loan_ratio": 0.3191201619959073,
+        "nbfi_commitment_ratio": 0.14871106893055075,
+        "pe_exposure": 0.1318069421387212,
+        "nbfi_growth": 0.006137329991644059
+      },
+      "norm": {
+        "ci_ratio": 0.6486588368450903,
+        "loan_scale": 0.14192563841092157,
+        "nbfi_loan_ratio": 0.8860293438993804,
+        "nbfi_commitment_ratio": 0.19701610507153516,
+        "pe_exposure": 0.14308176565054812,
+        "nbfi_growth": 0.42852723957376765
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "UMBF",
+      "name": "UMB Financial Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.36290871937239666,
+        "loan_scale": 17.47345228806087,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.766289022512859,
+        "loan_scale": 0.13899792988373263,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "BOKF",
+      "name": "BOK Financial Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.3416504068191287,
+        "loan_scale": 17.06205399985179,
+        "nbfi_loan_ratio": 0.34169238905290106,
+        "nbfi_commitment_ratio": 0.42590085158179253,
+        "pe_exposure": 0.1805394798747521,
+        "nbfi_growth": 0.029279850668400085
+      },
+      "norm": {
+        "ci_ratio": 0.7168989538103754,
+        "loan_scale": 0.0389968621863596,
+        "nbfi_loan_ratio": 1.0,
+        "nbfi_commitment_ratio": 1.0,
+        "pe_exposure": 0.6503068849057325,
+        "nbfi_growth": 0.5836695870372507
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "WBS",
+      "name": "Webster Financial Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.17556185441686245,
+        "loan_scale": 17.851731464179466,
+        "nbfi_loan_ratio": 0.17567808419968092,
+        "nbfi_commitment_ratio": 0.08851931311519205,
+        "pe_exposure": 0.12377857159461397,
+        "nbfi_growth": -0.05529388629691728
+      },
+      "norm": {
+        "ci_ratio": 0.3310204889374442,
+        "loan_scale": 0.23094853489042477,
+        "nbfi_loan_ratio": 0.16176816764974933,
+        "nbfi_commitment_ratio": 0.02264816818400548,
+        "pe_exposure": 0.05951970638087895,
+        "nbfi_growth": 0.016705932998605993
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "FCNCA",
+      "name": "First Citizens BancShares",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.22567782021625693,
+        "loan_scale": 18.81752210756912,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.44745640019432853,
+        "loan_scale": 0.46570910215368677,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "VLY",
+      "name": "Valley National Bancorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "COLB",
+      "name": "Columbia Banking System",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.1597059873052936,
+        "loan_scale": 17.68751553726961,
+        "nbfi_loan_ratio": 0.16008291331351288,
+        "nbfi_commitment_ratio": 0.1028055435247226,
+        "pe_exposure": 0.13194608519656045,
+        "nbfi_growth": 0.03164309726000666
+      },
+      "norm": {
+        "ci_ratio": 0.2941820821252604,
+        "loan_scale": 0.1910315772983372,
+        "nbfi_loan_ratio": 0.08302574434300039,
+        "nbfi_commitment_ratio": 0.06403357867196642,
+        "pe_exposure": 0.14453001475442884,
+        "nbfi_growth": 0.599512270251321
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "ASB",
+      "name": "Associated Banc-Corp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.2588548389487514,
+        "loan_scale": 17.257085451378853,
+        "nbfi_loan_ratio": 0.2625842722492392,
+        "nbfi_commitment_ratio": 0.17520627486524973,
+        "pe_exposure": 0.11806011202482204,
+        "nbfi_growth": 0.04342245598781597
+      },
+      "norm": {
+        "ci_ratio": 0.5245375528227667,
+        "loan_scale": 0.08640433554308566,
+        "nbfi_loan_ratio": 0.6005709160982284,
+        "nbfi_commitment_ratio": 0.2737693802279456,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.6784784896261314
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "FNB",
+      "name": "F.N.B. Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "ONB",
+      "name": "Old National Bancorp",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.21976854286204336,
+        "loan_scale": 17.70359066619522,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.4337272006741261,
+        "loan_scale": 0.1949390560166654,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "BPOP",
+      "name": "Popular, Inc.",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.16292290079349414,
+        "loan_scale": 17.047539500077388,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.301656032740769,
+        "loan_scale": 0.03546873502556802,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {
+        "nbfi_loan_ratio": "missing",
+        "nbfi_growth": "missing"
+      }
+    },
+    {
+      "ticker": "BKU",
+      "name": "BankUnited, Inc.",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "PB",
+      "name": "Prosperity Bancshares",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    },
+    {
+      "ticker": "SSB",
+      "name": "SouthState Corporation",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": 0.1436394179700134,
+        "loan_scale": 17.70618468927253,
+        "nbfi_loan_ratio": 0.1436394179700134,
+        "nbfi_commitment_ratio": 0.08297678544831048,
+        "pe_exposure": 0.13273120821872075,
+        "nbfi_growth": 0.0402911306041353
+      },
+      "norm": {
+        "ci_ratio": 0.25685414458109623,
+        "loan_scale": 0.19556960087987318,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.00659216348162075,
+        "pe_exposure": 0.152701846902846,
+        "nbfi_growth": 0.657486775824439
+      },
+      "sources": {
+        "nbfi_loan_ratio": "loan",
+        "nbfi_growth": "loan"
+      }
+    },
+    {
+      "ticker": "SF",
+      "name": "Stifel Financial Corp.",
+      "peer_group": "regional",
+      "raw": {
+        "ci_ratio": null,
+        "loan_scale": null,
+        "nbfi_loan_ratio": null,
+        "nbfi_commitment_ratio": null,
+        "pe_exposure": null,
+        "nbfi_growth": null
+      },
+      "norm": {
+        "ci_ratio": 0.0,
+        "loan_scale": 0.0,
+        "nbfi_loan_ratio": 0.0,
+        "nbfi_commitment_ratio": 0.0,
+        "pe_exposure": 0.0,
+        "nbfi_growth": 0.0
+      },
+      "sources": {}
+    }
+  ]
+}

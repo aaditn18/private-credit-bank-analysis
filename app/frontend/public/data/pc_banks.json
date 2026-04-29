@@ -1,0 +1,252 @@
+[
+  {
+    "ticker": "ALLY",
+    "name": "Ally Financial Inc.",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "ASB",
+    "name": "Associated Banc-Corp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "AXP",
+    "name": "American Express Company",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "BAC",
+    "name": "Bank of America Corporation",
+    "peer_group": "GSIB"
+  },
+  {
+    "ticker": "BK",
+    "name": "The Bank of New York Mellon",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "BKU",
+    "name": "BankUnited, Inc.",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "BOKF",
+    "name": "BOK Financial Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "BPOP",
+    "name": "Popular, Inc.",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "C",
+    "name": "Citigroup Inc.",
+    "peer_group": "GSIB"
+  },
+  {
+    "ticker": "CFG",
+    "name": "Citizens Financial Group",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "CFR",
+    "name": "Cullen/Frost Bankers",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "CMA",
+    "name": "Comerica Incorporated",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "COF",
+    "name": "Capital One Financial",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "COLB",
+    "name": "Columbia Banking System",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "DFS",
+    "name": "Discover Financial Services",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "EWBC",
+    "name": "East West Bancorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "FCNCA",
+    "name": "First Citizens BancShares",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "FHN",
+    "name": "First Horizon Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "FITB",
+    "name": "Fifth Third Bancorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "FLG",
+    "name": "Flagstar Financial",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "FNB",
+    "name": "F.N.B. Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "GS",
+    "name": "The Goldman Sachs Group",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "HBAN",
+    "name": "Huntington Bancshares",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JPMorgan Chase & Co.",
+    "peer_group": "GSIB"
+  },
+  {
+    "ticker": "KEY",
+    "name": "KeyCorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "MS",
+    "name": "Morgan Stanley",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "MTB",
+    "name": "M&T Bank Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "NTRS",
+    "name": "Northern Trust Corporation",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "ONB",
+    "name": "Old National Bancorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "PB",
+    "name": "Prosperity Bancshares",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "PNC",
+    "name": "The PNC Financial Services Group",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "PNFP",
+    "name": "Pinnacle Financial Partners",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "RF",
+    "name": "Regions Financial Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "RJF",
+    "name": "Raymond James Financial",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "SCHW",
+    "name": "The Charles Schwab Corporation",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "SF",
+    "name": "Stifel Financial Corp.",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "SNV",
+    "name": "Synovus Financial Corp.",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "SOFI",
+    "name": "SoFi Technologies",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "SSB",
+    "name": "SouthState Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "STT",
+    "name": "State Street Corporation",
+    "peer_group": "trust-ib"
+  },
+  {
+    "ticker": "SYF",
+    "name": "Synchrony Financial",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "TFC",
+    "name": "Truist Financial",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "UMBF",
+    "name": "UMB Financial Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "USB",
+    "name": "U.S. Bancorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "VLY",
+    "name": "Valley National Bancorp",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "WAL",
+    "name": "Western Alliance Bancorporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "WBS",
+    "name": "Webster Financial Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "WFC",
+    "name": "Wells Fargo & Company",
+    "peer_group": "GSIB"
+  },
+  {
+    "ticker": "WTFC",
+    "name": "Wintrust Financial Corporation",
+    "peer_group": "regional"
+  },
+  {
+    "ticker": "ZION",
+    "name": "Zions Bancorporation",
+    "peer_group": "regional"
+  }
+]

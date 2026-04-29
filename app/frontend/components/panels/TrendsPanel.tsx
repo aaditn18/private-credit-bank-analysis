@@ -151,7 +151,7 @@ export function TrendsPanel() {
   const [peerFilter, setPeerFilter] = useState<string>('all');
 
   useEffect(() => {
-    fetch('/api/backend/trends')
+    fetch('/data/pc_trends.json')
       .then((r) => {
         if (!r.ok) throw new Error('Failed to load trends data');
         return r.json();

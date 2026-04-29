@@ -153,7 +153,7 @@ export function RankingsPanel() {
   }
 
   useEffect(() => {
-    fetch('/api/backend/rankings')
+    fetch('/data/pc_rankings.json')
       .then((r) => r.json())
       .then((d: RankingsData) => {
         setData(d);

@@ -64,7 +64,7 @@ export function AnomaliesPanel({ slug }: { slug: ThemeSlug }) {
     setLoading(true);
     setError(null);
     setData(null);
-    fetch(`/api/backend/anomalies/${slug}`, { signal: controller.signal })
+    fetch(slug === 'private-credit' ? '/data/pc_anomalies.json' : `/api/backend/anomalies/${slug}`, { signal: controller.signal })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return (await res.json()) as AnomaliesResponse;

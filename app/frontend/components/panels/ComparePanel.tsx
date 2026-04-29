@@ -308,7 +308,6 @@ export function ComparePanel() {
   const [timelines, setTimelines] = useState<Record<string, TimelineData | null>>({});
   const [findings, setFindings] = useState<Record<string, FindingData | null>>({});
   const [loadingTickers, setLoadingTickers] = useState<Set<string>>(new Set());
-  const [loadError, setLoadError] = useState<string | null>(null);
 
   const [winnerLoading, setWinnerLoading] = useState(false);
   const [winnerError, setWinnerError] = useState<string | null>(null);
@@ -321,7 +320,7 @@ export function ComparePanel() {
   const [trends, setTrends] = useState<TrendsResponse | null>(null);
 
   // Metric trends section state.
-  const [trendMetric, setTrendMetric] = useState<MetricKey>('nbfi_loan_ratio');
+  const [trendMetric, setTrendMetric] = useState<MetricKey>('ci_ratio');
   const [showPeerMedian, setShowPeerMedian] = useState(false);
 
   // Read initial state from URL (?banks=JPM,BAC)
@@ -348,11 +347,11 @@ export function ComparePanel() {
     window.history.replaceState(null, '', url.toString());
   }, [selected]);
 
-  // Load bank list
+  // Load bank list, rankings, trends, and all timelines from static JSON — once per mount.
   useEffect(() => {
     setBanksLoading(true);
     setBanksError(null);
-    fetch('/api/backend/banks')
+    fetch('/data/pc_banks.json')
       .then((r) => {
         if (!r.ok) throw new Error(`Failed to load banks (HTTP ${r.status})`);
         return r.json();
@@ -362,50 +361,69 @@ export function ComparePanel() {
       .finally(() => setBanksLoading(false));
   }, []);
 
-  // Load /rankings (composite rank tile) — once per mount. Failures here
-  // shouldn't kill the page; the rank tile just won't render.
   useEffect(() => {
-    fetch('/api/backend/rankings')
+    fetch('/data/pc_rankings.json')
       .then((r) => (r.ok ? r.json() : null))
-      .then((d: RankingsResponse | null) => {
-        if (d) setRankings(d);
-      })
-      .catch(() => {
-        /* swallow */
-      });
+      .then((d: RankingsResponse | null) => { if (d) setRankings(d); })
+      .catch(() => { /* swallow */ });
   }, []);
 
-  // Load /trends (multi-quarter metric chart) — once per mount.
   useEffect(() => {
-    fetch('/api/backend/trends')
+    fetch('/data/pc_trends.json')
       .then((r) => (r.ok ? r.json() : null))
-      .then((d: TrendsResponse | null) => {
-        if (d) setTrends(d);
-      })
-      .catch(() => {
-        /* swallow */
-      });
+      .then((d: TrendsResponse | null) => { if (d) setTrends(d); })
+      .catch(() => { /* swallow */ });
   }, []);
 
-  // Ensure we have timeline + findings for selected tickers
+  // Load all timelines at once from the pre-computed static file, then
+  // populate the timelines state for any currently-selected tickers.
+  // Per-ticker findings still hit the backend (graceful null → banner).
   useEffect(() => {
     let cancelled = false;
-    async function loadFor(ticker: string) {
+    fetch('/data/pc_timelines.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((all: Record<string, TimelineData> | null) => {
+        if (!all || cancelled) return;
+        setTimelines(all);
+      })
+      .catch(() => { /* swallow — charts stay empty if file missing */ });
+    return () => { cancelled = true; };
+  }, []);
+
+  // Load pre-computed findings from static JSON. Populates findings state for
+  // all banks upfront so the Strategy & Quote panels render without a backend.
+  // The per-ticker backend fetch below is skipped for any ticker already set here.
+  useEffect(() => {
+    fetch('/data/pc_findings.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: Record<string, FindingData> | null) => {
+        if (!d) return;
+        setFindings((prev) => {
+          const next = { ...prev };
+          for (const [ticker, finding] of Object.entries(d)) {
+            if (next[ticker] === undefined) next[ticker] = finding;
+          }
+          return next;
+        });
+      })
+      .catch(() => { /* swallow — falls back to per-ticker backend fetch */ });
+  }, []);
+
+  // Load findings for selected tickers from the live backend.
+  // Returns null when the backend is down, which triggers the existing
+  // "pipeline not yet run" amber banner — no blank widgets.
+  useEffect(() => {
+    let cancelled = false;
+    async function loadFindingsFor(ticker: string) {
       setLoadingTickers((prev) => new Set(prev).add(ticker));
       try {
-        const [tRes, fRes] = await Promise.all([
-          fetch(`/api/backend/timeline/${ticker}`),
-          fetch(`/api/backend/findings/${ticker}`),
-        ]);
-        if (!tRes.ok) throw new Error(`Timeline failed for ${ticker} (HTTP ${tRes.status})`);
-        const tJson = (await tRes.json()) as TimelineData;
+        const fRes = await fetch(`/api/backend/findings/${ticker}`);
         const fJson = fRes.ok ? ((await fRes.json()) as FindingData) : null;
         if (!cancelled) {
-          setTimelines((prev) => ({ ...prev, [ticker]: tJson }));
           setFindings((prev) => ({ ...prev, [ticker]: fJson }));
         }
-      } catch (e) {
-        if (!cancelled) setLoadError(e instanceof Error ? e.message : String(e));
+      } catch {
+        if (!cancelled) setFindings((prev) => ({ ...prev, [ticker]: null }));
       } finally {
         if (!cancelled) {
           setLoadingTickers((prev) => {
@@ -418,12 +436,9 @@ export function ComparePanel() {
     }
 
     for (const t of selected) {
-      if (!timelines[t] && !loadingTickers.has(t)) void loadFor(t);
-      if (findings[t] === undefined && !loadingTickers.has(t)) void loadFor(t);
+      if (findings[t] === undefined && !loadingTickers.has(t)) void loadFindingsFor(t);
     }
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
@@ -500,9 +515,15 @@ export function ComparePanel() {
     const minMax: Record<string, { lo: number; hi: number }> = {};
     for (const k of keys) {
       const vals = rawByMetric[k];
-      const lo = vals.length ? Math.min(...vals) : 0;
-      const hi = vals.length ? Math.max(...vals) : 1;
-      minMax[k] = { lo, hi: hi === lo ? lo + 1e-9 : hi };
+      if (!vals.length) {
+        minMax[k] = { lo: 0, hi: 1 };
+      } else if (vals.length === 1 || Math.max(...vals) === Math.min(...vals)) {
+        // Only one bank reported this metric — anchor floor at 0 so it renders
+        // at full extent rather than collapsing to center.
+        minMax[k] = { lo: 0, hi: Math.max(...vals) || 1e-9 };
+      } else {
+        minMax[k] = { lo: Math.min(...vals), hi: Math.max(...vals) };
+      }
     }
 
     return METRICS.map((metric) => {
@@ -878,11 +899,6 @@ export function ComparePanel() {
               <div className="text-[11px] text-neutral-500 mt-1">
                 Loaded: {readyCount}/{selected.length} timelines
               </div>
-              {loadError && (
-                <div className="text-[11px] text-rose-600 mt-2">
-                  {loadError}
-                </div>
-              )}
               <div className="text-[11px] text-neutral-400 mt-3">
                 Tip: charts render once at least {MIN_BANKS} selected banks have timeline data.
               </div>
@@ -1002,7 +1018,9 @@ export function ComparePanel() {
         <div className="px-6 py-4 border-b border-neutral-100">
           <h3 className="font-semibold text-neutral-900 text-base">Side-by-side radar overlay</h3>
           <p className="text-xs text-neutral-400 mt-0.5">
-            Normalized across the selected set (0–1). Uses each bank’s latest available quarter.
+            Normalized across the selected set (0–1). Uses each bank&apos;s latest available quarter.
+            GSIB and trust-IB banks score near-zero on NBFI/PE axes — those metrics are filed
+            as confidential in public Call Reports, not a sign of zero exposure.
           </p>
         </div>
         <div className="p-6">
@@ -1126,8 +1144,9 @@ export function ComparePanel() {
           <h3 className="font-semibold text-neutral-900 text-base">Call Report metric comparison</h3>
           <p className="text-xs text-neutral-400 mt-0.5">
             Grouped bars show latest-quarter percent-of-loans ratios per bank.
-            Loan scale (size) and NBFI QoQ growth are shown as KPI cards below — they
-            don&apos;t share the percent axis but are part of the same composite.
+            Loan scale (size) and NBFI QoQ growth are shown as KPI cards below.
+            Missing bars for GSIB/trust-IB banks indicate confidential FFIEC reporting,
+            not zero exposure.
           </p>
         </div>
         <div className="p-6 space-y-6">
@@ -1218,6 +1237,12 @@ export function ComparePanel() {
             <p className="text-xs text-neutral-400 mt-0.5">
               One line per selected bank, charted across all reporting quarters. Toggle
               metric to see how each bank&apos;s ratio has moved.
+            </p>
+            <p className="text-[11px] text-amber-600 mt-1">
+              Note: GSIB and trust-IB banks (JPM, BAC, BK, STT, etc.) file NBFI loan,
+              commitment, and PE exposure figures as confidential in public FFIEC Call
+              Reports — those lines will be missing. Use C&amp;I or Loan scale for
+              full coverage across all banks.
             </p>
           </div>
           <div className="flex items-center gap-2 flex-wrap">

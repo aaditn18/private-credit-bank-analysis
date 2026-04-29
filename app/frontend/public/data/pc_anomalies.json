@@ -1,0 +1,848 @@
+{
+  "theme": "private_credit",
+  "theme_slug": "private-credit",
+  "quarter": "2025Q4",
+  "peer_group": null,
+  "categories": {
+    "exposure": [
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "ZION",
+        "severity": "high",
+        "headline": "NBFI loan ratio up 3.2\u03c3 vs own 8Q history",
+        "detail": "NBFI exposure at 23.95%; bank's 8-quarter band shifted notably.",
+        "metric_value": 0.2394618905984492,
+        "peer_median": 0.23681486007405592,
+        "z_score": 0.13305162423228906,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.2284267085195251,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.2285907343094679,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.2295440934874485,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.22451617154814177,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.2271477079892389,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.23316056791410011,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.23361438545327037,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.2394618905984492,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "BOKF",
+        "severity": "medium",
+        "headline": "NBFI ratio 1.8\u03c3 above peers",
+        "detail": "Bank at 34.17% vs peer median 23.68%.",
+        "metric_value": 0.34169238905290106,
+        "peer_median": 0.23681486007405592,
+        "z_score": 1.7516415653009254,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.34771535196074443,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.35409330623792573,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.346073224035758,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.3530338893868845,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.3409759466044837,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.33264056170557094,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.3319722899763468,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.34169238905290106,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "SSB",
+        "severity": "medium",
+        "headline": "NBFI loan ratio: 14.36%",
+        "detail": "Bank at 14.36% vs peer median 23.68%.",
+        "metric_value": 0.1436394179700134,
+        "peer_median": 0.23681486007405592,
+        "z_score": -1.3840816448949615,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.1200524216838336,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.12156421632064801,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.13108550506341968,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.13331987414675636,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.13384044231628245,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.13674772568670704,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.1380761728561472,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.1436394179700134,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "WBS",
+        "severity": "medium",
+        "headline": "NBFI loan ratio: 17.57%",
+        "detail": "Bank at 17.57% vs peer median 23.68%.",
+        "metric_value": 0.17567808419968092,
+        "peer_median": 0.23681486007405592,
+        "z_score": -0.8768214469247833,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.2521929927507487,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.2455551258334314,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.24879377804086958,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.24687087888439685,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.19177291401261654,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.1937867447685759,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.18596056662643323,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.17567808419968092,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "WAL",
+        "severity": "medium",
+        "headline": "NBFI loan ratio: 18.08%",
+        "detail": "Bank at 18.08% vs peer median 23.68%.",
+        "metric_value": 0.1808131046251521,
+        "peer_median": 0.23681486007405592,
+        "z_score": -0.7955199514463789,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.16691178497316497,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.17599896098623147,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.1796157702530793,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.16651990657319438,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.1642673175201856,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.16838232896123426,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.16942107193059122,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.1808131046251521,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "ASB",
+        "severity": "medium",
+        "headline": "NBFI loan ratio: 26.26%",
+        "detail": "Bank at 26.26% vs peer median 23.68%.",
+        "metric_value": 0.2625842722492392,
+        "peer_median": 0.23681486007405592,
+        "z_score": 0.4991425160828601,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.23843751493399798,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.23635847418829384,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.23749747630100737,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.24502570899208279,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.2552745257539725,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.2624501205767039,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.25165671942592865,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.2625842722492392,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "CFR",
+        "severity": "medium",
+        "headline": "NBFI loan ratio down 2.3\u03c3 vs own 8Q history",
+        "detail": "NBFI exposure at 25.38%; bank's 8-quarter band shifted notably.",
+        "metric_value": 0.2538340702983348,
+        "peer_median": 0.23681486007405592,
+        "z_score": 0.3606027547183667,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.3098262389267882,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.31001190503279574,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.2926998878114822,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.2953800381357106,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.2913017046500821,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.2723648095699307,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.2694016903833695,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.2538340702983348,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "PNFP",
+        "severity": "low",
+        "headline": "NBFI loan ratio: 31.91%",
+        "detail": "Bank at 31.91% vs peer median 23.68%.",
+        "metric_value": 0.3191201619959073,
+        "peer_median": 0.23681486007405592,
+        "z_score": 1.394261133684959,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.2976031365716054,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.3021594914687974,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.31120774006438573,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.3210468297462665,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.3025082135496739,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.3051489710105302,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.3171735631740824,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.3191201619959073,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "COLB",
+        "severity": "low",
+        "headline": "NBFI loan ratio: 16.01%",
+        "detail": "Bank at 16.01% vs peer median 23.68%.",
+        "metric_value": 0.16008291331351288,
+        "peer_median": 0.23681486007405592,
+        "z_score": -1.1237358913148254,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.16995775016427603,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.17075431038420313,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.16509984750719336,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.16964952937076697,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.16786936429880772,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.16817944458159972,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.15517276637500432,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.16008291331351288,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "FHN",
+        "severity": "low",
+        "headline": "NBFI loan ratio: 23.68%",
+        "detail": "Bank at 23.68% vs peer median 23.68%.",
+        "metric_value": 0.23681486007405592,
+        "peer_median": 0.23681486007405592,
+        "z_score": 0.09114185126572662,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.26524596217870344,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.26116826085881567,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.25504638252436057,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.25958653860410524,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.26125925221958746,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.23581674848338202,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.2374732965318635,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.23681486007405592,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      },
+      {
+        "theme": "private_credit",
+        "category": "exposure",
+        "bank_ticker": "SNV",
+        "severity": "low",
+        "headline": "NBFI loan ratio: 22.79%",
+        "detail": "Bank at 22.79% vs peer median 23.68%.",
+        "metric_value": 0.2279203622439207,
+        "peer_median": 0.23681486007405592,
+        "z_score": -0.04968251070417958,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": [
+          {
+            "quarter": "2024Q1",
+            "value": 0.23463481501106467,
+            "peer_value": 0.23843751493399798
+          },
+          {
+            "quarter": "2024Q2",
+            "value": 0.23500050424770869,
+            "peer_value": 0.23635847418829384
+          },
+          {
+            "quarter": "2024Q3",
+            "value": 0.23306201006129576,
+            "peer_value": 0.23749747630100737
+          },
+          {
+            "quarter": "2024Q4",
+            "value": 0.23327915347426562,
+            "peer_value": 0.24502570899208279
+          },
+          {
+            "quarter": "2025Q1",
+            "value": 0.21059530717114758,
+            "peer_value": 0.2271477079892389
+          },
+          {
+            "quarter": "2025Q2",
+            "value": 0.21325835831573595,
+            "peer_value": 0.23316056791410011
+          },
+          {
+            "quarter": "2025Q3",
+            "value": 0.20883614501659356,
+            "peer_value": 0.23361438545327037
+          },
+          {
+            "quarter": "2025Q4",
+            "value": 0.2279203622439207,
+            "peer_value": 0.23681486007405592
+          }
+        ]
+      }
+    ],
+    "credit_quality": [],
+    "peer_deviation": [
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "CMA",
+        "severity": "high",
+        "headline": "C&I ratio 3.0\u03c3 above regional peers",
+        "detail": "C&I ratio 46.35% vs peer median 23.37% (regional).",
+        "metric_value": 0.4635018373224749,
+        "peer_median": 0.23368296813093686,
+        "z_score": 2.9679621624594623,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "UMBF",
+        "severity": "medium",
+        "headline": "C&I ratio 1.6\u03c3 above regional peers",
+        "detail": "C&I ratio 36.29% vs peer median 23.37% (regional).",
+        "metric_value": 0.36290871937239666,
+        "peer_median": 0.23368296813093686,
+        "z_score": 1.6064140736336125,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "SSB",
+        "severity": "low",
+        "headline": "C&I ratio 1.4\u03c3 below regional peers",
+        "detail": "C&I ratio 14.36% vs peer median 23.37% (regional).",
+        "metric_value": 0.1436394179700134,
+        "peer_median": 0.23368296813093686,
+        "z_score": -1.3614400335504862,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "BOKF",
+        "severity": "low",
+        "headline": "C&I ratio 1.3\u03c3 above regional peers",
+        "detail": "C&I ratio 34.17% vs peer median 23.37% (regional).",
+        "metric_value": 0.3416504068191287,
+        "peer_median": 0.23368296813093686,
+        "z_score": 1.3186785364676525,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "EWBC",
+        "severity": "low",
+        "headline": "C&I ratio 1.3\u03c3 below regional peers",
+        "detail": "C&I ratio 15.04% vs peer median 23.37% (regional).",
+        "metric_value": 0.15039516636494155,
+        "peer_median": 0.23368296813093686,
+        "z_score": -1.269999619900443,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "NTRS",
+        "severity": "low",
+        "headline": "C&I ratio 1.3\u03c3 above trust-ib peers",
+        "detail": "C&I ratio 9.15% vs peer median 5.40% (trust-ib).",
+        "metric_value": 0.09151539765260955,
+        "peer_median": 0.054020234291799786,
+        "z_score": 1.2591128461427434,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "BAC",
+        "severity": "low",
+        "headline": "C&I ratio 1.2\u03c3 above GSIB peers",
+        "detail": "C&I ratio 22.15% vs peer median 15.59% (GSIB).",
+        "metric_value": 0.22154771166242812,
+        "peer_median": 0.1559256774280519,
+        "z_score": 1.1982825963533608,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "COLB",
+        "severity": "low",
+        "headline": "C&I ratio 1.1\u03c3 below regional peers",
+        "detail": "C&I ratio 15.97% vs peer median 23.37% (regional).",
+        "metric_value": 0.1597059873052936,
+        "peer_median": 0.23368296813093686,
+        "z_score": -1.1439757853173718,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "BPOP",
+        "severity": "low",
+        "headline": "C&I ratio 1.1\u03c3 below regional peers",
+        "detail": "C&I ratio 16.29% vs peer median 23.37% (regional).",
+        "metric_value": 0.16292290079349414,
+        "peer_median": 0.23368296813093686,
+        "z_score": -1.1004342140743846,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "FLG",
+        "severity": "low",
+        "headline": "C&I ratio 1.1\u03c3 below regional peers",
+        "detail": "C&I ratio 16.51% vs peer median 23.37% (regional).",
+        "metric_value": 0.16513165074811564,
+        "peer_median": 0.23368296813093686,
+        "z_score": -1.070538339081211,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "positive",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "FITB",
+        "severity": "low",
+        "headline": "C&I ratio 1.0\u03c3 above regional peers",
+        "detail": "C&I ratio 32.05% vs peer median 23.37% (regional).",
+        "metric_value": 0.3204679028101807,
+        "peer_median": 0.23368296813093686,
+        "z_score": 1.0319690832002621,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      },
+      {
+        "theme": "private_credit",
+        "category": "peer_deviation",
+        "bank_ticker": "KEY",
+        "severity": "low",
+        "headline": "C&I ratio 1.0\u03c3 above regional peers",
+        "detail": "C&I ratio 31.90% vs peer median 23.37% (regional).",
+        "metric_value": 0.31904090101853627,
+        "peer_median": 0.23368296813093686,
+        "z_score": 1.012654326865452,
+        "quarter": "2025Q4",
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": []
+      }
+    ],
+    "disclosure_nlp": [],
+    "events_8k": [],
+    "valuation_marks": [],
+    "structural": [],
+    "macro_divergence": []
+  },
+  "counts": {
+    "exposure": 11,
+    "credit_quality": 0,
+    "peer_deviation": 12,
+    "disclosure_nlp": 0,
+    "events_8k": 0,
+    "valuation_marks": 0,
+    "structural": 0,
+    "macro_divergence": 0
+  },
+  "total": 23
+}

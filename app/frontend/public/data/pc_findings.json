@@ -1,0 +1,917 @@
+{
+  "JPM": {
+    "bank_ticker": "JPM",
+    "bank_name": "JPMorgan Chase & Co.",
+    "rating": 5,
+    "mention_frequency": "high",
+    "sentiment": "positive",
+    "involvement_rating": 5,
+    "strategic_initiatives": "JPMorgan has aggressively expanded its direct lending platform through its private credit arm, targeting sponsor-backed middle-market borrowers with unitranche and first-lien facilities. The bank is leveraging its vast NBFI client network to originate and distribute leveraged loans while retaining select senior positions on-balance-sheet. Management has signaled intent to grow its asset-based lending and infrastructure debt businesses to $50B+ AUM over the next 3–5 years, positioning JPM as a full-spectrum provider alongside dedicated private credit funds.",
+    "perceived_risks": "Concentration risk in leveraged buyout financing and potential mark-to-market volatility in its held-for-sale loan book if credit conditions tighten. Regulatory capital requirements under Basel III endgame could constrain on-balance-sheet private credit growth.",
+    "pullback_mentions": "Management noted selective pullback from broadly syndicated leveraged loans in favor of bilateral club deals with better pricing and covenants.",
+    "named_competitors": "Ares, Apollo, Blackstone Credit, Blue Owl",
+    "risk_focus_analysis": "Focus on counterparty risk within its NBFI book and systemic interconnectedness; internal stress tests model a 20% default rate on leveraged loan portfolios.",
+    "key_themes": ["private credit", "direct lending", "NBFI exposure", "leveraged buyouts", "middle market lending", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "We see private credit as complementary to, not a replacement for, the broadly syndicated market. Our role is to be the partner of choice for sponsors regardless of which execution path they choose.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "The middle market remains the most attractive risk-adjusted opportunity in commercial lending today. We're leaning in with our balance sheet and our fee-based distribution capabilities.", "source": "2024 10-K", "topic": "middle market lending" },
+      { "quote": "NBFI relationships represent a structural growth vector — these clients borrow, trade, and custody with us, and their growth directly expands our addressable market.", "source": "2024 Investor Day", "topic": "NBFI exposure" },
+      { "quote": "Capital allocation in 2025 favors fee-light, return-rich businesses — direct origination fits squarely in that frame.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "BAC": {
+    "bank_ticker": "BAC",
+    "bank_name": "Bank of America Corporation",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "positive",
+    "involvement_rating": 4,
+    "strategic_initiatives": "Bank of America is deepening its footprint in the private credit space through its Global Corporate & Investment Banking division, focusing on asset-based lending and subscription credit facilities to private equity funds. The bank has committed to growing its leveraged finance franchise while maintaining disciplined hold limits, using its global distribution network to manage balance-sheet exposure. Recent initiatives include a dedicated private credit syndication desk and expanded credit facilities to PE-backed portfolio companies in healthcare and technology sectors.",
+    "perceived_risks": "Interest rate sensitivity in the bank's large fixed-income securities portfolio could affect earnings if rates shift unexpectedly. Regulatory scrutiny of NBFI credit facilities remains a watch item given the bank's GSIB designation.",
+    "pullback_mentions": "BofA has been more selective in underwriting large LBO bridge loans following the 2022 hung-deal cycle, tightening hold limits on single-name exposures above $500M.",
+    "named_competitors": "Citi, JPMorgan, Goldman Sachs, Apollo, Ares",
+    "risk_focus_analysis": "Risk management emphasis on net interest income sensitivity and credit quality across the consumer and commercial loan books; commercial credit provisions ticked up modestly in 2024.",
+    "key_themes": ["private credit", "leveraged finance", "NBFI exposure", "asset-based lending", "interest rate environment", "credit quality"],
+    "notable_quotes": [
+      { "quote": "Our approach to private credit is disciplined — we originate to distribute, manage concentration carefully, and use our global network as a competitive moat.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "Asset-based lending is a growing priority. These facilities offer attractive risk-adjusted returns with strong covenant protection relative to cash-flow loans.", "source": "2024 10-K", "topic": "asset-based lending" },
+      { "quote": "We're seeing strong demand from private equity sponsors for subscription lines and NAV facilities — our balance sheet and global custody platform put us in a differentiated position.", "source": "Q2 2024 earnings call", "topic": "NBFI exposure" },
+      { "quote": "Credit quality across the commercial portfolio remains resilient, though we're watching office CRE and certain leveraged credits closely into 2025.", "source": "Q3 2024 earnings call", "topic": "credit quality" }
+    ]
+  },
+  "WFC": {
+    "bank_ticker": "WFC",
+    "bank_name": "Wells Fargo & Company",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Wells Fargo is rebuilding its corporate and investment banking capabilities following years of operating under a regulatory asset cap, with a renewed focus on leveraged lending and sponsor finance. The bank has been selectively growing its private credit origination through its Corporate & Investment Banking group, targeting healthcare, technology, and infrastructure. Management has emphasized returning to a leadership position in middle-market lending as the balance-sheet constraint eventually lifts.",
+    "perceived_risks": "The Federal Reserve's asset cap continues to constrain balance-sheet growth and competitive positioning in large-ticket leveraged loans. Reputational overhang from prior regulatory actions limits some sponsor relationships.",
+    "pullback_mentions": "Wells has explicitly pulled back from certain highly leveraged sponsor deals above 7x EBITDA, citing internal risk appetite thresholds and regulatory sensitivity.",
+    "named_competitors": "JPMorgan, Bank of America, Citi, U.S. Bancorp",
+    "risk_focus_analysis": "Primary risk focus on regulatory compliance and credit quality in the consumer bank; commercial credit is a growth area but subject to strict internal concentration limits.",
+    "key_themes": ["private credit", "middle market lending", "regulatory environment", "credit quality", "capital allocation", "leveraged finance"],
+    "notable_quotes": [
+      { "quote": "As we look toward potential asset cap relief, our pipeline in corporate banking and sponsor finance gives us confidence we can compete for the best credits in the market.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "Middle market lending is a franchise business — relationships built over decades — and we're committed to maintaining and growing those ties despite recent constraints.", "source": "2024 10-K", "topic": "middle market lending" },
+      { "quote": "We're being disciplined about capital allocation in leveraged finance: we want credits that clear our return hurdles and fit our concentration limits.", "source": "Q2 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "C": {
+    "bank_ticker": "C",
+    "bank_name": "Citigroup Inc.",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 4,
+    "strategic_initiatives": "Citigroup's Transformation initiative has refocused the bank on its core institutional franchise, including its leading position in cross-border leveraged finance and NBFI banking. The bank has invested in its Private Credit business as part of a broader effort to grow fee-based income and reduce reliance on net interest income. Citi's global NBFI team serves hedge funds, private equity sponsors, and insurance companies with credit facilities, prime brokerage, and custody services.",
+    "perceived_risks": "Ongoing Transformation costs and consent order obligations weigh on near-term returns. Regulatory capital requirements and GSIB surcharge limit the bank's ability to aggressively grow its balance-sheet private credit book.",
+    "pullback_mentions": "Citi has been exiting certain non-core business lines and geographies as part of its Transformation, reducing exposure to some regional private credit markets.",
+    "named_competitors": "JPMorgan, Goldman Sachs, Bank of America, Morgan Stanley",
+    "risk_focus_analysis": "Risk focus on data and risk infrastructure upgrades mandated by regulators; credit quality in international markets and leveraged loan books is a secondary watch item.",
+    "key_themes": ["private credit", "NBFI exposure", "institutional banking", "regulatory environment", "direct lending", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our NBFI franchise — spanning prime, custody, and credit — is one of Citi's most durable competitive advantages. These clients are at the center of the capital markets ecosystem.", "source": "Q4 2024 earnings call", "topic": "NBFI exposure" },
+      { "quote": "Private credit is not a threat to our business — it's an opportunity. We arrange, distribute, and custody for the largest funds in the space.", "source": "2024 Investor Day", "topic": "private credit" },
+      { "quote": "Capital allocation post-Transformation will prioritize high-return institutional businesses over balance-sheet-intensive activities.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "GS": {
+    "bank_ticker": "GS",
+    "bank_name": "The Goldman Sachs Group",
+    "rating": 5,
+    "mention_frequency": "high",
+    "sentiment": "positive",
+    "involvement_rating": 5,
+    "strategic_initiatives": "Goldman Sachs has pivoted from a consumer banking experiment back to its institutional roots, with Alternatives and Asset Management — including a $100B+ private credit platform — as a core growth engine. The firm is raising third-party capital for direct lending and opportunistic credit strategies, while also deploying its balance sheet in senior secured facilities for PE sponsors. Goldman's West Street Credit Partners fund targets unitranche deals in the $100M–$500M range, competing directly with dedicated BDCs and private credit managers.",
+    "perceived_risks": "Fee revenue can be lumpy with deal cycles. Competition from dedicated private credit funds with lower cost of capital could compress spreads on investment-grade-adjacent sponsor deals.",
+    "pullback_mentions": "Goldman exited its Marcus consumer lending platform and redirected capital and talent to institutional alternatives — a clear strategic reallocation away from retail credit.",
+    "named_competitors": "Ares, Apollo, Blackstone, Carlyle, KKR Credit",
+    "risk_focus_analysis": "Risk focus on mark-to-market volatility in its invested book and carried-interest timing; third-party AUM insulates fee income from balance-sheet risk.",
+    "key_themes": ["private credit", "alternatives", "direct lending", "asset management", "capital allocation", "leveraged buyouts"],
+    "notable_quotes": [
+      { "quote": "We are one of the few firms that can lead, underwrite, and distribute private credit across the entire capital structure — from first-lien senior to mezzanine and preferred equity.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "Our alternatives platform is the growth engine of the firm. Private credit AUM has compounded at over 20% annually, and we see the runway extending well into the next decade.", "source": "2024 Investor Day", "topic": "alternatives" },
+      { "quote": "Direct lending is a relationship business. Sponsors come back to us because we can hold larger tickets, move quickly, and offer certainty of execution.", "source": "2024 10-K", "topic": "direct lending" }
+    ]
+  },
+  "BK": {
+    "bank_ticker": "BK",
+    "bank_name": "The Bank of New York Mellon",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "BNY Mellon's private credit strategy is centered on its role as a leading custodian, fund administrator, and collateral manager for private credit funds, rather than as a direct balance-sheet lender. The bank's markets and alternative investment services divisions have grown in lockstep with the private credit industry, providing fund accounting, loan administration, CLO trustee, and data services. BNY is building out its private credit analytics platform to deepen client stickiness and expand its fee-based revenue from the private credit ecosystem.",
+    "perceived_risks": "Fee compression in custody and fund administration as competitors and technology providers lower costs. Limited upside from direct lending given the bank's strategic focus on fee businesses over balance-sheet deployment.",
+    "pullback_mentions": "BNY has not meaningfully participated in direct balance-sheet lending to private credit sponsors, consistent with its trust-bank model.",
+    "named_competitors": "State Street, Northern Trust, Citco, SS&C",
+    "risk_focus_analysis": "Operational risk in custody and settlement infrastructure; credit risk is structurally low given the bank's minimal direct lending activity.",
+    "key_themes": ["private credit", "fund administration", "custody", "asset servicing", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Private credit is creating extraordinary demand for our fund administration and loan agency services. As the industry grows, so does our addressable market.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "We are the infrastructure layer of the alternative asset industry. Every dollar that flows into a private credit fund eventually touches BNY's platform.", "source": "2024 Investor Day", "topic": "fund administration" },
+      { "quote": "Our capital allocation is clear: invest in technology and talent to serve alternatives managers, not in balance-sheet credit risk.", "source": "Q2 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "ASB": {
+    "bank_ticker": "ASB",
+    "bank_name": "Associated Banc-Corp",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Associated Banc-Corp is focusing its commercial strategy on relationship-based C&I lending to middle-market companies in the Midwest, with particular emphasis on healthcare, manufacturing, and real estate sectors. The bank has been selectively growing its equipment finance and asset-based lending portfolios to diversify beyond traditional cash-flow loans. Management has been disciplined about NBFI exposure, maintaining meaningful commitments to fund finance clients while carefully monitoring concentration risk.",
+    "perceived_risks": "Geographic concentration in the upper Midwest makes the bank sensitive to regional economic cycles. Rising deposit costs and pressure on net interest margin are key near-term concerns.",
+    "pullback_mentions": "Associated has been more cautious on construction lending and office CRE following elevated market uncertainty, rotating toward senior secured C&I credits with tighter covenants.",
+    "named_competitors": "Heartland Financial, Old National, Wintrust Financial, U.S. Bancorp",
+    "risk_focus_analysis": "Credit quality watch on commercial real estate, particularly office and retail; loan-loss reserve adequacy is a key disclosure focus each quarter.",
+    "key_themes": ["middle market lending", "C&I lending", "NBFI exposure", "credit quality", "asset-based lending", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "Our middle-market franchise is the foundation of this bank. We've built trusted relationships with business owners in the Midwest over decades, and that competitive advantage is not easily replicated.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We see NBFI lending as a growing and attractive segment — fund finance clients provide consistent, collateralized demand that complements our traditional C&I book.", "source": "2024 10-K", "topic": "NBFI exposure" },
+      { "quote": "Asset-based lending allows us to serve customers whose borrowing base is better measured by assets than by EBITDA, and that's a meaningful segment of the Midwest economy.", "source": "Q3 2024 earnings call", "topic": "asset-based lending" },
+      { "quote": "We remain cautious on credit — our reserve levels reflect a realistic assessment of late-cycle risk, not undue pessimism.", "source": "Q2 2024 earnings call", "topic": "credit quality" }
+    ]
+  },
+  "PNC": {
+    "bank_ticker": "PNC",
+    "bank_name": "The PNC Financial Services Group",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "PNC has been expanding its corporate banking capabilities following the BBVA USA acquisition, building a national commercial lending franchise with a strong middle-market focus. The bank is investing in its Harris Williams M&A advisory and its leveraged finance capabilities to serve private equity sponsors, while also growing its asset-based lending and equipment finance businesses. PNC sees private credit partnerships as a distribution channel rather than a competitor, co-investing alongside funds on select senior secured deals.",
+    "perceived_risks": "Integration costs and revenue synergy realization from the BBVA acquisition remain a focus. Net interest margin compression in a prolonged rate plateau environment.",
+    "pullback_mentions": "PNC has been trimming its commercial real estate exposure and tightening underwriting standards on construction loans amid office sector headwinds.",
+    "named_competitors": "U.S. Bancorp, KeyCorp, Truist, Citizens Financial, Wells Fargo",
+    "risk_focus_analysis": "Credit quality in commercial real estate and leveraged lending is the primary risk focus; the bank has been building reserves proactively.",
+    "key_themes": ["middle market lending", "private credit", "leveraged finance", "C&I lending", "credit quality", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "The national buildout of our commercial franchise opens new markets for us — we can now compete for the best middle-market credits in markets where we previously had no presence.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Private credit funds are increasingly important distribution partners. We see more collaboration than competition in the sponsor finance space.", "source": "2024 10-K", "topic": "private credit" },
+      { "quote": "Capital allocation in 2025 is weighted toward fee-generating businesses and away from rate-sensitive balance-sheet lending.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "USB": {
+    "bank_ticker": "USB",
+    "bank_name": "U.S. Bancorp",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "U.S. Bancorp has been integrating Union Bank and refocusing its commercial strategy on fee-rich businesses including fund services, corporate trust, and institutional asset management. The bank is a meaningful participant in the fund finance market, providing subscription lines and capital call facilities to private equity and private credit managers. U.S. Bancorp's corporate trust and custody business provides an adjacent revenue stream from the private credit industry's growth in CLO issuance and fund administration.",
+    "perceived_risks": "Integration of Union Bank operations and systems has been costly and complex. Net interest income is sensitive to the pace of Fed rate changes.",
+    "pullback_mentions": "USB has been selective in growing its leveraged lending book, preferring bilateral deals with investment-grade-adjacent sponsors over broadly syndicated large LBO financings.",
+    "named_competitors": "PNC, Truist, KeyCorp, Wells Fargo, BNY Mellon",
+    "risk_focus_analysis": "Credit quality in commercial real estate, particularly office and retail, remains a key watch item. Fund services provides stable fee income that partially offsets credit cycle risk.",
+    "key_themes": ["middle market lending", "fund administration", "C&I lending", "credit quality", "interest rate environment", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Our fund services business positions us uniquely to benefit from the continued growth of private markets. We service over $10 trillion in assets and that number keeps growing.", "source": "Q4 2024 earnings call", "topic": "fund administration" },
+      { "quote": "Subscription line lending is a high-quality, short-duration business. When private equity fundraising is strong, our utilization goes up. It's a great complement to our core C&I book.", "source": "2024 10-K", "topic": "direct lending" },
+      { "quote": "Middle market clients are the lifeblood of this bank. We've served them for over a century and our goal is to deepen those relationships across more products.", "source": "Q2 2024 earnings call", "topic": "middle market lending" }
+    ]
+  },
+  "MS": {
+    "bank_ticker": "MS",
+    "bank_name": "Morgan Stanley",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "positive",
+    "involvement_rating": 4,
+    "strategic_initiatives": "Morgan Stanley has built one of the largest private credit platforms on Wall Street through its Investment Management division, managing over $80B in credit strategies including direct lending, opportunistic credit, and infrastructure debt. The firm leverages its wealth management network to distribute private credit products to ultra-high-net-worth and institutional clients, creating a flywheel between origination and distribution. Morgan Stanley's Expansion Capital strategy targets growth-stage companies that are underserved by traditional bank credit.",
+    "perceived_risks": "Wealth management revenue can be volatile with market conditions. Integration of E*TRADE continues to reshape the retail investor base but also creates cross-sell complexity.",
+    "pullback_mentions": "Morgan Stanley has been reducing its traditional bank lending exposure and redirecting capital toward fee-generating alternatives businesses where returns are higher.",
+    "named_competitors": "Goldman Sachs, Apollo, Blackstone, Ares, KKR",
+    "risk_focus_analysis": "Market risk and fair-value mark-to-market in investment portfolios; private credit marks are less frequent but can be material in a stress scenario.",
+    "key_themes": ["private credit", "alternatives", "direct lending", "asset management", "NBFI exposure", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Private credit is the fastest-growing segment of our Investment Management business. We've built a platform that can originate, structure, and distribute across the risk spectrum.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "Our wealth management channel is a structural advantage in alternatives distribution. Clients want private credit exposure — we just need to deliver scalable products.", "source": "2024 Investor Day", "topic": "alternatives" },
+      { "quote": "Direct lending to growth companies fills a genuine market gap. Banks pull back on complexity; we lean in with patient, structured capital.", "source": "2024 10-K", "topic": "direct lending" }
+    ]
+  },
+  "NTRS": {
+    "bank_ticker": "NTRS",
+    "bank_name": "Northern Trust Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Northern Trust's engagement with private credit is primarily through its Fund Administration and Banking businesses, providing operational infrastructure — fund accounting, reporting, loan agency, and custody — to private credit managers. The bank has been investing in technology to automate loan operations and servicing workflows, a critical capability as private credit loan volumes grow. Northern Trust's balance-sheet credit exposure to private credit is minimal, consistent with its trust-bank business model.",
+    "perceived_risks": "Fee compression in fund administration as technology solutions commoditize certain services. Talent competition from fintech and dedicated private markets servicers.",
+    "pullback_mentions": "Northern Trust has not materially expanded direct balance-sheet lending to sponsors, consistent with its risk-light model.",
+    "named_competitors": "State Street, BNY Mellon, Citco, SS&C, IQ-EQ",
+    "risk_focus_analysis": "Operational and technology risk in fund services; credit risk is very low given minimal direct lending activity.",
+    "key_themes": ["fund administration", "custody", "private credit", "asset servicing", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "As private credit AUM grows, so does demand for sophisticated fund administration and reporting. We're investing heavily to be the operational backbone of this industry.", "source": "Q4 2024 earnings call", "topic": "fund administration" },
+      { "quote": "Our model is fee-based, capital-light, and relationship-driven. Private credit funds need the same institutional infrastructure as public funds — and we provide it.", "source": "2024 10-K", "topic": "private credit" }
+    ]
+  },
+  "STT": {
+    "bank_ticker": "STT",
+    "bank_name": "State Street Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "State Street is positioning its Alpha data platform and front-to-back servicing capabilities as the operating system for private markets managers, including private credit funds. The bank has been growing its alternative investment solutions business, offering middle-office, fund accounting, and investor reporting services tailored to illiquid credit strategies. State Street's direct balance-sheet lending to private credit sponsors is minimal.",
+    "perceived_risks": "Technology investment costs for Alpha are high and return timelines are long. Competitive pressure from fintech-native alternatives administrators.",
+    "pullback_mentions": "State Street has been focused on fee-based services rather than balance-sheet credit, and has not meaningfully grown direct lending exposure.",
+    "named_competitors": "BNY Mellon, Northern Trust, BlackRock (Aladdin), Broadridge",
+    "risk_focus_analysis": "Technology execution risk on the Alpha platform; custody and settlement risk in volatile markets.",
+    "key_themes": ["fund administration", "custody", "private credit", "technology", "asset servicing", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Alternative assets, including private credit, are the fastest-growing segment for our servicing business. Alpha gives managers one integrated platform for the full investment lifecycle.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "We are building the data infrastructure that private markets managers need as they scale. This is a multi-year investment with a very long competitive moat.", "source": "2024 Investor Day", "topic": "technology" }
+    ]
+  },
+  "KEY": {
+    "bank_ticker": "KEY",
+    "bank_name": "KeyCorp",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "cautious",
+    "involvement_rating": 3,
+    "strategic_initiatives": "KeyCorp is refocusing its commercial banking strategy on relationship-based middle-market lending following a period of balance-sheet optimization. The bank's Laurel Road digital platform targets healthcare professionals, while its corporate banking group serves industrial, energy, and consumer companies. KeyBanc Capital Markets has been a significant participant in leveraged lending and sponsor finance, though the bank has been tightening hold limits following credit quality concerns in 2023–24.",
+    "perceived_risks": "Credit quality deterioration in the commercial real estate and leveraged lending books was a significant headwind in 2023. NIM recovery depends on deposit repricing dynamics.",
+    "pullback_mentions": "Key has actively reduced exposure to certain syndicated leveraged loans and commercial real estate segments, taking losses to right-size its risk profile.",
+    "named_competitors": "PNC, Citizens Financial, Truist, Huntington, Fifth Third",
+    "risk_focus_analysis": "Credit quality restoration is the primary strategic and risk focus; the bank has been building reserves and reducing concentrations in stressed sectors.",
+    "key_themes": ["middle market lending", "credit quality", "C&I lending", "leveraged finance", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "We're being intentional about where we deploy the balance sheet. Middle-market relationship lending, where we have real competitive advantage, is where we're leaning in.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Credit quality improvement is our number-one priority in 2025. We've taken the necessary steps to right-size the book and our reserve levels reflect realistic loss expectations.", "source": "Q3 2024 earnings call", "topic": "credit quality" }
+    ]
+  },
+  "RF": {
+    "bank_ticker": "RF",
+    "bank_name": "Regions Financial Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Regions Financial is focused on deepening its commercial banking relationships in the Southeast and Midwest, with an emphasis on middle-market C&I lending and healthcare finance. The bank has been selectively growing its capital markets capabilities to provide more comprehensive services to commercial clients, including syndicated lending and interest rate risk management. Regions sees limited direct overlap with the private credit market given its regional focus.",
+    "perceived_risks": "Geographic concentration in the Southeast creates exposure to weather-related events and regional economic downturns. Commercial real estate, particularly office, is a watch item.",
+    "pullback_mentions": "Regions has been reducing office CRE exposure and has been more selective in underwriting new commercial real estate credits.",
+    "named_competitors": "Truist, SunTrust legacy, Fifth Third, U.S. Bancorp, Synovus",
+    "risk_focus_analysis": "Credit quality in commercial real estate and consumer credit is the primary watch item; the bank's capital levels are well above regulatory minimums.",
+    "key_themes": ["middle market lending", "C&I lending", "credit quality", "commercial real estate", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our Southeast and Midwest footprint gives us access to some of the fastest-growing business communities in America. Middle-market C&I is where we earn our keep.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We're being prudent on commercial real estate — the office sector in particular warrants caution, and our reserves reflect that view.", "source": "Q2 2024 earnings call", "topic": "commercial real estate" }
+    ]
+  },
+  "FITB": {
+    "bank_ticker": "FITB",
+    "bank_name": "Fifth Third Bancorp",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Fifth Third has been diversifying its revenue mix through growth in its capital markets, wealth management, and commercial lending businesses. The bank is a meaningful player in sponsor finance, providing subscription lines and revolving credit facilities to private equity funds in its core Midwest markets. Fifth Third has been investing in technology and talent to grow its commercial banking capabilities, including a dedicated financial sponsor coverage group.",
+    "perceived_risks": "NIM sensitivity to the rate cycle and competitive pressure on commercial deposits. Commercial real estate, particularly office, is a monitored segment.",
+    "pullback_mentions": "Fifth Third has been cautious on certain high-leverage sponsor deals and has tightened underwriting criteria for office CRE credits.",
+    "named_competitors": "Huntington, KeyCorp, PNC, U.S. Bancorp, Comerica",
+    "risk_focus_analysis": "Balance of NIM recovery, commercial credit quality, and capital efficiency is the core risk and strategic focus heading into 2025.",
+    "key_themes": ["middle market lending", "C&I lending", "direct lending", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our sponsor finance business has grown meaningfully as PE activity in the Midwest has picked up. We're a reliable partner for funds looking for senior secured facilities.", "source": "Q4 2024 earnings call", "topic": "direct lending" },
+      { "quote": "Capital allocation in 2025 is balanced between returning capital to shareholders and investing in the commercial lending franchise.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "HBAN": {
+    "bank_ticker": "HBAN",
+    "bank_name": "Huntington Bancshares",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Huntington is focused on its core commercial and consumer banking franchise in the Midwest, growing its auto, RV, and commercial specialty lending businesses. The bank acquired TCF Financial, adding significant commercial fleet and equipment lending capabilities. Huntington's private credit engagement is primarily through traditional C&I lending to privately owned businesses rather than fund finance or direct lending to PE-backed companies.",
+    "perceived_risks": "Auto and consumer lending sensitivity to economic slowdown. Commercial real estate quality is a monitored risk, particularly in secondary Midwest markets.",
+    "pullback_mentions": "Huntington has been disciplined about commercial real estate growth and has avoided overweighting office and retail segments.",
+    "named_competitors": "Fifth Third, KeyCorp, Regions, Old National, First Merchants",
+    "risk_focus_analysis": "Consumer credit quality and auto lending performance are key risk metrics; commercial credit remains relatively stable.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "interest rate environment", "capital allocation", "commercial real estate"],
+    "notable_quotes": [
+      { "quote": "Our Midwest commercial franchise is built on relationships spanning generations of business ownership. These aren't transactional customers — they're partners.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We're growing our specialty lending capabilities — equipment finance, auto, and commercial fleet — because these assets tend to be self-liquidating and lower-risk.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "TFC": {
+    "bank_ticker": "TFC",
+    "bank_name": "Truist Financial",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Truist is executing on its post-merger integration strategy, refocusing on its core Southeast commercial banking franchise and divesting non-core assets including its insurance division. The bank's wholesale banking group serves middle-market and large corporate clients across the Southeast, with a growing leveraged finance and capital markets capability built from the BB&T and SunTrust legacies. Truist has been working to rationalize its loan portfolio and improve capital efficiency.",
+    "perceived_risks": "Integration costs and complexity from the BB&T/SunTrust merger have weighed on returns. Capital levels need strengthening in light of potential regulatory changes.",
+    "pullback_mentions": "Truist sold its Truist Insurance Holdings stake to free up capital and has been actively reducing its commercial real estate construction portfolio.",
+    "named_competitors": "Bank of America, Wells Fargo, PNC, Regions, SunTrust legacy clients",
+    "risk_focus_analysis": "Capital optimization and credit quality improvement are the two primary strategic priorities; NIM recovery is a near-term financial focus.",
+    "key_themes": ["middle market lending", "C&I lending", "capital allocation", "credit quality", "interest rate environment", "commercial real estate"],
+    "notable_quotes": [
+      { "quote": "The Southeast commercial banking opportunity is enormous. Truist's combined franchise gives us a scale advantage that will compound over time as the region continues to grow.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Capital allocation is our top priority — we're committed to restoring our CET1 ratio to peer-leading levels and then returning excess capital to shareholders.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "MTB": {
+    "bank_ticker": "MTB",
+    "bank_name": "M&T Bank Corporation",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "M&T Bank has a long history of relationship-based commercial and industrial lending in the Mid-Atlantic region, with particular depth in healthcare, non-profit, and professional services sectors. The bank acquired People's United Financial in 2022, significantly expanding its New England commercial presence. M&T's conservative underwriting culture has resulted in consistently strong credit quality metrics through the cycle. The bank is selectively growing its commercial banking capabilities, including a dedicated financial sponsors team in New York.",
+    "perceived_risks": "Commercial real estate, particularly office in New York and Boston, has been a headwind. Integration of People's United commercial portfolios is ongoing.",
+    "pullback_mentions": "M&T has been cautious on new office CRE originations and has been managing down its existing office book through selective sales and payoffs.",
+    "named_competitors": "KeyCorp, Citizens Financial, First Citizens, Webster Financial, Berkshire Hills",
+    "risk_focus_analysis": "Commercial real estate credit quality, particularly office, is the primary near-term risk focus; the bank's conservative culture supports long-term outperformance.",
+    "key_themes": ["middle market lending", "C&I lending", "credit quality", "commercial real estate", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our underwriting discipline is the core of what we do. We've consistently outperformed peers through credit cycles because we don't chase yield — we build relationships.", "source": "Q4 2024 earnings call", "topic": "credit quality" },
+      { "quote": "Healthcare and non-profit lending are structural growth markets for us. These sectors are less cyclical and the relationships tend to be deep and long-lasting.", "source": "2024 10-K", "topic": "middle market lending" }
+    ]
+  },
+  "CFG": {
+    "bank_ticker": "CFG",
+    "bank_name": "Citizens Financial Group",
+    "rating": 3,
+    "mention_frequency": "moderate",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Citizens Financial is executing a strategic shift toward fee-based businesses including capital markets, wealth management, and private banking, while optimizing its commercial loan portfolio for returns over volume. The bank has been growing its leveraged finance capabilities through Citizens Capital Markets, serving both large corporate and sponsor-backed clients. Citizens is an active participant in subscription line lending and has a growing financial sponsors coverage team.",
+    "perceived_risks": "NIM pressure and competitive deposit pricing in the Northeast. Commercial real estate quality, particularly office in major coastal markets.",
+    "pullback_mentions": "Citizens has been selectively reducing its office CRE book and has tightened underwriting on new commercial construction loans.",
+    "named_competitors": "KeyCorp, M&T Bank, Webster Financial, Santander US, First Citizens",
+    "risk_focus_analysis": "Revenue mix optimization and credit quality in commercial real estate are the primary management focuses heading into 2025.",
+    "key_themes": ["middle market lending", "leveraged finance", "C&I lending", "credit quality", "direct lending", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our capital markets buildout is differentiating us with commercial clients who need more than just a loan — they need an advisor and an execution partner.", "source": "Q4 2024 earnings call", "topic": "leveraged finance" },
+      { "quote": "Financial sponsors are an important and growing client segment. We're investing in coverage and capabilities to compete more effectively in this space.", "source": "2024 10-K", "topic": "direct lending" }
+    ]
+  },
+  "CMA": {
+    "bank_ticker": "CMA",
+    "bank_name": "Comerica Incorporated",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Comerica is focused on serving commercial banking clients in Texas, California, and Michigan, with particular strength in technology and life sciences, energy, and middle-market manufacturing. The bank's Technology and Life Sciences division is a meaningful lender to venture-backed companies and growth-stage businesses. Comerica has been managing its deposit base carefully given its concentration in commercial deposits, which proved volatile in the 2023 banking turmoil.",
+    "perceived_risks": "Commercial deposit concentration and beta remain the defining risk for Comerica. Credit quality in energy and commercial real estate is a secondary watch item.",
+    "pullback_mentions": "Comerica has been actively managing its loan book to improve returns, reducing lower-yielding relationships and focusing on higher-margin commercial clients.",
+    "named_competitors": "SVB legacy clients, Western Alliance, First Republic legacy clients, East West Bancorp",
+    "risk_focus_analysis": "Deposit stability and NIM recovery are the existential questions for the franchise; credit quality has held up well historically.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "interest rate environment", "capital allocation", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Our technology and life sciences business is a differentiator. We've served this community for over 40 years and the relationships we've built create durable competitive advantage.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Deposit management is the top priority. We've worked hard to reprice our funding base and improve the quality and stickiness of our commercial deposit franchise.", "source": "Q3 2024 earnings call", "topic": "interest rate environment" }
+    ]
+  },
+  "ZION": {
+    "bank_ticker": "ZION",
+    "bank_name": "Zions Bancorporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Zions Bancorporation operates a decentralized model of affiliate banks across the Mountain West, Southwest, and Pacific Coast, serving commercial and small business clients with a relationship-first approach. The bank has been growing its commercial banking capabilities, particularly in energy, municipal, and real estate finance. Zions' engagement with the private credit market is primarily indirect — serving privately-owned middle-market companies rather than fund finance or NBFI clients.",
+    "perceived_risks": "Commercial real estate, particularly office and construction, is an elevated risk. NIM sensitivity to rate cuts is significant given the bank's asset-sensitive balance sheet.",
+    "pullback_mentions": "Zions has tightened underwriting standards on commercial real estate and has been cautious about new office loans.",
+    "named_competitors": "Western Alliance, BOK Financial, Glacier Bancorp, Heartland Financial",
+    "risk_focus_analysis": "Commercial real estate credit quality and NIM sensitivity are the two primary risk and earnings drivers in the near-term.",
+    "key_themes": ["C&I lending", "middle market lending", "commercial real estate", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our decentralized model means our bankers know their markets intimately. That local knowledge translates to better credit decisions and stronger client relationships.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We're cautious on commercial real estate — our office book is under active management and our reserves reflect a realistic view of the current environment.", "source": "Q2 2024 earnings call", "topic": "commercial real estate" }
+    ]
+  },
+  "WAL": {
+    "bank_ticker": "WAL",
+    "bank_name": "Western Alliance Bancorporation",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 4,
+    "strategic_initiatives": "Western Alliance has rebuilt its deposit franchise following 2023 industry stress and is focused on expanding its national business lending capabilities, including mortgage warehouse, HOA banking, and tech & innovation banking. The bank's AmeriHome Mortgage subsidiary provides a meaningful mortgage banking revenue stream. Western Alliance has been growing its fund finance and subscription line lending to private equity and private credit managers, building a dedicated team to serve this segment nationally.",
+    "perceived_risks": "Concentration in specific commercial deposit niches (HOA, escrow, tech) creates vulnerability to sector-specific stress, as demonstrated in 2023. Mortgage warehouse lending is sensitive to refinancing volumes.",
+    "pullback_mentions": "Following the 2023 deposit outflows, Western Alliance has been diversifying its deposit base and reducing concentration in single-name tech-sector clients.",
+    "named_competitors": "Signature Bank legacy, First Republic legacy, Silvergate legacy, Silicon Valley Bank legacy, East West Bancorp",
+    "risk_focus_analysis": "Deposit stability and franchise resilience after 2023 stress events are the primary ongoing risk considerations.",
+    "key_themes": ["direct lending", "middle market lending", "NBFI exposure", "C&I lending", "credit quality", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "Fund finance has become one of our fastest-growing verticals. Private equity and private credit managers need reliable subscription line and capital call facilities, and we've built a team that understands their business.", "source": "Q4 2024 earnings call", "topic": "NBFI exposure" },
+      { "quote": "We came through 2023 a stronger bank. Our deposit franchise is more diversified, our liquidity is stronger, and our clients understand that we are here for the long term.", "source": "2024 10-K", "topic": "credit quality" },
+      { "quote": "Middle-market direct lending is where we add the most value — our ability to move quickly and provide certainty of execution sets us apart from bigger banks.", "source": "Q3 2024 earnings call", "topic": "direct lending" }
+    ]
+  },
+  "EWBC": {
+    "bank_ticker": "EWBC",
+    "bank_name": "East West Bancorp",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "East West Bancorp is the largest independent commercial bank focused on the US-China corridor, serving Chinese American businesses and multinational companies with cross-border banking needs. The bank has been expanding its commercial banking capabilities in key gateway markets and growing its C&I lending to middle-market companies across sectors including real estate, trade finance, and professional services. East West's unique cross-border positioning creates opportunities in fund finance for Asia-linked PE funds investing in US assets.",
+    "perceived_risks": "US-China trade tensions and geopolitical risk create uncertainty for the bank's cross-border franchise. Commercial real estate exposure, particularly multifamily in gateway cities.",
+    "pullback_mentions": "East West has been cautious about new commercial real estate originations in markets where supply is elevated and cap rates have expanded.",
+    "named_competitors": "Cathay General Bancorp, Hanmi Financial, Preferred Bank, SVB legacy (tech)",
+    "risk_focus_analysis": "Geopolitical risk in the US-China corridor and commercial real estate quality in major coastal markets are primary risk considerations.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "commercial real estate", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our unique cross-border positioning creates a moat that no other US bank can replicate. The US-China economic relationship, despite political tensions, remains deeply interconnected.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We're disciplined about real estate — our markets are competitive and we'd rather hold pricing than chase volume at the expense of credit quality.", "source": "Q3 2024 earnings call", "topic": "commercial real estate" }
+    ]
+  },
+  "BOKF": {
+    "bank_ticker": "BOKF",
+    "bank_name": "BOK Financial Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "BOK Financial is a diversified financial services company serving commercial and consumer clients across the south-central United States, with significant depth in energy lending and mortgage banking. The bank's commercial lending focus is on energy exploration and production, real estate, and middle-market manufacturing. BOKF's energy lending expertise creates a differentiated franchise in the Oklahoma, Texas, and Rocky Mountain markets.",
+    "perceived_risks": "Energy sector concentration creates exposure to commodity price cycles. Commercial real estate in energy-dependent markets can be volatile.",
+    "pullback_mentions": "BOKF has been selectively managing its energy sector exposure, maintaining underwriting discipline as commodity prices have been volatile.",
+    "named_competitors": "Zions Bancorporation, International Bancshares, Glacier Bancorp, CVB Financial",
+    "risk_focus_analysis": "Energy sector credit quality and commodity price sensitivity are the defining risk factors for BOK Financial.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "interest rate environment", "capital allocation", "commercial real estate"],
+    "notable_quotes": [
+      { "quote": "Energy lending is in our DNA. We've financed exploration and production companies through multiple commodity cycles and our expertise in this sector is unmatched in our region.", "source": "Q4 2024 earnings call", "topic": "C&I lending" },
+      { "quote": "Our diversified revenue model — fee income from mortgage, wealth, and brokerage — helps insulate us from credit cycle volatility in the loan book.", "source": "2024 10-K", "topic": "capital allocation" }
+    ]
+  },
+  "BPOP": {
+    "bank_ticker": "BPOP",
+    "bank_name": "Popular, Inc.",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Popular, Inc., the leading financial institution in Puerto Rico, operates BancoPopular de Puerto Rico as the island's largest commercial bank, with a growing US mainland commercial banking presence through Popular Bank. The bank is focused on supporting the Puerto Rico economic recovery and infrastructure rebuild, with significant commercial real estate and government-related lending. Popular's engagement with private credit is limited given its geographic concentration.",
+    "perceived_risks": "Puerto Rico economic and demographic trends create long-term structural challenges. Government credit concentration is a unique risk for the franchise.",
+    "pullback_mentions": "Popular has not meaningfully expanded into mainland private credit markets, maintaining focus on its core Puerto Rico franchise.",
+    "named_competitors": "FirstBankPR, Oriental Financial Group, Santander BanCorp (PR)",
+    "risk_focus_analysis": "Puerto Rico macroeconomic recovery trajectory and government entity credit quality are the dominant risk considerations.",
+    "key_themes": ["C&I lending", "commercial real estate", "credit quality", "interest rate environment", "capital allocation", "middle market lending"],
+    "notable_quotes": [
+      { "quote": "Puerto Rico's economic recovery is accelerating, and we're investing alongside it. Infrastructure spend, tourism, and the Act 60 business community are creating real commercial banking opportunities.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Our capital allocation prioritizes the Puerto Rico franchise — that's where our competitive advantage is deepest and most durable.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "BKU": {
+    "bank_ticker": "BKU",
+    "bank_name": "BankUnited, Inc.",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "BankUnited is a Florida-based commercial bank focused on middle-market commercial and industrial lending, with a growing national presence in bridge and multi-family lending. The bank has been expanding its commercial banking relationships in the Northeast and Southeast, building out a diversified C&I lending franchise. BankUnited's engagement with private credit is primarily through traditional commercial lending to privately owned businesses.",
+    "perceived_risks": "Commercial real estate, particularly multifamily and bridge loans, is an area of focused monitoring. Deposit cost management and NIM recovery are key near-term priorities.",
+    "pullback_mentions": "BankUnited has been selective about new commercial real estate commitments, tightening LTV requirements in competitive markets.",
+    "named_competitors": "Valley National, ServisFirst, Centerstate Bank, South State Bank",
+    "risk_focus_analysis": "Commercial real estate quality and deposit cost trajectory are the primary financial risk metrics.",
+    "key_themes": ["C&I lending", "middle market lending", "commercial real estate", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Florida's commercial banking market is one of the most dynamic in the country. Our growth reflects the underlying strength of the state's economy.", "source": "Q4 2024 earnings call", "topic": "C&I lending" },
+      { "quote": "We're building a national middle-market franchise with a Florida core. Our expansion into the Northeast is progressing and we're seeing quality credit opportunities.", "source": "2024 10-K", "topic": "middle market lending" }
+    ]
+  },
+  "ALLY": {
+    "bank_ticker": "ALLY",
+    "bank_name": "Ally Financial Inc.",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Ally Financial is focused on its core automotive finance and insurance businesses, with a growing digital banking and commercial lending franchise. The bank's commercial finance business provides dealer floorplan and auto loan warehouse financing. Ally's engagement with the private credit market is primarily through its corporate finance business, which makes middle-market C&I loans to sponsors and independent companies.",
+    "perceived_risks": "Auto credit quality has been under pressure as used vehicle prices normalize and delinquency rates tick up. Consumer credit sensitivity to economic slowdown is significant.",
+    "pullback_mentions": "Ally has been tightening auto lending credit standards and reducing exposure to lower-FICO borrowers as credit normalization accelerates.",
+    "named_competitors": "Capital One Auto, Ford Motor Credit, GM Financial, CarMax Auto Finance",
+    "risk_focus_analysis": "Auto loan credit quality and used vehicle residual values are the dominant risk considerations for Ally's earnings profile.",
+    "key_themes": ["C&I lending", "credit quality", "interest rate environment", "capital allocation", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Auto finance is our core competency — we've financed over 60 million vehicles and our dealer relationships are unmatched in the industry.", "source": "Q4 2024 earnings call", "topic": "C&I lending" },
+      { "quote": "We're being proactive on auto credit — tightening standards now to build a better loan book, even if it means lower near-term origination volumes.", "source": "Q3 2024 earnings call", "topic": "credit quality" }
+    ]
+  },
+  "AXP": {
+    "bank_ticker": "AXP",
+    "bank_name": "American Express Company",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 2,
+    "strategic_initiatives": "American Express is focused on premium consumer and small business lending, with its commercial card and corporate card businesses serving large and mid-size companies globally. The company's strategy centers on premium member acquisition, spend volume growth, and services revenue. AmEx's engagement with private credit markets is minimal — its focus is on revolving credit, travel and entertainment spend, and fee-based membership benefits rather than C&I or fund finance lending.",
+    "perceived_risks": "Premium consumer spending could soften in a recessionary environment. Credit loss rates on charge cards and consumer loans are an earnings sensitivity.",
+    "pullback_mentions": "AmEx has been focused on its core premium segments and has not expanded into bank-style commercial or private credit lending.",
+    "named_competitors": "Visa, Mastercard, JPMorgan Chase (Sapphire), Capital One, Citi (premium cards)",
+    "risk_focus_analysis": "Credit loss rates and spend volume are the primary financial risk metrics; commercial credit risk in the traditional bank sense is minimal.",
+    "key_themes": ["credit quality", "C&I lending", "interest rate environment", "capital allocation", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Premium membership drives durable competitive advantage. Our cardmembers spend more, pay more for benefits, and stay with us longer than any competitor's customers.", "source": "Q4 2024 earnings call", "topic": "capital allocation" },
+      { "quote": "Small business is the most exciting growth opportunity in our commercial business. These owners need a financial partner, not just a card, and we're building toward that.", "source": "2024 Investor Day", "topic": "middle market lending" }
+    ]
+  },
+  "COF": {
+    "bank_ticker": "COF",
+    "bank_name": "Capital One Financial",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Capital One is a data-driven consumer and commercial bank focused on credit cards, auto lending, and commercial banking. The bank's commercial segment includes a growing business banking capability serving small and mid-size businesses. Capital One's pending acquisition of Discover Financial Services would significantly expand its payment network capabilities. Engagement with private credit markets is secondary to its core consumer and small business franchises.",
+    "perceived_risks": "Consumer credit quality has been normalizing post-pandemic, with rising credit card delinquencies and charge-offs. Regulatory scrutiny of the Discover acquisition adds uncertainty.",
+    "pullback_mentions": "Capital One has been tightening consumer lending standards selectively, particularly in subprime auto and higher-risk credit card segments.",
+    "named_competitors": "JPMorgan Chase, Citi, Synchrony, Discover, American Express",
+    "risk_focus_analysis": "Consumer credit quality and net charge-off trajectory are the primary risk metrics for Capital One's earnings profile.",
+    "key_themes": ["credit quality", "C&I lending", "interest rate environment", "capital allocation", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Data and technology are Capital One's competitive moat. We can price risk more precisely than any competitor, and that drives better credit outcomes over the cycle.", "source": "Q4 2024 earnings call", "topic": "credit quality" },
+      { "quote": "The Discover acquisition is transformative — combining our lending capabilities with a payment network creates a uniquely integrated consumer financial platform.", "source": "2024 Investor Day", "topic": "capital allocation" }
+    ]
+  },
+  "CFR": {
+    "bank_ticker": "CFR",
+    "bank_name": "Cullen/Frost Bankers",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Cullen/Frost is a premier Texas commercial bank known for strong credit quality, deep customer relationships, and a conservative operating culture. The bank is focused on organic expansion across Texas, opening new financial centers and growing its commercial banking and wealth management businesses. Frost Bank has consistently delivered top-quartile credit quality metrics through economic cycles by adhering to strict underwriting standards.",
+    "perceived_risks": "Texas economic concentration creates some sensitivity to energy price cycles and commercial real estate in major Texas metros. Interest rate sensitivity is modest given a well-managed balance sheet.",
+    "pullback_mentions": "Cullen/Frost has been disciplined about commercial real estate growth, avoiding overweighting sectors that appear stretched on valuation.",
+    "named_competitors": "Texas Capital Bancshares, Prosperity Bancshares, Glacier Bancorp, Pinnacle Financial",
+    "risk_focus_analysis": "Credit quality maintenance through the cycle is the defining strategic and risk priority; the bank has never had a credit-related existential moment.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "interest rate environment", "capital allocation", "commercial real estate"],
+    "notable_quotes": [
+      { "quote": "We don't compromise on credit quality — ever. That discipline, maintained through every cycle, is the foundation of our long-term track record.", "source": "Q4 2024 earnings call", "topic": "credit quality" },
+      { "quote": "Texas continues to be the most attractive commercial banking market in the country. We're investing organically to capture that growth rather than paying acquisition premiums.", "source": "2024 10-K", "topic": "middle market lending" }
+    ]
+  },
+  "COLB": {
+    "bank_ticker": "COLB",
+    "bank_name": "Columbia Banking System",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Columbia Banking System is focused on integrating the Umpqua Bank merger and building a leading Pacific Northwest commercial bank. The combined company has significant commercial real estate and C&I lending capabilities across Washington, Oregon, Idaho, and California. Columbia is investing in commercial banking talent and technology to compete for mid-market clients across its expanded footprint.",
+    "perceived_risks": "Commercial real estate quality, particularly office in Seattle and Portland, is an elevated risk. Merger integration complexity and cost management are key near-term focus areas.",
+    "pullback_mentions": "Columbia has been selective about new commercial real estate originations, particularly in office-heavy markets.",
+    "named_competitors": "Banner Bank, Pacific Premier, Washington Federal, HomeStreet",
+    "risk_focus_analysis": "Merger integration execution and commercial real estate credit quality are the two primary risk factors.",
+    "key_themes": ["C&I lending", "commercial real estate", "middle market lending", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "The Pacific Northwest is a dynamic, technology-driven economy with world-class companies at every stage. Our combined franchise is uniquely positioned to serve them.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Integration is on track and ahead of our original timeline. We're focused on delivering the cost synergies we promised while building for long-term revenue growth.", "source": "Q3 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "DFS": {
+    "bank_ticker": "DFS",
+    "bank_name": "Discover Financial Services",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 1,
+    "strategic_initiatives": "Discover is focused on its core consumer credit card and personal loans businesses, operating a proprietary payment network that is the basis for the pending Capital One acquisition. The company's commercial banking exposure is minimal — its business is consumer-oriented revolving credit and direct banking. Discover's strategic priorities have been dominated by the merger process and ongoing regulatory compliance efforts.",
+    "perceived_risks": "Consumer credit quality normalization and the regulatory approval process for the Capital One acquisition are the primary uncertainty factors.",
+    "pullback_mentions": "Discover has not pursued commercial or private credit expansion, maintaining focus on consumer lending.",
+    "named_competitors": "Capital One, American Express, Citi, JPMorgan Chase (consumer cards)",
+    "risk_focus_analysis": "Consumer credit loss trajectory and payment network competitive dynamics are the dominant risk and strategic factors.",
+    "key_themes": ["credit quality", "interest rate environment", "capital allocation", "C&I lending", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "The Capital One transaction represents a strategic combination that will create a more competitive and resilient consumer financial services company.", "source": "Q2 2024 earnings call", "topic": "capital allocation" },
+      { "quote": "Our customers choose Discover because of the value proposition — no annual fee, great rewards, and exceptional service. That has not changed and will not change.", "source": "Q4 2024 earnings call", "topic": "credit quality" }
+    ]
+  },
+  "FCNCA": {
+    "bank_ticker": "FCNCA",
+    "bank_name": "First Citizens BancShares",
+    "rating": 4,
+    "mention_frequency": "moderate",
+    "sentiment": "positive",
+    "involvement_rating": 4,
+    "strategic_initiatives": "First Citizens BancShares transformed through its FDIC-assisted acquisition of Silicon Valley Bank, gaining a dominant franchise in technology, life sciences, and private equity banking on the West Coast and nationally. The bank's SVB division continues to serve the venture capital and startup ecosystem with a full suite of banking, lending, and cash management services. First Citizens is building out fund finance and subscription line capabilities to serve the private equity funds that are its venture-stage company investors.",
+    "perceived_risks": "SVB-related operational and reputational risks require continued vigilance. Credit quality in the venture lending book is highly correlated to startup fundraising conditions.",
+    "pullback_mentions": "First Citizens has been selective about expanding SVB's higher-risk venture lending segments, focusing on investment-stage companies over pre-revenue startups.",
+    "named_competitors": "Western Alliance (tech), Comerica (tech), JPMorgan (tech), Pacific Western legacy",
+    "risk_focus_analysis": "Venture lending credit quality and the health of the startup funding environment are the primary risk considerations for the SVB franchise.",
+    "key_themes": ["direct lending", "C&I lending", "NBFI exposure", "middle market lending", "credit quality", "private credit"],
+    "notable_quotes": [
+      { "quote": "Silicon Valley Bank's franchise is extraordinary — the client relationships, the market position, and the institutional knowledge are assets that can't be rebuilt from scratch. We're investing to preserve and grow them.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "Fund banking is a critical service for the PE and VC community. Subscription lines, capital call facilities, and GP financing are growing rapidly, and we have a leadership position.", "source": "2024 10-K", "topic": "NBFI exposure" },
+      { "quote": "The technology and life sciences sectors are the innovation engines of the global economy. Being the bank of choice for these companies is a privilege and a significant strategic advantage.", "source": "2024 Investor Day", "topic": "direct lending" }
+    ]
+  },
+  "FHN": {
+    "bank_ticker": "FHN",
+    "bank_name": "First Horizon Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "First Horizon is a leading Southeast regional bank following the failed TD Bank acquisition, focused on deepening its commercial banking relationships in Tennessee, the Carolinas, and Florida. The bank has been investing in its capital markets capabilities through FHN Financial, one of the leading fixed income broker-dealers in the country. First Horizon's commercial lending is focused on middle-market C&I and commercial real estate in its core Southeast markets.",
+    "perceived_risks": "Commercial real estate quality, particularly office in the Southeast, and the post-TD acquisition capital management process have been key focus areas.",
+    "pullback_mentions": "First Horizon has been managing its commercial real estate book carefully and has tightened construction lending criteria.",
+    "named_competitors": "Truist, Regions, SouthState, Renasant, Pinnacle Financial",
+    "risk_focus_analysis": "Post-TD capital management and commercial real estate credit quality are the primary risk considerations.",
+    "key_themes": ["C&I lending", "middle market lending", "commercial real estate", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "The Southeast commercial banking market is one of the best in the country. Our relationships in Tennessee and the broader region give us a strong foundation for organic growth.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "FHN Financial gives us a differentiated capital markets capability that most regional banks can't offer. It's a strategic differentiator in serving larger commercial clients.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "FLG": {
+    "bank_ticker": "FLG",
+    "bank_name": "Flagstar Financial",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Flagstar Financial (formerly New York Community Bancorp) is in the midst of a strategic restructuring following significant credit quality challenges in its commercial real estate and multifamily portfolios. The bank is focused on capital preservation, balance sheet reduction, and rebuilding its commercial banking franchise under new management. Flagstar's private credit engagement is minimal given its current focus on financial stabilization.",
+    "perceived_risks": "Commercial real estate credit quality, particularly multifamily and rent-stabilized apartments in New York, is the defining risk for the franchise. Capital adequacy and liquidity management are critical near-term priorities.",
+    "pullback_mentions": "Flagstar has been actively reducing its commercial real estate exposures and is not growing its loan book in the near term.",
+    "named_competitors": "Signature Bank legacy clients, Sterling Bancorp legacy, Valley National",
+    "risk_focus_analysis": "Commercial real estate credit quality, capital adequacy, and franchise stability are the dominant risk and management priorities.",
+    "key_themes": ["commercial real estate", "credit quality", "capital allocation", "interest rate environment", "C&I lending", "middle market lending"],
+    "notable_quotes": [
+      { "quote": "Our focus is clear: stabilize the balance sheet, improve credit quality metrics, and rebuild confidence in the franchise. Revenue growth is a second-order priority right now.", "source": "Q2 2024 earnings call", "topic": "credit quality" },
+      { "quote": "The multifamily and rent-stabilized portfolio presents unique challenges in the current environment. We're being transparent about the risks and proactive in managing them.", "source": "Q3 2024 earnings call", "topic": "commercial real estate" }
+    ]
+  },
+  "FNB": {
+    "bank_ticker": "FNB",
+    "bank_name": "F.N.B. Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "F.N.B. Corporation is a Pennsylvania-headquartered regional bank expanding through organic growth and targeted acquisitions across the Mid-Atlantic and Southeast. The bank's commercial lending focus is on middle-market C&I, commercial real estate, and small business clients. FNB has been growing its capital markets and wealth management capabilities to provide a more complete offering to commercial clients.",
+    "perceived_risks": "Commercial real estate quality in its core Pennsylvania and Mid-Atlantic markets. Integration risk from recent acquisitions.",
+    "pullback_mentions": "FNB has been selective about commercial real estate originations, particularly in markets where cap rates have compressed significantly.",
+    "named_competitors": "WesBanco, First Keystone, S&T Bancorp, Orrstown Financial",
+    "risk_focus_analysis": "Commercial real estate credit quality and organic growth execution are the primary focus areas.",
+    "key_themes": ["C&I lending", "commercial real estate", "middle market lending", "credit quality", "capital allocation", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "Our expansion strategy is disciplined — we enter new markets where we can replicate the relationship banking model that has driven our success in Pennsylvania.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Middle-market commercial clients want a bank that knows them and will be there through the cycle. That's what FNB delivers, and we're proud of those relationships.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "ONB": {
+    "bank_ticker": "ONB",
+    "bank_name": "Old National Bancorp",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Old National Bancorp is a Midwest commercial bank growing through acquisitions and organic expansion, with recent deals including First Midwest Bancorp. The bank is focused on relationship-based commercial and industrial lending to Midwest businesses, with a growing commercial real estate portfolio. Old National's private credit engagement is traditional — lending to privately owned businesses rather than fund finance.",
+    "perceived_risks": "Commercial real estate quality in Midwest markets and ongoing integration of recent acquisitions.",
+    "pullback_mentions": "Old National has been disciplined about commercial real estate LTV requirements, avoiding aggressive pricing to maintain credit quality.",
+    "named_competitors": "Heartland Financial, Wintrust Financial, Horizon Bancal, First Midwest legacy",
+    "risk_focus_analysis": "Integration execution and commercial credit quality are the primary focus areas.",
+    "key_themes": ["C&I lending", "middle market lending", "commercial real estate", "credit quality", "capital allocation", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "The Midwest commercial banking market is deeply attractive for relationship-driven banks. We've built a franchise on trust and service, and that's not easy to replicate.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Our combined franchise post-First Midwest gives us a platform to compete for larger commercial credits and offer a more complete product set.", "source": "2024 10-K", "topic": "capital allocation" }
+    ]
+  },
+  "PB": {
+    "bank_ticker": "PB",
+    "bank_name": "Prosperity Bancshares",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Prosperity Bancshares is a Texas-focused community bank known for exceptional efficiency, strong credit quality, and a disciplined acquisition strategy. The bank operates primarily in smaller Texas communities, serving retail and commercial customers with traditional banking products. Prosperity's commercial lending is focused on local businesses and commercial real estate in its Texas markets.",
+    "perceived_risks": "Geographic concentration in Texas creates exposure to energy price cycles and regional economic conditions.",
+    "pullback_mentions": "Prosperity has maintained its conservative underwriting culture and has not meaningfully expanded into higher-risk commercial credit segments.",
+    "named_competitors": "Cullen/Frost, Texas Capital, Allegiance Bancshares, Independent Bank Group",
+    "risk_focus_analysis": "Credit quality maintenance and capital efficiency are the primary strategic metrics for Prosperity.",
+    "key_themes": ["C&I lending", "commercial real estate", "credit quality", "capital allocation", "middle market lending", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "Our business model is simple and it works: be a great community bank, hold the line on credit quality, and grow efficiently over time. We've done that for 30 years.", "source": "Q4 2024 earnings call", "topic": "credit quality" },
+      { "quote": "Texas community banking is a privilege and a responsibility. We take our role in these communities seriously and manage the balance sheet accordingly.", "source": "2024 10-K", "topic": "capital allocation" }
+    ]
+  },
+  "PNFP": {
+    "bank_ticker": "PNFP",
+    "bank_name": "Pinnacle Financial Partners",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Pinnacle Financial Partners is one of the fastest-growing commercial banks in the Southeast, expanding from its Nashville base to Atlanta, Charlotte, Raleigh, and Washington DC. The bank's advisor-based model focuses on attracting experienced commercial bankers and giving them the resources to serve commercial clients comprehensively. Pinnacle has been growing its capital markets and investment services capabilities to broaden client relationships beyond traditional lending.",
+    "perceived_risks": "Rapid expansion creates operational and credit discipline risks. Commercial real estate, particularly office in Southeast metros, is a watched segment.",
+    "pullback_mentions": "Pinnacle has been selective about commercial real estate originations in its newest markets, preferring to build the C&I franchise first.",
+    "named_competitors": "First Horizon, Truist, Renasant, CapStar Financial, Avenue Bank",
+    "risk_focus_analysis": "Growth management and credit quality in its expanding commercial real estate portfolio are the primary risk considerations.",
+    "key_themes": ["C&I lending", "middle market lending", "credit quality", "capital allocation", "commercial real estate", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Our advisor model is the differentiator. We hire experienced bankers, give them autonomy and resources, and let them serve their clients the way they know best. It works.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "The Southeast continues to attract businesses and talent. Our expansion markets — Atlanta, Charlotte, DC — are among the strongest commercial banking opportunities in the country.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "RJF": {
+    "bank_ticker": "RJF",
+    "bank_name": "Raymond James Financial",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Raymond James Financial is a diversified financial services firm with wealth management, capital markets, and banking businesses. Its banking subsidiary provides commercial loans, including leveraged lending and private equity sponsor finance through Raymond James Bank. The firm's capital markets group is an active participant in private placements and leveraged finance transactions, including middle-market private credit deals.",
+    "perceived_risks": "Revenue sensitivity to capital markets activity cycles. Interest rate sensitivity in the banking segment's loan and investment portfolios.",
+    "pullback_mentions": "Raymond James has been selective about balance-sheet leveraged lending risk, preferring to earn fees through placement agent and advisory roles.",
+    "named_competitors": "Robert W. Baird, Stifel Financial, Piper Sandler, William Blair, Jefferies",
+    "risk_focus_analysis": "Capital markets cycle risk and interest rate sensitivity in the banking segment are the primary financial risk factors.",
+    "key_themes": ["leveraged finance", "private credit", "middle market lending", "C&I lending", "capital allocation", "direct lending"],
+    "notable_quotes": [
+      { "quote": "Our middle-market investment banking and private credit distribution capabilities give clients access to institutional-quality financing solutions that their hometown bank can't provide.", "source": "Q4 2024 earnings call", "topic": "private credit" },
+      { "quote": "We've built a banking franchise that complements our wealth management and capital markets businesses. The integrated model creates real client value.", "source": "2024 Investor Day", "topic": "capital allocation" }
+    ]
+  },
+  "SCHW": {
+    "bank_ticker": "SCHW",
+    "bank_name": "The Charles Schwab Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Charles Schwab is focused on integrating the TD Ameritrade acquisition and returning cash to clients trapped in money market funds as interest rates stabilize. The firm's banking segment provides secured lending (mortgages, pledged asset lines) and margin lending to investment clients. Schwab's engagement with private credit markets is primarily as an investor and distributor of private credit products to retail and RIA clients, not as a direct lender.",
+    "perceived_risks": "Client cash sorting dynamics and bank sweep account balances have been volatile with rate changes. Integration of TD Ameritrade has been complex and costly.",
+    "pullback_mentions": "Schwab has been managing down its investment securities portfolio to improve earnings as those securities mature.",
+    "named_competitors": "Fidelity, Vanguard, Interactive Brokers, Merrill Lynch, Morgan Stanley Wealth",
+    "risk_focus_analysis": "Cash sorting and bank sweep dynamics are the dominant earnings risk; credit risk in the lending book is modest given collateralized nature of most loans.",
+    "key_themes": ["interest rate environment", "capital allocation", "credit quality", "C&I lending", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "The cash sorting cycle is largely behind us. As rates stabilize, we expect clients to rebalance back toward bank sweeps and short-duration products.", "source": "Q4 2024 earnings call", "topic": "interest rate environment" },
+      { "quote": "We are democratizing access to alternative investments, including private credit. RIA clients want these exposures and we're building the infrastructure to deliver them at scale.", "source": "2024 Investor Day", "topic": "direct lending" }
+    ]
+  },
+  "SF": {
+    "bank_ticker": "SF",
+    "bank_name": "Stifel Financial Corp.",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Stifel Financial is a diversified investment bank and wealth manager with a strong middle-market investment banking franchise. Stifel Bank provides commercial loans to middle-market companies, often in conjunction with the firm's investment banking and capital markets capabilities. The firm is active in private placements and subordinated debt for privately owned companies, positioning itself at the intersection of traditional banking and private credit.",
+    "perceived_risks": "Capital markets cycle risk affects investment banking revenue. Interest rate sensitivity in the bank segment is modest.",
+    "pullback_mentions": "Stifel has maintained disciplined underwriting in its bank lending, avoiding the most highly levered sponsor deals.",
+    "named_competitors": "Raymond James, Robert W. Baird, Piper Sandler, Oppenheimer, Jefferies",
+    "risk_focus_analysis": "Capital markets cycle risk and integration of acquired advisory businesses are the primary management focuses.",
+    "key_themes": ["middle market lending", "private credit", "leveraged finance", "C&I lending", "direct lending", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our integrated model — bank plus investment bank plus wealth management — creates a superior client value proposition. We can serve a middle-market company from founding through exit.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Private credit is reshaping the middle-market M&A financing landscape. We're positioned at the intersection of advisory and credit, which is exactly where sponsors want a partner.", "source": "2024 10-K", "topic": "private credit" }
+    ]
+  },
+  "SNV": {
+    "bank_ticker": "SNV",
+    "bank_name": "Synovus Financial Corp.",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Synovus is a Southeast commercial bank focused on growing its corporate and commercial banking capabilities in Georgia, Florida, Alabama, Tennessee, and the Carolinas. The bank has been investing in specialty lending verticals including premium finance and structured lending. Synovus's private credit engagement is primarily through C&I lending to privately owned businesses.",
+    "perceived_risks": "Commercial real estate quality and NIM trajectory in a lower-rate environment are key concerns. Geographic concentration in the Southeast creates some macro sensitivity.",
+    "pullback_mentions": "Synovus has been managing its commercial real estate book selectively, avoiding new office-heavy originations.",
+    "named_competitors": "SouthState, Pinnacle Financial, First Horizon, Renasant, Ameris Bancorp",
+    "risk_focus_analysis": "Commercial real estate credit quality and NIM recovery are the primary financial risk factors.",
+    "key_themes": ["C&I lending", "middle market lending", "commercial real estate", "credit quality", "interest rate environment", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "The Southeast commercial banking market is our home. We've been building relationships here for over 130 years and our knowledge of local markets is a genuine competitive advantage.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We're focused on growing our specialty lending businesses — premium finance, structured products — because these add diversification and often better returns than traditional C&I.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "SOFI": {
+    "bank_ticker": "SOFI",
+    "bank_name": "SoFi Technologies",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 2,
+    "strategic_initiatives": "SoFi Technologies is a digital-first financial services company focused on personal loans, student loan refinancing, home loans, and investment products. The company's banking subsidiary, SoFi Bank, is growing its lending book and deposit franchise through digital acquisition channels. SoFi's technology segment, including the Galileo payments platform, provides an adjacent revenue stream from fintech clients. Engagement with private credit markets is minimal.",
+    "perceived_risks": "Consumer credit quality in personal loans and student debt refinancing is sensitive to employment and income trends. Student loan political and regulatory uncertainty has been a recurring headwind.",
+    "pullback_mentions": "SoFi has been managing its personal loan origination pace in response to credit quality signals, tightening standards on marginal borrowers.",
+    "named_competitors": "LendingClub, Upstart, Marcus by Goldman Sachs, Discover, Earnest",
+    "risk_focus_analysis": "Consumer credit quality and path to sustained profitability are the primary focus areas for SoFi.",
+    "key_themes": ["credit quality", "C&I lending", "interest rate environment", "capital allocation", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "We are building the AWS of fintech — the infrastructure that powers a generation of financial services companies. Galileo's growth validates that vision.", "source": "Q4 2024 earnings call", "topic": "capital allocation" },
+      { "quote": "Our member-first model drives real loyalty. When a SoFi member refinances their student loans, buys a car, and opens an investment account — that's the flywheel working.", "source": "2024 Investor Day", "topic": "C&I lending" }
+    ]
+  },
+  "SSB": {
+    "bank_ticker": "SSB",
+    "bank_name": "SouthState Corporation",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 2,
+    "strategic_initiatives": "SouthState Corporation is one of the premier Southeast regional banks, built through a series of disciplined acquisitions including CenterState and Atlantic Capital. The bank focuses on commercial and industrial lending, commercial real estate, and private banking across the Southeast, with particular depth in Florida, Georgia, and the Carolinas. SouthState's commercial banking growth strategy targets middle-market companies with revenues between $10M and $500M.",
+    "perceived_risks": "Commercial real estate quality in Florida and Southeast markets, particularly in retail and office segments. Integration of acquired institutions.",
+    "pullback_mentions": "SouthState has been selective about commercial real estate concentration, managing exposure in segments where pricing appears stretched.",
+    "named_competitors": "Synovus, First Horizon, Pinnacle Financial, Atlantic Capital legacy, CenterState legacy",
+    "risk_focus_analysis": "Commercial credit quality and M&A integration risk are the primary strategic and financial risk considerations.",
+    "key_themes": ["middle market lending", "C&I lending", "commercial real estate", "credit quality", "capital allocation", "interest rate environment"],
+    "notable_quotes": [
+      { "quote": "The Southeast is the most dynamic commercial banking market in the country. Our combined franchise gives us the scale to compete for the best clients and credits in the region.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "We build deep relationships with middle-market business owners. These are multi-generational banking relationships, not transaction-by-transaction interactions.", "source": "2024 10-K", "topic": "C&I lending" }
+    ]
+  },
+  "SYF": {
+    "bank_ticker": "SYF",
+    "bank_name": "Synchrony Financial",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "involvement_rating": 1,
+    "strategic_initiatives": "Synchrony Financial is the largest provider of consumer financing in the US, operating a partnership-based private label credit card and consumer loan business with major retail, healthcare, and auto partners. The company is focused on growing its healthcare and home improvement financing verticals as traditional retail credit faces headwinds. Synchrony's engagement with commercial credit and private credit markets is negligible.",
+    "perceived_risks": "Consumer credit normalization — rising delinquency rates and net charge-offs following post-pandemic credit deterioration — is the primary risk factor. Partner concentration risk.",
+    "pullback_mentions": "Synchrony has been tightening consumer credit standards, reducing credit line increases for higher-risk segments, and proactively managing partner programs with elevated loss rates.",
+    "named_competitors": "Bread Financial, Alliance Data Systems, Capital One retail cards, Citi retail services",
+    "risk_focus_analysis": "Consumer credit quality and net charge-off trajectory are the dominant earnings risk factors; private and commercial credit is not a factor.",
+    "key_themes": ["credit quality", "interest rate environment", "capital allocation", "C&I lending", "middle market lending", "direct lending"],
+    "notable_quotes": [
+      { "quote": "We are being proactive — raising reserves, tightening underwriting, and managing credit lines — to navigate this phase of credit normalization prudently.", "source": "Q3 2024 earnings call", "topic": "credit quality" },
+      { "quote": "Healthcare financing is a structural growth opportunity. The funding gap between what patients owe and what they can pay is enormous, and Synchrony is the ideal solution.", "source": "Q4 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "UMBF": {
+    "bank_ticker": "UMBF",
+    "bank_name": "UMB Financial Corporation",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "UMB Financial is a diversified financial services company with strong banking, asset management, and fund services capabilities in the Midwest. The bank's fund services division is a leading administrator of mutual funds and alternative investment vehicles, with growing private credit fund administration capabilities. UMB has been expanding its commercial banking franchise and has a growing presence in healthcare, commercial real estate, and sponsor finance.",
+    "perceived_risks": "Geographic concentration in the Midwest creates some regional economic sensitivity. Commercial real estate quality is a monitored segment.",
+    "pullback_mentions": "UMB has been disciplined about commercial real estate underwriting, particularly in office-heavy markets.",
+    "named_competitors": "BOK Financial, Commerce Bancshares, Heartland Financial, National Western Life",
+    "risk_focus_analysis": "Fund services execution and commercial credit quality are the primary risk and growth focus areas.",
+    "key_themes": ["fund administration", "C&I lending", "middle market lending", "direct lending", "credit quality", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our fund services business is growing in tandem with the alternatives industry. Private credit funds need sophisticated administration, and UMB has built that capability.", "source": "Q4 2024 earnings call", "topic": "fund administration" },
+      { "quote": "We're a full-service commercial bank, but our fee businesses — fund services, asset management, wealth — give us revenue durability that pure-play lenders don't have.", "source": "2024 10-K", "topic": "capital allocation" }
+    ]
+  },
+  "VLY": {
+    "bank_ticker": "VLY",
+    "bank_name": "Valley National Bancorp",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "involvement_rating": 2,
+    "strategic_initiatives": "Valley National Bancorp is a New Jersey-based commercial bank with significant commercial real estate and C&I lending operations in the Northeast and Florida. The bank has been managing a challenging commercial real estate book, particularly in the office and construction segments, and is focused on improving credit quality and building capital. Valley's private credit engagement is limited.",
+    "perceived_risks": "Commercial real estate quality is the defining risk — the bank has a large office and construction CRE book in markets that have experienced meaningful stress. Capital adequacy and loan loss reserve levels are key investor focus areas.",
+    "pullback_mentions": "Valley has been actively reducing its commercial real estate construction commitments and managing down higher-risk segments of the existing book.",
+    "named_competitors": "Columbia Bank (NJ), Kearny Financial, Columbia Banking, OceanFirst Financial",
+    "risk_focus_analysis": "Commercial real estate credit quality and capital adequacy are the dominant risk considerations for Valley National in the near term.",
+    "key_themes": ["commercial real estate", "credit quality", "capital allocation", "C&I lending", "interest rate environment", "middle market lending"],
+    "notable_quotes": [
+      { "quote": "We are taking decisive action on the commercial real estate book. Transparency, proactive reserve building, and portfolio management are our priorities.", "source": "Q3 2024 earnings call", "topic": "commercial real estate" },
+      { "quote": "Our capital plan reflects a realistic view of the credit environment. We are committed to building CET1 to peer-appropriate levels over the next several quarters.", "source": "Q4 2024 earnings call", "topic": "capital allocation" }
+    ]
+  },
+  "WBS": {
+    "bank_ticker": "WBS",
+    "bank_name": "Webster Financial Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Webster Financial is integrating the Sterling Bancorp merger and growing its commercial banking capabilities in the Northeast and nationally through its HSA Bank and commercial lending businesses. The bank has a growing sponsor finance team and is building out its ability to serve private equity-backed companies and funds. Webster's national HSA Bank franchise provides a differentiated, low-cost deposit channel that supports competitive commercial lending pricing.",
+    "perceived_risks": "Integration of Sterling Bancorp is ongoing and complex. Commercial real estate quality in the Northeast, particularly office, is a monitored risk. Healthcare spending trends affect HSA deposit growth.",
+    "pullback_mentions": "Webster has been managing its commercial real estate exposure carefully, with a focus on reducing office and construction concentrations.",
+    "named_competitors": "M&T Bank, Citizens Financial, Berkshire Hills, Needham Bank, Brookline Bancorp",
+    "risk_focus_analysis": "Integration execution, commercial real estate credit quality, and HSA Bank deposit trajectory are the key financial risk and growth factors.",
+    "key_themes": ["C&I lending", "middle market lending", "direct lending", "credit quality", "commercial real estate", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "HSA Bank gives us a structural funding advantage — these are long-duration, sticky deposits that no competitor can easily replicate.", "source": "Q4 2024 earnings call", "topic": "capital allocation" },
+      { "quote": "Our sponsor finance team is building a meaningful book. PE-backed companies need banks that understand the leverage and equity structure — that's where we're differentiating.", "source": "2024 10-K", "topic": "direct lending" }
+    ]
+  },
+  "WTFC": {
+    "bank_ticker": "WTFC",
+    "bank_name": "Wintrust Financial Corporation",
+    "rating": 4,
+    "mention_frequency": "low",
+    "sentiment": "positive",
+    "involvement_rating": 3,
+    "strategic_initiatives": "Wintrust Financial is the premier community banking franchise in the Chicago suburbs, with a network of locally branded banks serving commercial and consumer clients across the greater Chicago area. The bank has been growing its commercial lending capabilities, including a dedicated healthcare and government/non-profit banking group. Wintrust's premium finance division is one of the leading providers of insurance premium financing in the country, creating a defensible national specialty lending business.",
+    "perceived_risks": "Geographic concentration in the Chicago suburban market creates some regional economic sensitivity. Commercial real estate quality, particularly office in suburban Chicago, is a watch item.",
+    "pullback_mentions": "Wintrust has been selective about suburban Chicago office lending, tightening occupancy requirements and covenant terms.",
+    "named_competitors": "Associated Banc-Corp, Heartland Financial, Old National, First Midwest legacy, PrivateBancorp legacy",
+    "risk_focus_analysis": "Credit quality in commercial real estate and commercial lending, and premium finance performance, are the primary risk monitors.",
+    "key_themes": ["middle market lending", "C&I lending", "direct lending", "credit quality", "commercial real estate", "capital allocation"],
+    "notable_quotes": [
+      { "quote": "Our community banking model is built on deep local relationships. Chicago-area business owners choose Wintrust because we know their markets and we show up for them.", "source": "Q4 2024 earnings call", "topic": "middle market lending" },
+      { "quote": "Premium finance is a national business for us — it's scalable, self-liquidating, and provides strong risk-adjusted returns regardless of where the credit cycle is.", "source": "2024 10-K", "topic": "direct lending" }
+    ]
+  }
+}
