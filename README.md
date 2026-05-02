@@ -51,15 +51,18 @@ private-credit-bank-analysis/
 
 ## What the App Reads at Runtime
 
-The live app reads **exactly one local file:**
+The app has **two runtime data sources**, used by different pages:
 
-```
-app/backend/pc_analyst.db        ~1.3 GB SQLite
-```
+| Source | Path | Used by |
+|---|---|---|
+| SQLite DB | `app/backend/pc_analyst.db` (~1.3 GB) | Home overview chart, `/timeline/[ticker]`, DA + AI Anomalies, Compare-page chatbot fallback, "Generate winner summary", chatbot |
+| Static JSON | `app/frontend/public/data/pc_*.json` | All four PC sector pages: Rankings, Trends, Anomalies, Compare |
+| Static JSON | `app/frontend/public/data/ai/ai_*.json` | AI Bank Profile section |
+| Static TS | `app/frontend/lib/da-data.ts` | DA Rankings, Trends, Compare (BUFN403 Team 5 dashboards) |
 
-This contains every row the app serves: 50 banks, 900 documents, ~120k chunks with embeddings + topic tags + sentiment scores, ~2.8k Call Report facts, 50 LLM-extracted findings, ~23k stock-price points, and ~125 cached news articles.
+The DB contains: 50 banks, 900 documents, ~120k chunks with embeddings + topic tags + sentiment scores, ~2.8k Call Report facts, 50 LLM-extracted findings, ~23k stock-price points, ~125 cached news articles.
 
-The Digital Assets Rankings, Trends, and Compare pages are **frontend-only** — they read from `app/frontend/lib/da-data.ts` (static TypeScript), not the database. No ingestion pipeline required for DA views.
+**The PC static JSONs are derived from the DB** by running `scripts/generate_pc_static_data.py` (see "Refreshing the PC static JSONs" below). After any DB change — re-ingestion, re-running `populate_findings.py`, etc. — re-run the generator and commit the updated JSONs so the PC pages reflect the new data. If you skip this step, the chatbot and timeline page will show the new data but the PC sector pages will still show the old.
 
 ---
 
@@ -94,6 +97,54 @@ All routes are live unless noted. The Private Credit sector is fully data-backed
 /ai/{rankings,trends,compare}       Coming Soon (quantitative pipeline not yet built)
 
 /timeline/[ticker]                  Per-bank narrative + Call Report + stock + news
+```
+
+---
+
+## Refreshing the PC static JSONs
+
+The four Private Credit pages (Rankings, Trends, Anomalies, Compare) read from
+six committed JSON files in `app/frontend/public/data/`:
+
+```
+pc_banks.json       50 banks, peer groups
+pc_rankings.json    composite-score table for the latest quarter
+pc_trends.json      per-bank metric series across all quarters
+pc_anomalies.json   8-category anomaly engine output
+pc_timelines.json   per-bank filings + Call Report metrics + stock + news
+pc_findings.json    LLM-extracted strategic_initiatives + notable_quotes
+```
+
+These are committed so the PC pages render without a live backend. Whenever
+the DB changes — re-ingestion, re-running `populate_findings.py`, etc. — run
+the generator to refresh them:
+
+```bash
+# Backend must be running for the generator to hit /banks, /rankings, etc.
+cd app/backend && uvicorn pc_analyst.api:app --port 8000 &
+
+# Then, from the repo root:
+python scripts/generate_pc_static_data.py \
+    --backend http://localhost:8000 \
+    --out app/frontend/public/data
+```
+
+The generator hits the live FastAPI endpoints (`/banks`, `/rankings`, `/trends`,
+`/anomalies/private-credit`, `/timeline/{ticker}` × 50, `/findings/{ticker}` × 50)
+and writes the responses verbatim into the JSON files. This guarantees the JSON
+shapes match what the frontend's TypeScript types expect — no field-mapping
+logic to drift.
+
+Concurrent fetches make the per-ticker fan-out finish in <1 s each. End-to-end
+runtime is ~10 s with a warm cache.
+
+Then commit the updated JSONs so collaborators picking up `git pull` see the
+new data:
+
+```bash
+git add app/frontend/public/data/pc_*.json
+git commit -m "Refresh PC static JSONs from DB"
+git push
 ```
 
 ---
