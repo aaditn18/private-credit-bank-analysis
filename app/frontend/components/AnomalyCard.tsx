@@ -253,6 +253,17 @@ export function AnomalyCard({ anomaly }: { anomaly: Anomaly }) {
       <div className="mt-2 text-sm font-medium text-neutral-800">
         {anomaly.headline}
       </div>
+      {anomaly.takeaway && anomaly.takeaway.trim() && (
+        // LLM-generated analyst takeaway. Visually distinct (left border +
+        // tinted background) so it reads as interpretation rather than as
+        // raw filing data, which is what `shownText` carries below.
+        <div
+          className="mt-2 text-xs text-indigo-900 bg-indigo-50 border-l-2 border-indigo-400
+            pl-2.5 pr-2 py-1.5 rounded-r leading-relaxed italic"
+        >
+          {anomaly.takeaway.trim()}
+        </div>
+      )}
       <div className="mt-1 text-xs text-neutral-600 leading-relaxed whitespace-pre-wrap">
         {shownText}
       </div>

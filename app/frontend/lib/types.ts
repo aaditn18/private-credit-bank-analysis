@@ -86,6 +86,12 @@ export interface Anomaly {
   sentiment: AnomalySentiment;
   full_detail: string | null;
   history: AnomalyHistoryPoint[];
+  // Optional one-line analyst takeaway, written by Gemini via
+  // backend/scripts/annotate_anomaly_takeaways.py. Adds an interpretive
+  // "so what should the analyst watch?" on top of the headline+detail.
+  // Older anomaly records may not have this field — the UI degrades
+  // gracefully when missing.
+  takeaway?: string | null;
 }
 
 export interface AnomaliesResponse {

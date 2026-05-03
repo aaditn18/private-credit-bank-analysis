@@ -73,13 +73,6 @@ function sentimentBadge(score: number | null): { bg: string; label: string } {
   return { bg: 'bg-rose-100 text-rose-700', label: 'Bearish' };
 }
 
-function docTypeBadge(dt: string): string {
-  if (dt === '10-K') return 'bg-indigo-100 text-indigo-700';
-  if (dt === '10-Q') return 'bg-blue-100 text-blue-700';
-  if (dt === '8-K') return 'bg-amber-100 text-amber-700';
-  return 'bg-neutral-100 text-neutral-600';
-}
-
 function fmtPct(val: number | null): string {
   if (val === null || val === undefined) return '--';
   return `${(val * 100).toFixed(2)}%`;
@@ -287,7 +280,7 @@ export default function TimelinePage() {
         </div>
         <p className="text-sm text-neutral-500 mt-1">{data.name}</p>
         <p className="text-xs text-neutral-400 mt-2">
-          {quarters.length} quarters of Call Report data | {data.filings.length} SEC filings on record
+          {quarters.length} quarters of Call Report data
         </p>
       </section>
 
@@ -552,56 +545,6 @@ export default function TimelinePage() {
         </section>
       </div>
 
-      {/* SEC Filings */}
-      <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
-        <div className="px-6 py-4 border-b border-neutral-100">
-          <h3 className="font-semibold text-neutral-900 text-base">SEC Filings</h3>
-          <p className="text-xs text-neutral-400 mt-0.5">
-            {data.filings.length} filings on record — 10-K (annual), 10-Q (quarterly), 8-K (current events)
-          </p>
-        </div>
-        <div className="overflow-x-auto">
-          {data.filings.length === 0 ? (
-            <div className="px-6 py-8 text-center text-sm text-neutral-400">No filings found</div>
-          ) : (
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-xs text-neutral-400 border-b border-neutral-100">
-                  <th className="px-6 py-2.5 font-medium">Type</th>
-                  <th className="px-3 py-2.5 font-medium">Fiscal Year</th>
-                  <th className="px-3 py-2.5 font-medium">Quarter</th>
-                  <th className="px-3 py-2.5 font-medium">Filed</th>
-                  <th className="px-3 py-2.5 font-medium">Title</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.filings
-                  .sort((a, b) => {
-                    if (a.filed_at && b.filed_at) return new Date(b.filed_at).getTime() - new Date(a.filed_at).getTime();
-                    return 0;
-                  })
-                  .map((f, i) => (
-                    <tr key={i} className="border-b border-neutral-50 hover:bg-neutral-50 transition-colors">
-                      <td className="px-6 py-2.5">
-                        <span className={`text-[11px] px-2 py-0.5 rounded font-medium ${docTypeBadge(f.doc_type)}`}>
-                          {f.doc_type}
-                        </span>
-                      </td>
-                      <td className="px-3 py-2.5 text-neutral-700 tabular-nums">{f.fiscal_year ?? '--'}</td>
-                      <td className="px-3 py-2.5 text-neutral-700 tabular-nums">{f.fiscal_quarter ? `Q${f.fiscal_quarter}` : '--'}</td>
-                      <td className="px-3 py-2.5 text-neutral-500 text-xs">
-                        {f.filed_at
-                          ? new Date(f.filed_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-                          : '--'}
-                      </td>
-                      <td className="px-3 py-2.5 text-neutral-600 max-w-sm truncate">{f.title ?? '--'}</td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          )}
-        </div>
-      </section>
     </div>
   );
 }
