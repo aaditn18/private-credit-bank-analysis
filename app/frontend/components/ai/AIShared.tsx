@@ -118,9 +118,11 @@ function factorMetaLabel(factor: AIFactorBar): string {
 export function FactorBars({
   factors,
   onEvidenceClick,
+  showEvidenceButtons = true,
 }: {
   factors: AIFactorBar[];
   onEvidenceClick?: (ids: string[]) => void;
+  showEvidenceButtons?: boolean;
 }) {
   return (
     <div className="space-y-3">
@@ -134,14 +136,16 @@ export function FactorBars({
               </div>
               <p className="text-[10px] text-neutral-500">{factorMetaLabel(factor)}</p>
             </div>
-            <button
-              type="button"
-              onClick={() => onEvidenceClick?.(factor.evidence_ids)}
-              disabled={factor.evidence_ids.length === 0}
-              className="shrink-0 rounded-md border border-white/10 px-2 py-1 text-[10px] text-neutral-300 transition hover:border-emerald-300/50 hover:text-emerald-100 disabled:cursor-not-allowed disabled:opacity-35"
-            >
-              Evidence
-            </button>
+            {showEvidenceButtons && (
+              <button
+                type="button"
+                onClick={() => onEvidenceClick?.(factor.evidence_ids)}
+                disabled={factor.evidence_ids.length === 0}
+                className="shrink-0 rounded-md border border-white/10 px-2 py-1 text-[10px] text-neutral-300 transition hover:border-emerald-300/50 hover:text-emerald-100 disabled:cursor-not-allowed disabled:opacity-35"
+              >
+                Evidence
+              </button>
+            )}
           </div>
           <div className="h-2 rounded-full bg-white/10">
             <div
