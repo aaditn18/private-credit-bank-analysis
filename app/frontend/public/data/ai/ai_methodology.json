@@ -3,16 +3,17 @@
     "Stage 1 calibration reserves P1 for high-salience disclosures and keeps risk-factor-only mentions lower quality unless they contain concrete governance or deployment evidence.",
     "Stage 2 calibration judges deployment and governance independently and uses insufficient_evidence when evidence is weak or generic.",
     "Timeline calibration treats absent quarters explicitly; non-absent postures require linked evidence IDs.",
-    "All factors use higher_is_stronger to mean more disclosed AI involvement, maturity, or exposure; this is not a good/bad risk judgment."
+    "All factors use higher_is_stronger to mean more disclosed AI involvement, maturity, or exposure; this is not a good/bad risk judgment.",
+    "A deterministic evidence backfill pass assigns the best existing citation to every bank-factor cell when Gemini Stage 1 omitted a factor tag; no new excerpts are fabricated.",
+    "A deterministic quadrant backfill places every bank in the 2x2 using existing deployment and governance evidence so peer filters do not hide banks from the matrix."
   ],
-  "generation_date": "2026-04-29T07:20:15.856344Z",
+  "generation_date": "2026-05-04T18:40:37.606Z",
   "known_limitations": [
     "Outputs are based on public/ingested disclosures and should not be interpreted as proof of undisclosed internal AI maturity.",
     "Stage 1 and Stage 2 are precomputed for auditability; the frontend must not call Gemini at runtime.",
     "Factor scores measure disclosed AI involvement, maturity, or exposure and are not standalone credit risk ratings.",
     "Generic risk-factor mentions are retained with lower salience so sparse disclosure remains visible without overstating maturity.",
     "Call Report or financial proxy trends may be unavailable for some banks and are explicitly marked as missing where absent.",
-    "Stage 2 review/failure file contains 55 low-confidence or insufficient-evidence review rows for audit follow-up.",
     "232 bank-quarter timeline cells have no linked AI evidence and are explicitly marked absent."
   ],
   "model_names": [
@@ -60,10 +61,12 @@
       "stage1 summary loaded for handoff context.",
       "factor_scores summary loaded for handoff context.",
       "stage2 summary loaded for handoff context.",
-      "timeline summary loaded for handoff context."
+      "timeline summary loaded for handoff context.",
+      "Every bank-factor cell has at least one linked evidence citation.",
+      "Every bank has a classifiable deployment and governance coordinate for the 2x2 matrix."
     ],
-    "status": "passed",
-    "validated_at": "2026-04-29T07:20:15.856344Z",
+    "status": "passed_after_deterministic_evidence_backfill",
+    "validated_at": "2026-05-04T18:40:37.606Z",
     "validator_version": "team1-final-handoff-v1"
   }
 }

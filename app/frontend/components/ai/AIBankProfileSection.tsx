@@ -76,7 +76,7 @@ export function AIBankProfileSection({ ticker }: { ticker: string }) {
     const ids = [
       ...(quadrant?.evidence_ids ?? []),
       ...(bars?.factors.flatMap((factor) => factor.evidence_ids.slice(0, 1)) ?? []),
-      ...(timeline?.quarters.toReversed().flatMap((quarter) => quarter.evidence_ids.slice(0, 1)) ?? []),
+      ...(timeline?.quarters.slice().reverse().flatMap((quarter) => quarter.evidence_ids.slice(0, 1)) ?? []),
     ];
     const evidence = Array.from(new Set(ids))
       .map((id) => evidenceById.get(id))
@@ -86,7 +86,7 @@ export function AIBankProfileSection({ ticker }: { ticker: string }) {
   }, [data, normalizedTicker]);
 
   if (error) {
-    return <EmptyAIState message={`AI static data could not be loaded: ${error}`} />;
+    return <EmptyAIState message={`AI evidence data could not be loaded: ${error}`} />;
   }
 
   if (!data) {
@@ -99,10 +99,10 @@ export function AIBankProfileSection({ ticker }: { ticker: string }) {
   }
 
   if (!profile?.score) {
-    return <EmptyAIState message={`No static AI output is available for ${normalizedTicker}.`} />;
+    return <EmptyAIState message={`No AI evidence output is available for ${normalizedTicker}.`} />;
   }
 
-  const latestPosture = profile.timeline?.quarters.toReversed().find((quarter) => quarter.disclosure_posture !== 'absent');
+  const latestPosture = profile.timeline?.quarters.slice().reverse().find((quarter) => quarter.disclosure_posture !== 'absent');
 
   return (
     <section className="rounded-xl border border-neutral-200 bg-white shadow-sm">
@@ -111,7 +111,7 @@ export function AIBankProfileSection({ ticker }: { ticker: string }) {
           <div>
             <h3 className="text-base font-semibold text-neutral-900">AI Evidence Posture</h3>
             <p className="mt-0.5 text-xs text-neutral-400">
-              Static Team 1 outputs from /data/ai. High AI involvement is not automatically high AI risk.
+              Evidence-linked AI posture. High AI involvement is not automatically high AI risk.
             </p>
           </div>
           <ConfidenceBadge confidence={profile.score.confidence} />
