@@ -177,7 +177,16 @@ export function AIRankingsPanel({
                     >
                       <td className="px-4 py-3">
                         <div className="font-mono font-semibold text-emerald-300">{bundle.score.ticker}</div>
-                        <div className="max-w-[220px] truncate text-xs text-neutral-400">{bundle.score.bank_name}</div>
+                        <div className="flex max-w-[260px] items-center gap-2">
+                          <div className="truncate text-xs text-neutral-400">{bundle.score.bank_name}</div>
+                          <a
+                            href={`/timeline/${bundle.score.ticker}`}
+                            onClick={(event) => event.stopPropagation()}
+                            className="shrink-0 rounded border border-white/10 px-1.5 py-0.5 text-[10px] text-neutral-300 transition hover:border-emerald-300/50 hover:text-emerald-100"
+                          >
+                            Profile
+                          </a>
+                        </div>
                       </td>
                       <td className="px-4 py-3 text-xs text-neutral-300">{bundle.score.peer_group}</td>
                       <td className="px-4 py-3">
