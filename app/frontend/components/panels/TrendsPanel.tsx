@@ -15,6 +15,10 @@ import {
   Bar,
   Cell,
 } from 'recharts';
+import { PeerGroupTrajectories } from './trends/PeerGroupTrajectories';
+import { PeerGroupSnapshotBars } from './trends/PeerGroupSnapshotBars';
+import { SentimentExposureScatter } from './trends/SentimentExposureScatter';
+import { PCPositioningQuadrant } from './trends/PCPositioningQuadrant';
 
 // ── types ──────────────────────────────────────────────────────────────────────
 
@@ -144,19 +148,60 @@ function Insight({ children }: { children: React.ReactNode }) {
 
 // ── main component ─────────────────────────────────────────────────────────────
 
+// pc_findings.json shape — only the fields the new sentiment scatter reads.
+interface FindingRow {
+  bank_ticker?: string;
+  sentiment?: string | null;
+  rating?: number | null;
+  involvement_rating?: number | null;
+}
+
+// pc_rankings.json shape — only what we need for the snapshot bars, the
+// scatter, and the positioning quadrant (raw + norm metric values +
+// peer_group at the latest quarter). `higher_is_better` is required by
+// the composite-score logic in PCPositioningQuadrant; it's also what the
+// Rankings page reads.
+interface RankingsBank {
+  ticker: string;
+  name: string;
+  peer_group: string;
+  raw: Record<string, number | null>;
+  norm: Record<string, number>;
+}
+interface RankingsResponse {
+  quarter: string;
+  metrics: { key: string; label: string; higher_is_better: boolean }[];
+  banks: RankingsBank[];
+}
+
 export function TrendsPanel() {
   const [data, setData] = useState<TrendsData | null>(null);
+  const [findings, setFindings] = useState<Record<string, FindingRow> | null>(null);
+  const [rankings, setRankings] = useState<RankingsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [peerFilter, setPeerFilter] = useState<string>('all');
 
+  // Three JSONs feed this page now: pc_trends.json (existing — industry,
+  // peer-group, exposure ranking, mover lists), pc_findings.json (sentiment +
+  // involvement ratings for the new sentiment-exposure scatter), and
+  // pc_rankings.json (latest-quarter raw metric values for the per-peer
+  // snapshot bars). Fetched in parallel — total payload is ~340 KB so this
+  // is still a sub-second cold load.
   useEffect(() => {
-    fetch('/data/pc_trends.json')
-      .then((r) => {
+    Promise.all([
+      fetch('/data/pc_trends.json').then((r) => {
         if (!r.ok) throw new Error('Failed to load trends data');
-        return r.json();
+        return r.json() as Promise<TrendsData>;
+      }),
+      fetch('/data/pc_findings.json').then((r) => (r.ok ? (r.json() as Promise<Record<string, FindingRow>>) : null)),
+      fetch('/data/pc_rankings.json').then((r) => (r.ok ? (r.json() as Promise<RankingsResponse>) : null)),
+    ])
+      .then(([t, f, rk]) => {
+        setData(t);
+        setFindings(f);
+        setRankings(rk);
       })
-      .then((d: TrendsData) => setData(d))
       .catch((e) => setError(e instanceof Error ? e.message : String(e)))
       .finally(() => setLoading(false));
   }, []);
@@ -534,6 +579,50 @@ export function TrendsPanel() {
           </div>
         </section>
       </div>
+
+      {/* ── Peer-Group Deep Dive ──
+          Three views that combine the 6 metrics, sentiment, and the three
+          peer groups (GSIB / trust-IB / regional) — none of which the
+          existing industry-level charts above can show on their own. */}
+
+      {/* 1. Per-peer-group median trajectory across all 8 quarters with a
+            metric selector — gives the historical / time-series view per
+            group without dropping into per-bank noise. */}
+      {data && (
+        <PeerGroupTrajectories
+          banks={data.banks}
+          metricsOverTime={data.metrics_over_time as never}
+        />
+      )}
+
+      {/* 2. Latest-quarter snapshot — all 6 metrics × 3 peer groups in one
+            grouped-bar grid. Quick scan for "where do the groups stand
+            right now". */}
+      {rankings && (
+        <PeerGroupSnapshotBars
+          rankingsBanks={rankings.banks}
+          metrics={rankings.metrics}
+          quarter={rankings.quarter}
+        />
+      )}
+
+      {/* 3. Sentiment × NBFI exposure scatter — single 2D view that crosses
+            narrative tone with actual book size. */}
+      {findings && rankings && data && (
+        <SentimentExposureScatter
+          banks={data.banks}
+          findings={findings}
+          rankingsBanks={rankings.banks}
+        />
+      )}
+
+      {/* 4. PC Positioning Quadrant — composite × QoQ growth × NBFI book $
+            × LLM sentiment. The "where does each bank sit on the PC map"
+            view; surfaces the level-vs-direction split (e.g. GS bottom-
+            right: high score, contracting). */}
+      {rankings && findings && (
+        <PCPositioningQuadrant rankings={rankings} findings={findings} />
+      )}
 
       {/* Biggest Movers + Pullback Tracker */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
