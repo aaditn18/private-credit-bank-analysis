@@ -61,7 +61,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "MS holds an extreme outlier NBFI concentration; a single-sector shock would disproportionately impact MS. Scrutinize counterparty diversification disclosures."
+        "takeaway": "MS's extreme NBFI concentration (71.51%) makes it uniquely exposed; a sector-specific shock would hit MS first, watch counterparty diversification."
       },
       {
         "theme": "private_credit",
@@ -119,7 +119,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "GS holds the heaviest NBFI concentration among peers; monitor for outsized credit losses if the non-bank financial sector experiences a downturn."
+        "takeaway": "GS's extreme NBFI concentration (67.18%) elevates systemic risk significantly; monitor for specific counterparty or sector-level stress disclosures."
       },
       {
         "theme": "private_credit",
@@ -177,7 +177,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "ONB's NBFI exposure has surged 4.9σ from its historical range, yet remains below peers; watch for continued strategic growth and its impact on returns."
+        "takeaway": "ONB's NBFI exposure surged 4.9σ from its historical average, signaling a rapid strategic shift; watch for credit quality trends despite being below peers."
       },
       {
         "theme": "private_credit",
@@ -235,7 +235,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "BK's 3.3σ reduction in NBFI exposure signals a significant strategic shift or forced deleveraging; watch for related asset sales and potential revenue impact."
+        "takeaway": "BK's dramatic NBFI exposure reduction signals strategic de-risking, but concentration remains above peers; watch for further divestment or credit quality impacts."
       },
       {
         "theme": "private_credit",
@@ -293,7 +293,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SF's dramatic reduction in NBFI exposure signals a significant de-risking strategy; monitor its impact on future profitability and portfolio composition."
+        "takeaway": "SF aggressively reduced its NBFI exposure, now below peers, signaling a strategic de-risking; monitor future growth and profitability impacts."
       },
       {
         "theme": "private_credit",
@@ -351,7 +351,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "ZION's NBFI exposure has rapidly increased beyond its historical range; monitor credit quality and concentration risk in this expanding segment."
+        "takeaway": "ZION's NBFI exposure has significantly shifted beyond its historical range; watch for further increases and specific counterparty disclosures next quarter."
       },
       {
         "theme": "private_credit",
@@ -409,7 +409,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "UMBF's 4.2σ drop in NBFI exposure indicates a significant portfolio re-rating; watch for disclosures explaining this sharp de-risking."
+        "takeaway": "UMBF's dramatic 4.2σ drop in NBFI commitments suggests a significant, potentially forced, de-risking; watch for asset quality deterioration in the remaining portfolio."
       },
       {
         "theme": "private_credit",
@@ -467,7 +467,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "CMA's NBFI exposure has rapidly increased, indicating a notable shift in risk appetite; watch for further growth and portfolio quality disclosures."
+        "takeaway": "CMA's NBFI exposure has notably shifted higher, signaling increased risk appetite; monitor for details on portfolio quality and counterparty concentration."
       },
       {
         "theme": "private_credit",
@@ -525,7 +525,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "WTFC has significantly de-risked its NBFI book, but its concentration remains above peers; monitor if this trend continues and impacts credit quality."
+        "takeaway": "WTFC has significantly reduced its NBFI exposure from historical levels, yet it remains well above peers; monitor for further de-risking."
       },
       {
         "theme": "private_credit",
@@ -583,7 +583,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "VLY's NBFI commitment is well below peers, suggesting a more conservative stance that could offer relative stability if private credit markets face headwinds."
+        "takeaway": "VLY's lower NBFI commitment ratio signals relative conservatism; monitor if peers' higher exposure creates future credit differentiation."
       },
       {
         "theme": "private_credit",
@@ -641,7 +641,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SSB maintains a lower NBFI loan ratio than peers, suggesting a conservative approach; watch for any future shifts in this exposure strategy."
+        "takeaway": "SSB's lower NBFI loan ratio compared to peers indicates a more conservative risk profile; monitor if this translates to better credit quality."
       },
       {
         "theme": "private_credit",
@@ -699,7 +699,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "WAL maintains a lower NBFI loan ratio than peers, indicating a more conservative risk profile; monitor for any shifts in this strategy."
+        "takeaway": "WAL's lower NBFI loan ratio compared to peers indicates a more conservative portfolio. Monitor if WAL sustains this lower-risk approach."
       },
       {
         "theme": "private_credit",
@@ -757,7 +757,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "CFR's sharp 2.3σ reduction in NBFI exposure suggests a response to internal credit concerns; monitor for related asset sales or write-downs next quarter."
+        "takeaway": "CFR significantly reduced its NBFI exposure from historical highs, but it remains above peers; watch for further de-risking or credit quality impacts."
       },
       {
         "theme": "private_credit",
@@ -815,7 +815,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SCHW's zero NBFI exposure provides a significant risk buffer compared to peers, insulating it from potential sector-specific downturns."
+        "takeaway": "SCHW's zero NBFI exposure provides a significant risk buffer compared to peers; monitor if this conservative stance is maintained."
       },
       {
         "theme": "private_credit",
@@ -873,7 +873,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SYF's complete lack of NBFI exposure insulates its balance sheet from potential sector-specific shocks, offering a safer credit profile than peers."
+        "takeaway": "SYF's zero NBFI exposure provides a significant safety buffer, insulating its portfolio from potential sector-specific shocks impacting peers."
       },
       {
         "theme": "private_credit",
@@ -931,7 +931,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SOFI's negligible NBFI exposure, far below peers, indicates a conservative lending strategy, potentially shielding it from broader financial sector shocks."
+        "takeaway": "SOFI's near-zero NBFI exposure provides a significant buffer against potential sector-specific shocks, differentiating its risk profile from peers."
       },
       {
         "theme": "private_credit",
@@ -989,7 +989,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "C's NBFI commitment ratio is double peers; monitor future drawdowns and the credit quality of underlying non-bank financial counterparties."
+        "takeaway": "C's significantly higher NBFI commitment ratio compared to peers warrants monitoring future drawdowns and the credit quality of these counterparties."
       },
       {
         "theme": "private_credit",
@@ -1047,7 +1047,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "PNC's NBFI commitments are significantly above peers, signaling higher concentration risk; monitor for credit quality deterioration if the sector faces stress."
+        "takeaway": "PNC's significantly higher NBFI commitment ratio compared to peers indicates elevated potential concentration risk; monitor specific sub-sector exposures."
       },
       {
         "theme": "private_credit",
@@ -1105,7 +1105,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "STT's minimal NBFI commitment exposure compared to peers suggests a conservative strategy; monitor if this provides a defensive advantage in a downturn."
+        "takeaway": "STT maintains significantly lower NBFI commitments than peers, indicating a conservative risk posture and reduced exposure to potential sector volatility."
       },
       {
         "theme": "private_credit",
@@ -1163,7 +1163,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "RJF's minimal NBFI commitments relative to peers indicate a conservative stance, reducing potential exposure to non-bank financial sector volatility."
+        "takeaway": "RJF's NBFI commitment is significantly below the peer median, indicating a conservative stance; monitor if this low exposure persists or changes."
       },
       {
         "theme": "private_credit",
@@ -1221,7 +1221,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "AXP's NBFI commitment is significantly below peers, suggesting a deliberate de-emphasis; watch if this conservative positioning provides resilience or constrains future growth."
+        "takeaway": "AXP's NBFI commitment is significantly below the peer median, signaling a more conservative risk profile; watch for any future changes in this exposure."
       },
       {
         "theme": "private_credit",
@@ -1279,7 +1279,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "COF's NBFI commitment ratio is well below peers, signaling lower exposure to this volatile sector; watch for any strategic shifts or growth implications."
+        "takeaway": "COF maintains significantly lower NBFI exposure than peers, indicating a conservative risk appetite; monitor if this limits growth or changes in future quarters."
       },
       {
         "theme": "private_credit",
@@ -1337,7 +1337,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "EWBC's NBFI commitment is well below peers, signaling lower risk exposure; watch for any future increases that could shift its conservative stance."
+        "takeaway": "EWBC's NBFI commitment ratio is significantly below peers, indicating a conservative risk profile; monitor if this impacts growth or asset diversification."
       },
       {
         "theme": "private_credit",
@@ -1395,7 +1395,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "BAC's NBFI commitment ratio is notably higher than peers; monitor counterparty credit quality and concentration risk within this segment."
+        "takeaway": "BAC's NBFI commitment ratio significantly exceeds peers; watch for specific counterparty credit quality disclosures and any emerging stress in the NBFI sector."
       },
       {
         "theme": "private_credit",
@@ -1453,7 +1453,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "FLG's significantly lower NBFI commitment ratio compared to peers provides a defensive advantage; watch if this conservative stance persists."
+        "takeaway": "FLG's NBFI commitment is significantly below peers, indicating a conservative risk posture; monitor if this impacts future growth or strategy."
       },
       {
         "theme": "private_credit",
@@ -1511,7 +1511,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "PB's NBFI loan ratio is significantly below the peer median, indicating a more conservative credit risk profile and less exposure to sector-specific shocks."
+        "takeaway": "PB's significantly lower NBFI exposure compared to peers positions it defensively against private credit market volatility; watch for sustained credit quality outperformance."
       },
       {
         "theme": "private_credit",
@@ -1569,7 +1569,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "KEY's elevated NBFI commitment ratio suggests higher future drawdown risk; monitor the quality and concentration of these exposures next quarter."
+        "takeaway": "KEY's NBFI commitments are significantly above peers; watch for details on specific counterparty exposures and any future credit quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -1627,7 +1627,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "FITB's elevated NBFI commitments, though low severity, warrant monitoring for potential credit quality issues if the sector weakens."
+        "takeaway": "With NBFI commitments well above peers, FITB faces higher concentration risk; track specific NBFI sub-sectors for signs of stress."
       },
       {
         "theme": "private_credit",
@@ -1685,7 +1685,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "BPOP's NBFI commitments are significantly below peers, indicating a conservative stance that reduces exposure to this volatile sector; watch for any shift in strategy."
+        "takeaway": "BPOP's significantly lower NBFI commitments than peers suggest a conservative strategy, limiting exposure to this higher-risk sector."
       },
       {
         "theme": "private_credit",
@@ -1743,7 +1743,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "BOKF's elevated NBFI loan exposure warrants monitoring for early signs of credit quality stress, given its above-peer concentration."
+        "takeaway": "BOKF's NBFI loan ratio is significantly above peers, indicating elevated sector-specific risk; watch for any signs of credit quality stress."
       },
       {
         "theme": "private_credit",
@@ -1801,7 +1801,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "TFC's NBFI commitments are notably higher than peers; monitor this concentration for potential credit quality deterioration if the sector weakens."
+        "takeaway": "TFC's NBFI commitment ratio is above peers, indicating a higher concentration risk; monitor credit quality trends in this segment next quarter."
       },
       {
         "theme": "private_credit",
@@ -1859,7 +1859,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "FCNCA's NBFI commitment ratio is below the peer median, suggesting a conservative strategy that may offer relative stability if the private credit market faces headwinds."
+        "takeaway": "FCNCA's NBFI commitments are significantly below peers, suggesting a lower risk profile; monitor if this conservative stance impacts growth or changes."
       },
       {
         "theme": "private_credit",
@@ -1917,7 +1917,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "USB's NBFI commitments are notably above peers; watch for increasing concentration risk and future disclosures on specific counterparty credit quality."
+        "takeaway": "USB's above-peer NBFI commitments warrant monitoring for specific sub-sector concentrations and potential credit quality deterioration in future quarters."
       },
       {
         "theme": "private_credit",
@@ -1975,7 +1975,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "NTRS's above-peer NBFI commitments signal potential future exposure; monitor utilization and credit quality if these lines are drawn."
+        "takeaway": "NTRS's above-peer NBFI commitments signal slightly elevated future exposure; watch for growth in these commitments and underlying credit quality."
       },
       {
         "theme": "private_credit",
@@ -2033,7 +2033,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "PNFP's elevated NBFI loan exposure warrants close monitoring of credit quality within this portfolio for early signs of stress."
+        "takeaway": "PNFP's NBFI loan ratio is above peers; monitor if this exposure grows or if credit quality disclosures worsen next quarter."
       },
       {
         "theme": "private_credit",
@@ -2091,7 +2091,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "ALLY's NBFI commitment ratio is well below peers, indicating a conservative approach; watch for any future shifts in this exposure strategy."
+        "takeaway": "ALLY's NBFI commitment ratio is notably below peers, indicating a conservative risk profile and potentially greater resilience to sector-specific shocks."
       },
       {
         "theme": "private_credit",
@@ -2149,7 +2149,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "MTB maintains a lower NBFI commitment ratio than peers, indicating a more conservative risk posture and reduced exposure to non-bank financial sector volatility."
+        "takeaway": "MTB's NBFI commitment is below the peer median, indicating a conservative stance that limits its private credit exposure risk."
       },
       {
         "theme": "private_credit",
@@ -2207,7 +2207,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "COLB maintains a lower NBFI loan ratio than peers, indicating a more conservative risk profile and reduced exposure to this sector's volatility."
+        "takeaway": "COLB's significantly lower NBFI loan ratio compared to peers indicates a more conservative risk profile; watch for sustained credit quality outperformance."
       },
       {
         "theme": "private_credit",
@@ -2265,7 +2265,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "RF's NBFI commitments are slightly elevated versus peers; watch for any future acceleration or concentration risks."
+        "takeaway": "RF's NBFI commitment ratio is above peers, signaling a modest concentration risk; monitor for further increases or credit quality changes."
       },
       {
         "theme": "private_credit",
@@ -2323,7 +2323,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "WBS's NBFI loan ratio is below the peer median, signaling a more conservative credit profile; watch for any future increase in this exposure."
+        "takeaway": "WBS maintains lower NBFI exposure than peers, indicating a more conservative private credit strategy; watch for any future shifts in this risk appetite."
       },
       {
         "theme": "private_credit",
@@ -2381,7 +2381,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "JPM's NBFI commitment is slightly above peers but not a significant outlier; watch for future increases or shifts in peer averages."
+        "takeaway": "JPM's NBFI commitment ratio is slightly elevated versus peers; watch for sustained increases that could signal growing private credit risk."
       },
       {
         "theme": "private_credit",
@@ -2439,7 +2439,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "WFC's NBFI commitment ratio is slightly elevated versus peers; monitor for any upward trend or specific credit quality disclosures."
+        "takeaway": "WFC's NBFI commitment ratio is slightly elevated versus peers; monitor for increasing concentration or specific credit quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -2497,7 +2497,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "HBAN's NBFI commitment is below the peer median, indicating a more conservative risk posture and reduced exposure to private credit volatility."
+        "takeaway": "HBAN's NBFI commitment ratio is below peers, reflecting a conservative risk management approach. Monitor for sustained prudent exposure levels."
       },
       {
         "theme": "private_credit",
@@ -2555,7 +2555,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "ASB's NBFI loan ratio is slightly above peers; monitor if this trend continues to diverge, potentially signaling increased risk appetite."
+        "takeaway": "ASB's NBFI loan ratio is slightly elevated versus peers; watch for any future increase in this exposure or signs of credit deterioration."
       },
       {
         "theme": "private_credit",
@@ -2613,7 +2613,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "FNB's lower NBFI loan ratio compared to peers indicates a more conservative lending strategy, potentially reducing credit risk in a downturn."
+        "takeaway": "FNB's NBFI loan ratio is below peers, indicating a conservative stance that may provide resilience; watch for sustained lower risk in this segment."
       },
       {
         "theme": "private_credit",
@@ -2671,7 +2671,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "BKU's NBFI loan ratio below peers suggests a more conservative private credit strategy, potentially reducing risk and enhancing stability."
+        "takeaway": "BKU's lower NBFI exposure compared to peers positions it more conservatively, providing a relative advantage if private credit markets face headwinds."
       },
       {
         "theme": "private_credit",
@@ -2729,7 +2729,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "CFG's slightly elevated NBFI commitments warrant monitoring for any sustained divergence from peers, despite the current low Z-score."
+        "takeaway": "CFG's NBFI commitment ratio is slightly above peers; watch for future increases that could signal a growing concentration risk."
       },
       {
         "theme": "private_credit",
@@ -2787,7 +2787,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "FHN's NBFI loan ratio is only marginally above peers; monitor if this slight deviation grows in future quarters."
+        "takeaway": "FHN's NBFI loan ratio is barely above the peer median; watch for any material increase in concentration next quarter."
       },
       {
         "theme": "private_credit",
@@ -2845,7 +2845,7 @@
             "peer_value": 0.2279203622439207
           }
         ],
-        "takeaway": "SNV's NBFI exposure perfectly matches the peer median, indicating stable, non-idiosyncratic risk; monitor for any future deviation from this alignment."
+        "takeaway": "SNV's NBFI exposure aligns perfectly with peers; monitor future trends for any deviation from this baseline, or shifts in the sector's overall risk profile."
       }
     ],
     "credit_quality": [
@@ -2864,7 +2864,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "ASB is increasing NBFI exposure despite flat overall lending, an early signal that may precede credit-quality deterioration if the cycle turns."
+        "takeaway": "ASB is leaning into NBFI despite flat overall lending; an early signal that may precede credit-quality deterioration if the cycle turns."
       },
       {
         "theme": "private_credit",
@@ -2881,7 +2881,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "BAC's rapid NBFI commitment growth, outpacing overall loans, signals a directional credit-quality flag; monitor for early signs of asset quality stress."
+        "takeaway": "BAC's aggressive NBFI commitment growth, while total loans are flat, flags rising credit risk; monitor asset quality deterioration in upcoming quarters."
       },
       {
         "theme": "private_credit",
@@ -2898,7 +2898,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "FITB's growing NBFI exposure amid a shrinking overall loan book signals increasing risk; watch for specific credit quality deterioration in this segment."
+        "takeaway": "FITB is actively increasing NBFI commitments despite overall loan contraction, indicating a potential credit quality shift; watch for detailed sector risk."
       },
       {
         "theme": "private_credit",
@@ -2915,7 +2915,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "MS's growing NBFI concentration despite flat overall lending signals rising credit risk; watch for early signs of credit quality deterioration."
+        "takeaway": "MS is actively growing NBFI commitments despite flat overall lending, indicating a strategic credit quality shift. Watch for early signs of NBFI portfolio stress."
       },
       {
         "theme": "private_credit",
@@ -2932,7 +2932,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "ONB's aggressive NBFI commitment growth despite flat overall lending signals rising credit risk; watch for future asset quality deterioration in this segment."
+        "takeaway": "ONB's aggressive NBFI commitment growth, despite flat overall lending, signals increasing credit risk; watch for future asset quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -2949,7 +2949,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "PNC is leaning into NBFI commitments despite flat overall lending, an early signal to watch for credit quality deterioration if the cycle turns."
+        "takeaway": "PNC's accelerated NBFI commitment growth, outpacing overall loans, signals a directional credit-quality flag; watch for specific asset quality deterioration next quarter."
       },
       {
         "theme": "private_credit",
@@ -2966,7 +2966,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "SNV is leaning into NBFI despite flat overall lending; watch for early signs of credit quality deterioration in this concentrated portfolio."
+        "takeaway": "SNV's aggressive NBFI loan growth amid flat overall lending signals increasing credit risk; watch for early signs of asset quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -2983,7 +2983,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "SSB is leaning into NBFI despite flat overall lending, a directional credit-quality flag; watch for early signs of asset quality deterioration."
+        "takeaway": "SSB's accelerated NBFI lending, outpacing total loan growth, indicates a directional credit quality flag; monitor for early signs of asset deterioration."
       },
       {
         "theme": "private_credit",
@@ -3000,7 +3000,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "USB's accelerating NBFI commitments, despite slow overall loan growth, signals increasing credit risk; watch for specific NBFI credit quality deterioration."
+        "takeaway": "USB is significantly increasing NBFI commitments despite slow overall loan growth; watch for early signs of credit quality deterioration in this concentrated segment."
       },
       {
         "theme": "private_credit",
@@ -3017,7 +3017,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "WAL's rapid NBFI loan growth, outpacing overall lending, signals increasing credit risk; watch for specific NBFI loan performance and potential future impairments."
+        "takeaway": "WAL's aggressive NBFI loan growth, outpacing its flat overall book, flags increasing credit risk; watch for early signs of asset quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -3043,7 +3043,7 @@
         "sentiment": "negative",
         "full_detail": "Evolving macroeconomic and social conditions (including the shift to more hybrid work arrangements) may result in changes for General Office demand moving forward. Our General Office portfolio has experienced more negative credit quality trends relative to our other CRE portfolios. Select metrics for our General Office portfolio are summarized in the following table:\nTable 40\nSelect General Office Loan Metrics\ndollars in millions\nSeptember 30, 2025\nJune 30, 2025\nDecember 31, 2024\n% of total loans and leases\n1.47 \n %\n1.57 \n %\n1.77 \n %\n% of CRE loans\n9.07 \n %\n9.42 \n %\n10.81 \n %\nAverage loan balance\n$\n2 \n$\n2 \n$\n2 \nNet charge-offs (YTD annualized %)\n4.06 \n %\n4.09 \n %\n3.95 \n %\nDelinquencies as a % of General Office loans\n9.09 \n %\n6.59 \n %\n10.92 \n %\nNon-performing loans as a % of General Office loans\n11.27 \n %\n9.03 \n %\n12.10 \n %\nALLL ratio\n4.80 \n %\n4.59 \n %\n4.59 \n %\nLoans to Nondepository Financial Institutions (“NDFIs”)\nAs of September 30, 2025, loans to NDFIs were approximately $33.59 billion, comprised of the following:\n•Approximately $31.25 billion of loans to NDFIs was included in global fund banking loans, mainly consisting of capital call lines of approximately $28.64 billion, the repayment of which is dependent on the payment of capital calls by the underlying limited partner investors in funds managed by certain private equity and venture capital firms.",
         "history": [],
-        "takeaway": "FCNCA's General Office portfolio shows significant credit distress with high charge-offs and rising delinquencies; watch for further deterioration next quarter."
+        "takeaway": "FCNCA's General Office CRE portfolio shows significant credit distress with high delinquencies; watch for further de-risking or spread to other CRE segments."
       },
       {
         "theme": "private_credit",
@@ -3069,7 +3069,7 @@
         "sentiment": "positive",
         "full_detail": "The reduction in interest income associated with loans on nonaccrual status was approximately $2.8 million and $1.2 million for the three months ended June 30, 2023 and 2022, respectively, and $3.6 million and $2.3 million for the six months ended June 30, 2023 and 2022, respectively. The following table presents an aging analysis of past due loans by loan portfolio segment:\nJune 30, 2023\nCurrent\n30-59 Days\nPast Due\n60-89 Days\nPast Due\nOver 90 days\nPast Due\nTotal\nPast Due\nTotal\n(in millions)\nWarehouse lending\n$\n5,549\n$\n—\n$\n—\n$\n—\n$\n—\n$\n5,549\nMunicipal & nonprofit\n1,558\n—\n—\n—\n—\n1,558\nTech & innovation\n2,401\n—\n—\n—\n—\n2,401\nEquity fund resources\n931\n—\n—\n—\n—\n931\nOther commercial and industrial\n6,396\n—\n—\n—\n—\n6,396\nCRE - owner occupied\n1,648\n—\n—\n—\n—\n1,648\nHotel franchise finance\n4,101\n—\n—\n—\n—\n4,101\nOther CRE - non-owner occupied\n5,792\n—\n—\n—\n—\n5,792\nResidential\n13,388\n94\n20\n—\n114\n13,502\nResidential - EBO\n662\n173\n116\n481\n770\n1,432\nConstruction and land development\n4,396\n7\n—\n—\n7\n4,403\nOther\n162\n—\n—\n—\n—\n162\nTotal loans\n$\n46,984\n$\n274\n$\n136\n$\n481\n$\n891\n$\n47,875\n21\nTable of Contents\n22\nTable of Contents\nCredit Quality Indicators\nThe Company categorizes loans into risk categories based on relevant information about the ability of borrowers to service their debt such as current financial information, historical payment experience, credit documentation, public information, and current economic trends, among other factors.",
         "history": [],
-        "takeaway": "WAL's rising nonaccrual interest income, including in warehouse lending, signals credit deterioration; investigate the zero past-due loan discrepancy."
+        "takeaway": "Despite rising nonaccrual income reduction, WAL reports zero past-due loans across all segments; watch if nonaccruals translate to future delinquencies."
       },
       {
         "theme": "private_credit",
@@ -3095,7 +3095,7 @@
         "sentiment": "negative",
         "full_detail": "Approximately 93% and 87% of outstanding financial and insurance loans were designated as loans to nondepository financial institutions as prescribed in regulatory guidance for the Company's consolidated financial report for bank holding companies at September 30, 2025 and December 31, 2024, respectively.\n- 58 -\nCRITICIZED COMMERCIAL REAL ESTATE LOANS\nSeptember 30, 2025\nDecember 31, 2024\n(Dollars in millions)\nOutstanding\nCriticized Accrual\nCriticized Nonaccrual\nTotal Criticized\nOutstanding\nCriticized Accrual\nCriticized Nonaccrual\nTotal Criticized\nPermanent finance by property type:\nApartments/Multifamily\n$\n6,548 \n$\n479 \n$\n65 \n$\n544 \n$\n5,628 \n$\n935 \n$\n114 \n$\n1,049 \nRetail/Service\n4,320 \n659 \n76 \n735 \n4,747 \n673 \n80 \n753 \nOffice\n3,487 \n642 \n110 \n752 \n4,170 \n1,125 \n117 \n1,242 \nIndustrial/Warehouse\n2,175 \n79 \n10 \n89 \n1,926 \n143 \n13 \n156 \nHotel\n1,776 \n196 \n67 \n263 \n1,984 \n317 \n118 \n435 \nHealth services\n1,554 \n239 \n32 \n271 \n2,038 \n560 \n25 \n585 \nOther\n202 \n30 \n1 \n31 \n287 \n30 \n1 \n31 \nTotal permanent\n20,062 \n2,324 \n361 \n2,685 \n20,780 \n3,783 \n468 \n4,251 \nConstruction/Development\n3,984 \n1,177 \n21 \n1,198 \n5,984 \n1,715 \n68 \n1,783 \nTotal\n$\n24,046 \n$\n3,501 \n$\n382 \n$\n3,883 \n$\n26,764 \n$\n5,498 \n$\n536 \n$\n6,034 \nCriticized loans as a percent of total commercial real estate loans\n16.2 \n%\n22.6 \n%\nCommercial real estate loans weighted-average LTV ratio\n56 \n56 \nCommercial real estate criticized loans weighted-average LTV ratio\n66 \n63 \nLoans to financial and insurance companies, motor vehicle and recreational finance dealers and the retail industry contributed to the modest increase in commercial and industrial criticized loans from December 31, 2024 to September 30, 2025, partially offset by lower criticized loans to the health services, manufacturing and transportation, communications and utilities industries. The $2.2 billion decline in commercial real estate criticized loans from December 31, 2024 to September 30, 2025 spanned most property types and also reflected lower criticized construction and development loans.",
         "history": [],
-        "takeaway": "MTB's significant NDFI loan concentration, now flagged by credit-distress language, signals potential asset quality deterioration; watch for specific loss provisions."
+        "takeaway": "MTB's high NDFI loan concentration, flagged with credit-distress language in its PC narrative, indicates elevated risk; monitor for future credit quality declines."
       },
       {
         "theme": "private_credit",
@@ -3121,7 +3121,7 @@
         "sentiment": "negative",
         "full_detail": "State Street Corporation | 76\nMANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION\nAND RESULTS OF OPERATIONS\nLoans\nTABLE 21: LOANS\nAs of December 31,\n(In millions)\n2025\n2024\nSubscription finance\n$\n13,138\n$\n11,544 \nFund finance(1)\n10,916\n10,244 \nCollateralized loan obligations(2)\n12,809\n9,488 \nCommercial\n2,851\n3,881 \nCommercial real estate\n2,471\n2,842 \nOverdrafts\n1,962\n1,980 \nOther(3)\n2,635\n3,221 \nTotal loans(4)(5)\n$\n46,782\n$\n43,200 \nAllowance for credit losses\n(193)\n(174)\nLoans, net of allowance for credit losses\n$\n46,589\n$\n43,026 \n(1) Fund finance loans primarily include loans to real money funds and business development companies of $8.30 billion and $1.75 billion, respectively, as of December 31, 2025, compared to $7.90 billion and $1.44 billion, respectively, as of December 31, 2024. (2) Collateralized loan obligations include broadly syndicated and middle market CLO loans of $10.30 billion and $2.51 billion, respectively, as of December 31, 2025, compared to $8.39 billion and $1.10 billion as of December 31, 2024. (3) Includes securities finance loans and loans to municipalities of $2.52 billion and $0.12 billion, respectively, as of December 31, 2025, compared to $3.01 billion and $0.21 billion, respectively, as of December 31, 2024.",
         "history": [],
-        "takeaway": "STT's use of credit-distress language in its PC narrative, alongside growing private credit exposure, signals rising risk; watch for asset quality deterioration."
+        "takeaway": "STT's growing private credit exposure, especially CLOs, coupled with increased credit loss allowance, signals management's concern; watch for future credit quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -3147,7 +3147,7 @@
         "sentiment": "negative",
         "full_detail": "Select metrics for our General Office portfolio are summarized in the following table:\nTable 40\nSelect General Office Loan Metrics\ndollars in millions\nSeptember 30, 2025\nJune 30, 2025\nDecember 31, 2024\n% of total loans and leases\n1.47 \n %\n1.57 \n %\n1.77 \n %\n% of CRE loans\n9.07 \n %\n9.42 \n %\n10.81 \n %\nAverage loan balance\n$\n2 \n$\n2 \n$\n2 \nNet charge-offs (YTD annualized %)\n4.06 \n %\n4.09 \n %\n3.95 \n %\nDelinquencies as a % of General Office loans\n9.09 \n %\n6.59 \n %\n10.92 \n %\nNon-performing loans as a % of General Office loans\n11.27 \n %\n9.03 \n %\n12.10 \n %\nALLL ratio\n4.80 \n %\n4.59 \n %\n4.59 \n %\nLoans to Nondepository Financial Institutions (“NDFIs”)\nAs of September 30, 2025, loans to NDFIs were approximately $33.59 billion, comprised of the following:\n•Approximately $31.25 billion of loans to NDFIs was included in global fund banking loans, mainly consisting of capital call lines of approximately $28.64 billion, the repayment of which is dependent on the payment of capital calls by the underlying limited partner investors in funds managed by certain private equity and venture capital firms. The credit quality is strong for capital call lines based on the structural protection provided by the funds and the underlying investors.",
         "history": [],
-        "takeaway": "FCNCA's General Office portfolio shows significant credit deterioration, signaling broader stress within its private credit-related exposures; watch NDFI asset quality."
+        "takeaway": "FCNCA's General Office portfolio shows high NPLs and rising ALLL, confirming credit deterioration in its private credit-related assets; watch for loss recognition."
       },
       {
         "theme": "private_credit",
@@ -3173,7 +3173,7 @@
         "sentiment": "negative",
         "full_detail": "Item 6. Exhibits\n91\nSignatures\n92\n2\nTable of Contents\nZIONS BANCORPORATION, NATIONAL ASSOCIATION AND SUBSIDIARIES\nGLOSSARY OF ACRONYMS AND ABBREVIATIONS\nACL\nAllowance for Credit Losses\nGAAP\nGenerally Accepted Accounting Principles\nAFS\nAvailable-for-Sale\nGCF\nGeneral Collateral Finance\nALLL\nAllowance for Loan and Lease Losses\nHECL\nHome Equity Credit Line\nAmegy\nAmegy Bank, a division of Zions Bancorporation, National Association\nHTM\nHeld-to-Maturity\nAOCI\nAccumulated Other Comprehensive Income or Loss\nIPO\nInitial Public Offering\nASU\nAccounting Standards Update\nLTV\nLoan-to-Value\nBDC\nBusiness Development Company\nNASDAQ\nNational Association of Securities Dealers Automated Quotations\nBoard\nBoard of Directors\nNBAZ\nNational Bank of Arizona, a division of Zions Bancorporation, National Association\nbps\nBasis Points\nNDFI\nNondepository Financial Institution\nBTFP\nBank Term Funding Program\nNM\nNot Meaningful\nCB&T\nCalifornia Bank & Trust, a division of Zions Bancorporation, National Association\nNSB\nNevada State Bank, a division of Zions Bancorporation, National Association\nCET1\nCommon Equity Tier 1\nOCC\nOffice of the Comptroller of the Currency\nCLTV\nCombined Loan-to-Value Ratio\nOREO\nOther Real Estate Owned\nCODM\nChief Operating Decision Maker\nPAGA\nPrivate Attorneys General Act\nCRE\nCommercial Real Estate\nPEI\nPrivate Equity Investment\nCVA\nCredit Valuation Adjustment\nPPNR\nPre-provision Net Revenue\nDTA\nDeferred Tax Asset\nREIT\nReal Estate Investment Trust\nDTL\nDeferred Tax Liability\nROU\nRight-of-Use\nEaR\nEarnings at Risk\nRULC\nReserve for Unfunded Lending Commitments\nEPS\nEarnings per Share\nS&P\nStandard & Poor's\nEVE\nEconomic Value of Equity\nSBA\nU.S.",
         "history": [],
-        "takeaway": "While the flag indicates credit-distress language in ZION's PC narrative, the provided excerpt lacks specific details; watch future filings for concrete evidence."
+        "takeaway": "ZION's flagged credit-distress language in its private credit narrative warrants immediate review of the full filing to identify specific risk disclosures."
       },
       {
         "theme": "private_credit",
@@ -3199,7 +3199,7 @@
         "sentiment": "negative",
         "full_detail": "Petersburg-Clearwater, FL\n7.3\n6.8\nRaleigh-Cary, NC\n5.8\n5.9\nCincinnati-Middletown, OH-KY-IN\n5.8\n5.1\nPhoenix-Mesa-Scottsdale, AZ\n5.3\n4.5\nIndianapolis-Carmel, IN\n5.0\n4.9\nMilwaukee-Waukesha-West Allis, WI\n—\n5.2\nAll others\n20.8\n21.3\nTotal Office CRE\n100.0\n%\n100.0\n%\nConsumer real estate loans increased $226.5 million, or 7.7%, compared to 2023. These loans represented 12.4% of total loans as of December 31, 2024, compared to 12.8% as of December 31, 2023. For further information on loan portfolio segments refer to Note 3, “Loans and Allowance for Credit Losses,” in the Notes to the Consolidated Financial Statements. Nonaccrual, past due and restructured loans are discussed under “Quantitative and Qualitative Disclosure about Market Risk – Credit Risk Management” in Item 7A of this report. Investment Securities\nThe Company’s investment portfolio contains trading, available-for-sale (AFS), and held-to-maturity (HTM) securities as well as FRB stock, Federal Home Loan Bank (FHLB) stock, and other miscellaneous investments. Investment securities totaled $13.7 billion as of December 31, 2024 and $13.3 billion as of December 31, 2023 and comprised 28.5% and 31.9% of the Company’s earning assets, respectively, as of those dates.",
         "history": [],
-        "takeaway": "UMBF's narrative lacks specific credit-distress language for Private Credit; review Note 3 and Item 7A for detailed PC credit quality disclosures."
+        "takeaway": "UMBF's credit-distress language in its private credit narrative signals potential asset quality deterioration; watch for specific exposure and loss recognition."
       },
       {
         "theme": "private_credit",
@@ -3225,7 +3225,7 @@
         "sentiment": "inconclusive",
         "full_detail": "The following table shows the composition of the loan portfolio at the dates indicated (dollars in thousands):\nMarch 31, 2024\nDecember 31, 2023\nTotal\nPercent of Total\nTotal\nPercent of Total\nNon-owner occupied commercial real estate\n$\n5,309,126 \n21.9 \n%\n$\n5,323,241 \n21.6 \n%\nConstruction and land\n529,645 \n2.2 \n%\n495,992 \n2.0 \n%\nOwner occupied commercial real estate\n1,916,651 \n7.9 \n%\n1,935,743 \n7.9 \n%\nCommercial and industrial\n6,745,622 \n27.9 \n%\n6,971,981 \n28.3 \n%\nTotal C&I and CRE\n14,501,044 \n59.9 \n%\n14,726,957 \n59.8 \n%\nPinnacle - municipal finance\n864,796 \n3.6 \n%\n884,690 \n3.6 \n%\nFranchise and equipment finance\n347,103 \n1.4 \n%\n380,347 \n1.5 \n%\nMortgage warehouse lending\n456,385 \n1.9 \n%\n432,663 \n1.8 \n%\nTotal commercial \n16,169,328 \n66.8 \n%\n16,424,657 \n66.7 \n%\n1-4 single family residential\n6,814,865 \n28.1 \n%\n6,903,013 \n28.0 \n%\nGovernment insured residential\n1,242,107 \n5.1 \n%\n1,306,014 \n5.3 \n%\nTotal residential\n8,056,972 \n33.2 \n%\n8,209,027 \n33.3 \n%\nTotal loans\n24,226,300 \n100.0 \n%\n24,633,684 \n100.0 \n%\nAllowance for credit losses\n(217,556)\n(202,689)\nLoans, net\n$\n24,008,744 \n$\n24,430,995 \nCommercial loans and leases\nCommercial loans include a diverse portfolio of commercial and industrial loans and lines of credit, loans secured by owner-occupied commercial real-estate, income-producing non-owner occupied commercial real estate, a smaller amount of construction loans, SBA loans, mortgage warehouse lines of credit, municipal loans and leases originated by Pinnacle and franchise and equipment finance loans and leases originated by Bridge. \n42\nThe following charts present the distribution of the commercial loan portfolio at the dates indicated (dollars in millions):\nMarch 31, 2024\nDecember 31, 2023\nCommercial Real Estate:\nCommercial real estate loans include term loans secured by non-owner occupied income producing properties including rental apartments, industrial properties, retail shopping centers, free-standing single-tenant buildings, medical and other office buildings, warehouse facilities, hotels and real estate secured lines of credit. The Company’s commercial real estate underwriting standards most often provide for loan terms of five to seven years, with amortization schedules of no more than thirty years.",
         "history": [],
-        "takeaway": "The provided BKU excerpt lacks the flagged credit-distress language; review the full narrative for specific risk disclosures and their impact on loan quality."
+        "takeaway": "BKU's provided excerpt lacks the flagged credit-distress language; watch future filings for specific private credit risk commentary on its private credit exposure."
       },
       {
         "theme": "private_credit",
@@ -3251,7 +3251,7 @@
         "sentiment": "inconclusive",
         "full_detail": "The following table shows the composition of the loan portfolio at the dates indicated (dollars in thousands):\nJune 30, 2024\nDecember 31, 2023\nTotal\nPercent of Segment\nTotal\nPercent of Segment\nNon-owner occupied commercial real estate\n$\n5,367,663 \n32.0 \n%\n$\n5,323,241 \n32.4 \n%\nConstruction and land\n584,833 \n3.5 \n%\n495,992 \n3.0 \n%\nOwner occupied commercial real estate\n1,966,809 \n11.7 \n%\n1,935,743 \n11.8 \n%\nCommercial and industrial\n7,170,622 \n42.8 \n%\n6,971,981 \n42.5 \n%\nTotal C&I and CRE\n15,089,927 \n90.0 \n%\n14,726,957 \n89.7 \n%\nPinnacle - municipal finance\n847,234 \n5.0 \n%\n884,690 \n5.4 \n%\nFranchise and equipment finance\n307,442 \n1.8 \n%\n380,347 \n2.3 \n%\nMortgage warehouse lending\n539,159 \n3.2 \n%\n432,663 \n2.6 \n%\nTotal commercial \n16,783,762 \n100.0 \n%\n16,424,657 \n100.0 \n%\n1-4 single family residential\n6,672,529 \n85.1 \n%\n6,903,013 \n84.1 \n%\nGovernment insured residential\n1,172,193 \n14.9 \n%\n1,306,014 \n15.9 \n%\nTotal residential\n7,844,722 \n100.0 \n%\n8,209,027 \n100.0 \n%\nTotal loans\n24,628,484 \n24,633,684 \nAllowance for credit losses\n(225,698)\n(202,689)\nLoans, net\n$\n24,402,786 \n$\n24,430,995 \nCommercial loans and leases\nCommercial loans include a diverse portfolio of commercial and industrial loans and lines of credit, loans secured by owner-occupied commercial real-estate, income-producing non-owner occupied commercial real estate, a smaller amount of construction loans, SBA loans, mortgage warehouse lines of credit, municipal loans and leases originated by Pinnacle and franchise and equipment finance loans and leases originated by Bridge.\n45\nCommercial Real Estate:\nCommercial real estate loans include term loans secured by non-owner occupied income producing properties including rental apartments, industrial properties, retail shopping centers, free-standing single-tenant buildings, medical and other office buildings, warehouse facilities, hotels, and real estate secured lines of credit. The Company’s commercial real estate underwriting standards most often provide for loan terms of five to seven years, with amortization schedules of no more than thirty years.",
         "history": [],
-        "takeaway": "While flagged for credit-distress language, BKU's provided excerpt only shows loan composition; watch for the full narrative to interpret specific risk factors."
+        "takeaway": "The provided excerpt for BKU lacks the flagged credit-distress language; review the full narrative to assess private credit quality."
       },
       {
         "theme": "private_credit",
@@ -3277,7 +3277,7 @@
         "sentiment": "inconclusive",
         "full_detail": "The following schedule presents the geographic distribution of our commercial lending portfolio, with geographies based on the location of the primary borrower:\nCOMMERCIAL LENDING BY GEOGRAPHY\nSeptember 30, 2025\nDecember 31, 2024\n(Dollar amounts in millions)\nAmount\n% of\ntotal\nNonaccrual loans\nAmount\n% of\ntotal\nNonaccrual loans\nCommercial:\nArizona\n$\n2,250 \n7.2 \n%\n$\n4 \n$\n2,202 \n7.1 \n%\n$\n5 \nCalifornia\n6,215 \n19.9 \n73 \n6,190 \n20.0 \n58 \nColorado\n1,727 \n5.5 \n5 \n1,892 \n6.1 \n17 \nNevada\n1,366 \n4.4 \n3 \n1,336 \n4.3 \n11 \nTexas\n7,574 \n24.3 \n33 \n7,367 \n23.8 \n47 \nUtah/Idaho\n6,503 \n20.9 \n24 \n6,309 \n20.4 \n6 \nWashington/Oregon\n1,429 \n4.6 \n9 \n1,338 \n4.3 \n10 \nOther 1\n4,115 \n13.2 \n2 \n4,331 \n14.0 \n4 \nTotal commercial\n$\n31,179 \n100.0 \n%\n$\n153 \n$\n30,965 \n100.0 \n%\n$\n158 \n1 No other geography exceeds 2.0% and 2.6% for September 30, 2025 and December 31, 2024, respectively.\n23\nTable of Contents\nZIONS BANCORPORATION, NATIONAL ASSOCIATION AND SUBSIDIARIES\nThe following schedule presents the industry distribution of our commercial lending portfolio, classified based on the North American Industry Classification System:\nCOMMERCIAL LENDING BY INDUSTRY\nSeptember 30, 2025\nDecember 31, 2024\n(Dollar amounts in millions)\nAmount\n% of\ntotal\nNonaccrual loans\nAmount\n% of\ntotal\nNonaccrual loans\nReal estate, rental, and leasing\n$\n3,346 \n10.7 \n%\n$\n36 \n$\n3,083 \n10.0 \n%\n$\n7 \nRetail trade\n2,889 \n9.3 \n2 \n2,873 \n9.3 \n7 \nManufacturing\n2,392 \n7.7 \n20 \n2,322 \n7.5 \n7 \nFinance and insurance\n2,374 \n7.6 \n11 \n2,762 \n8.9 \n1 \nHealthcare and social assistance\n2,334 \n7.5 \n7 \n2,541 \n8.2 \n34 \nWholesale trade\n2,159 \n6.9 \n1 \n1,909 \n6.2 \n2 \nPublic administration\n1,954 \n6.3 \n— \n2,106 \n6.8 \n— \nHospitality and food services\n1,535 \n4.9 \n3 \n1,352 \n4.4 \n2 \nTransportation and warehousing\n1,508 \n4.8 \n7 \n1,589 \n5.1 \n7 \nUtilities 1\n1,491 \n4.8 \n3 \n1,389 \n4.5 \n2 \nConstruction\n1,446 \n4.6 \n12 \n1,335 \n4.3 \n26 \nEducational services\n1,293 \n4.2 \n— \n1,292 \n4.2 \n— \nOther Services (except Public administration)\n1,160 \n3.7 \n2 \n1,069 \n3.4 \n3 \nMining, quarrying, and oil and gas extraction\n1,093 \n3.5 \n— \n1,178 \n3.8 \n— \nProfessional, scientific, and technical services\n1,061 \n3.4 \n3 \n1,057 \n3.4 \n25 \nOther 2\n3,144 \n10.1 \n46 \n3,108 \n10.0 \n35 \nTotal\n$\n31,179 \n100.0 \n%\n$\n153 \n$\n30,965 \n100.0 \n%\n$\n158 \n1 Includes primarily utilities, power, and renewable energy.\n2 No other industry group exceeds 3.1% and 3.4% for September 30, 2025 and December 31, 2024, respectively. As previously noted, our commercial lending portfolio is well-diversified across both geographic regions and industry sectors. In light of increased investor interest in loans extended to nondepository financial institutions (“NDFIs”), we provide the following information regarding these exposures within our commercial lending portfolio.",
         "history": [],
-        "takeaway": "ZION's nonaccrual loans are rising sharply in Utah/Idaho and California, despite a slight overall decrease; watch for further regional credit deterioration."
+        "takeaway": "ZION's flagged credit-distress language likely points to rising nonaccrual loans in California and Utah/Idaho, despite a slight overall portfolio improvement."
       },
       {
         "theme": "private_credit",
@@ -3303,7 +3303,7 @@
         "sentiment": "negative",
         "full_detail": "Exhibits\n91\nSignatures\n92\n2\nTable of Contents\nZIONS BANCORPORATION, NATIONAL ASSOCIATION AND SUBSIDIARIES\nGLOSSARY OF ACRONYMS AND ABBREVIATIONS\nACL\nAllowance for Credit Losses\nGAAP\nGenerally Accepted Accounting Principles\nAFS\nAvailable-for-Sale\nGCF\nGeneral Collateral Finance\nALLL\nAllowance for Loan and Lease Losses\nHECL\nHome Equity Credit Line\nAmegy\nAmegy Bank, a division of Zions Bancorporation, National Association\nHTM\nHeld-to-Maturity\nAOCI\nAccumulated Other Comprehensive Income or Loss\nIPO\nInitial Public Offering\nASU\nAccounting Standards Update\nLTV\nLoan-to-Value\nBDC\nBusiness Development Company\nNASDAQ\nNational Association of Securities Dealers Automated Quotations\nBoard\nBoard of Directors\nNBAZ\nNational Bank of Arizona, a division of Zions Bancorporation, National Association\nbps\nBasis Points\nNDFI\nNondepository Financial Institution\nBTFP\nBank Term Funding Program\nNM\nNot Meaningful\nCB&T\nCalifornia Bank & Trust, a division of Zions Bancorporation, National Association\nNSB\nNevada State Bank, a division of Zions Bancorporation, National Association\nCET1\nCommon Equity Tier 1\nOCC\nOffice of the Comptroller of the Currency\nCLTV\nCombined Loan-to-Value Ratio\nOREO\nOther Real Estate Owned\nCODM\nChief Operating Decision Maker\nPAGA\nPrivate Attorneys General Act\nCRE\nCommercial Real Estate\nPEI\nPrivate Equity Investment\nCVA\nCredit Valuation Adjustment\nPPNR\nPre-provision Net Revenue\nDTA\nDeferred Tax Asset\nREIT\nReal Estate Investment Trust\nDTL\nDeferred Tax Liability\nROU\nRight-of-Use\nEaR\nEarnings at Risk\nRULC\nReserve for Unfunded Lending Commitments\nEPS\nEarnings per Share\nS&P\nStandard & Poor's\nEVE\nEconomic Value of Equity\nSBA\nU.S. Small Business Administration\nFASB\nFinancial Accounting Standards Board\nSBIC\nSmall Business Investment Company\nFDIC\nFederal Deposit Insurance Corporation\nSEC\nSecurities and Exchange Commission\nFHLB\nFederal Home Loan Bank\nTCBW\nThe Commerce Bank of Washington, a division of Zions Bancorporation, National Association\nFICO\nFair Isaac Corporation\nU.S.",
         "history": [],
-        "takeaway": "The provided excerpt for ZION lacks specific credit-distress language; locate the relevant narrative to assess the nature of private credit concerns."
+        "takeaway": "ZION's flagged credit-distress language in PC narrative lacks detail here; watch next quarter's filings for specific risk disclosures."
       },
       {
         "theme": "private_credit",
@@ -3329,7 +3329,7 @@
         "sentiment": "inconclusive",
         "full_detail": "The following table shows the composition of the loan portfolio at the dates indicated (dollars in thousands):\nSeptember 30, 2023\nDecember 31, 2022\nTotal\nPercent of Total\nTotal\nPercent of Total\n1-4 single family residential\n$\n6,982,832 \n28.7 \n%\n$\n7,128,834 \n28.6 \n%\nGovernment insured residential\n1,397,736 \n5.7 \n%\n1,771,880 \n7.1 \n%\nNon-owner occupied commercial real estate\n5,296,784 \n21.7 \n%\n5,405,597 \n21.7 \n%\nConstruction and land\n445,273 \n1.8 \n%\n294,360 \n1.2 \n%\nOwner occupied commercial real estate\n1,851,246 \n7.6 \n%\n1,890,813 \n7.6 \n%\nCommercial and industrial\n6,658,010 \n27.4 \n%\n6,417,721 \n25.9 \n%\nPinnacle - municipal finance\n900,199 \n3.7 \n%\n912,122 \n3.7 \n%\nFranchise finance\n196,745 \n0.8 \n%\n253,774 \n1.0 \n%\nEquipment finance\n219,874 \n0.9 \n%\n286,147 \n1.1 \n%\nMortgage warehouse lending\n407,577 \n1.7 \n%\n524,740 \n2.1 \n%\nTotal loans\n24,356,276 \n100.0 \n%\n24,885,988 \n100.0 \n%\nAllowance for credit losses\n(196,063)\n(147,946)\nLoans, net\n$\n24,160,213 \n$\n24,738,042 \nCommercial loans and leases\nCommercial loans include a diverse portfolio of commercial and industrial loans and lines of credit, loans secured by owner-occupied commercial real-estate, income-producing non-owner occupied commercial real estate, a smaller amount of construction and land loans, SBA loans, mortgage warehouse lines of credit, municipal loans and leases originated by Pinnacle and franchise and equipment finance loans and leases originated by Bridge. Management intends to increasingly emphasize the origination of relationship-based loans that are accompanied by deposit business.\n45\nThe following charts present the distribution of the commercial loan portfolio at the dates indicated (dollars in millions):\nSeptember 30, 2023\nDecember 31, 2022\nCommercial real estate loans include term loans secured by non-owner occupied income producing properties including rental apartments, industrial properties, retail shopping centers, free-standing single-tenant buildings, medical and other office buildings, warehouse facilities, hotels and real estate secured lines of credit.",
         "history": [],
-        "takeaway": "The provided BKU excerpt does not contain the flagged credit-distress language; monitor future filings for specific narrative details on PC exposure."
+        "takeaway": "BKU's flagged credit-distress language is not visible in the provided excerpt; review the full filing for specific risk disclosures."
       },
       {
         "theme": "private_credit",
@@ -3355,7 +3355,7 @@
         "sentiment": "negative",
         "full_detail": "As of that date, approximately 66% and 33% of our aggregate municipal securities exposure was associated with general obligation and revenue bonds, respectively. The portfolios are also diversified geographically, with the states that represent our largest exposures widely dispersed across the U.S. State Street Corporation | 26\nMANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION\nAND RESULTS OF OPERATIONS\nAdditional information with respect to our assessment of the allowance for credit losses on debt securities and impairment of AFS securities is provided in Note 3to the consolidated financial statements in this Form 10-Q. Loans \nTABLE 24: U.S. AND NON-U.S. LOANS\n(In millions)\nMarch 31, 2024\nDecember 31, 2023\nDomestic(1):\nCommercial and financial:\nFund Finance(2)\n$\n13,775\n$\n13,697 \nLeveraged Loans\n2,503\n2,412 \nOverdrafts\n1,584\n1,225 \nCollateralized loan obligations in loan form\n150\n150 \nOther(3)\n2,453\n2,512 \nCommercial real estate\n3,062\n3,069 \nTotal domestic\n$\n23,527\n$\n23,065 \nForeign(1):\nCommercial and financial:\nFund Finance(2)\n$\n5,207\n$\n4,956 \nLeveraged Loans\n1,204\n1,194 \nOverdrafts\n2,136\n1,047 \nCollateralized loan obligations in loan form\n6,561\n6,369 \nTotal foreign\n15,108\n13,566 \nTotal loans(4)\n38,635\n36,631 \nAllowance for loan losses\n(135)\n(135)\nLoans, net of allowance\n$\n38,500\n$\n36,496 \n(1) Domestic and foreign categorization is based on the borrower’s country of domicile.",
         "history": [],
-        "takeaway": "STT's excerpt lacks the flagged credit-distress language; watch future filings for actual signs, especially concerning its significant Fund Finance exposure."
+        "takeaway": "The flagged credit-distress language isn't in STT's provided PC-related excerpt; watch for specific credit quality disclosures next quarter."
       },
       {
         "theme": "private_credit",
@@ -3381,7 +3381,7 @@
         "sentiment": "negative",
         "full_detail": "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS\nDecember 31, 2023\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nDecember 31, 2023\nDecember 31, 2022\nTotal\nPercent of Total\nTotal\nPercent of Total\nResidential:\n1-4 single family residential\n$\n6,903,013\n28.0\n%\n$\n7,128,834\n28.6\n%\nGovernment insured residential\n1,306,014\n5.3\n%\n1,771,880\n7.1\n%\n8,209,027\n33.3\n%\n8,900,714\n35.7\n%\nCommercial:\nNon-owner occupied commercial real estate\n5,323,241\n21.6\n%\n5,405,597\n21.7\n%\nConstruction and land\n495,992\n2.0\n%\n294,360\n1.2\n%\nOwner occupied commercial real estate\n1,935,743\n7.9\n%\n1,890,813\n7.6\n%\nCommercial and industrial\n6,971,981\n28.3\n%\n6,417,721\n25.9\n%\nPinnacle - municipal finance\n884,690\n3.6\n%\n912,122\n3.7\n%\nFranchise finance\n182,408\n0.7\n%\n253,774\n1.0\n%\nEquipment finance \n197,939\n0.8\n%\n286,147\n1.1\n%\nMortgage warehouse lending \n432,663\n1.8\n%\n524,740\n2.1\n%\n16,424,657\n66.7\n%\n15,985,274\n64.3\n%\nTotal loans\n24,633,684\n100.0\n%\n24,885,988\n100.0\n%\nAllowance for credit losses\n(202,689)\n(147,946)\nLoans, net\n$\n24,430,995\n$\n24,738,042\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $45 million and $61 million at December 31, 2023 and 2022, respectively.\n98\nTable of Contents\nBANKUNITED, INC.",
         "history": [],
-        "takeaway": "BKU's flagged credit-distress language in its private credit narrative requires immediate review of the specific wording for early signs of asset quality deterioration."
+        "takeaway": "BKU's flagged credit-distress language in its PC narrative signals potential future asset quality issues; monitor next quarter's disclosures for specific impacts."
       },
       {
         "theme": "private_credit",
@@ -3407,7 +3407,7 @@
         "sentiment": "negative",
         "full_detail": "AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nJune 30, 2024\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nJune 30, 2024\nDecember 31, 2023\nTotal\nPercent of Total\nTotal\nPercent of Total\nCommercial:\nNon-owner occupied commercial real estate\n$\n5,367,663\n21.8\n%\n$\n5,323,241\n21.6\n%\nConstruction and land\n584,833\n2.4\n%\n495,992\n2.0\n%\nOwner occupied commercial real estate\n1,966,809\n8.0\n%\n1,935,743\n7.9\n%\nCommercial and industrial\n7,170,622\n29.1\n%\n6,971,981\n28.3\n%\nPinnacle - municipal finance\n847,234\n3.4\n%\n884,690\n3.6\n%\nFranchise and equipment finance\n307,442\n1.2\n%\n380,347\n1.5\n%\nMortgage warehouse lending \n539,159\n2.2\n%\n432,663\n1.8\n%\n16,783,762\n68.1\n%\n16,424,657\n66.7\n%\nResidential:\n1-4 single family residential\n6,672,529\n27.1\n%\n6,903,013\n28.0\n%\nGovernment insured residential\n1,172,193\n4.8\n%\n1,306,014\n5.3\n%\n7,844,722\n31.9\n%\n8,209,027\n33.3\n%\nTotal loans\n24,628,484\n100.0\n%\n24,633,684\n100.0\n%\nAllowance for credit losses\n(225,698)\n(202,689)\nLoans, net\n$\n24,402,786\n$\n24,430,995\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $39 million and $45 million at June 30, 2024 and December 31, 2023, respectively. The following table presents the amortized cost basis of residential PCD loans and the related amount of non-credit discount, net of the related ACL, at the dates indicated (in thousands):\nJune 30, 2024\nDecember 31, 2023\nUPB\n$\n71,914\n$\n80,123\nNon-credit discount \n(30,855)\n(35,249)\nTotal amortized cost of PCD loans \n41,059\n44,874\nACL related to PCD loans\n(129)\n(161)\nPCD loans, net \n$\n40,930\n$\n44,713\nIncluded in loans, net are direct or sales type finance leases totaling $582 million and $602 million at June 30, 2024 and December 31, 2023, respectively.",
         "history": [],
-        "takeaway": "BKU's reported credit-distress language in its private credit narrative is not detailed here; watch for specific disclosures next quarter."
+        "takeaway": "BKU's filing excerpt lacks the flagged credit-distress language; watch for specific disclosures on private credit quality in future reports."
       },
       {
         "theme": "private_credit",
@@ -3433,7 +3433,7 @@
         "sentiment": "inconclusive",
         "full_detail": "We continue to monitor performance and make adjustments to our underwriting strategies in response to macroeconomic conditions and portfolio credit trends.\n107\nTable of Contents\nManagement’s Discussion and Analysis\nAlly Financial Inc. • Form 10-Q\nThe following table summarizes total consumer loan originations for the periods shown. Total consumer loan originations include loans classified as finance receivables and loans held-for-sale during the period. Three months ended September 30,\nNine months ended September 30,\n($ in millions)\n2024\n2023\n2024\n2023\nConsumer automotive (a)\n$\n8,512\n$\n10,076 \n$\n26,655\n$\n28,862 \nConsumer mortgage (b)\n257\n267 \n751\n731 \nConsumer other (c) (d)\n—\n382 \n—\n1,258 \nTotal consumer loan originations\n$\n8,769\n$\n10,725 \n$\n27,406\n$\n30,851 \n(a)Includes loans purchased under forward flow agreements with automotive retailers, as well as $79 million and $349 million of loans originated as held-for-sale for the three months and nine months ended September 30, 2024, respectively, and $224 million and $694 million for the three months and nine months ended September 30, 2023. (b)Excludes bulk loan purchases associated with our Mortgage Finance operations, and includes $255 million and $702 million of loans originated as held-for-sale for the three months and nine months ended September 30, 2024, respectively, and $221 million and $629 million for the three months and nine months ended September 30, 2023.",
         "history": [],
-        "takeaway": "ALLY's explicit underwriting adjustments and declining originations signal proactive tightening due to credit concerns; watch for actual credit quality trends next quarter."
+        "takeaway": "ALLY's \"adjustments\" language, interpreted as credit-distress, aligns with declining originations; watch if this proactive tightening improves future credit quality."
       },
       {
         "theme": "private_credit",
@@ -3459,7 +3459,7 @@
         "sentiment": "negative",
         "full_detail": "As of that date, approximately 59% and 40% of our aggregate municipal securities exposure was associated with general obligation and revenue bonds, respectively. The portfolios are also diversified geographically, with the states that represent our largest exposures widely dispersed across the U.S. Additional information with respect to our assessment of the allowance for credit losses on debt securities and impairment of AFS securities is \nprovided in Note 3to the consolidated financial statements in this Form 10-Q. Loans \nTABLE 24: U.S. AND NON-U.S. LOANS\n(In millions)\nSeptember 30, 2023\nDecember 31, 2022\nDomestic(1):\nCommercial and financial:\nFund Finance(2)\n$\n12,732\n$\n12,154 \nLeveraged Loans\n2,336\n2,431 \nOverdrafts\n1,017\n1,707 \nCollateralized loan obligations in loan form\n100\n100 \nOther(3)\n2,207\n1,871 \nCommercial real estate\n3,117\n2,985 \nTotal domestic\n$\n21,509\n$\n21,248 \nForeign(1):\nCommercial and financial:\nFund Finance(2)\n$\n4,809\n$\n3,949 \nLeveraged Loans\n1,096\n1,118 \nOverdrafts\n2,576\n1,094 \nCollateralized loan obligations in loan form\n5,446\n4,741 \nTotal foreign\n13,927\n10,902 \nTotal loans(4)\n35,436\n32,150 \nAllowance for loan losses\n(119)\n(97)\nLoans, net of allowance\n$\n35,317\n$\n32,053 \n(1) Domestic and foreign categorization is based on the borrower’s country of domicile.",
         "history": [],
-        "takeaway": "STT's narrative contains credit-distress language despite growing Fund Finance exposure; scrutinize underlying asset quality and future loss provisions."
+        "takeaway": "STT's credit-distress language in its private credit narrative suggests rising risk in Fund Finance and Leveraged Loans; watch for specific loss provisions."
       },
       {
         "theme": "private_credit",
@@ -3485,7 +3485,7 @@
         "sentiment": "negative",
         "full_detail": "As of that date, approximately 79% and 20% of our aggregate municipal securities exposure was associated with general obligation and revenue bonds, respectively. The portfolios are also diversified geographically, with the states that represent our largest exposures widely dispersed across the U.S. Additional information with respect to our assessment of the allowance for credit losses on debt securities and impairment of AFS securities is provided in Note 3to the consolidated financial statements in this Form 10-Q. Loans \nTABLE 24: U.S. AND NON-U.S. LOANS\n(In millions)\nSeptember 30, 2024\nDecember 31, 2023\nDomestic(1):\nCommercial and financial:\nFund finance(2)\n$\n14,676\n$\n13,697 \nLeveraged loans\n2,708\n2,412 \nOverdrafts\n1,738\n1,225 \nCollateralized loan obligations in loan form\n50\n150 \nOther(3)\n2,846\n2,512 \nCommercial real estate\n2,856\n3,069 \nTotal domestic\n$\n24,874\n$\n23,065 \nForeign(1):\nCommercial and financial:\nFund finance(2)\n$\n6,369\n$\n4,956 \nLeveraged loans\n1,142\n1,194 \nOverdrafts\n1,758\n1,047 \nCollateralized loan obligations in loan form\n7,818\n6,369 \nTotal foreign\n17,087\n13,566 \nTotal loans(4)\n41,961\n36,631 \nAllowance for loan losses\n(162)\n(135)\nLoans, net of allowance\n$\n41,799\n$\n36,496 \n(1) Domestic and foreign categorization is based on the borrower’s country of domicile.",
         "history": [],
-        "takeaway": "STT's increasing leveraged and fund finance loans, alongside flagged distress language, suggests rising private credit risk; watch for credit quality metrics."
+        "takeaway": "STT's significant fund finance and leveraged loan exposures are now accompanied by credit-distress language; watch for specific loss recognition in these portfolios."
       },
       {
         "theme": "private_credit",
@@ -3511,7 +3511,7 @@
         "sentiment": "negative",
         "full_detail": "Management will continue to actively review and monitor its loan portfolios, in an effort to identify problem credits in a timely manner.\n68\nTable of Contents\nNon-performing Loans Rollforward, excluding early buy-out loans guaranteed by U.S. government agencies\nThe table below presents a summary of non-performing loans for the periods presented:\nThree Months Ended\nNine Months Ended\nSeptember 30,\nSeptember 30,\nSeptember 30,\nSeptember 30,\n(In thousands)\n2023\n2022\n2023\n2022\nBalance at beginning of period\n$\n108,712\n$\n72,351 \n$\n100,697\n$\n74,438 \nAdditions from becoming non-performing in the respective period\n18,666\n35,234 \n64,367\n62,216 \nReturn to performing status\n(1,702)\n(154)\n(2,542)\n(1,883)\nPayments received\n(6,488)\n(20,417)\n(24,063)\n(44,585)\nTransfer to OREO and other repossessed assets\n(2,671)\n(185)\n(5,629)\n(6,173)\nCharge-offs\n(3,011)\n(341)\n(6,866)\n(4,664)\nNet change for niche loans (1)\n19,595\n11,145 \n7,137\n18,284 \nBalance at end of period\n$\n133,101\n$\n97,633 \n$\n133,101\n$\n97,633 \n(1)This includes activity for premium finance receivables and indirect consumer loans. Allowance for Credit Losses\nThe allowance for credit losses, specifically the allowance for loans losses and the allowance for unfunded commitment losses, represents management’s estimate of lifetime expected credit losses in the loan portfolio.",
         "history": [],
-        "takeaway": "WTFC's explicit focus on 'problem credits' and rising 9M NPL additions signals heightened concern over its private credit portfolio; watch for specific PC loss recognition."
+        "takeaway": "WTFC's NPL additions confirm management's concern over \"problem credits\" in its private credit portfolio; watch for specific asset quality disclosures."
       },
       {
         "theme": "private_credit",
@@ -3537,7 +3537,7 @@
         "sentiment": "negative",
         "full_detail": "AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2024\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nSeptember 30, 2024\nDecember 31, 2023\nTotal\nPercent of Total\nTotal\nPercent of Total\nCommercial:\nNon-owner occupied commercial real estate\n$\n5,488,884\n22.5\n%\n$\n5,323,241\n21.6\n%\nConstruction and land\n497,928\n2.0\n%\n495,992\n2.0\n%\nOwner occupied commercial real estate\n1,999,515\n8.2\n%\n1,935,743\n7.9\n%\nCommercial and industrial\n7,026,412\n28.9\n%\n6,971,981\n28.3\n%\nPinnacle - municipal finance\n749,035\n3.1\n%\n884,690\n3.6\n%\nFranchise and equipment finance\n277,704\n1.1\n%\n380,347\n1.5\n%\nMortgage warehouse lending \n571,783\n2.3\n%\n432,663\n1.8\n%\n16,611,261\n68.1\n%\n16,424,657\n66.7\n%\nResidential:\n1-4 single family residential\n6,663,300\n27.3\n%\n6,903,013\n28.0\n%\nGovernment insured residential\n1,124,142\n4.6\n%\n1,306,014\n5.3\n%\n7,787,442\n31.9\n%\n8,209,027\n33.3\n%\nTotal loans\n24,398,703\n100.0\n%\n24,633,684\n100.0\n%\nAllowance for credit losses\n(228,249)\n(202,689)\nLoans, net\n$\n24,170,454\n$\n24,430,995\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $36 million and $45 million at September 30, 2024 and December 31, 2023, respectively. The following table presents the amortized cost basis of residential PCD loans and the related amount of non-credit discount, net of the related ACL, at the dates indicated (in thousands):\nSeptember 30, 2024\nDecember 31, 2023\nUPB\n$\n68,154\n$\n80,123\nNon-credit discount \n(28,853)\n(35,249)\nTotal amortized cost of PCD loans \n39,301\n44,874\nACL related to PCD loans\n(202)\n(161)\nPCD loans, net \n$\n39,099\n$\n44,713\nIncluded in loans, net are direct or sales type finance leases totaling $501 million and $602 million at September 30, 2024 and December 31, 2023, respectively.",
         "history": [],
-        "takeaway": "The provided BKU excerpt lacks specific credit-distress language; watch future filings for actual textual evidence of private credit deterioration."
+        "takeaway": "BKU's credit-distress language in its private credit narrative signals management's recognition of heightened risk; monitor specific portfolio segments for deterioration."
       },
       {
         "theme": "private_credit",
@@ -3563,7 +3563,7 @@
         "sentiment": "negative",
         "full_detail": "AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nMarch 31, 2024\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nMarch 31, 2024\nDecember 31, 2023\nTotal\nPercent of Total\nTotal\nPercent of Total\nCommercial:\nNon-owner occupied commercial real estate\n$\n5,309,126\n21.9\n%\n$\n5,323,241\n21.6\n%\nConstruction and land\n529,645\n2.2\n%\n495,992\n2.0\n%\nOwner occupied commercial real estate\n1,916,651\n7.9\n%\n1,935,743\n7.9\n%\nCommercial and industrial\n6,745,622\n27.9\n%\n6,971,981\n28.3\n%\nPinnacle - municipal finance\n864,796\n3.6\n%\n884,690\n3.6\n%\nFranchise and equipment finance\n347,103\n1.4\n%\n380,347\n1.5\n%\nMortgage warehouse lending \n456,385\n1.9\n%\n432,663\n1.8\n%\n16,169,328\n66.8\n%\n16,424,657\n66.7\n%\nResidential:\n1-4 single family residential\n6,814,865\n28.1\n%\n6,903,013\n28.0\n%\nGovernment insured residential\n1,242,107\n5.1\n%\n1,306,014\n5.3\n%\n8,056,972\n33.2\n%\n8,209,027\n33.3\n%\nTotal loans\n24,226,300\n100.0\n%\n24,633,684\n100.0\n%\nAllowance for credit losses\n(217,556)\n(202,689)\nLoans, net\n$\n24,008,744\n$\n24,430,995\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $41 million and $45 million at March 31, 2024 and December 31, 2023, respectively. The following table presents the amortized cost basis of residential PCD loans and the related amount of non-credit discount, net of the related ACL, at the dates indicated (in thousands):\nMarch 31, 2024\nDecember 31, 2023\nUPB\n$\n76,342\n$\n80,123\nNon-credit discount \n(33,171)\n(35,249)\nTotal amortized cost of PCD loans \n43,171\n44,874\nACL related to PCD loans\n(134)\n(161)\nPCD loans, net \n$\n43,037\n$\n44,713\nIncluded in loans, net are direct or sales type finance leases totaling $583 million and $602 million at March 31, 2024 and December 31, 2023, respectively.",
         "history": [],
-        "takeaway": "BKU's flagged credit-distress language is not visible in the provided excerpt; review the full filing for specific risk disclosures."
+        "takeaway": "BKU's flagged credit-distress language in PC narrative lacks specific detail; watch next quarter's filings for concrete examples and impact."
       },
       {
         "theme": "private_credit",
@@ -3589,7 +3589,7 @@
         "sentiment": "negative",
         "full_detail": "These and other risk characteristics are reflected in forecasts of delinquency levels, bankruptcies and losses which are the primary factors in determining the allowance for credit losses for the consumer lending segment. The Company further disaggregates its loan portfolio segments into various classes based on their underlying risk characteristics. The two classes within the commercial lending segment are commercial loans and commercial real estate loans. The three classes within the consumer lending segment are residential mortgages, credit card loans and other retail loans. The Company’s consumer lending segment utilizes several distinct business processes and channels to originate consumer credit, including traditional branch lending, mobile and online banking, indirect lending, alliance partnerships and correspondent banks. Each distinct underwriting and origination activity manages unique credit risk characteristics and prices its loan production commensurate with the differing risk profiles. Residential mortgage originations are generally limited to prime borrowers and are performed through the Company’s branches, loan production offices, mobile and online services, and a wholesale network of originators.",
         "history": [],
-        "takeaway": "USB's detailed allowance methodology for consumer lending reflects active preparation for potential credit distress; watch for actual loss recognition in upcoming quarters."
+        "takeaway": "USB's detailed focus on consumer loan delinquencies and losses signals rising credit quality concerns; watch for increased allowance for credit losses."
       },
       {
         "theme": "private_credit",
@@ -3615,7 +3615,7 @@
         "sentiment": "negative",
         "full_detail": "AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2025\n11\nTable of Contents\nBANKUNITED, INC. AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2025\n12\nTable of Contents\nBANKUNITED, INC. AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2025\n.\n13\nTable of Contents\nBANKUNITED, INC. AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2025\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nSeptember 30, 2025\nDecember 31, 2024\nAmortized Cost\nPercent of Total Loans\nAmortized Cost\nPercent of Total Loans\nCommercial:\nNon-owner occupied commercial real estate\n$\n5,820,343\n24.6\n%\n$\n5,652,203\n23.3\n%\nConstruction and land\n714,272\n3.0\n%\n561,989\n2.3\n%\nOwner occupied commercial real estate\n1,943,331\n8.2\n%\n1,941,004\n8.0\n%\nCommercial and industrial\n6,612,538\n27.8\n%\n7,042,222\n28.9\n%\nPinnacle - municipal finance\n637,198\n2.7\n%\n720,661\n3.0\n%\nFranchise and equipment finance\n134,635\n0.6\n%\n213,477\n0.9\n%\nMortgage warehouse lending \n709,185\n3.0\n%\n585,610\n2.4\n%\n16,571,502\n69.9\n%\n16,717,166\n68.8\n%\nResidential:\n1-4 single family residential\n6,199,657\n26.2\n%\n6,508,922\n26.8\n%\nGovernment insured residential\n931,335\n3.9\n%\n1,071,892\n4.4\n%\n7,130,992\n30.1\n%\n7,580,814\n31.2\n%\nTotal loans\n23,702,494\n100.0\n%\n24,297,980\n100.0\n%\nAllowance for credit losses\n(219,884)\n(223,153)\nLoans, net\n$\n23,482,610\n$\n24,074,827\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $28 million and $33 million at September 30, 2025 and December 31, 2024, respectively.",
         "history": [],
-        "takeaway": "BKU's flagged credit-distress language in PC narrative signals potential deterioration; watch next quarter for specific disclosures detailing these credit quality concerns."
+        "takeaway": "BKU's reported credit-distress language in PC suggests potential asset quality issues; watch for specific disclosures on non-performing loans next quarter."
       },
       {
         "theme": "private_credit",
@@ -3641,7 +3641,7 @@
         "sentiment": "negative",
         "full_detail": "The increases were primarily due to higher direct and allocated expenses related to the growth of the business.\n92\nTable of Contents\nManagement’s Discussion and Analysis\nAlly Financial Inc. • Form 10-Q\nCredit Portfolio\nThe following table presents loans held-for-sale, the amortized cost of finance receivables and loans outstanding, unfunded lending commitments, and total serviced loans of our Corporate Finance operations. As of September 30, 2025, 62% of our loans and 61% of our lending commitments were asset based, with all in a first-lien position. Additionally, total criticized exposures were 9.4% and 14.2% of total Corporate Finance finance receivables and loans at September 30, 2025, and December 31, 2024, respectively. ($ in millions)\nSeptember 30, 2025\nDecember 31, 2024\nLoans held-for-sale, net\n$\n78\n$\n105 \nFinance receivables and loans (a)\n$\n11,289\n$\n9,593 \nUnfunded lending commitments (b)\n$\n7,931\n$\n7,913 \nTotal serviced loans\n$\n14,661\n$\n12,820 \n(a)Includes $9.0 billion and $8.1 billion of commercial and industrial loans at September 30, 2025, and December 31, 2024, respectively, and $2.3 billion and $1.5 billion of commercial real estate loans at September 30, 2025, and December 31, 2024, respectively.",
         "history": [],
-        "takeaway": "ALLY's Corporate Finance criticized exposures, though down to 9.4%, remain elevated; watch for further reductions to normalize credit quality."
+        "takeaway": "ALLY's Corporate Finance portfolio holds 9.4% criticized exposures, a high level despite recent reduction; watch for potential credit quality impacts."
       },
       {
         "theme": "private_credit",
@@ -3667,7 +3667,7 @@
         "sentiment": "negative",
         "full_detail": "AND SUBSIDIARIES\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS - UNAUDITED\nSeptember 30, 2025\nNote 4 Loans and Allowance for Credit Losses\nLoans consisted of the following at the dates indicated (dollars in thousands):\nSeptember 30, 2025\nDecember 31, 2024\nAmortized Cost\nPercent of Total Loans\nAmortized Cost\nPercent of Total Loans\nCommercial:\nNon-owner occupied commercial real estate\n$\n5,820,343\n24.6\n%\n$\n5,652,203\n23.3\n%\nConstruction and land\n714,272\n3.0\n%\n561,989\n2.3\n%\nOwner occupied commercial real estate\n1,943,331\n8.2\n%\n1,941,004\n8.0\n%\nCommercial and industrial\n6,612,538\n27.8\n%\n7,042,222\n28.9\n%\nPinnacle - municipal finance\n637,198\n2.7\n%\n720,661\n3.0\n%\nFranchise and equipment finance\n134,635\n0.6\n%\n213,477\n0.9\n%\nMortgage warehouse lending \n709,185\n3.0\n%\n585,610\n2.4\n%\n16,571,502\n69.9\n%\n16,717,166\n68.8\n%\nResidential:\n1-4 single family residential\n6,199,657\n26.2\n%\n6,508,922\n26.8\n%\nGovernment insured residential\n931,335\n3.9\n%\n1,071,892\n4.4\n%\n7,130,992\n30.1\n%\n7,580,814\n31.2\n%\nTotal loans\n23,702,494\n100.0\n%\n24,297,980\n100.0\n%\nAllowance for credit losses\n(219,884)\n(223,153)\nLoans, net\n$\n23,482,610\n$\n24,074,827\nPremiums, discounts and deferred fees and costs, excluding the non-credit related discount on PCD loans, totaled $28 million and $33 million at September 30, 2025 and December 31, 2024, respectively. The amortized cost of PCD loans totaled $34 million and $38 million at September 30, 2025 and December 31, 2024, respectively.",
         "history": [],
-        "takeaway": "While specific credit-distress language for BKU's private credit is not detailed, watch for rising non-performing loans or charge-offs in upcoming disclosures."
+        "takeaway": "BKU's provided filing excerpt does not contain the flagged credit-distress language; analysts should locate the specific narrative for interpretation."
       },
       {
         "theme": "private_credit",
@@ -3693,7 +3693,7 @@
         "sentiment": "negative",
         "full_detail": "(b)Excludes forward-starting interest rate swap agreements not in effect during the period. (c)Weighted-average rate paid or received on interest rate swap agreements in effect during the period. Lending activities\nThe Company's lending activities reflect a shift in portfolio composition as the Company executed various strategies to lessen its relative concentration of commercial real estate loans throughout 2024 and to reduce the amount of criticized loans in this category through 2025. The following table summarizes changes in the components of average loans. AVERAGE LOANS\nThree Months Ended\nNine Months Ended\n(Dollars in millions)\nSeptember 30, 2025\nJune 30,\n2025\nPercentage Change\nSeptember 30, 2025\nSeptember 30, 2024\nPercentage Change\nCommercial and industrial\n$\n61,716 \n$\n61,036 \n1 \n%\n$\n61,271 \n$\n58,256 \n5 \n%\nReal estate - commercial\n24,353 \n25,333 \n-4 \n25,308 \n31,069 \n-19 \nReal estate - residential\n24,359 \n23,684 \n3 \n23,744 \n23,045 \n3 \nConsumer:\nHome equity lines and loans\n4,674 \n4,598 \n2 \n4,613 \n4,571 \n1 \nRecreational finance\n13,958 \n13,295 \n5 \n13,317 \n10,949 \n22 \nAutomobile\n5,235 \n5,225 \n— \n5,120 \n4,408 \n16 \nOther\n2,232 \n2,236 \n— \n2,225 \n2,081 \n7 \nTotal consumer\n26,099 \n25,354 \n3 \n25,275 \n22,009 \n15 \nTotal\n$\n136,527 \n$\n135,407 \n1 \n%\n$\n135,598 \n$\n134,379 \n1 \n%\nAverage loans totaled $136.5 billion in the third quarter of 2025, up $1.1 billion from the second quarter of 2025. \n•Average commercial and industrial loans grew $680 million reflecting growth in loans to the financial and insurance industry.",
         "history": [],
-        "takeaway": "MTB is actively reducing criticized CRE loans through 2025, indicating existing credit distress; watch if this impacts their broader private credit portfolio."
+        "takeaway": "MTB is actively reducing criticized CRE loans through 2025; watch for progress on these portfolio shifts and any new credit quality issues."
       },
       {
         "theme": "private_credit",
@@ -3719,7 +3719,7 @@
         "sentiment": "negative",
         "full_detail": "The following table provides an analysis of the ACL, provision for (recovery of) credit losses related to the funded portion of loans and net charge-offs by loan segment for the periods indicated (dollars in thousands):\nResidential\nNon-Owner Occupied Commercial Real Estate\nConstruction and Land\nOwner Occupied Commercial Real Estate\nCommercial and Industrial\nPinnacle - municipal Finance\nFranchise Finance\nEquipment Finance\nTotal\nBalance at December 31, 2020\n$\n18,719 \n$\n101,334 \n$\n3,284 \n$\n28,797 \n$\n62,197 \n$\n304 \n$\n36,331 \n$\n6,357 \n$\n257,323 \nProvision for (recovery of) credit losses\n(9,241)\n(65,543)\n(2,253)\n(6,844)\n31,180 \n(134)\n(8,857)\n(2,764)\n(64,456)\nCharge-offs\n(304)\n(9,167)\n— \n(471)\n(50,563)\n— \n(10,745)\n— \n(71,250)\nRecoveries\n13 \n1,156 \n— \n156 \n3,498 \n— \n17 \n— \n4,840 \nBalance at December 31, 2021\n9,187 \n27,780 \n1,031 \n21,638 \n46,312 \n170 \n16,746 \n3,593 \n126,457 \nProvision for (recovery of) credit losses\n2,858 \n635 \n1,736 \n952 \n61,337 \n3 \n7,542 \n(1,249)\n73,814 \nCharge-offs\n(412)\n(9,188)\n(343)\n(2,870)\n(36,051)\n— \n(13,191)\n— \n(62,055)\nRecoveries\n108 \n3,100 \n— \n823 \n5,049 \n— \n650 \n— \n9,730 \nBalance at December 31, 2022\n11,741 \n22,327 \n2,424 \n20,543 \n76,647 \n173 \n11,747 \n2,344 \n147,946 \nImpact of adoption of ASU 2022-02\n(117)\n— \n— \n5 \n(1,676)\n— \n(6)\n— \n(1,794)\nBalance at January 1, 2023\n11,624 \n22,327 \n2,424 \n20,548 \n74,971 \n173 \n11,741 \n2,344 \n146,152 \nProvision for (recovery of) credit losses\n(4,002)\n11,088 \n6,104 \n(5,546)\n67,816 \n70 \n2,738 \n656 \n78,924 \nCharge-offs\n— \n(1,228)\n— \n(447)\n(26,092)\n— \n(7,247)\n— \n(35,014)\nRecoveries\n9 \n623 \n— \n3,087 \n8,285 \n— \n623 \n— \n12,627 \nBalance at December 31, 2023\n$\n7,631 \n$\n32,810 \n$\n8,528 \n$\n17,642 \n$\n124,980 \n$\n243 \n$\n7,855 \n$\n3,000 \n$\n202,689 \nNet Charge-offs to Average Loans\nYears Ended \nDecember 31, 2021\n— \n%\n0.13 \n%\n— \n%\n0.02 \n%\n0.82 \n%\n— \n%\n2.34 \n%\n— \n%\n0.29 \n%\nYears Ended\nDecember 31, 2022\n— \n%\n0.11 \n%\n0.16 \n%\n0.11 \n%\n0.50 \n%\n— \n%\n4.49 \n%\n— \n%\n0.22 \n%\nYears Ended\nDecember 31, 2023\n— \n%\n0.01 \n%\n— \n%\n(0.14)\n%\n0.25 \n%\n— \n%\n3.48 \n%\n— \n%\n0.09 \n%\n57\nThe following table shows the distribution of the ACL at the dates indicated (dollars in thousands):\nDecember 31, 2023\nDecember 31, 2022\nTotal\n%(1)\nTotal\n%(1)\nResidential\n$\n7,631 \n33.3 \n%\n$\n11,741 \n35.7 \n%\nNon-owner occupied commercial real estate\n32,810 \n21.6 \n%\n22,327 \n21.7 \n%\nConstruction and land\n8,528 \n2.0 \n%\n2,424 \n1.2 \n%\nCRE \n41,338 \n24,751 \nOwner occupied commercial real estate\n17,642 \n7.9 \n%\n20,543 \n7.6 \n%\nCommercial and industrial(2)\n124,980 \n30.1 \n%\n76,647 \n28.0 \n%\nPinnacle - municipal finance\n243 \n3.6 \n%\n173 \n3.7 \n%\nFranchise finance\n7,855 \n0.7 \n%\n11,747 \n1.0 \n%\nEquipment finance\n3,000 \n0.8 \n%\n2,344 \n1.1 \n%\n153,720 \n111,454 \n$\n202,689 \n100.0 \n%\n$\n147,946 \n100.0 \n%\n(1)Represents percentage of loans receivable in each category to total loans receivable. (2)Includes mortgage warehouse lending.",
         "history": [],
-        "takeaway": "BKU's 2020 credit metrics reveal significant charge-offs in C&I and CRE; watch if current narrative reflects ongoing asset quality concerns."
+        "takeaway": "BKU's provided 2020 financial table lacks the \"credit-distress language\" mentioned; monitor future filings for actual narrative evidence."
       },
       {
         "theme": "private_credit",
@@ -3736,7 +3736,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "BOKF's outsized NBFI loan growth, while overall lending is modest, flags increasing credit risk; monitor specific NBFI portfolio quality disclosures closely."
+        "takeaway": "BOKF's accelerating NBFI loan growth, outpacing total loans, signals a directional credit-quality risk; watch for specific NBFI sector disclosures."
       },
       {
         "theme": "private_credit",
@@ -3753,7 +3753,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "CMA's growing NBFI exposure amidst overall loan contraction signals increased credit risk; monitor future credit quality disclosures closely for deterioration."
+        "takeaway": "CMA's growing NBFI commitments amid flat overall lending signals a strategic shift; watch for early signs of credit quality stress."
       },
       {
         "theme": "private_credit",
@@ -3770,7 +3770,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "WFC's faster NBFI commitment growth, despite flat overall lending, flags rising credit risk; monitor future disclosures for portfolio quality."
+        "takeaway": "WFC's growing NBFI commitments, outpacing total loans, indicates a shift into higher-risk areas; watch for early signs of credit quality stress."
       }
     ],
     "peer_deviation": [
@@ -3789,7 +3789,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "AXP's NBFI commitments are significantly below regional peers, suggesting a conservative strategy; evaluate if this limits growth or market share in private credit."
+        "takeaway": "AXP's NBFI commit ratio is significantly below regional peers, suggesting a deliberate underweighting; assess if this strategy impacts future revenue diversification or risk."
       },
       {
         "theme": "private_credit",
@@ -3806,7 +3806,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "BOKF's top-quintile NBFI loan concentration among regional peers suggests higher risk; scrutinize credit quality disclosures for this segment."
+        "takeaway": "BOKF's NBFI loan concentration, nearly double the peer median, poses elevated risk to non-bank financial sector stress; monitor credit quality trends."
       },
       {
         "theme": "private_credit",
@@ -3823,7 +3823,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "CMA's NBFI commit ratio is a regional outlier, indicating outsized exposure to a potentially volatile sector; monitor for drawdowns and credit quality."
+        "takeaway": "CMA's NBFI commit ratio is a regional outlier, indicating high concentration risk. Scrutinize counterparty diversification and potential credit quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -3840,7 +3840,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "COF's NBFI commitment ratio is significantly below peers; investigate if this reflects a deliberate risk-averse strategy or a competitive disadvantage."
+        "takeaway": "COF's significantly lower NBFI commitments compared to regional peers indicate a cautious strategy; watch for potential impact on growth or sector-specific risk diversification."
       },
       {
         "theme": "private_credit",
@@ -3857,7 +3857,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "EWBC's significantly lower NBFI commit ratio positions it with less direct exposure to sector risks than peers; monitor for strategic shifts or growth implications."
+        "takeaway": "EWBC maintains significantly lower NBFI exposure than regional peers, signaling a more conservative credit risk strategy in this potentially volatile segment."
       },
       {
         "theme": "private_credit",
@@ -3874,7 +3874,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "FITB's outlier NBFI commit ratio signals higher potential future exposure; watch for drawdowns and credit quality deterioration within this concentrated portfolio."
+        "takeaway": "FITB's high NBFI commit ratio significantly exceeds peers; watch for increased drawdowns and potential credit quality deterioration if the sector faces stress."
       },
       {
         "theme": "private_credit",
@@ -3891,7 +3891,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "FLG's NBFI commitments are significantly below regional peers; watch if this conservative approach protects credit quality or limits future growth."
+        "takeaway": "FLG's significantly lower NBFI commit ratio compared to peers indicates reduced exposure to private credit risks; monitor if this conservative strategy persists."
       },
       {
         "theme": "private_credit",
@@ -3908,7 +3908,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "KEY's high NBFI commit ratio significantly exceeds peers; watch for increased capital consumption or credit quality deterioration if these commitments are drawn."
+        "takeaway": "KEY's high NBFI commit ratio signals elevated potential exposure; watch for increased drawdowns or sector-specific stress impacting credit quality."
       },
       {
         "theme": "private_credit",
@@ -3925,7 +3925,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "PNC's NBFI commit ratio is a significant outlier; monitor commitment utilization and potential asset quality impact from this concentrated exposure."
+        "takeaway": "PNC's NBFI commit ratio is a significant outlier, signaling higher exposure to a volatile sector; watch for future drawdowns and credit quality deterioration."
       },
       {
         "theme": "private_credit",
@@ -3942,7 +3942,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "SOFI's near-zero NBFI loan exposure makes it a significant outlier, insulating it from risks peers face; monitor its alternative growth strategies."
+        "takeaway": "SOFI's near-zero NBFI exposure significantly de-risks its balance sheet from potential shocks impacting non-bank financial institutions compared to peers."
       },
       {
         "theme": "private_credit",
@@ -3959,7 +3959,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "SYF's zero NBFI commitments make it a significant outlier among peers; assess if this is a deliberate risk-aversion strategy or a missed growth opportunity."
+        "takeaway": "SYF's zero NBFI commitments are a significant outlier; assess if this reflects a deliberate risk-aversion strategy or a different business focus."
       },
       {
         "theme": "private_credit",
@@ -3976,7 +3976,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "WTFC's top-quintile NBFI concentration among regional peers increases exposure to sector-specific shocks; monitor sub-sector diversification and credit quality."
+        "takeaway": "WTFC's high NBFI loan concentration (P88) makes it more susceptible to sector-specific shocks; watch for early signs of credit quality stress."
       },
       {
         "theme": "private_credit",
@@ -3993,7 +3993,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "C's NBFI commit ratio significantly exceeds GSIB peers, indicating higher potential future drawdowns; monitor C's capital and counterparty risk disclosures."
+        "takeaway": "C's high NBFI commit ratio among GSIB peers signals elevated potential future exposure; monitor conversion rates and specific counterparty credit quality."
       },
       {
         "theme": "private_credit",
@@ -4010,7 +4010,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "WFC's significantly lower NBFI commitment ratio suggests a more conservative risk posture than GSIB peers; watch if this impacts future growth or capital efficiency."
+        "takeaway": "WFC's NBFI commitments are notably lower than GSIB peers, indicating a cautious strategy; watch if this impacts future growth or reflects a deliberate de-risking."
       },
       {
         "theme": "private_credit",
@@ -4027,7 +4027,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "MS's elevated NBFI commit ratio signals higher potential capital and liquidity risk; monitor counterparty health and drawdown rates closely."
+        "takeaway": "MS's NBFI commit ratio is significantly higher than peers, indicating greater exposure to this opaque sector; watch for commitment drawdowns and credit quality."
       },
       {
         "theme": "private_credit",
@@ -4044,7 +4044,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "SCHW's zero NBFI commitments significantly de-risks it from sector-specific shocks compared to peers; monitor if this impacts long-term growth opportunities."
+        "takeaway": "SCHW's 0% NBFI commitment ratio is a stark outlier, indicating deliberate avoidance; watch if this conservative stance impacts future revenue diversification."
       },
       {
         "theme": "private_credit",
@@ -4061,7 +4061,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "BPOP's NBFI commit ratio is significantly below regional peers, signaling a conservative stance; watch for management's strategic rationale or potential missed growth."
+        "takeaway": "BPOP's significantly lower NBFI commitments than peers indicate a conservative risk posture; watch how this impacts loan growth and overall portfolio diversification."
       },
       {
         "theme": "private_credit",
@@ -4078,7 +4078,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "PB's significantly lower NBFI exposure than peers indicates a conservative strategy; watch for commentary on its impact on future growth."
+        "takeaway": "PB's low NBFI exposure relative to regional peers indicates a conservative lending strategy; watch if this limits future growth compared to more aggressive banks."
       },
       {
         "theme": "private_credit",
@@ -4095,7 +4095,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "TFC's significant NBFI commit concentration among regional peers warrants close monitoring of underlying sub-sectors and potential credit quality deterioration."
+        "takeaway": "TFC's high NBFI commit ratio implies significant contingent credit risk; monitor for increased drawdowns and potential capital strain if conditions worsen."
       },
       {
         "theme": "private_credit",
@@ -4112,7 +4112,7 @@
         "sentiment": "negative",
         "full_detail": null,
         "history": [],
-        "takeaway": "USB's NBFI commit ratio is notably higher than peers, signaling greater exposure; watch for credit quality deterioration if the NBFI sector faces headwinds."
+        "takeaway": "USB's NBFI commit ratio significantly exceeds regional peers, indicating higher potential for credit contagion; watch for specific counterparty risk disclosures."
       }
     ],
     "disclosure_nlp": [
@@ -4140,7 +4140,7 @@
         "sentiment": "inconclusive",
         "full_detail": "(Exact name of registrant as specified in its charter) \nDelaware\n001-16715\n56-1528994\n(State or other jurisdiction\nof incorporation) \n(Commission File Number)\n(IRS Employer Identification No.)\n4300 Six Forks Road\nRaleigh\nNorth Carolina\n27609\n(Address of principal executive offices)\n(Zip Code)\nRegistrant’s telephone number, including area code: (919) 716-7000\n________________________________________________________________________________\n(Former name or former address, if changed since last report)\nCheck the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:\n☐\nWritten communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)\n☐\nSoliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)\n☐\nPre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))\n☐\nPre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))\nSecurities Registered Pursuant to Section 12(b) of the Securities Exchange Act of 1934: \nTitle of each class\nTrading Symbol\nName of each exchange on which registered\nClass A Common Stock, Par Value $1\nFCNCA\nNasdaq Global Select Market\nDepositary Shares, Each Representing a 1/40th Interest in a Share of 5.375% Non-Cumulative Perpetual Preferred Stock, Series A\nFCNCP\nNasdaq Global Select Market\n5.625% Non-Cumulative Perpetual Preferred Stock, Series C\nFCNCO\nNasdaq Global Select Market\nIndicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter). Emerging growth company ☐\nIf an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐",
         "history": [],
-        "takeaway": "FCNCA's sharp uptick in uncertainty language about private credit suggests growing caution; watch for concrete risk mitigation or loss recognition next quarter."
+        "takeaway": "Sharp uptick in hedging language about PC exposure at FCNCA — possible disclosure drift, watch next quarter's filings for concrete loss recognition."
       },
       {
         "theme": "private_credit",
@@ -4166,7 +4166,7 @@
         "sentiment": "negative",
         "full_detail": "Although not GAAP terms, these regulatory measures are not considered “non-GAAP” under U.S. financial reporting rules as long as their presentation conforms to regulatory standards. Regulatory measures included in the measures furnished by this report include: common equity tier 1 capital (\"CET1\"), generally defined as common equity less goodwill, other intangibles, and certain other required regulatory deductions; tier 1 capital, generally defined as the sum of core capital (including common equity and instruments that cannot be redeemed at the option of the holder) adjusted for certain items under risk-based capital regulations; and risk-weighted assets (\"RWA\"), which is a measure of total on- and off-balance sheet assets adjusted for credit and market risk, used to determine regulatory capital ratios. Forward-Looking Statements\nEach exhibit furnished by this report contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, with respect to FHN's beliefs, plans, goals, expectations, and estimates. Forward-looking statements are not a representation of historical information, but instead pertain to future operations, strategies, financial results, or other developments.",
         "history": [],
-        "takeaway": "FHN's private credit narrative shows a sharp rise in uncertainty language; watch next quarter for specific disclosures on portfolio quality or risk management strategies."
+        "takeaway": "FHN's private credit narrative shows a sharp rise in uncertainty language, signaling increased caution; watch for specific risk disclosures next quarter."
       },
       {
         "theme": "private_credit",
@@ -4192,7 +4192,7 @@
         "sentiment": "negative",
         "full_detail": "Such risks, uncertainties and assumptions, include, among others, the following: (1) economic volatility risk, including as a result of monetary, fiscal, and trade law policies, such as tariffs, and inflation, potentially resulting in higher rates, deterioration in the credit markets, greater than expected noninterest expenses, excessive loan losses, or on the other hand lower rates, which also may have other negative consequences, which risks could be exacerbated by potential negative economic developments resulting from federal spending cuts and/or one or more federal budget-related impasses or actions; (2) risks related to the ability of the Company to pursue its strategic plans which depend upon certain growth goals in our lines of business; (3) risks related to the merger and integration of SouthState and Independent including, among others, (i) the risk that the cost savings and any revenue synergies from the merger may not be fully realized or may take longer than anticipated to be realized, (ii) the risk that the integration of Independent’s operations into SouthState’s operations will be materially delayed or will be more costly or difficult than expected or that the parties are otherwise unable to successfully integrate Independent’s businesses into SouthState’s businesses, (iii) the amount of the costs, fees, expenses and charges related to the merger, and (iv) reputational risk and the reaction of each company's customers, suppliers, employees or other business partners to the merger; (4) risks relating to the ability to retain our culture and attract and retain qualified people as we grow and are located in new markets, and being able to offer competitive salaries and benefits, including flexibility of working remotely or in the office; (5) deposit attrition, client loss or revenue loss following completed mergers or acquisitions that may be greater than anticipated; (6) credit risks associated with an obligor’s failure to meet the terms of any contract with the Bank or otherwise fail to perform as agreed under the terms of any loan-related document; (7) interest rate risk primarily resulting from our inability to effectively manage the risk, and their impact on the Bank’s earnings, including from the correspondent and mortgage divisions, housing demand, the market value of the Bank’s loan and securities portfolios, and the market value of SouthState’s equity; (8) inflationary risks negatively impacting our business and profitability, earnings and budgetary projections, or demand for our products and services; (9) a decrease in our net interest income due to the interest rate environment; (10) liquidity risk affecting the Bank’s ability to meet its obligations when they come due; (11) unexpected outflows of uninsured deposits may require us to sell investment securities at a loss; (12) potential deterioration in real estate values; (13) the loss of value of our investment portfolio could negatively impact market perceptions of us and could lead to deposit withdrawals; (14) price risk focusing on changes in market factors that may affect the value of traded instruments in “mark-to-market” portfolios; (15) transaction risk arising from problems with service or product delivery; (16) the impact of increasing digitization of the banking industry and movement of customers to on-line platforms, and the possible impact on the Bank’s results of operations, customer base, expenses, suppliers and operations; (17) controls and procedures risk, including the potential failure or circumvention of our controls and procedures or failure to comply with regulations related to controls and procedures; (18) volatility in the financial services industry (including failures or rumors of failures of other depository institutions), along with actions taken by governmental agencies to address such turmoil, could affect the ability of depository institutions, including us, to attract and retain depositors and to borrow or raise capital; (19) the impact of competition with other financial institutions, including deposit and loan pricing pressures and the resulting impact, including as a result of compression to net interest margin; (20) compliance risk involving risk to earnings or capital resulting from violations of or nonconformance with laws, rules, regulations, prescribed practices, or ethical standards, and contractual obligations regarding data privacy and cybersecurity; (21) regulatory change risk resulting from new laws, rules, regulations, accounting principles, proscribed practices or ethical standards, including, without limitation, the possibility that regulatory agencies may require higher levels of capital above the current regulatory-mandated minimums and including the impact of special FDIC assessments, the Consumer Financial Protection Bureau regulations or other guidance, and the possibility of changes in accounting standards, policies, principles and practices; (22) risks related to the legal, regulatory, and supervisory environment, including changes in financial services legislation, regulation, policies, or government officials or other personnel; (23) strategic risk resulting from adverse business decisions or improper implementation of business decisions; (24) reputation risk that adversely affects earnings or capital arising from negative public opinion including the effects of social media on market perceptions of us and banks generally; (25) cybersecurity risk related to the dependence of SouthState on internal computer systems and the technology of outside service providers, as well as the potential impacts of internal or external security breaches, which may subject the Company to potential business disruptions or financial losses resulting from deliberate attacks or unintentional events; (26) reputational and operational risks associated with environment, social and governance (ESG) matters, including the impact of changes in federal and state laws, regulations and guidance relating to climate change; (27) excessive loan losses; (28) reputational risk and possible higher than estimated reduced revenue from previously announced or proposed regulatory changes in the Bank’s consumer programs and products; (29) operational, technological, cultural, regulatory, legal, credit and other risks associated with the exploration, consummation and integration of potential future acquisitions, whether involving stock or cash consideration; (30) catastrophic events \n4\nsuch as hurricanes, tornados, earthquakes, floods or other natural or human disasters, including public health crises and infectious disease outbreaks, as well as any government actions in response to such events, and the related disruption to local, regional and global economic activity and financial markets, and the impact that any of the foregoing may have on SouthState and its customers and other constituencies; (31) geopolitical risk from terrorist activities and armed conflicts that may result in economic and supply disruptions, and loss of market and consumer confidence; (32) the risks of fluctuations in market prices for SouthState common stock that may or may not reflect economic condition or performance of SouthState; (33) the payment of dividends on SouthState common stock, which is subject to legal and regulatory limitations as well as the discretion of the board of directors of SouthState, SouthState’s performance and other factors; (34) ownership dilution risk associated with potential acquisitions in which SouthState’s stock may be issued as consideration for an acquired company; and (35) other factors that may affect future results of SouthState, as disclosed in SouthState’s Annual Report on Form 10-K, Quarterly Reports on Form 10-Q, and Current Reports on Form 8-K, filed by SouthState with the U.S. Securities and Exchange Commission (“SEC”) and available on the SEC’s website at http://www.sec.gov, any of which could cause actual results to differ materially from future results expressed, implied or otherwise anticipated by such forward-looking statements.\n​\nAll forward-looking statements speak only as of the date they are made and are based on information available at that time.",
         "history": [],
-        "takeaway": "SSB's significant increase in private credit uncertainty language signals heightened risk awareness; monitor next quarter's filings for specific portfolio impacts."
+        "takeaway": "SSB's significant increase in private credit uncertainty language signals growing concern about credit market deterioration; watch for actual loan loss recognition."
       },
       {
         "theme": "private_credit",
@@ -4218,7 +4218,7 @@
         "sentiment": "negative",
         "full_detail": "These statements are not historical facts, but instead represent our beliefs regarding future events, many of which, by their nature, are inherently uncertain and outside of our control. The following factors, among others, could cause actual results to differ materially from those set forth in the forward-looking statements: (i) the possibility of a failure to complete the merger of Comerica with Fifth Third (the “Transaction”) or unexpected delays related to the Merger or the inability of the parties to obtain regulatory approvals or satisfy other closing conditions in the Merger Agreement required to complete the Transaction, or (ii) regulatory approvals resulting in the imposition of conditions that could adversely affect the combined company or the expected benefits of the Transaction. These and other important factors, including those discussed under “Risk Factors” in Comerica’s Annual Report on Form 10-K for the year ended December 31, 2024 (available at: https://www.sec.gov/ix?doc=/Archives/edgar/data/0000028412/000002841225000108/cma-20241231.htm), and in Fifth Third’s Annual Report on Form 10-K for the year ended December 31, 2024 (available at: https://www.sec.gov/ix?doc=/Archives/edgar/data/0000035527/000003552725000079/fitb-20241231.htm), as well as Comerica’s and Fifth Third’s subsequent filings with the SEC, may cause actual results, performance or achievements to differ materially from those expressed or implied by these forward-looking statements.",
         "history": [],
-        "takeaway": "FITB's significant increase in private credit uncertainty language signals growing concerns; watch for specific risk disclosures or portfolio adjustments next quarter."
+        "takeaway": "FITB's private credit narrative shows increased uncertainty, likely reflecting merger-related risks; watch for impacts on private credit strategy post-transaction."
       },
       {
         "theme": "private_credit",
@@ -4244,7 +4244,7 @@
         "sentiment": "negative",
         "full_detail": "Both the Change in Control Agreement and Non-Competition Agreement provide post-termination payments as generally described under “Potential Payments Upon Termination or Change in Control” of the “Executive Compensation” section of the Company’s 2025 Proxy Statement. Upon certain change in control events, Ms. Antonopoulos is entitled to an amount equal to the sum of her base salary and her cash incentive award target.",
         "history": [],
-        "takeaway": "WBS's reported increase in private credit uncertainty language lacks supporting detail in the provided excerpt; monitor next quarter for specific PC risk commentary."
+        "takeaway": "WBS's private credit uncertainty language is up, but the provided excerpt is unrelated; locate the actual private credit narrative to understand the shift."
       },
       {
         "theme": "private_credit",
@@ -4270,7 +4270,7 @@
         "sentiment": "negative",
         "full_detail": "Item 3.02\nUnregistered Sales of Equity Securities. On January 12, 2026, U.S. Bancorp (the “Company”) entered into an Agreement and Plan of Merger (the “Merger Agreement”) by and among the Company, Project Falcon Merger Subsidiary L.P., a Delaware limited partnership of which the Company is the general partner (“Merger Sub”), Condor Trading LP, a Delaware limited partnership (“BTIG Parent”), and CT Equity Rep, LLC, a Delaware limited liability company (solely in its capacity as the equityholder representative appointed pursuant to the Merger Agreement), pursuant to which, upon the terms and subject to the conditions set forth therein, Merger Sub will merge with and into BTIG Parent (the “Merger”), with BTIG Parent continuing as the surviving entity as a subsidiary of the Company. The completion of the Merger is subject to applicable closing conditions, including receipt of regulatory approvals. Pursuant to the terms and subject to the conditions set forth in the Merger Agreement, the transaction provides for the payment to the equityholders of BTIG Parent of (a) an amount of cash equal to $362,500,000, subject to certain adjustments described in the Merger Agreement, payable at closing, (b) 6,600,594 shares of common stock, par value $0.01 per share, of the Company, to be issued at closing, and (c) additional contingent cash consideration of up to $275,000,000, payable over a three-year period after closing subject to achievement of specified revenue targets.",
         "history": [],
-        "takeaway": "USB's rising uncertainty in private credit narrative suggests growing caution; watch next quarter for specific risk disclosures or portfolio shifts."
+        "takeaway": "USB's sharp rise in private credit hedging language indicates increasing caution; monitor next quarter's filings for specific risk disclosures or portfolio adjustments."
       },
       {
         "theme": "private_credit",
@@ -4296,7 +4296,7 @@
         "sentiment": "positive",
         "full_detail": "Forward-looking statements include all statements other than statements of historical fact, including forecasts or trends, and are based on current expectations, assumptions, estimates, and projections about Prosperity, Stellar and their respective subsidiaries or related to the proposed transaction between Prosperity and Stellar and are subject to significant risks and uncertainties that could cause actual results to differ materially from the results expressed in such statements. These forward-looking statements may include information about Prosperity’s and Stellar’s possible or assumed future economic performance or future results of operations, including future revenues, income, expenses, provision for loan losses, provision for taxes, effective tax rate, earnings per share and cash flows and Prosperity’s and Stellar’s future capital expenditures and dividends, future financial condition and changes therein, including changes in Prosperity’s and Stellar’s loan portfolio and allowance for loan losses, future capital structure or changes therein, as well as the plans and objectives of management for Prosperity’s and Stellar’s future operations, future or proposed acquisitions, the future or expected effect of acquisitions on Prosperity’s and Stellar’s operations, results of operations, financial condition, and future economic performance, statements about the anticipated benefits of the proposed transaction, and statements about the assumptions underlying any such statement.",
         "history": [],
-        "takeaway": "PB's increased uncertainty language in private credit disclosures signals management caution; watch for specific risk factors or credit quality changes next quarter."
+        "takeaway": "PB's private credit narrative shows a significant uptick in hedging language, signaling increased transparency on potential risks; monitor for specific risk mitigation strategies."
       }
     ],
     "events_8k": [],
@@ -4325,7 +4325,7 @@
         "sentiment": "positive",
         "full_detail": "Subscription Finance\nOur subscription finance portfolio consists of revolving lines of credit that allow private equity and private credit fund managers to borrow against uncalled investor capital commitments. These facilities are secured by the limited partners’ commitments and the fund’s right to call capital, enabling managers across strategies, including private equity/buyout, private debt, infrastructure, secondaries, and real estate to manage capital calls, fund asset acquisitions, and mitigate timing mismatches. The uncalled capital commitments securing these facilities are predominantly from institutional investors. Fund Finance\nOur fund finance portfolio primarily consists of loans to real money funds (RMF). RMF facilities \nprovide liquidity and leverage solutions to funds regulated under the Investment Company Act of 1940 (1940 Act), as well as certain non‑U.S. regulated funds. Borrowers, which typically maintain highly diversified portfolios of liquid securities, may access revolving lines of credit for short‑term liquidity needs and structural leverage. Loans to business development companies (BDCs), also included in our fund finance portfolio, are senior secured credit facilities to 1940 Act registered funds that invest in U.S. middle‑market companies.",
         "history": [],
-        "takeaway": "STT's explicit Level 3 valuation language for its private credit portfolio signals transparency; verify the rigor of their fair-value methodologies next quarter."
+        "takeaway": "STT's transparent Level 3 valuation for its secured PC portfolio is a positive signal; closely track performance and credit quality of these complex assets."
       },
       {
         "theme": "private_credit",
@@ -4351,7 +4351,7 @@
         "sentiment": "negative",
         "full_detail": "Significant loan concentrations are considered to exist when there are amounts loaned to numerous borrowers engaged in similar activities that would cause them to be similarly impacted by economic or other conditions. At December 31, 2025, no significant concentrations existed in the Corporation’s loan portfolio in excess of 10% of total loan exposure.\n53\nCommercial and business lending: The commercial and business lending classification primarily includes commercial loans to large corporations, middle market companies, small businesses, and ABL and equipment financing. Table 8 Largest Commercial and Industrial Industry Group Exposures, by NAICS Subsector\nDecember 31, 2025\nNAICS Subsector\nOutstanding Balance\nTotal Exposure\n% of Total Loan Exposure\n(Dollars in thousands)\nUtilities(a)\n221 \n$\n3,009,210 \n$\n3,787,934 \n9 \n%\nReal Estate(b)\n531 \n2,183,905 \n3,757,948 \n9 \n%\nCredit Intermediation and Related Activities(c)\n522 \n671,604 \n1,331,594 \n3 \n%\nMerchant Wholesalers, Durable Goods\n423 \n713,836 \n1,212,061 \n3 \n%\n(a) 68% of the total utilities exposure comes from renewable energy sources (wind, solar, hydroelectric, and geothermal). (b) Includes REIT lines\n(c) Includes mortgage warehouse lines\nThe remaining commercial and industrial portfolio is spread over a diverse range of industries, none of which exceed 2% of total loan exposure.",
         "history": [],
-        "takeaway": "ASB's Level 3/fair-value language in its PC narrative flags potential valuation subjectivity; watch for detailed disclosures on these illiquid assets."
+        "takeaway": "ASB's new Level 3/fair-value language in its PC narrative suggests growing illiquid exposures; watch for detailed valuation disclosures next quarter."
       },
       {
         "theme": "private_credit",
@@ -4377,7 +4377,7 @@
         "sentiment": "positive",
         "full_detail": "The Commercial Banking segment includes customers in Middle Market Banking, Corporate, Specialty, and Government Banking, Asset Finance, Commercial Real Estate Banking, Capital Markets, and National Settlements. Middle Market Banking serves the banking needs of mid-sized clients, leveraging our local presence to serve our clients, and extending our full suite of banking products including lending, liquidity, treasury management and other payment services, and capital markets. Corporate, Specialty, and Government Banking serves medium to large enterprises. We focus on specific industry verticals such as government and non-profits, healthcare, technology and telecommunications, franchises, financial sponsors, Native American financial services, mortgage financial services, fund finance, and global services. Our expertise in these markets allows us to uniquely serve our clients’ sophisticated banking, capital markets, and payments requirements. Asset Finance serves our clients’ capital expenditure and working capital needs through equipment financing, asset-based lending, distribution finance, structured lending, and municipal financing solutions. Our relationship with large manufacturers is bolstered by a strong commitment to their dealers and financing needs.",
         "history": [],
-        "takeaway": "HBAN's positive Level 3/fair-value language in its private credit narrative signals strong disclosure; examine the full text for specific valuation practices."
+        "takeaway": "HBAN's narrative details Level 3 fair-value methods for private credit, indicating robust transparency in valuing these complex assets."
       },
       {
         "theme": "private_credit",
@@ -4403,7 +4403,7 @@
         "sentiment": "negative",
         "full_detail": "These conditions could also heighten concerns about the ability of customers of JPMorganChase’s consumer businesses who live in those areas or work in those industries to meet their obligations. JPMorganChase’s consumer businesses could also be harmed by an excessive expansion of consumer credit by competitors. Heightened competition for certain types of consumer loans could lead to significant price reductions for those loans or providing loans to less-creditworthy borrowers. If large numbers of consumers subsequently default on their loans, this could impair their ability to repay obligations owed to JPMorganChase and result in an increase in the allowance for credit losses and higher charge-offs. More broadly, widespread defaults on consumer debt could lead to recessionary conditions in the U.S. economy, and JPMorganChase’s consumer businesses could earn lower revenues in such an environment. Furthermore, the interconnectivity across credit markets increases the risk that the significant expansion of private credit could worsen losses among non-bank lenders and their borrowers, particularly if stress or defaults spread to broader funding and credit markets. Such developments could impair asset valuations, reduce market-wide liquidity, disrupt borrowers’ ability to refinance, and increase default rates, especially if non-bank lenders have weaker underwriting standards, loans are less liquid, or transparency is limited.",
         "history": [],
-        "takeaway": "JPM's increased Level 3/fair value language in its PC narrative suggests heightened valuation risk amid broader private credit market interconnectivity; watch for related write-downs."
+        "takeaway": "JPM warns private credit's expansion poses systemic risk, especially for non-bank lenders; monitor JPM's direct and indirect exposure to this interconnected market."
       },
       {
         "theme": "private_credit",
@@ -4429,7 +4429,7 @@
         "sentiment": "positive",
         "full_detail": "Shareholders may obtain a copy of any of the above-referenced corporate governance documents by writing to our Investor Relations Department at Investor Relations, KeyCorp, 127 Public Square, Mailcode OH-01-27-0737, Cleveland, Ohio 44114-1306; by calling (216) 689-4221; or by sending an e-mail to investor_relations@keybank.com.\n7\nTable of contents\nCompetition\nThe market for banking and related financial services is highly competitive and continuously evolving. Legislative, regulatory, economic, and technology changes, as well as consolidation within the financial services industry, could result in increased competition from new and existing market participants. Key competes with other providers of financial services, such as BHCs, commercial banks, savings associations, credit unions, mortgage banking companies, finance companies, mutual funds, insurance companies, investment management firms, private credit funds, investment banking firms, broker-dealers, financial technology companies, and other local, regional, national, and global institutions that offer financial services. Some of our competitors are larger and may have more financial resources, while some of our competitors enjoy fewer regulatory constraints and may have lower cost structures.",
         "history": [],
-        "takeaway": "The provided narrative for KEY discusses competition, not Level 3 fair-value language; watch for specific private credit valuation disclosures in future filings."
+        "takeaway": "The provided KEY narrative discusses competition, not Level 3/fair-value language in PC; watch for relevant fair-value disclosures in future filings."
       },
       {
         "theme": "private_credit",
@@ -4455,7 +4455,7 @@
         "sentiment": "positive",
         "full_detail": "Commercial and industrial loans decreased by $112.2 million, or 4.1 percent on an annualized basis, to $10.8 billion at September 30, 2025 from June 30, 2025 mostly due to repayment activity in a small portfolio of loans made to the commodities industry during the third quarter 2025. We continue to focus on new loan origination from a diverse range of relationship-driven small business and middle market opportunities in our primary markets \n80\ncombined with certain specialty nationwide business lines. As part of this focus, we have specifically targeted growth in healthcare and capital-call facilities in the fund finance market due to their attractive credit risk-adjusted profiles. Commercial real estate loans (excluding construction loans) increased $195.1 million to $26.2 billion at September 30, 2025 from June 30, 2025. The increase was largely driven by an increase of $307.9 million, or 21.3 percent on an annualized basis, in owner occupied loans resulting from the migration of completed construction project to permanent financing, as well as new loan origination volumes. Non-owner occupied and multifamily loans decreased $73.4 million and $39.5 million, respectively, at September 30, 2025 from June 30, 2025 due to the targeted runoff of transactional loans outpacing our selective loan originations within these categories.",
         "history": [],
-        "takeaway": "VLY's Level 3/fair value language for growing private credit in healthcare and capital-call facilities signals robust valuation; monitor for consistent application."
+        "takeaway": "VLY's strategic growth in capital-call facilities signals an increasing portfolio share requiring Level 3 valuations; monitor future fair-value disclosures."
       },
       {
         "theme": "private_credit",
@@ -4481,7 +4481,7 @@
         "sentiment": "positive",
         "full_detail": "Our competitors, including money center banks, national and regional commercial banks, community banks, thrift institutions, mutual savings banks, credit unions, finance companies, insurance companies, securities dealers, brokers, mortgage bankers, investment advisors, money market mutual funds, financial technology companies and other financial service organizations including private credit funds, compete with lending and deposit-gathering services offered by us. Increased competition in our markets or our inability to compete effectively may result in reduced loans and deposits or less favorable pricing. In particular, we have experienced intense price and terms competition in some of the lending lines of business and deposits in recent years. Many of these competing institutions have much greater financial and marketing resources than we have. Due to their size and brand recognition, larger competitors can achieve economies of scale and may offer a broader range of products and services or more attractive pricing than us. In addition, some of the non-bank financial services organizations we compete with are not subject to the same degree of regulation as is imposed on bank holding companies and federally insured depository institutions.",
         "history": [],
-        "takeaway": "WAL mentions private credit funds as competitors, but the excerpt lacks Level 3 or fair-value disclosures; monitor future filings for actual exposure details."
+        "takeaway": "WAL's narrative mentions private credit funds as competitors; monitor future filings for specific Level 3 or fair-value disclosures regarding its own private credit exposures."
       },
       {
         "theme": "private_credit",
@@ -4507,7 +4507,7 @@
         "sentiment": "inconclusive",
         "full_detail": "Forward-looking statements speak only as of the date they are made, and the Corporation undertakes no obligation to update any forward-looking statement to reflect the impact of circumstances or events that arise after the date the forward-looking statement was made. Notes to the Consolidated Financial Statements referred to in Management’s Discussion and Analysis of Financial Condition and Results of Operations (MD&A) are incorporated by reference into the MD&A. Certain prior-period amounts have been reclassified to conform to current-period presentation. Throughout the MD&A, the Corporation uses certain acronyms and abbreviations which are defined in the Glossary. Executive Summary\nBusiness Overview\nThe Corporation is a Delaware corporation, a bank holding company (BHC) and a financial holding company. When used in this report, “Bank of America,” “the Corporation,” “we,” “us” and “our” may refer to Bank of America Corporation individually, Bank of America Corporation and its subsidiaries, or certain of Bank of America Corporation’s subsidiaries or affiliates. Our principal executive offices are located in Charlotte, North Carolina. Through our various bank and nonbank subsidiaries throughout the U.S. and in international markets, we provide a diversified range of banking and nonbank financial services and products through four business segments: Consumer Banking, Global Wealth & Investment Management (GWIM), Global Banking and Global Markets, with the remaining operations recorded in All Other.",
         "history": [],
-        "takeaway": "BAC's filing lacks specific Level 3 or fair-value details on private credit; watch next quarter for concrete disclosures on valuation methodologies."
+        "takeaway": "BAC's flagged Level 3/fair-value language in PC lacks detail; watch future filings for specific disclosures on valuation methodologies and exposure."
       },
       {
         "theme": "private_credit",
@@ -4533,7 +4533,7 @@
         "sentiment": "inconclusive",
         "full_detail": "Commercial and Industrial\nCommercial and industrial loans are typically made to small, middle market and larger corporate businesses and not-for-profit entities and include equipment loans, secured and unsecured working capital facilities, formula-based loans, subscription finance lines of credit, trade finance, SBA product offerings, business acquisition finance credit facilities, credit facilities to institutional real estate entities such as REITs and commercial real estate investment funds, and a small amount of commercial credit cards. These loans may be structured as term loans, typically with maturities of five to seven years, or revolving lines of credit which may have multi-year maturities. In addition to financing provided by Pinnacle, the Bank provides financing to state and local governmental entities generally within our primary geographic markets. The Bank makes loans secured by owner-occupied commercial real estate that typically have risk profiles more closely aligned with that of commercial and industrial loans than with other types of commercial real estate loans. The following table presents the exposure in the C&I portfolio by industry, at September 30, 2025 (dollars in thousands):\nAmortized Cost(1)\nPercent of Total\nFinance and Insurance\n$\n1,280,729 \n15.0 \n%\nHealth Care and Social Assistance\n831,259 \n9.7 \n%\nUtilities\n720,953 \n8.4 \n%\nManufacturing\n712,403 \n8.3 \n%\nWholesale Trade\n651,960 \n7.6 \n%\nEducational Services\n632,741 \n7.4 \n%\nConstruction\n575,531 \n6.7 \n%\nTransportation and Warehousing\n529,532 \n6.2 \n%\nReal Estate and Rental and Leasing\n522,814 \n6.1 \n%\nInformation\n468,947 \n5.5 \n%\nRetail Trade\n362,985 \n4.2 \n%\nProfessional, Scientific, and Technical Services\n308,788 \n3.6 \n%\nPublic Administration\n253,829 \n3.0 \n%\nOther Services (except Public Administration)\n239,784 \n2.8 \n%\nArts, Entertainment, and Recreation\n142,590 \n1.7 \n%\nAccommodation and Food Services\n125,205 \n1.5 \n%\nAdministrative and Support and Waste Management\n80,061 \n0.9 \n%\nOther\n115,758 \n1.4 \n%\n$\n8,555,869 \n100.0 \n%\n(1) Includes $1.9 billion of owner occupied real estate.\n48\nThe following chart presents the geographic distribution of the commercial and industrial portfolio at September 30, 2025: \nC&I Geographic Distribution\nThe following chart presents a further breakdown of the NDFI portfolio at September 30, 2025: \nNDFI Portfolio Distribution\nNDFI exposure totaled $1.3 billion, or 5% of total loans, at September 30, 2025.",
         "history": [],
-        "takeaway": "BKU's PC narrative includes Level 3 fair-value language, signaling reliance on unobservable inputs; watch for detailed valuation methodology disclosures next quarter."
+        "takeaway": "BKU's emerging Level 3/fair-value language for C&I loans signals increasing valuation subjectivity; watch for detailed disclosures on mark-to-model inputs."
       }
     ],
     "structural": [],
@@ -4553,7 +4553,7 @@
         "sentiment": "inconclusive",
         "full_detail": null,
         "history": [],
-        "takeaway": "Macro reference series are not yet ingested, preventing divergence analysis; watch for data availability next quarter to assess decoupling."
+        "takeaway": "Ingest HY OAS, BDC index, and CRE price series to enable crucial macro divergence analysis for all banks' private credit and CRE exposures."
       }
     ]
   },

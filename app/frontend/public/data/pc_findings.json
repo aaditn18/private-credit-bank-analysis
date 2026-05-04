@@ -1,47 +1,4 @@
 {
-  "ASB": {
-    "bank_ticker": "ASB",
-    "bank_name": "Associated Banc-Corp",
-    "rating": 2,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "commercial and business lending",
-      "asset-based lending",
-      "middle market focus",
-      "loan portfolio growth",
-      "credit risk management",
-      "floating rate exposure"
-    ],
-    "strategic_initiatives": "The bank is actively growing its commercial and business lending portfolio, which includes asset-based lending. This segment has been a primary driver of overall loan growth, with average loans increasing by 3% in 2025. The bank's strategy involves expanding this key lending area to large corporations, middle market companies, and small businesses.",
-    "perceived_risks": "The bank flags that commercial loan balances per borrower are typically larger, implying higher potential losses on an individual loan basis. The deterioration of a few significant commercial loans could lead to a material increase in nonaccrual loans. Credit risk in commercial and business lending is largely influenced by general economic conditions and their impact on borrower operations or underlying collateral value.",
-    "notable_quotes": [
-      {
-        "quote": "The commercial and business lending classification primarily includes commercial loans to large corporations, middle market companies, small businesses, and ABL and equipment financing.",
-        "topic": "asset-based lending",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Average loans of $30.6 billion for the full year of 2025 increased $892.7 million, or 3%, from 2024, driven primarily by increases in commercial and business lending and auto finance loans",
-        "topic": "loan portfolio growth",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Because our loan portfolio contains a number of commercial loans with significant balances, the deterioration of one or a few of these loans could cause a significant increase in nonaccrual loans, which could have a material adverse effect on our financial condition and results of operations.",
-        "topic": "credit risk management",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "The credit risk related to commercial and business lending is largely influenced by general economic conditions and the resulting impact on a borrower’s operations or on the value of underlying collateral, if any.",
-        "topic": "credit risk management",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "The bank consistently reports increases in commercial and business lending, indicating an expansion rather than a pullback.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's risk disclosures predominantly focus on credit quality and concentration risk within its commercial loan portfolio. It highlights the potential for significant losses from individual large commercial loans and the susceptibility of commercial and business lending to general economic conditions and collateral values. The bank emphasizes detailed underwriting and ongoing review to manage these risks.",
-    "involvement_rating": 2
-  },
   "ALLY": {
     "bank_ticker": "ALLY",
     "bank_name": "Ally Financial Inc.",
@@ -92,53 +49,53 @@
     "risk_focus_analysis": "Ally's disclosures primarily focus on credit quality risk, emphasizing a disciplined and selective approach, and the use of proprietary risk rating models. Concentration risk is addressed through syndication to reduce single obligor exposure. Collateralization is a key mitigation strategy, with a significant portion of their portfolio being senior-secured and asset-based loans in a first-lien position.",
     "involvement_rating": 4
   },
-  "BAC": {
-    "bank_ticker": "BAC",
-    "bank_name": "Bank of America Corporation",
-    "rating": 3,
+  "BKU": {
+    "bank_ticker": "BKU",
+    "bank_name": "BankUnited, Inc.",
+    "rating": 2,
     "mention_frequency": "low",
     "sentiment": "cautious",
     "key_themes": [
-      "commercial credit exposure",
-      "credit quality deterioration",
-      "commercial real estate office risk",
-      "macroeconomic challenges",
-      "risk mitigation techniques",
-      "asset managers and finance companies exposure"
+      "de-emphasis on specialized lending",
+      "risk/return profile management",
+      "competition from non-bank lenders",
+      "municipal finance",
+      "franchise and equipment finance",
+      "balance sheet repositioning"
     ],
-    "strategic_initiatives": "The bank utilizes syndications of exposure to third parties, loan sales, hedging, and other risk mitigation techniques to manage the size and risk profile of its commercial credit portfolio. It also continuously monitors the ability of borrowers and counterparties to perform under their obligations, using risk rating aggregations to evaluate concentrations within portfolios. Management of deteriorating commercial exposures is transferred to independent special asset officers as credits enter criticized categories.",
-    "perceived_risks": "Various macroeconomic challenges, including geopolitical tensions, higher costs associated with inflationary pressures, and elevated interest rates, have led to uncertainty in the U.S. and global economies, adversely impacting a number of industries. Commercial credit quality deteriorated, with increased reservable criticized utilized exposure and nonperforming commercial loans, particularly in the U.S. commercial portfolio. The commercial real estate office portfolio is a specific concern, with stagnant demand and uncertain future needs.",
+    "strategic_initiatives": "BankUnited is strategically repositioning its balance sheet by de-emphasizing growth in municipal, franchise, and equipment finance segments. This move is driven by their current risk/return profile and the lack of significant deposit business associated with these customers. The bank explicitly states it does not expect significant new loan originations in these areas.",
+    "perceived_risks": "The bank flags the 'current risk/return profile' and 'lack of significant deposit business with these customers' as reasons for de-emphasizing franchise and equipment finance. It also acknowledges competition from 'private credit funds' and other financial intermediaries.",
     "notable_quotes": [
       {
-        "quote": "During 2024, commercial credit quality deteriorated as reservable criticized utilized exposure increased across a broad range of industries, and nonperforming commercial loans increased primarily driven by U.S. commercial.",
-        "topic": "credit quality deterioration",
+        "quote": "growth in these segments has been de-emphasized due to their current risk/return profile.",
+        "topic": "risk/return profile management",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "We do not currently expect significant new loan originations in these segments.",
+        "topic": "de-emphasis on specialized lending",
         "source": "10-K 2024Q4"
       },
       {
-        "quote": "Various macroeconomic challenges, including geopolitical tensions, higher costs associated with inflationary pressures experienced over the past several years and elevated interest rates, have led to uncertainty in the U.S. and global economies and have adversely impacted, and may continue to adversely impact, a number of industries.",
-        "topic": "macroeconomic challenges",
+        "quote": "Franchise and equipment finance have been de-emphasized due to their current risk/return profile, including the lack of significant deposit business with these customers.",
+        "topic": "risk/return profile management",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "We compete with financial intermediaries, such as private credit funds, FinTech companies, consumer finance companies, marketplace lenders, mortgage banking companies, insurance companies, securities firms, mutual funds and several government agencies as well as major retailers, all actively engaged in providing providing various types of financial services.",
+        "topic": "competition from non-bank lenders",
         "source": "10-K 2024Q4"
       },
       {
-        "quote": "Recent demand for office space continues to be stagnant, and future demand for office space continues to be uncertain as companies evaluate space needs with employment models that utilize a mix of remote and conventional office use.",
-        "topic": "commercial real estate office risk",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "We also utilize syndications of exposure to third parties, loan sales, hedging and other risk mitigation techniques to manage the size and risk profile of the commercial credit portfolio.",
-        "topic": "risk mitigation techniques",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "We continue to monitor all industries, particularly higher risk industries that are experiencing or could experience a more significant impact to their financial condition.",
-        "topic": "commercial credit exposure",
+        "quote": "The residential, franchise, equipment and municipal finance portfolios declined by a combined $959 million while the core C&I and CRE categories grew by $470 million for the year ended December 31, 2024, all reflective of our balance sheet repositioning strategy.",
+        "topic": "balance sheet repositioning",
         "source": "10-K 2024Q4"
       }
     ],
-    "pullback_mentions": "Outstanding commercial loans and leases increased $37.1 billion during 2024 due to growth in U.S. and Non-U.S. commercial, primarily in Global Markets and Global Banking.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality deterioration across its commercial portfolio, with specific emphasis on the challenges within the commercial real estate office sector. Macroeconomic factors like geopolitical tensions, inflation, and elevated interest rates are highlighted as significant drivers of uncertainty and potential adverse impacts on various industries. The bank also emphasizes managing concentrations of credit exposure by industry, product, and geography.",
-    "involvement_rating": 3
+    "pullback_mentions": "The bank discusses tightening and pulling back on municipal, franchise, and equipment finance due to their risk/return profile and lack of deposit business.",
+    "named_competitors": "private credit funds",
+    "risk_focus_analysis": "The bank's primary risk focus regarding its specialized lending segments (municipal, franchise, equipment finance) is on their overall risk/return profile and the associated funding stability, specifically the lack of significant deposit business. This indicates a strategic shift driven by profitability and balance sheet optimization rather than explicit concerns about credit quality deterioration, although credit risk is an underlying component of the risk/return assessment.",
+    "involvement_rating": 1
   },
   "BK": {
     "bank_ticker": "BK",
@@ -188,102 +145,6 @@
     "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality risk, emphasizing its strategy of lending to investment-grade clients and securing loans with collateral. For capital call financing and margin loans, the focus is on the security of fund commitments and marketable securities. Commercial real estate risk is managed through a focus on experienced owners, moderate leverage, and cash flows, with explicit mentions of provisions for credit losses.",
     "involvement_rating": 3
   },
-  "AXP": {
-    "bank_ticker": "AXP",
-    "bank_name": "American Express Company",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "consumer and small business lending",
-      "commercial credit risk management",
-      "network partnership strategy",
-      "funding diversification",
-      "lending product evolution",
-      "partner competition"
-    ],
-    "strategic_initiatives": "The bank is evolving its product offerings, including the expansion of lending features on its charge card portfolio, and is focused on growing its direct deposit program to diversify funding sources. It also aims to extend the reach of its global network through licensing agreements with third-party card issuers.",
-    "perceived_risks": "The bank identifies commercial credit risk, characterized by lower loss frequency but higher severity, as a key concern within its commercial and network businesses. It also highlights the risk of intense competition for partner relationships and the importance of maintaining minimum regulatory capital levels to avoid business limitations.",
-    "notable_quotes": [
-      {
-        "quote": "Other loans consist primarily of consumer installment loans and lines of credit offered to small business customers.",
-        "topic": "consumer and small business lending",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Commercial credit risk is characterized by a lower loss frequency but higher severity.",
-        "topic": "commercial credit risk management",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We face intense competition for partner relationships, which could result in a loss or renegotiation of these arrangements that could have a material adverse impact on our business and results of operations.",
-        "topic": "partner competition",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We believe that this new net interest yield metric reflects the evolution of our products over time, such as the expansion of lending features on our charge card portfolio.",
-        "topic": "lending product evolution",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We seek to achieve diversity and cost efficiency in our funding sources by maintaining scale and market relevance in deposits, unsecured debt and asset securitizations and access to secured borrowing facilities and a committed bank credit facility.",
-        "topic": "funding diversification",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding lending features and growing its direct deposit program, indicating an expansionary rather than pullback stance, supported by a disciplined growth strategy.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality risks associated with its Card Member loans and receivables, as well as the distinct profile of commercial credit risk within its business segments. Regulatory capital compliance and competition for strategic partnerships are also significant areas of risk emphasis.",
-    "involvement_rating": 1
-  },
-  "BKU": {
-    "bank_ticker": "BKU",
-    "bank_name": "BankUnited, Inc.",
-    "rating": 2,
-    "mention_frequency": "low",
-    "sentiment": "cautious",
-    "key_themes": [
-      "de-emphasis on specialized lending",
-      "risk/return profile management",
-      "competition from non-bank lenders",
-      "municipal finance",
-      "franchise and equipment finance",
-      "balance sheet repositioning"
-    ],
-    "strategic_initiatives": "BankUnited is strategically repositioning its balance sheet by de-emphasizing growth in municipal, franchise, and equipment finance segments. This move is driven by their current risk/return profile and the lack of significant deposit business associated with these customers. The bank explicitly states it does not expect significant new loan originations in these areas.",
-    "perceived_risks": "The bank flags the 'current risk/return profile' and 'lack of significant deposit business with these customers' as reasons for de-emphasizing franchise and equipment finance. It also acknowledges competition from 'private credit funds' and other financial intermediaries.",
-    "notable_quotes": [
-      {
-        "quote": "growth in these segments has been de-emphasized due to their current risk/return profile.",
-        "topic": "risk/return profile management",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "We do not currently expect significant new loan originations in these segments.",
-        "topic": "de-emphasis on specialized lending",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Franchise and equipment finance have been de-emphasized due to their current risk/return profile, including the lack of significant deposit business with these customers.",
-        "topic": "risk/return profile management",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "We compete with financial intermediaries, such as private credit funds, FinTech companies, consumer finance companies, marketplace lenders, mortgage banking companies, insurance companies, securities firms, mutual funds and several government agencies as well as major retailers, all actively engaged in providing providing various types of financial services.",
-        "topic": "competition from non-bank lenders",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The residential, franchise, equipment and municipal finance portfolios declined by a combined $959 million while the core C&I and CRE categories grew by $470 million for the year ended December 31, 2024, all reflective of our balance sheet repositioning strategy.",
-        "topic": "balance sheet repositioning",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses tightening and pulling back on municipal, franchise, and equipment finance due to their risk/return profile and lack of deposit business.",
-    "named_competitors": "private credit funds",
-    "risk_focus_analysis": "The bank's primary risk focus regarding its specialized lending segments (municipal, franchise, equipment finance) is on their overall risk/return profile and the associated funding stability, specifically the lack of significant deposit business. This indicates a strategic shift driven by profitability and balance sheet optimization rather than explicit concerns about credit quality deterioration, although credit risk is an underlying component of the risk/return assessment.",
-    "involvement_rating": 1
-  },
   "BPOP": {
     "bank_ticker": "BPOP",
     "bank_name": "Popular, Inc.",
@@ -332,6 +193,54 @@
     "risk_focus_analysis": "The bank's disclosures heavily focus on credit quality and concentration risk, particularly related to commercial real estate and exposure to Puerto Rico government entities. There's also a strong emphasis on monitoring the macroeconomic environment, interest rates, and inflationary pressures, which impact overall credit performance across their diverse loan portfolios (commercial, mortgage, consumer).",
     "involvement_rating": 1
   },
+  "AXP": {
+    "bank_ticker": "AXP",
+    "bank_name": "American Express Company",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "consumer and small business lending",
+      "commercial credit risk management",
+      "network partnership strategy",
+      "funding diversification",
+      "lending product evolution",
+      "partner competition"
+    ],
+    "strategic_initiatives": "The bank is evolving its product offerings, including the expansion of lending features on its charge card portfolio, and is focused on growing its direct deposit program to diversify funding sources. It also aims to extend the reach of its global network through licensing agreements with third-party card issuers.",
+    "perceived_risks": "The bank identifies commercial credit risk, characterized by lower loss frequency but higher severity, as a key concern within its commercial and network businesses. It also highlights the risk of intense competition for partner relationships and the importance of maintaining minimum regulatory capital levels to avoid business limitations.",
+    "notable_quotes": [
+      {
+        "quote": "Other loans consist primarily of consumer installment loans and lines of credit offered to small business customers.",
+        "topic": "consumer and small business lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Commercial credit risk is characterized by a lower loss frequency but higher severity.",
+        "topic": "commercial credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We face intense competition for partner relationships, which could result in a loss or renegotiation of these arrangements that could have a material adverse impact on our business and results of operations.",
+        "topic": "partner competition",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We believe that this new net interest yield metric reflects the evolution of our products over time, such as the expansion of lending features on our charge card portfolio.",
+        "topic": "lending product evolution",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We seek to achieve diversity and cost efficiency in our funding sources by maintaining scale and market relevance in deposits, unsecured debt and asset securitizations and access to secured borrowing facilities and a committed bank credit facility.",
+        "topic": "funding diversification",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding lending features and growing its direct deposit program, indicating an expansionary rather than pullback stance, supported by a disciplined growth strategy.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality risks associated with its Card Member loans and receivables, as well as the distinct profile of commercial credit risk within its business segments. Regulatory capital compliance and competition for strategic partnerships are also significant areas of risk emphasis.",
+    "involvement_rating": 1
+  },
   "BOKF": {
     "bank_ticker": "BOKF",
     "bank_name": "BOK Financial Corporation",
@@ -361,6 +270,97 @@
     "named_competitors": "",
     "risk_focus_analysis": "The bank's disclosures primarily focus on general credit risk across its main loan segments like energy, commercial real estate, and healthcare, as well as regional economic conditions. There is no specific analysis or discussion of unique risks associated with its limited exposure to non-depository financial institutions.",
     "involvement_rating": 1
+  },
+  "ASB": {
+    "bank_ticker": "ASB",
+    "bank_name": "Associated Banc-Corp",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "commercial and business lending",
+      "asset-based lending",
+      "middle market focus",
+      "loan portfolio growth",
+      "credit risk management",
+      "floating rate exposure"
+    ],
+    "strategic_initiatives": "The bank is actively growing its commercial and business lending portfolio, which includes asset-based lending. This segment has been a primary driver of overall loan growth, with average loans increasing by 3% in 2025. The bank's strategy involves expanding this key lending area to large corporations, middle market companies, and small businesses.",
+    "perceived_risks": "The bank flags that commercial loan balances per borrower are typically larger, implying higher potential losses on an individual loan basis. The deterioration of a few significant commercial loans could lead to a material increase in nonaccrual loans. Credit risk in commercial and business lending is largely influenced by general economic conditions and their impact on borrower operations or underlying collateral value.",
+    "notable_quotes": [
+      {
+        "quote": "The commercial and business lending classification primarily includes commercial loans to large corporations, middle market companies, small businesses, and ABL and equipment financing.",
+        "topic": "asset-based lending",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Average loans of $30.6 billion for the full year of 2025 increased $892.7 million, or 3%, from 2024, driven primarily by increases in commercial and business lending and auto finance loans",
+        "topic": "loan portfolio growth",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Because our loan portfolio contains a number of commercial loans with significant balances, the deterioration of one or a few of these loans could cause a significant increase in nonaccrual loans, which could have a material adverse effect on our financial condition and results of operations.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "The credit risk related to commercial and business lending is largely influenced by general economic conditions and the resulting impact on a borrower’s operations or on the value of underlying collateral, if any.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank consistently reports increases in commercial and business lending, indicating an expansion rather than a pullback.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's risk disclosures predominantly focus on credit quality and concentration risk within its commercial loan portfolio. It highlights the potential for significant losses from individual large commercial loans and the susceptibility of commercial and business lending to general economic conditions and collateral values. The bank emphasizes detailed underwriting and ongoing review to manage these risks.",
+    "involvement_rating": 2
+  },
+  "BAC": {
+    "bank_ticker": "BAC",
+    "bank_name": "Bank of America Corporation",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "key_themes": [
+      "commercial credit exposure",
+      "credit quality deterioration",
+      "commercial real estate office risk",
+      "macroeconomic challenges",
+      "risk mitigation techniques",
+      "asset managers and finance companies exposure"
+    ],
+    "strategic_initiatives": "The bank utilizes syndications of exposure to third parties, loan sales, hedging, and other risk mitigation techniques to manage the size and risk profile of its commercial credit portfolio. It also continuously monitors the ability of borrowers and counterparties to perform under their obligations, using risk rating aggregations to evaluate concentrations within portfolios. Management of deteriorating commercial exposures is transferred to independent special asset officers as credits enter criticized categories.",
+    "perceived_risks": "Various macroeconomic challenges, including geopolitical tensions, higher costs associated with inflationary pressures, and elevated interest rates, have led to uncertainty in the U.S. and global economies, adversely impacting a number of industries. Commercial credit quality deteriorated, with increased reservable criticized utilized exposure and nonperforming commercial loans, particularly in the U.S. commercial portfolio. The commercial real estate office portfolio is a specific concern, with stagnant demand and uncertain future needs.",
+    "notable_quotes": [
+      {
+        "quote": "During 2024, commercial credit quality deteriorated as reservable criticized utilized exposure increased across a broad range of industries, and nonperforming commercial loans increased primarily driven by U.S. commercial.",
+        "topic": "credit quality deterioration",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Various macroeconomic challenges, including geopolitical tensions, higher costs associated with inflationary pressures experienced over the past several years and elevated interest rates, have led to uncertainty in the U.S. and global economies and have adversely impacted, and may continue to adversely impact, a number of industries.",
+        "topic": "macroeconomic challenges",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Recent demand for office space continues to be stagnant, and future demand for office space continues to be uncertain as companies evaluate space needs with employment models that utilize a mix of remote and conventional office use.",
+        "topic": "commercial real estate office risk",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "We also utilize syndications of exposure to third parties, loan sales, hedging and other risk mitigation techniques to manage the size and risk profile of the commercial credit portfolio.",
+        "topic": "risk mitigation techniques",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "We continue to monitor all industries, particularly higher risk industries that are experiencing or could experience a more significant impact to their financial condition.",
+        "topic": "commercial credit exposure",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "Outstanding commercial loans and leases increased $37.1 billion during 2024 due to growth in U.S. and Non-U.S. commercial, primarily in Global Markets and Global Banking.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality deterioration across its commercial portfolio, with specific emphasis on the challenges within the commercial real estate office sector. Macroeconomic factors like geopolitical tensions, inflation, and elevated interest rates are highlighted as significant drivers of uncertainty and potential adverse impacts on various industries. The bank also emphasizes managing concentrations of credit exposure by industry, product, and geography.",
+    "involvement_rating": 3
   },
   "C": {
     "bank_ticker": "C",
@@ -405,48 +405,53 @@
     "risk_focus_analysis": "Citigroup's disclosures primarily focus on credit quality risks, detailing non-accrual loans, criticized exposures, and allowances for credit losses across its corporate and consumer portfolios. Macroeconomic factors impacting borrower repayment ability are also a key area of risk analysis, alongside regulatory capital optimization efforts influencing overall lending.",
     "involvement_rating": 2
   },
-  "CFG": {
-    "bank_ticker": "CFG",
-    "bank_name": "Citizens Financial Group",
-    "rating": 3,
-    "mention_frequency": "medium",
-    "sentiment": "positive",
+  "CFR": {
+    "bank_ticker": "CFR",
+    "bank_name": "Cullen/Frost Bankers",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
     "key_themes": [
-      "secured private credit finance",
-      "capital call facilities",
-      "private equity firm partnerships",
-      "private wealth management",
+      "commercial real estate lending",
       "commercial and industrial lending",
-      "credit risk management"
+      "energy lending",
+      "large credit relationships",
+      "credit risk management",
+      "loan portfolio concentrations"
     ],
-    "strategic_initiatives": "Citizens Financial Group is actively growing its \"Secured private credit finance\" portfolio, which increased from $2.9 billion to $3.9 billion in the past year. The bank also provides \"acquisition and follow-on financing for new and recapitalized portfolio companies of key sponsors, with services meeting the unique and time-sensitive needs of private equity firms, management companies and funds.\" Additionally, the bank is undertaking a \"Private Bank and Private Wealth build-out\" which involves hiring and investments.",
-    "perceived_risks": "The bank highlights risks related to the deterioration of borrower credit quality due to prevailing economic and market conditions, including inflationary pressures, and adverse collateral valuations. It also manages concentration risk through limits on industry sectors and asset classes. The competitive landscape from various financial institutions, including private equity firms, is also noted as a risk.",
+    "strategic_initiatives": "",
+    "perceived_risks": "Cullen/Frost Bankers highlights risks from increases in interest rates and weakening economic conditions, which could impair borrowers' ability to repay and reduce collateral values. A significant portion of its loan portfolio is concentrated in large commercial and industrial, energy, construction, and commercial real estate loans, making it vulnerable to the deterioration of even a few relationships. Commercial real estate loans specifically face risks from adverse market conditions, the economy, and changes in government regulations, as repayment depends on property operations.",
     "notable_quotes": [
       {
-        "quote": "Corporate Finance also provides acquisition and follow-on financing for new and recapitalized portfolio companies of key sponsors, with services meeting the unique and time-sensitive needs of private equity firms, management companies and funds",
-        "topic": "private equity firm partnerships",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Noninterest expense... driven by salaries and employee benefits reflecting hiring related to the Private Bank and Private Wealth build-out",
-        "topic": "private wealth management",
+        "quote": "Because our loan portfolio contains a significant number of commercial and industrial, energy, construction and commercial real estate loans with relatively large balances, the deterioration of one or a few of these loans could cause a significant increase in non-performing loans.",
+        "topic": "loan portfolio concentrations",
         "source": "10-K 2025Q4"
       },
       {
-        "quote": "The credit quality of our borrowers may deteriorate for a number of reasons that are outside our control, including prevailing economic and market conditions and collateral valuations.",
+        "quote": "Due to the fact that a significant portion of our loan portfolio is concentrated in large credit relationships and because of large, concentrated credit losses in recent years, management made the qualitative adjustments detailed in the table above to address the risk associated with such a relationship deteriorating to a loss event.",
+        "topic": "large credit relationships",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We generally require production borrowers to maintain an active hedging program to manage risk and to have at least 50% of their production hedged for two years.",
+        "topic": "energy lending",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Commercial and industrial loans made up 28.8% and 29.5% of total loans at December 31, 2025 and 2024 while energy loans made up 5.0% and 5.4% of total loans at December 31, 2025 and 2024 and real estate loans made up 64.1% and 63.0% of total loans at December 31, 2025 and 2024.",
+        "topic": "loan portfolio concentrations",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We have certain lending policies and procedures in place that are designed to maximize loan income within an acceptable level of risk.",
         "topic": "credit risk management",
         "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We face aggressive competition from other domestic and foreign lending institutions",
-        "topic": "competition",
-        "source": "10-K 2024Q4"
       }
     ],
-    "pullback_mentions": "The bank is expanding its \"Secured private credit finance\" portfolio and investing in its \"Private Bank and Private Wealth build-out\".",
-    "named_competitors": "private equity firms, hedge funds",
-    "risk_focus_analysis": "This bank's risk disclosures primarily focus on fundamental credit quality risks, including borrower financial strength, cash flows, and collateral values, which are assessed during origination and ongoing monitoring. Macroeconomic factors like economic conditions, inflation, and interest rates are also highlighted as drivers of potential credit losses. Concentration risk across industry sectors and asset classes is managed through policy guidelines.",
-    "involvement_rating": 3
+    "pullback_mentions": "Average loans increased $1.4 billion, or 7.3%, in 2025 compared to 2024, indicating expansion rather than pullback.",
+    "named_competitors": "",
+    "risk_focus_analysis": "The bank's disclosures are dominated by concerns over credit quality and concentration risk, particularly within its significant commercial real estate, commercial and industrial, and energy loan portfolios. There is also a strong emphasis on managing large credit relationships, which are subject to specific qualitative adjustments due to their potential impact on overall credit losses. Interest rate sensitivity and broader economic conditions are also frequently cited as factors influencing loan repayment ability and collateral values.",
+    "involvement_rating": 1
   },
   "CMA": {
     "bank_ticker": "CMA",
@@ -495,6 +500,145 @@
     "named_competitors": "",
     "risk_focus_analysis": "Comerica's disclosures primarily focus on credit quality and concentration risk within its leveraged loan portfolio and NDFI exposures. The bank emphasizes the importance of robust underwriting standards, including stress-testing cash flows and evaluating collateral, leverage, and covenants. This approach highlights concerns about borrower repayment capacity, especially in the face of economic downturns and rising interest rates.",
     "involvement_rating": 4
+  },
+  "CFG": {
+    "bank_ticker": "CFG",
+    "bank_name": "Citizens Financial Group",
+    "rating": 3,
+    "mention_frequency": "medium",
+    "sentiment": "positive",
+    "key_themes": [
+      "secured private credit finance",
+      "capital call facilities",
+      "private equity firm partnerships",
+      "private wealth management",
+      "commercial and industrial lending",
+      "credit risk management"
+    ],
+    "strategic_initiatives": "Citizens Financial Group is actively growing its \"Secured private credit finance\" portfolio, which increased from $2.9 billion to $3.9 billion in the past year. The bank also provides \"acquisition and follow-on financing for new and recapitalized portfolio companies of key sponsors, with services meeting the unique and time-sensitive needs of private equity firms, management companies and funds.\" Additionally, the bank is undertaking a \"Private Bank and Private Wealth build-out\" which involves hiring and investments.",
+    "perceived_risks": "The bank highlights risks related to the deterioration of borrower credit quality due to prevailing economic and market conditions, including inflationary pressures, and adverse collateral valuations. It also manages concentration risk through limits on industry sectors and asset classes. The competitive landscape from various financial institutions, including private equity firms, is also noted as a risk.",
+    "notable_quotes": [
+      {
+        "quote": "Corporate Finance also provides acquisition and follow-on financing for new and recapitalized portfolio companies of key sponsors, with services meeting the unique and time-sensitive needs of private equity firms, management companies and funds",
+        "topic": "private equity firm partnerships",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Noninterest expense... driven by salaries and employee benefits reflecting hiring related to the Private Bank and Private Wealth build-out",
+        "topic": "private wealth management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "The credit quality of our borrowers may deteriorate for a number of reasons that are outside our control, including prevailing economic and market conditions and collateral valuations.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We face aggressive competition from other domestic and foreign lending institutions",
+        "topic": "competition",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank is expanding its \"Secured private credit finance\" portfolio and investing in its \"Private Bank and Private Wealth build-out\".",
+    "named_competitors": "private equity firms, hedge funds",
+    "risk_focus_analysis": "This bank's risk disclosures primarily focus on fundamental credit quality risks, including borrower financial strength, cash flows, and collateral values, which are assessed during origination and ongoing monitoring. Macroeconomic factors like economic conditions, inflation, and interest rates are also highlighted as drivers of potential credit losses. Concentration risk across industry sectors and asset classes is managed through policy guidelines.",
+    "involvement_rating": 3
+  },
+  "COLB": {
+    "bank_ticker": "COLB",
+    "bank_name": "Columbia Banking System",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "cautious",
+    "key_themes": [
+      "commercial loan growth",
+      "equipment and lease financing",
+      "credit quality normalization",
+      "commercial real estate exposure",
+      "SBA portfolio performance",
+      "relationship banking focus"
+    ],
+    "strategic_initiatives": "The bank is focused on relationship-driven commercial loan growth and line utilization, operating under a \"Business Bank of Choice operating strategy.\" It is also strategically remixing its portfolio by reducing transactional multifamily and residential loans and selling existing loans with higher charge-off potential. Additionally, the bank recalibrated its commercial CECL model to better reflect its post-Merger loan portfolio.",
+    "perceived_risks": "The bank flags elevated non-performing and charge-offs in its trucking or transportation lease portfolio and notes migration in its SBA portfolio. It also highlights that commercial real estate loans may be adversely affected by conditions in real estate markets or the general economy, with specific concerns for office properties due to tightening credit or declining values.",
+    "notable_quotes": [
+      {
+        "quote": "Delinquency and non-accrual loan movements during the period reflect an anticipated move toward a normalized credit environment following a phase of exceptional high credit quality.",
+        "topic": "credit quality normalization",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "The leasing portfolio has elevated non-performing and charge-offs centered in the trucking or transportation portion of the portfolio.",
+        "topic": "equipment and lease financing",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "Commercial real estate loans may be more adversely affected by conditions in the real estate markets or in the general economy.",
+        "topic": "commercial real estate exposure",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "This sale was the result of strategic actions taken by the Company to restructure its mortgage business given the lower mortgage origination volume in the higher rate environment and focus on relationship banking that drives balanced growth in loans, deposits, and core fee income.",
+        "topic": "relationship banking focus",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "As of December 31, 2024, commercial loans held in our loan portfolio were $10.0 billion, an increase of $271.7 million compared to December 31, 2023, which is mainly attributable to relationship driven commercial loan growth and line utilization.",
+        "topic": "commercial loan growth",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding commercial loan originations and line utilization, but also mentions a decline in transactional multifamily and residential loans as it organically remixes its portfolio, and strategic sales of loans with greater potential for charge-offs.",
+    "named_competitors": "",
+    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risks within its commercial and commercial real estate portfolios. It highlights specific segments like trucking/transportation leases and the SBA portfolio due to elevated non-performing assets and migration. Broader economic and real estate market conditions are also identified as significant risk factors, particularly for office properties, alongside efforts to recalibrate credit models post-merger.",
+    "involvement_rating": 4
+  },
+  "FHN": {
+    "bank_ticker": "FHN",
+    "bank_name": "First Horizon Corporation",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "key_themes": [
+      "asset-based lending",
+      "loans to mortgage companies",
+      "finance and insurance industry exposure",
+      "competition from non-traditional providers",
+      "TRUPs",
+      "consumer finance lending"
+    ],
+    "strategic_initiatives": "",
+    "perceived_risks": "FHN identifies industry concentrations in loans to mortgage companies and the finance and insurance industry, noting these segments could be uniquely impacted by economic conditions. The bank also acknowledges intensified competition from non-traditional, less-regulated financial service providers.",
+    "notable_quotes": [
+      {
+        "quote": "asset-based lending to consumer finance companies represents approximately $1.9 billion of the finance and insurance component.",
+        "topic": "asset-based lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Loans to mortgage companies and borrowers in the finance and insurance industry were 21% and 18% of FHN’s C&I loan portfolio as of December 31, 2024 and 2023, respectively, and as a result could be affected by items that uniquely impact the financial services industry.",
+        "topic": "finance and insurance industry exposure",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "The emergence of non-traditional, disruptive service providers (see Industry Disruption within this Item 1A beginning on page 33) has intensified the competitive environment.",
+        "topic": "competition from non-traditional providers",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Some competitors are traditional banks, subject to the same regulatory framework as we are, while others are not banks and in many cases experience a significantly different or reduced degree of regulation.",
+        "topic": "competition from non-traditional providers",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "TRUPs (i.e., long-term unsecured loans to bank and insurance-related businesses)",
+        "topic": "TRUPs",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank reported overall commercial loan growth of 2% in 2024.",
+    "named_competitors": "",
+    "risk_focus_analysis": "FHN's disclosures primarily focus on credit quality and industry concentration risks, particularly within its commercial loan portfolio segments like mortgage companies and the finance and insurance industry. The bank also highlights competitive risks stemming from less-regulated, non-traditional financial service providers.",
+    "involvement_rating": 2
   },
   "COF": {
     "bank_ticker": "COF",
@@ -587,102 +731,6 @@
     "risk_focus_analysis": "This bank's disclosures are dominated by credit quality and concentration risks. A significant focus is placed on the repayment dependency of early-stage and mid-stage companies on external equity financing or liquidity events, and the reliance of global fund banking on capital calls. Industry and client concentrations, particularly in technology, life science, healthcare, and with private equity/venture capital clients, are also frequently highlighted as key risk areas.",
     "involvement_rating": 5
   },
-  "CFR": {
-    "bank_ticker": "CFR",
-    "bank_name": "Cullen/Frost Bankers",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "commercial real estate lending",
-      "commercial and industrial lending",
-      "energy lending",
-      "large credit relationships",
-      "credit risk management",
-      "loan portfolio concentrations"
-    ],
-    "strategic_initiatives": "",
-    "perceived_risks": "Cullen/Frost Bankers highlights risks from increases in interest rates and weakening economic conditions, which could impair borrowers' ability to repay and reduce collateral values. A significant portion of its loan portfolio is concentrated in large commercial and industrial, energy, construction, and commercial real estate loans, making it vulnerable to the deterioration of even a few relationships. Commercial real estate loans specifically face risks from adverse market conditions, the economy, and changes in government regulations, as repayment depends on property operations.",
-    "notable_quotes": [
-      {
-        "quote": "Because our loan portfolio contains a significant number of commercial and industrial, energy, construction and commercial real estate loans with relatively large balances, the deterioration of one or a few of these loans could cause a significant increase in non-performing loans.",
-        "topic": "loan portfolio concentrations",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Due to the fact that a significant portion of our loan portfolio is concentrated in large credit relationships and because of large, concentrated credit losses in recent years, management made the qualitative adjustments detailed in the table above to address the risk associated with such a relationship deteriorating to a loss event.",
-        "topic": "large credit relationships",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We generally require production borrowers to maintain an active hedging program to manage risk and to have at least 50% of their production hedged for two years.",
-        "topic": "energy lending",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Commercial and industrial loans made up 28.8% and 29.5% of total loans at December 31, 2025 and 2024 while energy loans made up 5.0% and 5.4% of total loans at December 31, 2025 and 2024 and real estate loans made up 64.1% and 63.0% of total loans at December 31, 2025 and 2024.",
-        "topic": "loan portfolio concentrations",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We have certain lending policies and procedures in place that are designed to maximize loan income within an acceptable level of risk.",
-        "topic": "credit risk management",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "Average loans increased $1.4 billion, or 7.3%, in 2025 compared to 2024, indicating expansion rather than pullback.",
-    "named_competitors": "",
-    "risk_focus_analysis": "The bank's disclosures are dominated by concerns over credit quality and concentration risk, particularly within its significant commercial real estate, commercial and industrial, and energy loan portfolios. There is also a strong emphasis on managing large credit relationships, which are subject to specific qualitative adjustments due to their potential impact on overall credit losses. Interest rate sensitivity and broader economic conditions are also frequently cited as factors influencing loan repayment ability and collateral values.",
-    "involvement_rating": 1
-  },
-  "COLB": {
-    "bank_ticker": "COLB",
-    "bank_name": "Columbia Banking System",
-    "rating": 4,
-    "mention_frequency": "high",
-    "sentiment": "cautious",
-    "key_themes": [
-      "commercial loan growth",
-      "equipment and lease financing",
-      "credit quality normalization",
-      "commercial real estate exposure",
-      "SBA portfolio performance",
-      "relationship banking focus"
-    ],
-    "strategic_initiatives": "The bank is focused on relationship-driven commercial loan growth and line utilization, operating under a \"Business Bank of Choice operating strategy.\" It is also strategically remixing its portfolio by reducing transactional multifamily and residential loans and selling existing loans with higher charge-off potential. Additionally, the bank recalibrated its commercial CECL model to better reflect its post-Merger loan portfolio.",
-    "perceived_risks": "The bank flags elevated non-performing and charge-offs in its trucking or transportation lease portfolio and notes migration in its SBA portfolio. It also highlights that commercial real estate loans may be adversely affected by conditions in real estate markets or the general economy, with specific concerns for office properties due to tightening credit or declining values.",
-    "notable_quotes": [
-      {
-        "quote": "Delinquency and non-accrual loan movements during the period reflect an anticipated move toward a normalized credit environment following a phase of exceptional high credit quality.",
-        "topic": "credit quality normalization",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The leasing portfolio has elevated non-performing and charge-offs centered in the trucking or transportation portion of the portfolio.",
-        "topic": "equipment and lease financing",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "Commercial real estate loans may be more adversely affected by conditions in the real estate markets or in the general economy.",
-        "topic": "commercial real estate exposure",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "This sale was the result of strategic actions taken by the Company to restructure its mortgage business given the lower mortgage origination volume in the higher rate environment and focus on relationship banking that drives balanced growth in loans, deposits, and core fee income.",
-        "topic": "relationship banking focus",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "As of December 31, 2024, commercial loans held in our loan portfolio were $10.0 billion, an increase of $271.7 million compared to December 31, 2023, which is mainly attributable to relationship driven commercial loan growth and line utilization.",
-        "topic": "commercial loan growth",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding commercial loan originations and line utilization, but also mentions a decline in transactional multifamily and residential loans as it organically remixes its portfolio, and strategic sales of loans with greater potential for charge-offs.",
-    "named_competitors": "",
-    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risks within its commercial and commercial real estate portfolios. It highlights specific segments like trucking/transportation leases and the SBA portfolio due to elevated non-performing assets and migration. Broader economic and real estate market conditions are also identified as significant risk factors, particularly for office properties, alongside efforts to recalibrate credit models post-merger.",
-    "involvement_rating": 4
-  },
   "DFS": {
     "bank_ticker": "DFS",
     "bank_name": "Discover Financial Services",
@@ -730,6 +778,44 @@
     "named_competitors": "",
     "risk_focus_analysis": "This bank's disclosures are heavily dominated by credit quality risks, particularly concerning consumer loan portfolios and the challenges of managing delinquencies and charge-offs in varying economic conditions. Regulatory and compliance risks are also a significant focus, stemming from consent orders and evolving legislative requirements, especially in the context of their student loan divestment.",
     "involvement_rating": 1
+  },
+  "FITB": {
+    "bank_ticker": "FITB",
+    "bank_name": "Fifth Third Bancorp",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "commercial and industrial lending",
+      "commercial real estate finance",
+      "asset-based lending",
+      "syndicated finance",
+      "leveraged lending risk management",
+      "credit quality deterioration"
+    ],
+    "strategic_initiatives": "",
+    "perceived_risks": "The Bancorp views nonowner-occupied commercial real estate as a higher credit risk product due to its industry volatility. Deterioration in the macroeconomic forecast for the commercial portfolio has affected the provision for credit losses. The bank also notes increases in net charge-offs on commercial and industrial loans and solar energy installation loans. Portfolios such as real estate and leveraged lending are subject to individual loan-level stress testing during underwriting.",
+    "notable_quotes": [
+      {
+        "quote": "The Bancorp views nonowner-occupied commercial real estate as a higher credit risk product compared to some other commercial loan portfolios due to the higher volatility of the industry.",
+        "topic": "commercial real estate finance",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "In addition to the traditional lending and depository offerings, Commercial Banking products and services include global cash management, foreign exchange and international trade finance, derivatives and capital markets services, asset-based lending, real estate finance, public finance, commercial leasing and syndicated finance.",
+        "topic": "commercial banking services",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "For certain portfolios, such as real estate and leveraged lending, stress testing is performed at the individual loan level during credit underwriting.",
+        "topic": "leveraged lending risk management",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The Bancorp discusses planned reductions in commercial and industrial loans and commercial leases in 2023, and decreases in credit card and residential mortgage loans, while also noting an increase in solar energy installation loans.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures are dominated by credit quality risks, evidenced by detailed discussions of net charge-offs, nonaccrual loans, and the allowance for credit losses. Specific asset classes, such as nonowner-occupied commercial real estate and leveraged lending, are highlighted for their higher inherent risk. The impact of macroeconomic forecasts on the commercial portfolio's credit loss provision is also a key focus.",
+    "involvement_rating": 2
   },
   "EWBC": {
     "bank_ticker": "EWBC",
@@ -779,54 +865,6 @@
     "risk_focus_analysis": "This bank's disclosures primarily emphasize credit quality and concentration risks within its commercial and real estate loan portfolios. They detail increases in criticized and nonaccrual loans, particularly in C&I, and highlight the importance of geographical and property type diversification. General liquidity and interest rate risks are also noted as broader financial concerns.",
     "involvement_rating": 3
   },
-  "FHN": {
-    "bank_ticker": "FHN",
-    "bank_name": "First Horizon Corporation",
-    "rating": 2,
-    "mention_frequency": "low",
-    "sentiment": "cautious",
-    "key_themes": [
-      "asset-based lending",
-      "loans to mortgage companies",
-      "finance and insurance industry exposure",
-      "competition from non-traditional providers",
-      "TRUPs",
-      "consumer finance lending"
-    ],
-    "strategic_initiatives": "",
-    "perceived_risks": "FHN identifies industry concentrations in loans to mortgage companies and the finance and insurance industry, noting these segments could be uniquely impacted by economic conditions. The bank also acknowledges intensified competition from non-traditional, less-regulated financial service providers.",
-    "notable_quotes": [
-      {
-        "quote": "asset-based lending to consumer finance companies represents approximately $1.9 billion of the finance and insurance component.",
-        "topic": "asset-based lending",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Loans to mortgage companies and borrowers in the finance and insurance industry were 21% and 18% of FHN’s C&I loan portfolio as of December 31, 2024 and 2023, respectively, and as a result could be affected by items that uniquely impact the financial services industry.",
-        "topic": "finance and insurance industry exposure",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The emergence of non-traditional, disruptive service providers (see Industry Disruption within this Item 1A beginning on page 33) has intensified the competitive environment.",
-        "topic": "competition from non-traditional providers",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Some competitors are traditional banks, subject to the same regulatory framework as we are, while others are not banks and in many cases experience a significantly different or reduced degree of regulation.",
-        "topic": "competition from non-traditional providers",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "TRUPs (i.e., long-term unsecured loans to bank and insurance-related businesses)",
-        "topic": "TRUPs",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank reported overall commercial loan growth of 2% in 2024.",
-    "named_competitors": "",
-    "risk_focus_analysis": "FHN's disclosures primarily focus on credit quality and industry concentration risks, particularly within its commercial loan portfolio segments like mortgage companies and the finance and insurance industry. The bank also highlights competitive risks stemming from less-regulated, non-traditional financial service providers.",
-    "involvement_rating": 2
-  },
   "FLG": {
     "bank_ticker": "FLG",
     "bank_name": "Flagstar Financial",
@@ -874,44 +912,6 @@
     "named_competitors": "",
     "risk_focus_analysis": "Flagstar Financial's disclosures are dominated by credit quality and concentration risks, particularly within its multi-family and commercial real estate portfolios. The bank highlights concerns over declining collateral values, debt service coverage, and the impact of rent regulations. For its specialty finance portfolio, the bank emphasizes robust underwriting, collateralization, and senior debt structures as key risk mitigation strategies.",
     "involvement_rating": 4
-  },
-  "FITB": {
-    "bank_ticker": "FITB",
-    "bank_name": "Fifth Third Bancorp",
-    "rating": 2,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "commercial and industrial lending",
-      "commercial real estate finance",
-      "asset-based lending",
-      "syndicated finance",
-      "leveraged lending risk management",
-      "credit quality deterioration"
-    ],
-    "strategic_initiatives": "",
-    "perceived_risks": "The Bancorp views nonowner-occupied commercial real estate as a higher credit risk product due to its industry volatility. Deterioration in the macroeconomic forecast for the commercial portfolio has affected the provision for credit losses. The bank also notes increases in net charge-offs on commercial and industrial loans and solar energy installation loans. Portfolios such as real estate and leveraged lending are subject to individual loan-level stress testing during underwriting.",
-    "notable_quotes": [
-      {
-        "quote": "The Bancorp views nonowner-occupied commercial real estate as a higher credit risk product compared to some other commercial loan portfolios due to the higher volatility of the industry.",
-        "topic": "commercial real estate finance",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "In addition to the traditional lending and depository offerings, Commercial Banking products and services include global cash management, foreign exchange and international trade finance, derivatives and capital markets services, asset-based lending, real estate finance, public finance, commercial leasing and syndicated finance.",
-        "topic": "commercial banking services",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "For certain portfolios, such as real estate and leveraged lending, stress testing is performed at the individual loan level during credit underwriting.",
-        "topic": "leveraged lending risk management",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The Bancorp discusses planned reductions in commercial and industrial loans and commercial leases in 2023, and decreases in credit card and residential mortgage loans, while also noting an increase in solar energy installation loans.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures are dominated by credit quality risks, evidenced by detailed discussions of net charge-offs, nonaccrual loans, and the allowance for credit losses. Specific asset classes, such as nonowner-occupied commercial real estate and leveraged lending, are highlighted for their higher inherent risk. The impact of macroeconomic forecasts on the commercial portfolio's credit loss provision is also a key focus.",
-    "involvement_rating": 2
   },
   "FNB": {
     "bank_ticker": "FNB",
@@ -975,6 +975,224 @@
     "named_competitors": "",
     "risk_focus_analysis": "Goldman Sachs' disclosures emphasize credit quality risks, particularly the impact of deteriorating economic conditions and borrower creditworthiness on loan portfolios. Regulatory risks, including potential restrictions on leveraged lending and evolving capital requirements, are also a key focus. Additionally, the bank specifically highlights the commercial real estate sector as an area of concern that could negatively affect financial performance.",
     "involvement_rating": 5
+  },
+  "NTRS": {
+    "bank_ticker": "NTRS",
+    "bank_name": "Northern Trust Corporation",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "non-participation in leveraged finance",
+      "absence from secondary loan markets",
+      "no loan syndication",
+      "no private equity sponsored company lending"
+    ],
+    "strategic_initiatives": "",
+    "perceived_risks": "",
+    "notable_quotes": [
+      {
+        "quote": "Northern Trust is generally: •not a participant in leveraged financial transactions, such as project finance, hedge fund leveraging, loans to private equity sponsored companies, or prime brokerage activities.",
+        "topic": "non-participation in leveraged finance",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank explicitly states it is not involved in originating or participating in private credit activities.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures are dominated by general credit risk management, including detailed methodologies for allowance for credit losses and sensitivity to macroeconomic factors. Significant attention is also paid to regulatory compliance and capital requirements, rather than specific risks related to private credit or NBFI exposure.",
+    "involvement_rating": 1
+  },
+  "KEY": {
+    "bank_ticker": "KEY",
+    "bank_name": "KeyCorp",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "key_themes": [
+      "specialty finance lending",
+      "commercial real estate",
+      "risk management",
+      "commercial and industrial loans",
+      "competition from NBFIs",
+      "multifamily housing oversupply"
+    ],
+    "strategic_initiatives": "KeyCorp is increasing its specialty finance lending within its commercial and industrial portfolio, which contributed to a 9.0% increase in C&I loans. The bank is also investing an additional $100 million in technology for customer-facing capabilities and adding nearly 10% to its frontline banker staff across various commercial segments. These moves aim to build targeted scale and competitive advantage in distinct product capabilities.",
+    "perceived_risks": "KeyCorp identifies concentrated credit exposure in commercial and industrial loans, commercial real estate loans, and commercial leases as a material risk. They specifically flag the deterioration of the commercial real estate market, noting oversupply in multifamily housing in certain urban markets, which could lead to higher vacancy rates and pressure on borrowers' ability to service or refinance debt. The bank also highlights recourse arrangements on a significant portion of its administered commercial real estate loans.",
+    "notable_quotes": [
+      {
+        "quote": "The increase was partly driven by increases in specialty finance lending within the finance industry classification.",
+        "topic": "specialty finance lending",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Key competes with other providers of financial services, such as BHCs, commercial banks, savings associations, credit unions, mortgage banking companies, finance companies, mutual funds, insurance companies, investment management firms, private credit funds, investment banking firms, broker-dealers, financial technology companies, and other local, regional, national, and global institutions that offer financial services.",
+        "topic": "competition from NBFIs",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "We have concentrated credit exposure in commercial and industrial loans, commercial real estate loans, and commercial leases.",
+        "topic": "risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "oversupply of multifamily housing is a concern in certain urban markets. This oversupply has resulted in higher vacancy rates and put pressure on some borrowers to achieve underwritten rents.",
+        "topic": "multifamily housing oversupply",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We continued to maintain our strong risk discipline. Full year net charge-offs were 41 basis points. Additionally, all leading indicators: non-performing assets, criticized loans, and delinquencies moved in a favorable...",
+        "topic": "risk management",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding its commercial loan portfolio, specifically noting increases in specialty finance lending.",
+    "named_competitors": "private credit funds",
+    "risk_focus_analysis": "KeyCorp's disclosures are primarily focused on credit quality and concentration risks, particularly within its commercial real estate portfolio. The bank explicitly highlights the potential for increased nonperforming loans and losses stemming from CRE market deterioration, with specific concerns about multifamily housing oversupply impacting borrower cash flows. The mention of recourse arrangements on administered CRE loans further underscores a focus on contingent credit risk.",
+    "involvement_rating": 3
+  },
+  "ONB": {
+    "bank_ticker": "ONB",
+    "bank_name": "Old National Bancorp",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "commercial real estate lending",
+      "credit risk management",
+      "mergers and acquisitions",
+      "regional market focus",
+      "competition from FinTechs",
+      "loan portfolio growth"
+    ],
+    "strategic_initiatives": "Old National Bancorp's strategy involves remaining on offense with its growth strategy, investing in client-facing and key support talent, and remaining opportunistic for new acquisitions. This includes significant acquisitions like CapStar and Bremer, which have driven substantial loan and asset growth. The bank also emphasizes disciplined loan production balanced across its market footprint and product lines, alongside organic growth of fee-based businesses.",
+    "perceived_risks": "The bank flags significant credit quality risks, particularly for commercial real estate, commercial, and agricultural loans, which are more susceptible to adverse economic conditions and external factors. Regional concentrations in the Midwest and Southeast amplify these risks. Competition from non-financial institutions, especially marketplace lenders and FinTechs, is also a concern. Furthermore, the bank highlights risks associated with mergers and acquisitions, including integration challenges and potential regulatory delays, and the evolving impact of climate change on borrower insurance and credit losses.",
+    "notable_quotes": [
+      {
+        "quote": "remaining on offense with our growth strategy, investing in client-facing and key support talent, and remaining opportunistic for new acquisitions.",
+        "topic": "mergers and acquisitions",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Old National’s loan portfolio includes loans with a higher risk of loss. Old National Bank originates commercial real estate loans, commercial loans, agricultural loans, consumer loans, and residential real estate loans primarily within Old National’s market areas.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Some of our nonfinancial institution competitors may have fewer regulatory constraints, broader geographic service areas, and, in some cases, lower cost structures and, as a result, may be able to compete more effectively for business. In particular, the activity of marketplace lenders and other FinTechs has grown significantly over recent years and is expected to continue to grow.",
+        "topic": "competition from FinTechs",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Commercial real estate loans generally involve a greater degree of credit risk than residential mortgage loans because they typically have larger balances and are more affected by adverse conditions in the economy.",
+        "topic": "commercial real estate lending",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "At December 31, 2025, commercial and commercial real estate loans were $37.0 billion, an increase of $10.4 billion compared to December 31, 2024 driven primarily by the acquisition of Bremer, as well as disciplined commercial loan production that was well balanced across our market footprint and product lines, partly offset by the sale of $71 million of commercial real estate loans in 2025.",
+        "topic": "loan portfolio growth",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding its loan portfolio and market footprint, primarily through strategic acquisitions and disciplined loan production, with no mention of pulling back.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures are heavily dominated by credit quality risks across its diverse loan portfolio, particularly commercial real estate and agricultural loans, which are sensitive to economic conditions and external factors. Additionally, strategic risks associated with mergers and acquisitions, including integration challenges and regulatory hurdles, are frequently highlighted. The bank also acknowledges competitive pressures from FinTechs and the evolving risks posed by climate change.",
+    "involvement_rating": 1
+  },
+  "MTB": {
+    "bank_ticker": "MTB",
+    "bank_name": "M&T Bank Corporation",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "cautious",
+    "key_themes": [
+      "NDFI lending exposure",
+      "subscription credit facilities",
+      "mortgage warehouse lending",
+      "BDC lending",
+      "credit quality of financial intermediaries",
+      "competition from non-bank lenders"
+    ],
+    "strategic_initiatives": "The Company executed various strategies to lessen its relative concentration of commercial real estate loans and to reduce the amount of criticized loans in this category throughout 2024 and 2025. This shift in portfolio composition implies a strategic reallocation of lending focus, though not explicitly an expansion of private credit.",
+    "perceived_risks": "The bank flags general credit risk, particularly within its commercial real estate portfolio due to elevated vacancies and lower debt service coverage ratios. It also notes increased criticized loans within the financial and insurance industry, and a higher provision for unfunded credit commitments. Competition from private credit funds and other non-bank financial institutions is also a significant strategic risk.",
+    "notable_quotes": [
+      {
+        "quote": "Approximately 89% of loans to the financial and insurance industry and 7% of loans to the services industry were designated as loans to NDFIs as prescribed in regulatory guidance applicable to M&T Bank at December 31, 2025.",
+        "topic": "NDFI lending exposure",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Private equity funds (b) 5,981 3,287 __________________________________________________________________________________ (b)Primarily subscription credit facilities.",
+        "topic": "subscription credit facilities",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "The Company competes not only with commercial and other banks and thrifts, but also with private credit funds, insurance companies, mutual funds, hedge funds, securities brokerage firms, financial technology companies and other companies offering financial services in the U.S., gl…",
+        "topic": "competition from non-bank lenders",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "The provision for credit losses increased $7 million reflecting a higher provision for unfunded credit commitments.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Financial and insurance $ 12,794 $ 200 $ 4 $ 204 $ 11,479 $ 71 $ 35 $ 106",
+        "topic": "credit quality of financial intermediaries",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank is actively managing its portfolio by reducing commercial real estate concentration and has increased its provision for unfunded credit commitments, indicating a cautious approach to certain lending segments, including an increase in criticized loans within the financial and insurance industry.",
+    "named_competitors": "",
+    "risk_focus_analysis": "The bank's risk focus is primarily on credit quality and concentration, particularly within its commercial real estate portfolio, which it is actively reducing. However, the detailed disclosure and increased provision for unfunded commitments highlight a growing focus on managing credit risk within its significant NDFI exposures, including potential deterioration in specific segments like financial intermediaries. Competition from a broad range of non-bank financial institutions is also a key strategic risk.",
+    "involvement_rating": 4
+  },
+  "HBAN": {
+    "bank_ticker": "HBAN",
+    "bank_name": "Huntington Bancshares",
+    "rating": 4,
+    "mention_frequency": "medium",
+    "sentiment": "positive",
+    "key_themes": [
+      "financial sponsor lending",
+      "asset-based finance",
+      "equipment and lease financing",
+      "structured lending",
+      "commercial and industrial loans",
+      "commercial real estate"
+    ],
+    "strategic_initiatives": "The bank is expanding product offerings and leveraging partnerships with manufacturers, dealers, and third-party sources to drive origination, particularly in lease financing. They are pursuing organic growth, complemented by acquisitions like Veritex, and are focused on entering new markets while maintaining high credit quality standards.",
+    "perceived_risks": "The bank flags that commercial loans carry greater risk of non-payment and loss due to reliance on borrower income streams or successful property operations, and often involve larger loan balances to single borrowers. They also acknowledge increased risk from higher origination volume and entering new markets, alongside interest rate sensitivity impacting borrower repayment ability.",
+    "notable_quotes": [
+      {
+        "quote": "Asset Finance serves our clients’ capital expenditure and working capital needs through equipment financing, asset-based lending, distribution finance, structured lending, and municipal financing solutions.",
+        "topic": "asset-based finance",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Our lease financing portfolio will utilize a variety of origination partners and third-party sources including equipment manufacturers, dealers, or vendors set up under program structures to generate transactions from a nationwide footprint.",
+        "topic": "equipment and lease financing",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "commercial loans are generally more interest rate sensitive and carry higher yields than residential mortgage loans, these types of loans generally expose a lender to greater risk of non-payment and loss than single-family residential mortgage loans because repayment of the loans often depend on the income stream of the borrowers or successful operation of the property.",
+        "topic": "perceived risks",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "The C&I portfolio continues to have solid origination activity while we maintain a focus on high quality originations.",
+        "topic": "commercial and industrial loans",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Our disciplined portfolio management processes are central to our commitment to maintaining an aggregate moderate-to-low risk appetite.",
+        "topic": "perceived risks",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding origination volume and entering new markets while maintaining high credit quality standards.",
+    "named_competitors": "",
+    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risks within its commercial loan portfolio, emphasizing the dependence on borrower income streams and the larger balances involved. They manage these through rigorous origination policies, established concentration limits, and ongoing loan-level and portfolio-level reviews. Interest rate risk is also highlighted as a factor that could adversely affect borrowers' ability to repay.",
+    "involvement_rating": 4
   },
   "MS": {
     "bank_ticker": "MS",
@@ -1067,222 +1285,52 @@
     "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality risks within its wholesale portfolio, specifically highlighting increased loss assumptions on leveraged loans and instances of borrower fraud. A significant portion of the risk discussion centers on sector-specific credit deterioration, evidenced by downgrades and rising nonaccrual loans in Real Estate (Office), Technology, Media & Telecommunications, Oil & Gas, and Utilities.",
     "involvement_rating": 3
   },
-  "HBAN": {
-    "bank_ticker": "HBAN",
-    "bank_name": "Huntington Bancshares",
-    "rating": 4,
-    "mention_frequency": "medium",
-    "sentiment": "positive",
-    "key_themes": [
-      "financial sponsor lending",
-      "asset-based finance",
-      "equipment and lease financing",
-      "structured lending",
-      "commercial and industrial loans",
-      "commercial real estate"
-    ],
-    "strategic_initiatives": "The bank is expanding product offerings and leveraging partnerships with manufacturers, dealers, and third-party sources to drive origination, particularly in lease financing. They are pursuing organic growth, complemented by acquisitions like Veritex, and are focused on entering new markets while maintaining high credit quality standards.",
-    "perceived_risks": "The bank flags that commercial loans carry greater risk of non-payment and loss due to reliance on borrower income streams or successful property operations, and often involve larger loan balances to single borrowers. They also acknowledge increased risk from higher origination volume and entering new markets, alongside interest rate sensitivity impacting borrower repayment ability.",
-    "notable_quotes": [
-      {
-        "quote": "Asset Finance serves our clients’ capital expenditure and working capital needs through equipment financing, asset-based lending, distribution finance, structured lending, and municipal financing solutions.",
-        "topic": "asset-based finance",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Our lease financing portfolio will utilize a variety of origination partners and third-party sources including equipment manufacturers, dealers, or vendors set up under program structures to generate transactions from a nationwide footprint.",
-        "topic": "equipment and lease financing",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "commercial loans are generally more interest rate sensitive and carry higher yields than residential mortgage loans, these types of loans generally expose a lender to greater risk of non-payment and loss than single-family residential mortgage loans because repayment of the loans often depend on the income stream of the borrowers or successful operation of the property.",
-        "topic": "perceived risks",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "The C&I portfolio continues to have solid origination activity while we maintain a focus on high quality originations.",
-        "topic": "commercial and industrial loans",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Our disciplined portfolio management processes are central to our commitment to maintaining an aggregate moderate-to-low risk appetite.",
-        "topic": "perceived risks",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding origination volume and entering new markets while maintaining high credit quality standards.",
-    "named_competitors": "",
-    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risks within its commercial loan portfolio, emphasizing the dependence on borrower income streams and the larger balances involved. They manage these through rigorous origination policies, established concentration limits, and ongoing loan-level and portfolio-level reviews. Interest rate risk is also highlighted as a factor that could adversely affect borrowers' ability to repay.",
-    "involvement_rating": 4
-  },
-  "KEY": {
-    "bank_ticker": "KEY",
-    "bank_name": "KeyCorp",
-    "rating": 3,
+  "RF": {
+    "bank_ticker": "RF",
+    "bank_name": "Regions Financial Corporation",
+    "rating": 1,
     "mention_frequency": "low",
     "sentiment": "cautious",
     "key_themes": [
-      "specialty finance lending",
-      "commercial real estate",
-      "risk management",
-      "commercial and industrial loans",
-      "competition from NBFIs",
-      "multifamily housing oversupply"
-    ],
-    "strategic_initiatives": "KeyCorp is increasing its specialty finance lending within its commercial and industrial portfolio, which contributed to a 9.0% increase in C&I loans. The bank is also investing an additional $100 million in technology for customer-facing capabilities and adding nearly 10% to its frontline banker staff across various commercial segments. These moves aim to build targeted scale and competitive advantage in distinct product capabilities.",
-    "perceived_risks": "KeyCorp identifies concentrated credit exposure in commercial and industrial loans, commercial real estate loans, and commercial leases as a material risk. They specifically flag the deterioration of the commercial real estate market, noting oversupply in multifamily housing in certain urban markets, which could lead to higher vacancy rates and pressure on borrowers' ability to service or refinance debt. The bank also highlights recourse arrangements on a significant portion of its administered commercial real estate loans.",
-    "notable_quotes": [
-      {
-        "quote": "The increase was partly driven by increases in specialty finance lending within the finance industry classification.",
-        "topic": "specialty finance lending",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Key competes with other providers of financial services, such as BHCs, commercial banks, savings associations, credit unions, mortgage banking companies, finance companies, mutual funds, insurance companies, investment management firms, private credit funds, investment banking firms, broker-dealers, financial technology companies, and other local, regional, national, and global institutions that offer financial services.",
-        "topic": "competition from NBFIs",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "We have concentrated credit exposure in commercial and industrial loans, commercial real estate loans, and commercial leases.",
-        "topic": "risk management",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "oversupply of multifamily housing is a concern in certain urban markets. This oversupply has resulted in higher vacancy rates and put pressure on some borrowers to achieve underwritten rents.",
-        "topic": "multifamily housing oversupply",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We continued to maintain our strong risk discipline. Full year net charge-offs were 41 basis points. Additionally, all leading indicators: non-performing assets, criticized loans, and delinquencies moved in a favorable...",
-        "topic": "risk management",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding its commercial loan portfolio, specifically noting increases in specialty finance lending.",
-    "named_competitors": "private credit funds",
-    "risk_focus_analysis": "KeyCorp's disclosures are primarily focused on credit quality and concentration risks, particularly within its commercial real estate portfolio. The bank explicitly highlights the potential for increased nonperforming loans and losses stemming from CRE market deterioration, with specific concerns about multifamily housing oversupply impacting borrower cash flows. The mention of recourse arrangements on administered CRE loans further underscores a focus on contingent credit risk.",
-    "involvement_rating": 3
-  },
-  "NTRS": {
-    "bank_ticker": "NTRS",
-    "bank_name": "Northern Trust Corporation",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "non-participation in leveraged finance",
-      "absence from secondary loan markets",
-      "no loan syndication",
-      "no private equity sponsored company lending"
-    ],
-    "strategic_initiatives": "",
-    "perceived_risks": "",
-    "notable_quotes": [
-      {
-        "quote": "Northern Trust is generally: •not a participant in leveraged financial transactions, such as project finance, hedge fund leveraging, loans to private equity sponsored companies, or prime brokerage activities.",
-        "topic": "non-participation in leveraged finance",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank explicitly states it is not involved in originating or participating in private credit activities.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures are dominated by general credit risk management, including detailed methodologies for allowance for credit losses and sensitivity to macroeconomic factors. Significant attention is also paid to regulatory compliance and capital requirements, rather than specific risks related to private credit or NBFI exposure.",
-    "involvement_rating": 1
-  },
-  "MTB": {
-    "bank_ticker": "MTB",
-    "bank_name": "M&T Bank Corporation",
-    "rating": 4,
-    "mention_frequency": "high",
-    "sentiment": "cautious",
-    "key_themes": [
-      "NDFI lending exposure",
-      "subscription credit facilities",
-      "mortgage warehouse lending",
-      "BDC lending",
-      "credit quality of financial intermediaries",
-      "competition from non-bank lenders"
-    ],
-    "strategic_initiatives": "The Company executed various strategies to lessen its relative concentration of commercial real estate loans and to reduce the amount of criticized loans in this category throughout 2024 and 2025. This shift in portfolio composition implies a strategic reallocation of lending focus, though not explicitly an expansion of private credit.",
-    "perceived_risks": "The bank flags general credit risk, particularly within its commercial real estate portfolio due to elevated vacancies and lower debt service coverage ratios. It also notes increased criticized loans within the financial and insurance industry, and a higher provision for unfunded credit commitments. Competition from private credit funds and other non-bank financial institutions is also a significant strategic risk.",
-    "notable_quotes": [
-      {
-        "quote": "Approximately 89% of loans to the financial and insurance industry and 7% of loans to the services industry were designated as loans to NDFIs as prescribed in regulatory guidance applicable to M&T Bank at December 31, 2025.",
-        "topic": "NDFI lending exposure",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Private equity funds (b) 5,981 3,287 __________________________________________________________________________________ (b)Primarily subscription credit facilities.",
-        "topic": "subscription credit facilities",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "The Company competes not only with commercial and other banks and thrifts, but also with private credit funds, insurance companies, mutual funds, hedge funds, securities brokerage firms, financial technology companies and other companies offering financial services in the U.S., gl…",
-        "topic": "competition from non-bank lenders",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "The provision for credit losses increased $7 million reflecting a higher provision for unfunded credit commitments.",
-        "topic": "credit risk management",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Financial and insurance $ 12,794 $ 200 $ 4 $ 204 $ 11,479 $ 71 $ 35 $ 106",
-        "topic": "credit quality of financial intermediaries",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "The bank is actively managing its portfolio by reducing commercial real estate concentration and has increased its provision for unfunded credit commitments, indicating a cautious approach to certain lending segments, including an increase in criticized loans within the financial and insurance industry.",
-    "named_competitors": "",
-    "risk_focus_analysis": "The bank's risk focus is primarily on credit quality and concentration, particularly within its commercial real estate portfolio, which it is actively reducing. However, the detailed disclosure and increased provision for unfunded commitments highlight a growing focus on managing credit risk within its significant NDFI exposures, including potential deterioration in specific segments like financial intermediaries. Competition from a broad range of non-bank financial institutions is also a key strategic risk.",
-    "involvement_rating": 4
-  },
-  "ONB": {
-    "bank_ticker": "ONB",
-    "bank_name": "Old National Bancorp",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "commercial real estate lending",
+      "commercial lending",
+      "investor real estate",
       "credit risk management",
-      "mergers and acquisitions",
-      "regional market focus",
-      "competition from FinTechs",
-      "loan portfolio growth"
+      "asset quality",
+      "portfolio concentrations",
+      "exit strategies"
     ],
-    "strategic_initiatives": "Old National Bancorp's strategy involves remaining on offense with its growth strategy, investing in client-facing and key support talent, and remaining opportunistic for new acquisitions. This includes significant acquisitions like CapStar and Bremer, which have driven substantial loan and asset growth. The bank also emphasizes disciplined loan production balanced across its market footprint and product lines, alongside organic growth of fee-based businesses.",
-    "perceived_risks": "The bank flags significant credit quality risks, particularly for commercial real estate, commercial, and agricultural loans, which are more susceptible to adverse economic conditions and external factors. Regional concentrations in the Midwest and Southeast amplify these risks. Competition from non-financial institutions, especially marketplace lenders and FinTechs, is also a concern. Furthermore, the bank highlights risks associated with mergers and acquisitions, including integration challenges and potential regulatory delays, and the evolving impact of climate change on borrower insurance and credit losses.",
+    "strategic_initiatives": "Regions' strategy remains primarily centered around larger, existing clients and slowing originations of smaller trucking deals at this point in the cycle. The Company also ceased originating new loans related to certain third-party lending businesses prior to 2020, with these portfolios now in run-off, and sold substantially all of its unsecured consumer loans in this portfolio in the fourth quarter of 2023.",
+    "perceived_risks": "Regions identifies risks related to concentrations of credit risk across individual borrowers, collateral types, industries, and loan products. The bank also highlights adverse risk migration and the need for qualitative adjustments for incremental risk in higher-risk portfolios, specifically noting office, senior housing, and trucking as 'portfolios of interest' requiring increased monitoring.",
     "notable_quotes": [
       {
-        "quote": "remaining on offense with our growth strategy, investing in client-facing and key support talent, and remaining opportunistic for new acquisitions.",
-        "topic": "mergers and acquisitions",
+        "quote": "Regions' strategy remains primarily centered around larger, existing clients and slowing originations of smaller trucking deals at this point in the cycle.",
+        "topic": "credit risk management",
         "source": "10-K 2024Q4"
       },
       {
-        "quote": "Old National’s loan portfolio includes loans with a higher risk of loss. Old National Bank originates commercial real estate loans, commercial loans, agricultural loans, consumer loans, and residential real estate loans primarily within Old National’s market areas.",
+        "quote": "The decline in commercial loans, specifically commercial and industrial loans, is due to lower line of credit utilization and loans refinanced off the Company's balance sheet through the debt capital markets.",
+        "topic": "commercial lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "The Company manages the related risks to this portfolio by setting certain lending limits for each significant industry.",
+        "topic": "portfolio concentrations",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Regions’ objective regarding credit risk is to maintain a credit portfolio that provides for stable credit costs with acceptable volatility through an economic cycle.",
         "topic": "credit risk management",
-        "source": "10-K 2025Q4"
+        "source": "10-K 2024Q4"
       },
       {
-        "quote": "Some of our nonfinancial institution competitors may have fewer regulatory constraints, broader geographic service areas, and, in some cases, lower cost structures and, as a result, may be able to compete more effectively for business. In particular, the activity of marketplace lenders and other FinTechs has grown significantly over recent years and is expected to continue to grow.",
-        "topic": "competition from FinTechs",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Commercial real estate loans generally involve a greater degree of credit risk than residential mortgage loans because they typically have larger balances and are more affected by adverse conditions in the economy.",
-        "topic": "commercial real estate lending",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "At December 31, 2025, commercial and commercial real estate loans were $37.0 billion, an increase of $10.4 billion compared to December 31, 2024 driven primarily by the acquisition of Bremer, as well as disciplined commercial loan production that was well balanced across our market footprint and product lines, partly offset by the sale of $71 million of commercial real estate loans in 2025.",
-        "topic": "loan portfolio growth",
-        "source": "10-K 2025Q4"
+        "quote": "The increase in the provision for credit losses was driven primarily by adverse risk migration and continued credit normalization, as well as a build in qualitative adjustments for incremental risk in higher risk portfolios.",
+        "topic": "asset quality",
+        "source": "10-K 2023Q4"
       }
     ],
-    "pullback_mentions": "The bank discusses expanding its loan portfolio and market footprint, primarily through strategic acquisitions and disciplined loan production, with no mention of pulling back.",
+    "pullback_mentions": "The bank discusses slowing originations of smaller trucking deals and has ceased originating new loans in certain third-party lending exit portfolios, also selling off unsecured consumer loans.",
     "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures are heavily dominated by credit quality risks across its diverse loan portfolio, particularly commercial real estate and agricultural loans, which are sensitive to economic conditions and external factors. Additionally, strategic risks associated with mergers and acquisitions, including integration challenges and regulatory hurdles, are frequently highlighted. The bank also acknowledges competitive pressures from FinTechs and the evolving risks posed by climate change.",
+    "risk_focus_analysis": "This bank's disclosures are dominated by credit quality and concentration risks. There is a clear focus on monitoring specific 'portfolios of interest' (office, senior housing, trucking) due to perceived higher risk, and a general emphasis on managing asset quality normalization and adverse risk migration across its loan portfolio.",
     "involvement_rating": 1
   },
   "PB": {
@@ -1333,150 +1381,6 @@
     "risk_focus_analysis": "The bank's risk disclosures for its NBFI lending, specifically the Warehouse Purchase Program, primarily highlight operational risks related to internal risk management policies and market risks tied to the residential real estate market. Across its broader loan portfolio, the bank emphasizes credit quality risks, particularly the potential for increased delinquencies and losses due to general economic downturns and the challenges of monitoring collateral for commercial loans.",
     "involvement_rating": 3
   },
-  "PNC": {
-    "bank_ticker": "PNC",
-    "bank_name": "The PNC Financial Services Group",
-    "rating": 3,
-    "mention_frequency": "low",
-    "sentiment": "cautious",
-    "key_themes": [
-      "commercial and industrial lending",
-      "asset-based lending",
-      "equipment financing",
-      "commercial real estate risk",
-      "credit risk management",
-      "loan portfolio growth"
-    ],
-    "strategic_initiatives": "PNC aims to grow its market share and drive higher returns by delivering value-added solutions to clients, focusing on attractive risk-return profiles. The bank's Business Credit segment specifically provides asset-based lending and equipment financing solutions. Commercial Banking also offers lending, treasury management, and capital markets products to corporate and middle market clients.",
-    "perceived_risks": "The bank flags risks associated with commercial real estate loans, noting their correlation to loan structure, collateral location and quality, project progress, and the business environment. A particular area of uncertainty is the office sector, given the fundamental change in demand due to remote work. The bank also monitors overall loan delinquencies, nonperforming assets, and net charge-offs, with macroeconomic scenarios impacting credit loss provisions.",
-    "notable_quotes": [
-      {
-        "quote": "Our processes for managing credit risk are designed to be embedded in our risk culture and in our decision-making processes using a systematic approach whereby credit risks and related exposures are identified and assessed, managed through specific policies and processes, measured and evaluated against our risk appetite and credit concentration limits, and reported, along with specific mitigation activities, to management and the Board of Directors through our governance structure.",
-        "topic": "credit risk management",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "risks associated with commercial real estate loans tend to be correlated to the loan structure, collateral location and quality, project progress and business environment.",
-        "topic": "commercial real estate risk",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "Given the fundamental change in office demand driven by the acceptance of remote work, real estate performance related to the office sector continues to be an area of uncertainty.",
-        "topic": "commercial real estate risk",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Business Credit provides asset-based lending and equipment financing solutions.",
-        "topic": "asset-based lending",
-        "source": "10-K 2025Q4"
-      },
-      {
-        "quote": "We continue to focus on building client relationships where the risk-return profile is attractive.",
-        "topic": "strategic focus",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding in commercial and industrial loans and asset-based lending, while commercial real estate loans have seen declines due to paydowns.",
-    "named_competitors": "",
-    "risk_focus_analysis": "PNC's disclosures are heavily focused on credit quality and concentration risk, particularly within its commercial real estate portfolio. The bank emphasizes monitoring loan delinquencies, nonperforming assets, and the impact of macroeconomic scenarios on its allowance for credit losses. Specific attention is given to the office sector within commercial real estate, highlighting its performance as an area of uncertainty due to changing work patterns.",
-    "involvement_rating": 3
-  },
-  "RF": {
-    "bank_ticker": "RF",
-    "bank_name": "Regions Financial Corporation",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "cautious",
-    "key_themes": [
-      "commercial lending",
-      "investor real estate",
-      "credit risk management",
-      "asset quality",
-      "portfolio concentrations",
-      "exit strategies"
-    ],
-    "strategic_initiatives": "Regions' strategy remains primarily centered around larger, existing clients and slowing originations of smaller trucking deals at this point in the cycle. The Company also ceased originating new loans related to certain third-party lending businesses prior to 2020, with these portfolios now in run-off, and sold substantially all of its unsecured consumer loans in this portfolio in the fourth quarter of 2023.",
-    "perceived_risks": "Regions identifies risks related to concentrations of credit risk across individual borrowers, collateral types, industries, and loan products. The bank also highlights adverse risk migration and the need for qualitative adjustments for incremental risk in higher-risk portfolios, specifically noting office, senior housing, and trucking as 'portfolios of interest' requiring increased monitoring.",
-    "notable_quotes": [
-      {
-        "quote": "Regions' strategy remains primarily centered around larger, existing clients and slowing originations of smaller trucking deals at this point in the cycle.",
-        "topic": "credit risk management",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The decline in commercial loans, specifically commercial and industrial loans, is due to lower line of credit utilization and loans refinanced off the Company's balance sheet through the debt capital markets.",
-        "topic": "commercial lending",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The Company manages the related risks to this portfolio by setting certain lending limits for each significant industry.",
-        "topic": "portfolio concentrations",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Regions’ objective regarding credit risk is to maintain a credit portfolio that provides for stable credit costs with acceptable volatility through an economic cycle.",
-        "topic": "credit risk management",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "The increase in the provision for credit losses was driven primarily by adverse risk migration and continued credit normalization, as well as a build in qualitative adjustments for incremental risk in higher risk portfolios.",
-        "topic": "asset quality",
-        "source": "10-K 2023Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses slowing originations of smaller trucking deals and has ceased originating new loans in certain third-party lending exit portfolios, also selling off unsecured consumer loans.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures are dominated by credit quality and concentration risks. There is a clear focus on monitoring specific 'portfolios of interest' (office, senior housing, trucking) due to perceived higher risk, and a general emphasis on managing asset quality normalization and adverse risk migration across its loan portfolio.",
-    "involvement_rating": 1
-  },
-  "SF": {
-    "bank_ticker": "SF",
-    "bank_name": "Stifel Financial Corp.",
-    "rating": 4,
-    "mention_frequency": "high",
-    "sentiment": "cautious",
-    "key_themes": [
-      "fund banking / capital call lines",
-      "commercial and industrial lending",
-      "leveraged finance",
-      "private placements",
-      "credit risk management",
-      "investment banking growth through acquisitions"
-    ],
-    "strategic_initiatives": "The bank intends to grow its investment banking business by leveraging industry expertise, product knowledge, capital markets strength, and a middle-market focus. It plans to seek opportunities to capitalize on consolidation among middle-market firms to increase market share. A recent acquisition of Bryan, Garnier & Co. is expected to expand its European focus, including private and public growth financing solutions.",
-    "perceived_risks": "The bank flags credit risk, particularly for C&I loans, considering factors like borrower financial strength, collateral, leverage, and covenants. It also notes that provision for credit losses was impacted by loan growth and a deterioration in certain loans. A reduction in the bank's credit rating could adversely affect its liquidity, competitive position, and access to capital markets.",
-    "notable_quotes": [
-      {
-        "quote": "Fund banking loans primarily include capital call lines of credit, also known as subscription lines of credit. These credit facilities are used by closed-end private investment funds (“Fund”) that have ra…",
-        "topic": "fund banking / capital call lines",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "C&I loans primarily include commercial and industrial lending used for general corporate purposes, working capital and liquidity, and “event-driven.” “Event-driven” loans support client merger, acquisition, or recapitalization activities.",
-        "topic": "commercial and industrial lending",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "The increase is primarily attributable to higher leveraged finance activity.",
-        "topic": "leveraged finance",
-        "source": "10-K 2023Q4"
-      },
-      {
-        "quote": "Provision for credit losses was primarily impacted by loan growth and a deterioration in certain loans, partially offset by a slightly better macroeconomic forecast.",
-        "topic": "credit risk management",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Bryan Garnier’s product suite includes mergers & acquisitions advisory, private and public growth financing solutions, and institutional sales and execution.",
-        "topic": "investment banking growth through acquisitions",
-        "source": "10-K 2024Q4"
-      }
-    ],
-    "pullback_mentions": "The bank is expanding its investment banking business, including private and public growth financing solutions, and seeking acquisition opportunities.",
-    "named_competitors": "",
-    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risk within its loan portfolio. Specific attention is given to underwriting criteria for commercial loans, emphasizing borrower financial strength, collateral, leverage, and covenants. While 'Fund banking' loans appear to be low risk, the overall 'deterioration in certain loans' indicates a broader concern for credit quality across the portfolio.",
-    "involvement_rating": 4
-  },
   "RJF": {
     "bank_ticker": "RJF",
     "bank_name": "Raymond James Financial",
@@ -1524,6 +1428,21 @@
     "named_competitors": "",
     "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality and concentration risk within its corporate loan portfolio. They emphasize monitoring industry concentrations and credit quality trends, utilizing internal risk ratings, and incorporating external SNC exam results. The subjectivity inherent in loan classification is also highlighted as a specific risk factor that can impact provisions for credit losses.",
     "involvement_rating": 4
+  },
+  "SCHW": {
+    "bank_ticker": "SCHW",
+    "bank_name": "The Charles Schwab Corporation",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [],
+    "strategic_initiatives": "",
+    "perceived_risks": "",
+    "notable_quotes": [],
+    "pullback_mentions": "",
+    "named_competitors": "",
+    "risk_focus_analysis": "",
+    "involvement_rating": 1
   },
   "PNFP": {
     "bank_ticker": "PNFP",
@@ -1573,20 +1492,53 @@
     "risk_focus_analysis": "This bank's disclosures primarily highlight credit quality risks, particularly concerning highly leveraged transactions and the potential for rapid deterioration if private equity sponsors fail to provide support. A significant focus is also placed on regulatory and compliance risks associated with BHG's expanding operations and new product lines, along with the systemic risk of restrictions on BHG's loan sales to other banks.",
     "involvement_rating": 4
   },
-  "SCHW": {
-    "bank_ticker": "SCHW",
-    "bank_name": "The Charles Schwab Corporation",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [],
-    "strategic_initiatives": "",
-    "perceived_risks": "",
-    "notable_quotes": [],
-    "pullback_mentions": "",
+  "SF": {
+    "bank_ticker": "SF",
+    "bank_name": "Stifel Financial Corp.",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "cautious",
+    "key_themes": [
+      "fund banking / capital call lines",
+      "commercial and industrial lending",
+      "leveraged finance",
+      "private placements",
+      "credit risk management",
+      "investment banking growth through acquisitions"
+    ],
+    "strategic_initiatives": "The bank intends to grow its investment banking business by leveraging industry expertise, product knowledge, capital markets strength, and a middle-market focus. It plans to seek opportunities to capitalize on consolidation among middle-market firms to increase market share. A recent acquisition of Bryan, Garnier & Co. is expected to expand its European focus, including private and public growth financing solutions.",
+    "perceived_risks": "The bank flags credit risk, particularly for C&I loans, considering factors like borrower financial strength, collateral, leverage, and covenants. It also notes that provision for credit losses was impacted by loan growth and a deterioration in certain loans. A reduction in the bank's credit rating could adversely affect its liquidity, competitive position, and access to capital markets.",
+    "notable_quotes": [
+      {
+        "quote": "Fund banking loans primarily include capital call lines of credit, also known as subscription lines of credit. These credit facilities are used by closed-end private investment funds (“Fund”) that have ra…",
+        "topic": "fund banking / capital call lines",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "C&I loans primarily include commercial and industrial lending used for general corporate purposes, working capital and liquidity, and “event-driven.” “Event-driven” loans support client merger, acquisition, or recapitalization activities.",
+        "topic": "commercial and industrial lending",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "The increase is primarily attributable to higher leveraged finance activity.",
+        "topic": "leveraged finance",
+        "source": "10-K 2023Q4"
+      },
+      {
+        "quote": "Provision for credit losses was primarily impacted by loan growth and a deterioration in certain loans, partially offset by a slightly better macroeconomic forecast.",
+        "topic": "credit risk management",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Bryan Garnier’s product suite includes mergers & acquisitions advisory, private and public growth financing solutions, and institutional sales and execution.",
+        "topic": "investment banking growth through acquisitions",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank is expanding its investment banking business, including private and public growth financing solutions, and seeking acquisition opportunities.",
     "named_competitors": "",
-    "risk_focus_analysis": "",
-    "involvement_rating": 1
+    "risk_focus_analysis": "The bank's disclosures primarily focus on credit quality and concentration risk within its loan portfolio. Specific attention is given to underwriting criteria for commercial loans, emphasizing borrower financial strength, collateral, leverage, and covenants. While 'Fund banking' loans appear to be low risk, the overall 'deterioration in certain loans' indicates a broader concern for credit quality across the portfolio.",
+    "involvement_rating": 4
   },
   "SNV": {
     "bank_ticker": "SNV",
@@ -1635,6 +1587,78 @@
     "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality and asset quality risks, evidenced by the increase in criticized and classified loans and non-performing assets. The impact of the economic and interest rate environment is frequently cited as a driver for these deteriorations. Governance and enterprise-level portfolio concentrations are also mentioned as areas of risk management focus.",
     "involvement_rating": 4
   },
+  "PNC": {
+    "bank_ticker": "PNC",
+    "bank_name": "The PNC Financial Services Group",
+    "rating": 3,
+    "mention_frequency": "low",
+    "sentiment": "cautious",
+    "key_themes": [
+      "commercial and industrial lending",
+      "asset-based lending",
+      "equipment financing",
+      "commercial real estate risk",
+      "credit risk management",
+      "loan portfolio growth"
+    ],
+    "strategic_initiatives": "PNC aims to grow its market share and drive higher returns by delivering value-added solutions to clients, focusing on attractive risk-return profiles. The bank's Business Credit segment specifically provides asset-based lending and equipment financing solutions. Commercial Banking also offers lending, treasury management, and capital markets products to corporate and middle market clients.",
+    "perceived_risks": "The bank flags risks associated with commercial real estate loans, noting their correlation to loan structure, collateral location and quality, project progress, and the business environment. A particular area of uncertainty is the office sector, given the fundamental change in demand due to remote work. The bank also monitors overall loan delinquencies, nonperforming assets, and net charge-offs, with macroeconomic scenarios impacting credit loss provisions.",
+    "notable_quotes": [
+      {
+        "quote": "Our processes for managing credit risk are designed to be embedded in our risk culture and in our decision-making processes using a systematic approach whereby credit risks and related exposures are identified and assessed, managed through specific policies and processes, measured and evaluated against our risk appetite and credit concentration limits, and reported, along with specific mitigation activities, to management and the Board of Directors through our governance structure.",
+        "topic": "credit risk management",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "risks associated with commercial real estate loans tend to be correlated to the loan structure, collateral location and quality, project progress and business environment.",
+        "topic": "commercial real estate risk",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "Given the fundamental change in office demand driven by the acceptance of remote work, real estate performance related to the office sector continues to be an area of uncertainty.",
+        "topic": "commercial real estate risk",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Business Credit provides asset-based lending and equipment financing solutions.",
+        "topic": "asset-based lending",
+        "source": "10-K 2025Q4"
+      },
+      {
+        "quote": "We continue to focus on building client relationships where the risk-return profile is attractive.",
+        "topic": "strategic focus",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding in commercial and industrial loans and asset-based lending, while commercial real estate loans have seen declines due to paydowns.",
+    "named_competitors": "",
+    "risk_focus_analysis": "PNC's disclosures are heavily focused on credit quality and concentration risk, particularly within its commercial real estate portfolio. The bank emphasizes monitoring loan delinquencies, nonperforming assets, and the impact of macroeconomic scenarios on its allowance for credit losses. Specific attention is given to the office sector within commercial real estate, highlighting its performance as an area of uncertainty due to changing work patterns.",
+    "involvement_rating": 3
+  },
+  "SSB": {
+    "bank_ticker": "SSB",
+    "bank_name": "SouthState Corporation",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "SBA loan securitization",
+      "third-party loan origination"
+    ],
+    "strategic_initiatives": "The Company began purchasing guaranteed portions of SBA loans from third-party originators in 2024, with the strategic intent to aggregate these into pools and create securities through the SBA’s fiscal transfer agent. This line of business became more established in 2025, leading to an increase in SBA loans held for sale.",
+    "perceived_risks": "",
+    "notable_quotes": [
+      {
+        "quote": "During the third quarter of 2024, the Company began purchasing the guaranteed portions of SBA loans from third-party originators with the intent to aggregate the guaranteed portion of the SBA loans into pools with similar characteristics to create a security representing an interest in those pools through the SBA’s fiscal transfer agent.",
+        "topic": "SBA loan securitization",
+        "source": "10-K 2025Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses expanding its SBA loan business, which became more established in 2025.",
+    "named_competitors": "",
+    "risk_focus_analysis": "This bank's disclosures primarily focus on risks related to real estate market conditions, the credit quality of its diverse loan portfolio (commercial, residential, and acquired loans), and the challenges of integrating acquired entities. There is no explicit discussion of risks associated with private credit or NBFI exposure.",
+    "involvement_rating": 1
+  },
   "SOFI": {
     "bank_ticker": "SOFI",
     "bank_name": "SoFi Technologies",
@@ -1682,30 +1706,6 @@
     "named_competitors": "Climb Credit, 1/0, Ejudicate, Navient, Prehired, National Collegiate Student Loan Trusts, Pennsylvania Higher Education Assistance Agency, Western Benefits Group, Student Loan Pro, Judith Noh, Performant Recovery, Inc.",
     "risk_focus_analysis": "SoFi's disclosures are dominated by risks related to funding liquidity, specifically the reliance on warehouse facilities, access to capital markets, and deposit growth. Significant attention is also given to regulatory and compliance risks, including potential actions from the CFPB and state agencies, and the impact of changes in student loan bankruptcy laws. Credit quality risks, such as member default rates, fraud, and repurchase obligations, are also prominent concerns.",
     "involvement_rating": 5
-  },
-  "SSB": {
-    "bank_ticker": "SSB",
-    "bank_name": "SouthState Corporation",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "SBA loan securitization",
-      "third-party loan origination"
-    ],
-    "strategic_initiatives": "The Company began purchasing guaranteed portions of SBA loans from third-party originators in 2024, with the strategic intent to aggregate these into pools and create securities through the SBA’s fiscal transfer agent. This line of business became more established in 2025, leading to an increase in SBA loans held for sale.",
-    "perceived_risks": "",
-    "notable_quotes": [
-      {
-        "quote": "During the third quarter of 2024, the Company began purchasing the guaranteed portions of SBA loans from third-party originators with the intent to aggregate the guaranteed portion of the SBA loans into pools with similar characteristics to create a security representing an interest in those pools through the SBA’s fiscal transfer agent.",
-        "topic": "SBA loan securitization",
-        "source": "10-K 2025Q4"
-      }
-    ],
-    "pullback_mentions": "The bank discusses expanding its SBA loan business, which became more established in 2025.",
-    "named_competitors": "",
-    "risk_focus_analysis": "This bank's disclosures primarily focus on risks related to real estate market conditions, the credit quality of its diverse loan portfolio (commercial, residential, and acquired loans), and the challenges of integrating acquired entities. There is no explicit discussion of risks associated with private credit or NBFI exposure.",
-    "involvement_rating": 1
   },
   "STT": {
     "bank_ticker": "STT",
@@ -1803,6 +1803,71 @@
     "risk_focus_analysis": "This bank's disclosures are heavily dominated by risks related to partner concentration, given that a significant portion of its revenue comes from a few large retail partners. Credit quality risk is also a major focus, with extensive discussion of charge-off levels, delinquencies, and the sufficiency of the allowance for credit losses. Additionally, the bank emphasizes the risk associated with customers' ability to repay, influenced by their broader financial obligations and cash flow.",
     "involvement_rating": 1
   },
+  "TFC": {
+    "bank_ticker": "TFC",
+    "bank_name": "Truist Financial",
+    "rating": 2,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "leveraged lending",
+      "asset-based lending",
+      "point-of-sale lending",
+      "trading business exposure",
+      "commercial portfolio risk management",
+      "third-party lending partnerships"
+    ],
+    "strategic_initiatives": "Consumer loans and credit cards increased $632 million during 2024 primarily due to a $748 million increase in other consumer primarily due to growth of higher-return point-of-sale lending portfolios (Service Finance and Sheffield), and a $362 million increase in indirect auto primarily due to higher production. The bank also originates unsecured loans via third-party partnerships.",
+    "perceived_risks": "The bank discusses general credit risk, economic downturns affecting borrower repayment ability, and the need to manage risk concentrations in its commercial portfolio. No specific risks are highlighted for 'private credit' or 'NBFI' as distinct categories, but rather as part of broader commercial lending risks.",
+    "notable_quotes": [
+      {
+        "quote": "Trading loans include loans held in connection with the Company’s trading business primarily consisting of commercial and corporate leveraged loans and loans made or acquired in connection with the Company’s TRS business.",
+        "topic": "leveraged lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Examples of these products and services include: ... Wholesale Services: Asset based lending",
+        "topic": "asset-based lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Consumer loans and credit cards increased $632 million during 2024 primarily due to a $748 million increase in other consumer primarily due to growth of higher-return point-of-sale lending portfolios (Service Finance and Sheffield), and a $362 million increase in indirect auto primarily due to higher production, partially offset by a $411 million decrease in home equity.",
+        "topic": "point-of-sale lending",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "In the commercial portfolio, risk concentrations are evaluated regularly on both an aggregate portfolio level and on an individual client basis.",
+        "topic": "commercial portfolio risk management",
+        "source": "10-K 2024Q4"
+      },
+      {
+        "quote": "Management is involved in the credit approval and review process, and risk acceptance criteria are adjusted as needed to reflect the Company’s risk appetite.",
+        "topic": "commercial portfolio risk management",
+        "source": "10-K 2024Q4"
+      }
+    ],
+    "pullback_mentions": "The bank discusses growth in higher-return point-of-sale lending portfolios and increased production in indirect auto, indicating expansion in certain consumer lending areas.",
+    "named_competitors": "",
+    "risk_focus_analysis": "Truist's risk disclosures primarily focus on managing overall credit quality across its diverse loan portfolios, with particular attention to commercial and industrial, commercial real estate, and various consumer segments. The bank emphasizes evaluating risk concentrations and adjusting risk acceptance criteria to align with its risk appetite. While leveraged loans are mentioned, specific risks for this segment are not detailed separately from general commercial credit risk.",
+    "involvement_rating": 3
+  },
+  "UMBF": {
+    "bank_ticker": "UMBF",
+    "bank_name": "UMB Financial Corporation",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [
+      "specialty lending"
+    ],
+    "strategic_initiatives": "",
+    "perceived_risks": "",
+    "notable_quotes": [],
+    "pullback_mentions": "",
+    "named_competitors": "",
+    "risk_focus_analysis": "",
+    "involvement_rating": 1
+  },
   "VLY": {
     "bank_ticker": "VLY",
     "bank_name": "Valley National Bancorp",
@@ -1850,6 +1915,21 @@
     "named_competitors": "",
     "risk_focus_analysis": "Valley National Bancorp's disclosures are heavily focused on commercial real estate risks, particularly credit quality concerns stemming from dependence on business operations, balloon payments, and larger loan balances. Concentration risk in CRE is a key management focus, with explicit goals to reduce the CRE concentration ratio. General market interest rate fluctuations and their impact on loan demand and funding costs are also prominent.",
     "involvement_rating": 4
+  },
+  "USB": {
+    "bank_ticker": "USB",
+    "bank_name": "U.S. Bancorp",
+    "rating": 1,
+    "mention_frequency": "low",
+    "sentiment": "neutral",
+    "key_themes": [],
+    "strategic_initiatives": "",
+    "perceived_risks": "",
+    "notable_quotes": [],
+    "pullback_mentions": "",
+    "named_competitors": "",
+    "risk_focus_analysis": "The provided disclosures for U.S. Bancorp do not specifically address private credit or non-bank financial institution (NBFI) lending as distinct risk categories. The bank's risk discussions primarily revolve around its traditional loan portfolio segments, including commercial lending, commercial real estate, residential mortgages, and consumer credit, focusing on credit quality, delinquency rates, and macroeconomic factors affecting these segments.",
+    "involvement_rating": 1
   },
   "WAL": {
     "bank_ticker": "WAL",
@@ -1947,85 +2027,48 @@
     "risk_focus_analysis": "This bank's risk disclosures are dominated by credit quality and concentration risks, especially within its commercial real estate and commercial non-mortgage portfolios. There is a particular focus on geographic concentration in the Greater New York City area and the uncertainty surrounding the traditional office sector, with reserves established against these exposures.",
     "involvement_rating": 4
   },
-  "UMBF": {
-    "bank_ticker": "UMBF",
-    "bank_name": "UMB Financial Corporation",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
+  "WFC": {
+    "bank_ticker": "WFC",
+    "bank_name": "Wells Fargo & Company",
+    "rating": 4,
+    "mention_frequency": "high",
+    "sentiment": "cautious",
     "key_themes": [
-      "specialty lending"
-    ],
-    "strategic_initiatives": "",
-    "perceived_risks": "",
-    "notable_quotes": [],
-    "pullback_mentions": "",
-    "named_competitors": "",
-    "risk_focus_analysis": "",
-    "involvement_rating": 1
-  },
-  "USB": {
-    "bank_ticker": "USB",
-    "bank_name": "U.S. Bancorp",
-    "rating": 1,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [],
-    "strategic_initiatives": "",
-    "perceived_risks": "",
-    "notable_quotes": [],
-    "pullback_mentions": "",
-    "named_competitors": "",
-    "risk_focus_analysis": "The provided disclosures for U.S. Bancorp do not specifically address private credit or non-bank financial institution (NBFI) lending as distinct risk categories. The bank's risk discussions primarily revolve around its traditional loan portfolio segments, including commercial lending, commercial real estate, residential mortgages, and consumer credit, focusing on credit quality, delinquency rates, and macroeconomic factors affecting these segments.",
-    "involvement_rating": 1
-  },
-  "TFC": {
-    "bank_ticker": "TFC",
-    "bank_name": "Truist Financial",
-    "rating": 2,
-    "mention_frequency": "low",
-    "sentiment": "neutral",
-    "key_themes": [
-      "leveraged lending",
+      "loans to asset managers and funds",
+      "commercial finance",
       "asset-based lending",
-      "point-of-sale lending",
-      "trading business exposure",
-      "commercial portfolio risk management",
-      "third-party lending partnerships"
+      "structured lending",
+      "collateralized loan obligations",
+      "credit risk management"
     ],
-    "strategic_initiatives": "Consumer loans and credit cards increased $632 million during 2024 primarily due to a $748 million increase in other consumer primarily due to growth of higher-return point-of-sale lending portfolios (Service Finance and Sheffield), and a $362 million increase in indirect auto primarily due to higher production. The bank also originates unsecured loans via third-party partnerships.",
-    "perceived_risks": "The bank discusses general credit risk, economic downturns affecting borrower repayment ability, and the need to manage risk concentrations in its commercial portfolio. No specific risks are highlighted for 'private credit' or 'NBFI' as distinct categories, but rather as part of broader commercial lending risks.",
+    "strategic_initiatives": "The bank has seen increased originations and loan draws in its commercial and industrial loans and lease financing portfolio, particularly within the 'Financials except banks' category. It also reported a $253 million gain associated with a merchant services joint venture acquisition in the second quarter of 2025.",
+    "perceived_risks": "The bank identifies credit risk as the potential for loss from borrower or counterparty default. It mitigates this through structural credit enhancements, collateral eligibility requirements, contractual re-margining, and limiting loan amounts to a percentage of underlying asset value. A significant portion of commercial nonaccrual loans are secured, predominantly by real estate.",
     "notable_quotes": [
       {
-        "quote": "Trading loans include loans held in connection with the Company’s trading business primarily consisting of commercial and corporate leveraged loans and loans made or acquired in connection with the Company’s TRS business.",
-        "topic": "leveraged lending",
-        "source": "10-K 2024Q4"
+        "quote": "These loans are generally secured and have features to help manage credit risk, such as structural credit enhancements, collateral eligibility requirements, contractual re-margining of collateral supporting the loans, and loan amounts limited to a percentage of the value of the underlying assets considering underlying credit risk, asset duration, and ongoing performance.",
+        "topic": "credit risk management",
+        "source": "10-Q 2025Q2"
       },
       {
-        "quote": "Examples of these products and services include: ... Wholesale Services: Asset based lending",
-        "topic": "asset-based lending",
-        "source": "10-K 2024Q4"
+        "quote": "The portfolio increased at September 30, 2025, compared with December 31, 2024, as a result of increased originations and loan draws, partially offset by paydowns.",
+        "topic": "commercial finance",
+        "source": "10-Q 2025Q3"
       },
       {
-        "quote": "Consumer loans and credit cards increased $632 million during 2024 primarily due to a $748 million increase in other consumer primarily due to growth of higher-return point-of-sale lending portfolios (Service Finance and Sheffield), and a $362 million increase in indirect auto primarily due to higher production, partially offset by a $411 million decrease in home equity.",
-        "topic": "point-of-sale lending",
-        "source": "10-K 2024Q4"
+        "quote": "This category includes loans to investment firms, financial vehicles, nonbank creditors, rental and leasing companies, securities firms, and investment banks.",
+        "topic": "loans to asset managers and funds",
+        "source": "10-Q 2025Q1"
       },
       {
-        "quote": "In the commercial portfolio, risk concentrations are evaluated regularly on both an aggregate portfolio level and on an individual client basis.",
-        "topic": "commercial portfolio risk management",
-        "source": "10-K 2024Q4"
-      },
-      {
-        "quote": "Management is involved in the credit approval and review process, and risk acceptance criteria are adjusted as needed to reflect the Company’s risk appetite.",
-        "topic": "commercial portfolio risk management",
-        "source": "10-K 2024Q4"
+        "quote": "Includes asset-based lending and leasing, including loans to special purpose entities, loans to commercial leasing entities, structured lending facilities to commercial loan managers, and also includes collateralized loan obligations (CLOs) in loan form, all of which were rated AA or above, of $945 million and $3.7 billion at September 30, 2025, and December 31, 2024, respectively.",
+        "topic": "structured lending",
+        "source": "10-Q 2025Q3"
       }
     ],
-    "pullback_mentions": "The bank discusses growth in higher-return point-of-sale lending portfolios and increased production in indirect auto, indicating expansion in certain consumer lending areas.",
+    "pullback_mentions": "The bank discusses increased originations and loan draws in its commercial and industrial loan portfolios, indicating expansion.",
     "named_competitors": "",
-    "risk_focus_analysis": "Truist's risk disclosures primarily focus on managing overall credit quality across its diverse loan portfolios, with particular attention to commercial and industrial, commercial real estate, and various consumer segments. The bank emphasizes evaluating risk concentrations and adjusting risk acceptance criteria to align with its risk appetite. While leveraged loans are mentioned, specific risks for this segment are not detailed separately from general commercial credit risk.",
-    "involvement_rating": 3
+    "risk_focus_analysis": "Wells Fargo's disclosures primarily focus on credit quality and collateralization risk within its private credit and NBFI exposures. The bank emphasizes that a high percentage of commercial nonaccrual loans are secured, and details various structural credit enhancements and collateral eligibility requirements to manage potential defaults and associated losses. This indicates a strong emphasis on mitigating direct credit risk through robust underwriting and security.",
+    "involvement_rating": 4
   },
   "WTFC": {
     "bank_ticker": "WTFC",
@@ -2074,49 +2117,6 @@
     "named_competitors": "",
     "risk_focus_analysis": "This bank's disclosures primarily focus on credit quality and delinquency risk within its premium finance segment, highlighting the inherently higher risk compared to other lending operations. A significant emphasis is also placed on collateral risk, specifically the potential impairment of insurance policy values due to the financial health of insurance providers. Operational risks related to managing a geographically dispersed borrower base and reliance on unaffiliated agents for origination are also key concerns.",
     "involvement_rating": 5
-  },
-  "WFC": {
-    "bank_ticker": "WFC",
-    "bank_name": "Wells Fargo & Company",
-    "rating": 4,
-    "mention_frequency": "high",
-    "sentiment": "cautious",
-    "key_themes": [
-      "loans to asset managers and funds",
-      "commercial finance",
-      "asset-based lending",
-      "structured lending",
-      "collateralized loan obligations",
-      "credit risk management"
-    ],
-    "strategic_initiatives": "The bank has seen increased originations and loan draws in its commercial and industrial loans and lease financing portfolio, particularly within the 'Financials except banks' category. It also reported a $253 million gain associated with a merchant services joint venture acquisition in the second quarter of 2025.",
-    "perceived_risks": "The bank identifies credit risk as the potential for loss from borrower or counterparty default. It mitigates this through structural credit enhancements, collateral eligibility requirements, contractual re-margining, and limiting loan amounts to a percentage of underlying asset value. A significant portion of commercial nonaccrual loans are secured, predominantly by real estate.",
-    "notable_quotes": [
-      {
-        "quote": "These loans are generally secured and have features to help manage credit risk, such as structural credit enhancements, collateral eligibility requirements, contractual re-margining of collateral supporting the loans, and loan amounts limited to a percentage of the value of the underlying assets considering underlying credit risk, asset duration, and ongoing performance.",
-        "topic": "credit risk management",
-        "source": "10-Q 2025Q2"
-      },
-      {
-        "quote": "The portfolio increased at September 30, 2025, compared with December 31, 2024, as a result of increased originations and loan draws, partially offset by paydowns.",
-        "topic": "commercial finance",
-        "source": "10-Q 2025Q3"
-      },
-      {
-        "quote": "This category includes loans to investment firms, financial vehicles, nonbank creditors, rental and leasing companies, securities firms, and investment banks.",
-        "topic": "loans to asset managers and funds",
-        "source": "10-Q 2025Q1"
-      },
-      {
-        "quote": "Includes asset-based lending and leasing, including loans to special purpose entities, loans to commercial leasing entities, structured lending facilities to commercial loan managers, and also includes collateralized loan obligations (CLOs) in loan form, all of which were rated AA or above, of $945 million and $3.7 billion at September 30, 2025, and December 31, 2024, respectively.",
-        "topic": "structured lending",
-        "source": "10-Q 2025Q3"
-      }
-    ],
-    "pullback_mentions": "The bank discusses increased originations and loan draws in its commercial and industrial loan portfolios, indicating expansion.",
-    "named_competitors": "",
-    "risk_focus_analysis": "Wells Fargo's disclosures primarily focus on credit quality and collateralization risk within its private credit and NBFI exposures. The bank emphasizes that a high percentage of commercial nonaccrual loans are secured, and details various structural credit enhancements and collateral eligibility requirements to manage potential defaults and associated losses. This indicates a strong emphasis on mitigating direct credit risk through robust underwriting and security.",
-    "involvement_rating": 4
   },
   "ZION": {
     "bank_ticker": "ZION",

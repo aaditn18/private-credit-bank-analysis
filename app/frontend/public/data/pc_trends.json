@@ -4549,48 +4549,6 @@
     }
   ],
   "peer_group_comparison": {
-    "regional": {
-      "2024Q1": {
-        "avg_nbfi_ratio": 0.2209937969639547,
-        "avg_ci_ratio": 0.2443119264266192,
-        "bank_count": 39
-      },
-      "2024Q2": {
-        "avg_nbfi_ratio": 0.2202645971548984,
-        "avg_ci_ratio": 0.24388262551251513,
-        "bank_count": 39
-      },
-      "2024Q3": {
-        "avg_nbfi_ratio": 0.22204509584195137,
-        "avg_ci_ratio": 0.24302390319414302,
-        "bank_count": 39
-      },
-      "2024Q4": {
-        "avg_nbfi_ratio": 0.21763557801002628,
-        "avg_ci_ratio": 0.23620801369140138,
-        "bank_count": 39
-      },
-      "2025Q1": {
-        "avg_nbfi_ratio": 0.21159612009146253,
-        "avg_ci_ratio": 0.2307320467092346,
-        "bank_count": 39
-      },
-      "2025Q2": {
-        "avg_nbfi_ratio": 0.2147357524221884,
-        "avg_ci_ratio": 0.23427966529197478,
-        "bank_count": 38
-      },
-      "2025Q3": {
-        "avg_nbfi_ratio": 0.21474063456685238,
-        "avg_ci_ratio": 0.22970798506644877,
-        "bank_count": 38
-      },
-      "2025Q4": {
-        "avg_nbfi_ratio": 0.20460776087689325,
-        "avg_ci_ratio": 0.2207187564585948,
-        "bank_count": 38
-      }
-    },
     "GSIB": {
       "2024Q1": {
         "avg_nbfi_ratio": 0.3638899947091007,
@@ -4673,6 +4631,48 @@
         "avg_nbfi_ratio": 0.29159802568336135,
         "avg_ci_ratio": 0.06250973923831801,
         "bank_count": 7
+      }
+    },
+    "regional": {
+      "2024Q1": {
+        "avg_nbfi_ratio": 0.2209937969639547,
+        "avg_ci_ratio": 0.2443119264266192,
+        "bank_count": 39
+      },
+      "2024Q2": {
+        "avg_nbfi_ratio": 0.2202645971548984,
+        "avg_ci_ratio": 0.24388262551251513,
+        "bank_count": 39
+      },
+      "2024Q3": {
+        "avg_nbfi_ratio": 0.22204509584195137,
+        "avg_ci_ratio": 0.24302390319414302,
+        "bank_count": 39
+      },
+      "2024Q4": {
+        "avg_nbfi_ratio": 0.21763557801002628,
+        "avg_ci_ratio": 0.23620801369140138,
+        "bank_count": 39
+      },
+      "2025Q1": {
+        "avg_nbfi_ratio": 0.21159612009146253,
+        "avg_ci_ratio": 0.2307320467092346,
+        "bank_count": 39
+      },
+      "2025Q2": {
+        "avg_nbfi_ratio": 0.2147357524221884,
+        "avg_ci_ratio": 0.23427966529197478,
+        "bank_count": 38
+      },
+      "2025Q3": {
+        "avg_nbfi_ratio": 0.21474063456685238,
+        "avg_ci_ratio": 0.22970798506644877,
+        "bank_count": 38
+      },
+      "2025Q4": {
+        "avg_nbfi_ratio": 0.20460776087689325,
+        "avg_ci_ratio": 0.2207187564585948,
+        "bank_count": 38
       }
     }
   }

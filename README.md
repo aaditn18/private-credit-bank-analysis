@@ -51,18 +51,38 @@ private-credit-bank-analysis/
 
 ## What the App Reads at Runtime
 
-The app has **two runtime data sources**, used by different pages:
+**Static JSON only.** As of this commit, the running app makes **zero**
+calls to the FastAPI backend or the SQLite DB. Every page renders from
+files in `app/frontend/public/data/` — the frontend can be deployed to
+any static host (Vercel, Cloudflare Pages, GitHub Pages) with no Python
+runtime.
 
-| Source | Path | Used by |
-|---|---|---|
-| SQLite DB | `app/backend/pc_analyst.db` (~1.3 GB) | Home overview chart, `/timeline/[ticker]`, DA + AI Anomalies, Compare-page chatbot fallback, "Generate winner summary", chatbot |
-| Static JSON | `app/frontend/public/data/pc_*.json` | All four PC sector pages: Rankings, Trends, Anomalies, Compare |
-| Static JSON | `app/frontend/public/data/ai/ai_*.json` | AI Bank Profile section |
-| Static TS | `app/frontend/lib/da-data.ts` | DA Rankings, Trends, Compare (BUFN403 Team 5 dashboards) |
+| Page | Source file(s) |
+|---|---|
+| `/` (home overview chart, sector cards, multi-theme banks table) | `pc_overview.json` |
+| `/private-credit/rankings` | `pc_rankings.json` |
+| `/private-credit/trends` | `pc_trends.json` + `pc_findings.json` |
+| `/private-credit/anomalies` | `pc_anomalies.json` |
+| `/private-credit/compare` | `pc_banks.json` + `pc_rankings.json` + `pc_trends.json` + `pc_timelines.json` + `pc_findings.json` |
+| `/digital-assets/anomalies` | `da_anomalies.json` |
+| `/ai/anomalies` | `ai_anomalies.json` |
+| `/digital-assets/{rankings,trends,compare}` | `app/frontend/lib/da-data.ts` (static TS) |
+| `/ai` Bank Profile section | `ai/ai_*.json` (5 files) |
+| `/timeline/[ticker]` | `pc_timelines.json` (single fetch) |
 
-The DB contains: 50 banks, 900 documents, ~120k chunks with embeddings + topic tags + sentiment scores, ~2.8k Call Report facts, 50 LLM-extracted findings, ~23k stock-price points, ~125 cached news articles.
+The SQLite DB at `app/backend/pc_analyst.db` (~1.3 GB) is now only
+used **at JSON-generation time** — it's the source the
+`scripts/generate_pc_static_data.py` script reads from once when
+producing the JSONs. The committed JSONs are the source of truth for
+every page. Production deployment doesn't need the DB or the FastAPI
+backend running.
 
-**The PC static JSONs are derived from the DB** by running `scripts/generate_pc_static_data.py` (see "Refreshing the PC static JSONs" below). After any DB change — re-ingestion, re-running `populate_findings.py`, etc. — re-run the generator and commit the updated JSONs so the PC pages reflect the new data. If you skip this step, the chatbot and timeline page will show the new data but the PC sector pages will still show the old.
+**Removed in this iteration:**
+- The chatbot drawer + agent loop (would require live LLM + vector
+  retrieval; fundamentally not snapshot-friendly)
+- The "Generate winner summary" button on the Compare page (same path)
+- The Next.js `/api/backend/[...path]` proxy and `lib/api.ts` runtime
+  helpers
 
 ---
 
@@ -101,51 +121,56 @@ All routes are live unless noted. The Private Credit sector is fully data-backed
 
 ---
 
-## Refreshing the PC static JSONs
+## Refreshing the static JSONs
 
-The four Private Credit pages (Rankings, Trends, Anomalies, Compare) read from
-six committed JSON files in `app/frontend/public/data/`:
+Every page reads from committed JSON files in `app/frontend/public/data/`:
 
 ```
 pc_banks.json       50 banks, peer groups
 pc_rankings.json    composite-score table for the latest quarter
 pc_trends.json      per-bank metric series across all quarters
-pc_anomalies.json   8-category anomaly engine output
+pc_anomalies.json   8-category PC anomaly engine output (with takeaways)
+da_anomalies.json   DA anomaly engine output (with takeaways)
+ai_anomalies.json   AI anomaly engine output (with takeaways)
+pc_overview.json    cross-sector home-page data
 pc_timelines.json   per-bank filings + Call Report metrics + stock + news
-pc_findings.json    LLM-extracted strategic_initiatives + notable_quotes
+pc_findings.json    LLM-extracted strategy + classification fields
 ```
 
-These are committed so the PC pages render without a live backend. Whenever
-the DB changes — re-ingestion, re-running `populate_findings.py`, etc. — run
-the generator to refresh them:
+Whenever the DB changes — re-ingestion, re-running `populate_findings.py`, etc.
+— run the generator + annotator pipeline to refresh them:
 
 ```bash
-# Backend must be running for the generator to hit /banks, /rankings, etc.
-cd app/backend && uvicorn pc_analyst.api:app --port 8000 &
+# 1. Bring the FastAPI backend up so the generator can read /banks,
+#    /rankings, /trends, /anomalies/{theme}, /timeline/{ticker},
+#    /findings/{ticker}, /overview.
+cd app/backend && source .venv/bin/activate && uvicorn pc_analyst.api:app --port 8000 &
 
-# Then, from the repo root:
+# 2. Snapshot every endpoint into JSON. Concurrent per-ticker fans
+#    finish in ~10s.
+cd ../..  # back to repo root
 python scripts/generate_pc_static_data.py \
     --backend http://localhost:8000 \
     --out app/frontend/public/data
-```
 
-The generator hits the live FastAPI endpoints (`/banks`, `/rankings`, `/trends`,
-`/anomalies/private-credit`, `/timeline/{ticker}` × 50, `/findings/{ticker}` × 50)
-and writes the responses verbatim into the JSON files. This guarantees the JSON
-shapes match what the frontend's TypeScript types expect — no field-mapping
-logic to drift.
+# 3. (Optional) regenerate Gemini-written anomaly takeaways. The
+#    generator at step 2 wipes them since it pulls fresh anomalies
+#    from the DB. Each call costs ~80 seconds.
+python app/backend/scripts/annotate_anomaly_takeaways.py --rerun
+python app/backend/scripts/annotate_anomaly_takeaways.py \
+    --input app/frontend/public/data/da_anomalies.json --rerun
+python app/backend/scripts/annotate_anomaly_takeaways.py \
+    --input app/frontend/public/data/ai_anomalies.json --rerun
 
-Concurrent fetches make the per-ticker fan-out finish in <1 s each. End-to-end
-runtime is ~10 s with a warm cache.
-
-Then commit the updated JSONs so collaborators picking up `git pull` see the
-new data:
-
-```bash
-git add app/frontend/public/data/pc_*.json
-git commit -m "Refresh PC static JSONs from DB"
+# 4. Commit + push so collaborators pick up the refreshed data via git pull.
+git add app/frontend/public/data/
+git commit -m "Refresh static JSONs from DB"
 git push
 ```
+
+Once the JSONs are committed, the running app needs **only** the JSONs to
+work — the FastAPI backend is irrelevant to production deployment. Step 1
+only matters when you regenerate.
 
 ---
 

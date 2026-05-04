@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import {
   Radar,
@@ -214,86 +214,8 @@ function safeNum(v: number | null | undefined): number | null {
   return v === null || v === undefined || Number.isNaN(v) ? null : v;
 }
 
-// ── tiny “markdown-ish” renderer for winner summaries ─────────────────────────
-
-type Block =
-  | { kind: 'paragraph'; text: string }
-  | { kind: 'heading'; text: string }
-  | { kind: 'bullet'; items: string[] };
-
-function splitIntoBlocks(md: string): Block[] {
-  const lines = md.split(/\r?\n/);
-  const blocks: Block[] = [];
-  let paragraph: string[] = [];
-  let bullets: string[] | null = null;
-  const flushParagraph = () => {
-    if (paragraph.length) {
-      blocks.push({ kind: 'paragraph', text: paragraph.join(' ') });
-      paragraph = [];
-    }
-  };
-  const flushBullets = () => {
-    if (bullets && bullets.length) {
-      blocks.push({ kind: 'bullet', items: bullets });
-      bullets = null;
-    }
-  };
-  for (const raw of lines) {
-    const line = raw.trimEnd();
-    if (!line.trim()) {
-      flushParagraph();
-      flushBullets();
-      continue;
-    }
-    if (line.startsWith('## ') || line.startsWith('### ')) {
-      flushParagraph();
-      flushBullets();
-      blocks.push({ kind: 'heading', text: line.replace(/^#+\s*/, '') });
-    } else if (line.startsWith('- ')) {
-      flushParagraph();
-      if (!bullets) bullets = [];
-      bullets.push(line.slice(2));
-    } else {
-      flushBullets();
-      paragraph.push(line);
-    }
-  }
-  flushParagraph();
-  flushBullets();
-  return blocks;
-}
-
-function renderBold(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((p, i) => {
-    const m = /^\*\*(.+)\*\*$/.exec(p);
-    if (m) return <strong key={i}>{m[1]}</strong>;
-    return <span key={i}>{p}</span>;
-  });
-}
-
-function RenderedMarkdown({ markdown }: { markdown: string }) {
-  const blocks = useMemo(() => splitIntoBlocks(markdown), [markdown]);
-  return (
-    <div className="space-y-2 leading-relaxed text-sm text-neutral-800">
-      {blocks.map((b, i) =>
-        b.kind === 'heading' ? (
-          <div key={i} className="font-semibold text-[11px] uppercase tracking-wide text-neutral-500 pt-1">
-            {b.text}
-          </div>
-        ) : b.kind === 'bullet' ? (
-          <ul key={i} className="list-disc ml-4 space-y-1">
-            {b.items.map((line, j) => (
-              <li key={j}>{renderBold(line)}</li>
-            ))}
-          </ul>
-        ) : (
-          <p key={i}>{renderBold(b.text)}</p>
-        ),
-      )}
-    </div>
-  );
-}
+// (RenderedMarkdown helper + Block type removed — were only used by the
+//  removed "Generate winner summary" panel.)
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
@@ -309,10 +231,9 @@ export function ComparePanel() {
   const [findings, setFindings] = useState<Record<string, FindingData | null>>({});
   const [loadingTickers, setLoadingTickers] = useState<Set<string>>(new Set());
 
-  const [winnerLoading, setWinnerLoading] = useState(false);
-  const [winnerError, setWinnerError] = useState<string | null>(null);
-  const [winnerMarkdown, setWinnerMarkdown] = useState<string | null>(null);
-  const abortWinner = useRef<AbortController | null>(null);
+  // The "Generate winner summary" feature was removed when the app went
+  // backend-free. It depended on POST /api/backend/search → agent loop +
+  // Gemini synthesis, which can't be served from static JSON.
 
   // Cross-bank context: rankings (composite rank tile) + trends (per-metric
   // line chart). These are global, not per-ticker, so we fetch once on mount.
@@ -409,38 +330,12 @@ export function ComparePanel() {
       .catch(() => { /* swallow — falls back to per-ticker backend fetch */ });
   }, []);
 
-  // Load findings for selected tickers from the live backend.
-  // Returns null when the backend is down, which triggers the existing
-  // "pipeline not yet run" amber banner — no blank widgets.
-  useEffect(() => {
-    let cancelled = false;
-    async function loadFindingsFor(ticker: string) {
-      setLoadingTickers((prev) => new Set(prev).add(ticker));
-      try {
-        const fRes = await fetch(`/api/backend/findings/${ticker}`);
-        const fJson = fRes.ok ? ((await fRes.json()) as FindingData) : null;
-        if (!cancelled) {
-          setFindings((prev) => ({ ...prev, [ticker]: fJson }));
-        }
-      } catch {
-        if (!cancelled) setFindings((prev) => ({ ...prev, [ticker]: null }));
-      } finally {
-        if (!cancelled) {
-          setLoadingTickers((prev) => {
-            const next = new Set(prev);
-            next.delete(ticker);
-            return next;
-          });
-        }
-      }
-    }
-
-    for (const t of selected) {
-      if (findings[t] === undefined && !loadingTickers.has(t)) void loadFindingsFor(t);
-    }
-    return () => { cancelled = true; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selected]);
+  // Findings are pre-loaded from /data/pc_findings.json via the global
+  // useEffect that hydrates `findings` for ALL 50 banks on mount (see
+  // earlier in this component). The previous per-ticker backend fallback
+  // was removed when the app went backend-free — the static JSON is the
+  // sole source. If a ticker isn't in the JSON we leave its slot null,
+  // which triggers the existing "pipeline not yet run" amber banner.
 
   const selectedBanks = useMemo(() => {
     const byTicker = new Map(banks.map((b) => [b.ticker.toUpperCase(), b]));
@@ -723,8 +618,6 @@ export function ComparePanel() {
 
   function addTicker(t: string) {
     const up = t.toUpperCase();
-    setWinnerMarkdown(null);
-    setWinnerError(null);
     setSelected((prev) => {
       if (prev.includes(up)) return prev;
       if (prev.length >= MAX_BANKS) return prev;
@@ -734,47 +627,11 @@ export function ComparePanel() {
   }
 
   function removeTicker(t: string) {
-    setWinnerMarkdown(null);
-    setWinnerError(null);
     setSelected((prev) => prev.filter((x) => x !== t));
   }
 
-  async function generateWinnerSummary() {
-    if (selected.length < MIN_BANKS) return;
-    abortWinner.current?.abort();
-    const ctrl = new AbortController();
-    abortWinner.current = ctrl;
-    setWinnerLoading(true);
-    setWinnerError(null);
-    setWinnerMarkdown(null);
-    try {
-      const payload = {
-        question:
-          `Compare these banks side-by-side: ${selected.join(', ')}.\n\n` +
-          `Use these dimensions and pick a "winner" per dimension with a short justification:\n` +
-          `- Call Report metrics (C&I ratio, NBFI loans, NBFI commitments, PE exposure)\n` +
-          `- Stock performance context (note any reactions around filing dates if visible)\n` +
-          `- Strategy initiatives / narrative positioning\n` +
-          `- Quote face-off on a shared theme (if available)\n\n` +
-          `Be precise and cite sources with [n] markers when possible.`,
-      };
-      const res = await fetch('/api/backend/search', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(payload),
-        signal: ctrl.signal,
-      });
-      if (!res.ok) throw new Error(`Winner summary failed (HTTP ${res.status})`);
-      const json = await res.json();
-      setWinnerMarkdown(String(json.answer_markdown ?? ''));
-    } catch (e) {
-      if ((e as Error).name === 'AbortError') return;
-      setWinnerError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setWinnerLoading(false);
-      abortWinner.current = null;
-    }
-  }
+  // generateWinnerSummary() removed — depended on POST /api/backend/search
+  // which can't be served from static JSON.
 
   const readyCount = selected.filter((t) => timelines[t]).length;
   const canRenderCharts = selected.length >= MIN_BANKS && readyCount >= MIN_BANKS;
@@ -791,19 +648,6 @@ export function ComparePanel() {
               Pick 2–4 banks and get a side-by-side read on Call Report metrics, stock reactions near filings, strategy initiatives, and quote-level language differences.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={generateWinnerSummary}
-            disabled={selected.length < MIN_BANKS || winnerLoading}
-            className={clsx(
-              'text-sm px-4 py-2 rounded-lg font-medium border',
-              selected.length < MIN_BANKS
-                ? 'border-neutral-200 text-neutral-400 cursor-not-allowed'
-                : 'border-indigo-200 text-indigo-700 hover:bg-indigo-50',
-            )}
-          >
-            {winnerLoading ? 'Generating…' : 'Generate “winner” summary'}
-          </button>
         </div>
       </section>
 
@@ -991,25 +835,6 @@ export function ComparePanel() {
               Rankings data still loading…
             </div>
           )}
-        </section>
-      )}
-
-      {/* Winner summary */}
-      {(winnerError || winnerMarkdown) && (
-        <section className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-neutral-100">
-            <h3 className="font-semibold text-neutral-900 text-base">AI “winner” summary</h3>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              Generated via the same cite-backed agent used in chat (may take ~30–60s).
-            </p>
-          </div>
-          <div className="p-6">
-            {winnerError ? (
-              <div className="text-sm text-rose-600">{winnerError}</div>
-            ) : winnerMarkdown ? (
-              <RenderedMarkdown markdown={winnerMarkdown} />
-            ) : null}
-          </div>
         </section>
       )}
 

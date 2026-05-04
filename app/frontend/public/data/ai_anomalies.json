@@ -1,0 +1,525 @@
+{
+  "theme": "ai",
+  "theme_slug": "ai",
+  "quarter": "2025Q4",
+  "peer_group": null,
+  "categories": {
+    "exposure": [
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "AXP",
+        "severity": "high",
+        "headline": "AI exposure language disclosed",
+        "detail": "ncluding flaws in models or datasets that may result in biased or inaccurate results, especially as generative AI has been known to produce false or “hallucinatory” inferences or outputs. The use of AI may also result in unintended or unexpected outcomes, present significant ethical challenges and heighten risks related to information sec…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 11791,
+            "label": "Item 1a. RISK FACTORS",
+            "bank_ticker": "AXP",
+            "quarter": null,
+            "document_id": 92
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The use of AI & ML technologies, including generative AI and agentic commerce, has increased rapidly and may be transformative to the payments industry, heightening the risks described herein and others in ways that may be unpredictable and disadvantageous to us. Our and our partners’ use of AI & ML is subject to various and evolving risks, including flaws in models or datasets that may result in biased or inaccurate results, especially as generative AI has been known to produce false or “hallucinatory” inferences or outputs. The use of AI may also result in unintended or unexpected outcomes, present significant ethical challenges and heighten risks related to information security, the infringement of intellectual property rights and exposure of proprietary or personal information. We may also face challenges in our ability to safely deploy AI systems and implement appropriate governance and controls, which may not be as burdensome to our competitors, and which may impair our implementation or impose additional risks. The complexity of these technologies can make it difficult to assess proper operation, reduce error, or understand and explain their outputs. Adverse consequences of AI & ML remain uncertain but could include flaws in the decisions, predictions, outputs or analysis such technologies produce, subjecting us to competitive harm, legal liability, heightened regulatory scrutiny, greater prevalence of surcharging or other negative point-of-sale practices and brand or reputational harm, as well as decreased demand for our products and services or increased costs.",
+        "history": [],
+        "takeaway": "AXP's detailed AI risk disclosure, especially regarding generative AI flaws, suggests significant internal adoption; monitor for specific use cases and mitigation strategies."
+      },
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "C",
+        "severity": "high",
+        "headline": "AI exposure language disclosed",
+        "detail": "iltration, as well as cause widespread disruptions. Moreover, the use of increasingly sophisticated AI technologies by malicious actors and others has increased the risk of fraud, including identity theft and bypassing of verification controls, and exposure to cyberattacks (see the cybersecurity risk factor below), as well as disinformati…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 24839,
+            "label": "RISK FACTORS",
+            "bank_ticker": "C",
+            "quarter": null,
+            "document_id": 200
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The complexity of AI models, particularly Generative AI models, can make it challenging to understand why particular outputs are generated, which can increase the risk of erroneous and/or biased output and complying with regulations requiring documentation, explainability or auditability on the basis of AI-influenced decisions. Citi may also rely on AI models developed by third parties and be exposed to risks arising from their development and training methods, including potential inclusion of unauthorized material in the training data or limitations in their risk mitigation strategies, over which Citi may have limited visibility or control (see also the operational processes and systems risk factor below). While Citi may provide restrictions on use of certain data in third-party AI applications or models, a third party could breach those terms, which could expose Citi to legal and reputations risks. Citi is also exposed to risks related to the use of AI technologies by counterparties, clients and vendors, where interconnected AI systems could amplify failures and threats of cyber infiltration, as well as cause widespread disruptions. Moreover, the use of increasingly sophisticated AI technologies by malicious actors and others has increased the risk of fraud, including identity theft and bypassing of verification controls, and exposure to cyberattacks (see the cybersecurity risk factor below), as well as disinformation and market manipulation campaigns, and failure to effectively manage such risks could result in misappropriation of funds, unauthorized transactions, exposure of sensitive client or Company information, reputational harm and increased litigation and regulatory risk.",
+        "history": [],
+        "takeaway": "C's extensive AI risk disclosure, particularly third-party model reliance, signals significant operational and regulatory compliance costs ahead."
+      },
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "FCNCA",
+        "severity": "high",
+        "headline": "AI exposure language disclosed",
+        "detail": "ns, as well as additional requirements for financial institutions with total consolidated assets of $50 billion or more. The prospects and timing for the adoption of the proposed rule remain uncertain because both the Federal Reserve and the SEC have not joined the proposal. Artificial Intelligence\nWe are subject to regulation of our busi…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 41371,
+            "label": "Item 1. Business",
+            "bank_ticker": "FCNCA",
+            "quarter": null,
+            "document_id": 326
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The proposed rule includes general qualitative requirements aimed at making incentive-compensation arrangements more sensitive to risk that are applicable to all covered financial institutions, as well as additional requirements for financial institutions with total consolidated assets of $50 billion or more. The prospects and timing for the adoption of the proposed rule remain uncertain because both the Federal Reserve and the SEC have not joined the proposal. Artificial Intelligence\nWe are subject to regulation of our business and operations, including risk management, with respect to artificial intelligence (“AI”). In 2023, the Biden Administration issued an Executive Order on Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence (“Executive Order 14110”) that required certain federal agencies, including the CFPB, to address potential discrimination in the housing and consumer financial markets relating to the use by financial institutions of AI technologies. On June 24, 2024, the CFPB along with the federal banking agencies, the National Credit Union Administration, and the Federal Housing Finance Agency, adopted a final rule on Quality Control Standards for Automated Valuation Models to address the use of algorithms and AI in estimating home values.",
+        "history": [],
+        "takeaway": "FCNCA's initial AI disclosure signals emerging regulatory risk; monitor future filings for concrete details on exposure and compliance costs."
+      },
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "WAL",
+        "severity": "medium",
+        "headline": "AI exposure language disclosed",
+        "detail": "of, our operational systems, data or infrastructure. The rapid evolution and increased adoption of artificial intelligence technologies has also given rise to additional vulnerabilities and potential entry points for cyber threats. In addition, we may be at risk of an operational failure with respect to our customers’ systems. Our risk an…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 110856,
+            "label": "Item 1a. Risk Factors",
+            "bank_ticker": "WAL",
+            "quarter": null,
+            "document_id": 811
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "We also face the risk of operational disruption, failure, termination, or capacity constraints of any of the third parties that facilitate our business activities, including vendors, exchanges, clearing agents, clearing houses, or other financial intermediaries. Such parties could also be the source or cause of an attack on, or breach of, our operational systems, data or infrastructure. The rapid evolution and increased adoption of artificial intelligence technologies has also given rise to additional vulnerabilities and potential entry points for cyber threats. In addition, we may be at risk of an operational failure with respect to our customers’ systems. Our risk and exposure to these matters remains heightened because of, among other things, the evolving nature of these threats, the outsourcing of many of our business operations, and the continued uncertain global economic environment. As cyber threats continue to evolve, we may be required to expend significant additional resources to continue to modify or enhance our protective measures or to investigate and remediate any information security vulnerabilities. We maintain insurance policies that we believe provide reasonable coverage for an institution of our size and scope with similar technological systems.",
+        "history": [],
+        "takeaway": "WAL acknowledges AI-driven cyber threats to its operations; watch for increased cybersecurity spending or specific mitigation strategies in future disclosures."
+      },
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "HBAN",
+        "severity": "low",
+        "headline": "AI exposure language disclosed",
+        "detail": "compliance with significant contracts, agreements, laws, rules, and regulations, and to reduce our exposure to fraud and improve the oversight of our operational risk. To govern operational risks, we have an Operational Risk Committee, a Legal, Regulatory, and Compliance Committee, a Funds Movement Committee, a Fraud Risk Committee, an In…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 54896,
+            "label": "Item 2 Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "bank_ticker": "HBAN",
+            "quarter": null,
+            "document_id": 405
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "We continuously strive to test and strengthen our system of internal controls to ensure compliance with significant contracts, agreements, laws, rules, and regulations, and to reduce our exposure to fraud and improve the oversight of our operational risk. To govern operational risks, we have an Operational Risk Committee, a Legal, Regulatory, and Compliance Committee, a Funds Movement Committee, a Fraud Risk Committee, an Information and Technology Risk Committee, an Artificial Intelligence Risk Committee, and a Third Party Risk Management Committee. The responsibilities of these committees, among other duties, include establishing and maintaining management information systems to monitor material risks and to identify potential concerns, risks, or trends that may have a significant impact, and ensuring that recommendations are developed to address the identified issues. In addition, we have a Model Risk Oversight Committee that is responsible for policies and procedures describing how model risk is evaluated and managed and the application of the governance process to implement these practices throughout the enterprise. These committees report any significant findings and remediation recommendations to the Risk Management Committee.",
+        "history": [],
+        "takeaway": "HBAN's new AI Risk Committee signals formal recognition of AI as a material operational risk; watch for specific AI-related disclosures next quarter."
+      },
+      {
+        "theme": "ai",
+        "category": "exposure",
+        "bank_ticker": "SCHW",
+        "severity": "low",
+        "headline": "AI exposure language disclosed",
+        "detail": "onal outsourcing of certain technology, processing, servicing, and support functions. We manage the exposure to third-party risk and promote a culture of resiliency through internal policies, procedures and controls, and contractual provisions, control standards, ongoing monitoring of third-party performance, and appropriate testing with …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 83158,
+            "label": "Item 7. Management’s Discussion and Analysisof Financial Condition and Results of Operations",
+            "bank_ticker": "SCHW",
+            "quarter": null,
+            "document_id": 614
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Fraud risk includes internal fraud, or the risk arising from personnel attempting or committing theft of financial assets or other property of any client or the Company. Schwab is committed to protecting the Company’s and its clients’ assets from fraud and complying with all applicable laws and regulations to prevent, detect, and report fraudulent activity. Schwab manages fraud risk through policies, procedures, and controls. We also take affirmative steps to prevent and detect fraud and report, to appropriate authorities, any known or suspected acts of fraud in accordance with existing laws and requirements. Schwab also faces operational risk when we employ the services of various third parties, including domestic and international outsourcing of certain technology, processing, servicing, and support functions. We manage the exposure to third-party risk and promote a culture of resiliency through internal policies, procedures and controls, and contractual provisions, control standards, ongoing monitoring of third-party performance, and appropriate testing with third-party service providers. Model risk is the potential for adverse consequences from decisions based on incorrect or misused model outputs and reports.",
+        "history": [],
+        "takeaway": "SCHW's disclosure on tech outsourcing and third-party risk lacks specific AI exposure language; watch for clearer details on AI-related risks next quarter."
+      }
+    ],
+    "credit_quality": [
+      {
+        "theme": "ai",
+        "category": "credit_quality",
+        "bank_ticker": "AXP",
+        "severity": "high",
+        "headline": "AI-borrower credit-quality language",
+        "detail": "propriate governance and controls, which may not be as burdensome to our competitors, and which may impair our implementation or impose additional risks. The complexity of these technologies can make it difficult to assess proper operation, reduce error, or understand and explain their outputs. Adverse consequences of AI & ML remain uncer…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 11791,
+            "label": "Item 1a. RISK FACTORS",
+            "bank_ticker": "AXP",
+            "quarter": null,
+            "document_id": 92
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The use of AI & ML technologies, including generative AI and agentic commerce, has increased rapidly and may be transformative to the payments industry, heightening the risks described herein and others in ways that may be unpredictable and disadvantageous to us. Our and our partners’ use of AI & ML is subject to various and evolving risks, including flaws in models or datasets that may result in biased or inaccurate results, especially as generative AI has been known to produce false or “hallucinatory” inferences or outputs. The use of AI may also result in unintended or unexpected outcomes, present significant ethical challenges and heighten risks related to information security, the infringement of intellectual property rights and exposure of proprietary or personal information. We may also face challenges in our ability to safely deploy AI systems and implement appropriate governance and controls, which may not be as burdensome to our competitors, and which may impair our implementation or impose additional risks. The complexity of these technologies can make it difficult to assess proper operation, reduce error, or understand and explain their outputs. Adverse consequences of AI & ML remain uncertain but could include flaws in the decisions, predictions, outputs or analysis such technologies produce, subjecting us to competitive harm, legal liability, heightened regulatory scrutiny, greater prevalence of surcharging or other negative point-of-sale practices and brand or reputational harm, as well as decreased demand for our products and services or increased costs.",
+        "history": [],
+        "takeaway": "AXP details significant, unpredictable risks from its internal AI/ML use, including accuracy and IP; monitor governance disclosures and any related operational incidents."
+      },
+      {
+        "theme": "ai",
+        "category": "credit_quality",
+        "bank_ticker": "KEY",
+        "severity": "high",
+        "headline": "AI-borrower credit-quality language",
+        "detail": "be able to sufficiently mitigate or detect any of the foregoing risks given the emerging nature of AI technology. Additionally, inappropriate or controversial data practices by third party AI developers and \n37\nTable of contents\ntheir end-users could adversely affect public opinion of AI and ultimately impair acceptance of AI, including t…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 60257,
+            "label": "Item 1a. RISKFACTORS",
+            "bank_ticker": "KEY",
+            "quarter": null,
+            "document_id": 434
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The limited transparency into the underlying complexity of AI and associated models that we rely on makes reproducing the connection between input and output, at times, difficult or impossible. If the AI that we leverage is flawed in such ways, we may make inaccurate or ineffective decisions and otherwise incur operational inefficiencies, compliance issues, competitive and reputational harm, adverse legal and regulatory actions, or other adverse impacts to our business and operations. We may not be able to sufficiently mitigate or detect any of the foregoing risks given the emerging nature of AI technology. Additionally, inappropriate or controversial data practices by third party AI developers and \n37\nTable of contents\ntheir end-users could adversely affect public opinion of AI and ultimately impair acceptance of AI, including those incorporated into our business and operations. V. Compliance Risk\nWe are subject to extensive government regulation, supervision, and tax legislation. As a financial services institution, we are subject to extensive federal and state regulation, supervision, and tax legislation. Banking regulations are primarily intended to protect depositors’ funds, the DIF, consumers, taxpayers, and the banking system as a whole, not our debtholders or shareholders.",
+        "history": [],
+        "takeaway": "KEY's opaque AI models risk inaccurate credit decisions, potentially impairing asset quality and increasing operational and reputational harm."
+      },
+      {
+        "theme": "ai",
+        "category": "credit_quality",
+        "bank_ticker": "JPM",
+        "severity": "medium",
+        "headline": "AI-borrower credit-quality language",
+        "detail": "ement of risk, assessing regulatory capital requirements, conducting stress testing, evaluating the allowance for credit losses and making business decisions. A dedicated independent function, Model Risk Governance and Review (“MRGR”), defines and governs the Firm’s policies relating to the management of model risk and risks associated wi…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 56502,
+            "label": "Notes to consolidated financial statements",
+            "bank_ticker": "JPM",
+            "quarter": null,
+            "document_id": 416
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The Firm’s General Counsel and other members of Legal report on significant legal matters to the Firm’s Board of Directors and to the Audit Committee. Legal serves on and advises various committees and advises the Firm’s LOBs and Corporate on potential reputation risk issues.\n152\nJPMorgan Chase & Co./2025 Form 10-K\nESTIMATIONS AND MODEL RISK MANAGEMENT\nEstimations and Model risk, a subcategory of operational risk, is the potential for adverse consequences from decisions based on incorrect or misused estimation outputs. The Firm uses models and other analytical and judgment-based estimations, including those based upon machine learning or artificial intelligence techniques,across various businesses and functions. The estimation methods are of varying levels of sophistication and are used for many purposes, such as the valuation of positions and measurement of risk, assessing regulatory capital requirements, conducting stress testing, evaluating the allowance for credit losses and making business decisions. A dedicated independent function, Model Risk Governance and Review (“MRGR”), defines and governs the Firm’s policies relating to the management of model risk and risks associated with certain analytical and judgment-based estimations, such as those used in risk management, budget forecasting and capital planning and analysis.",
+        "history": [],
+        "takeaway": "JPM's filing details internal AI model use for credit risk assessment; watch for future disclosures on specific credit quality of AI-focused borrowers."
+      },
+      {
+        "theme": "ai",
+        "category": "credit_quality",
+        "bank_ticker": "RJF",
+        "severity": "medium",
+        "headline": "AI-borrower credit-quality language",
+        "detail": "AND SUBSIDIARIES \nManagement’s Discussion and Analysis\nIndex\nModel risk\nModel risk refers to the possibility of unintended business outcomes arising from the design, implementation or use of models. Models are used throughout the firm for a variety of purposes such as the valuation of financial instruments, the calculation of our allowanc…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 80562,
+            "label": "Item 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "bank_ticker": "RJF",
+            "quarter": null,
+            "document_id": 595
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "AND SUBSIDIARIES \nManagement’s Discussion and Analysis\nIndex\nModel risk\nModel risk refers to the possibility of unintended business outcomes arising from the design, implementation or use of models. Models are used throughout the firm for a variety of purposes such as the valuation of financial instruments, the calculation of our allowance for credit losses, assessing risk, stress testing, and to assist in making certain business decisions. Model risk includes the potential risk that management makes incorrect decisions based upon either incorrect model results or incorrect understanding and use of model results. Model risk may also occur when model outputs differ from the expected result. Model errors or misuse could result in significant financial loss, inaccurate financial or regulatory reporting, or misaligned business strategies. Model Risk Management is a separate department within our Risk Management department and is independent of model owners, users, and developers. Our model risk management framework consists primarily of model governance, maintaining the firmwide model inventory, validating and approving models used across the firm, and ongoing monitoring. Results of validations and issues identified are reported to the Enterprise Risk Management Committee and Risk Committee of the Board of Directors.",
+        "history": [],
+        "takeaway": "RJF's model risk discussion lacks specific AI-borrower credit quality details; watch for future disclosures connecting model risk to this exposure."
+      },
+      {
+        "theme": "ai",
+        "category": "credit_quality",
+        "bank_ticker": "WBS",
+        "severity": "low",
+        "headline": "AI-borrower credit-quality language",
+        "detail": "Further, the complexity of many AI models makes it difficult to fully evaluate. Thus, the use of an AI model could expose us to liability or adverse legal or regulatory consequences and harm our reputation. Credit Risk\nOur allowance for credit losses on loans and leases may be insufficient. We maintain an ACL on loans and leases, which is…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 113282,
+            "label": "Item 1a. RISK FACTORS",
+            "bank_ticker": "WBS",
+            "quarter": null,
+            "document_id": 830
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "AI models may reflect biases included in the data on which they are trained, that could result in the release of company confidential information, infringe on intellectual property rights, or that is otherwise harmful. Further, the complexity of many AI models makes it difficult to fully evaluate. Thus, the use of an AI model could expose us to liability or adverse legal or regulatory consequences and harm our reputation. Credit Risk\nOur allowance for credit losses on loans and leases may be insufficient. We maintain an ACL on loans and leases, which is a reserve established through a provision for credit losses charged to expense, that represents management’s best estimate of expected credit losses over the life of the loan or lease within our existing portfolio. The determination of the appropriate level of ACL on loans and leases inherently involves a high degree of subjectivity and requires us to make significant estimates of current credit risks and trends using existing qualitative and quantitative information and reasonable supportable forecasts of future economic conditions, all of which may undergo frequent and material changes. Changes in economic conditions affecting borrowers, the softening of macroeconomic variables that we are more susceptible to, along with new information regarding existing loans, identification of additional problem loans, and other factors, both within and outside our control, may indicate the need for an increase in the ACL on loans and leases.",
+        "history": [],
+        "takeaway": "WBS highlights the difficulty in evaluating AI models, linking it to potential liability and ACL insufficiency; watch for increased credit provisions."
+      }
+    ],
+    "peer_deviation": [
+      {
+        "theme": "ai",
+        "category": "peer_deviation",
+        "bank_ticker": "COF",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "140 ai-tagged chunks vs peer median 61. P96.",
+        "metric_value": 140.0,
+        "peer_median": 61.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "COF's extensive AI disclosures, significantly above peers, indicate a larger exposure profile; watch for specific risk management and capital allocation details."
+      },
+      {
+        "theme": "ai",
+        "category": "peer_deviation",
+        "bank_ticker": "HBAN",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "129 ai-tagged chunks vs peer median 61. P94.",
+        "metric_value": 129.0,
+        "peer_median": 61.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "HBAN's extensive AI disclosures, far exceeding peers, signal a significant strategic focus or exposure; watch for concrete investment details or emerging risks."
+      },
+      {
+        "theme": "ai",
+        "category": "peer_deviation",
+        "bank_ticker": "SOFI",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "320 ai-tagged chunks vs peer median 61. P99.",
+        "metric_value": 320.0,
+        "peer_median": 61.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "SOFI's top-tier AI disclosure intensity among regional peers suggests significant exposure; watch for concrete details on its AI strategy and related risks."
+      },
+      {
+        "theme": "ai",
+        "category": "peer_deviation",
+        "bank_ticker": "GS",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (trust-ib)",
+        "detail": "268 ai-tagged chunks vs peer median 71. P93.",
+        "metric_value": 268.0,
+        "peer_median": 71.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "GS's top-tier AI disclosure intensity suggests a substantial, potentially complex, exposure; watch for specific details on its nature and risk profile."
+      },
+      {
+        "theme": "ai",
+        "category": "peer_deviation",
+        "bank_ticker": "ALLY",
+        "severity": "low",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "122 ai-tagged chunks vs peer median 61. P91.",
+        "metric_value": 122.0,
+        "peer_median": 61.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "ALLY's AI disclosure intensity, double its peers, indicates a material exposure; watch for specific risk management or investment details next quarter."
+      }
+    ],
+    "disclosure_nlp": [
+      {
+        "theme": "ai",
+        "category": "disclosure_nlp",
+        "bank_ticker": "SSB",
+        "severity": "medium",
+        "headline": "Hedging language up 1.8× YoY",
+        "detail": "Uncertainty word density 3.63% → 6.48% in ai narrative.",
+        "metric_value": 0.06483790523690773,
+        "peer_median": null,
+        "z_score": 1.7867431876928686,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 97468,
+            "label": "Item 9. 01",
+            "bank_ticker": "SSB",
+            "quarter": null,
+            "document_id": 702
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Words and phrases such as “may,” “approximately,” “continue,” “should,” “expects,” “projects,” “anticipates,” “is likely,” “look ahead,” “look forward,” “believes,” “will,” “intends,” “estimates,” “strategy,” “plan,” “could,” “potential,” “possible” and variations of such words and similar expressions are intended to identify such forward-looking statements.\n​\nSouthState cautions readers that forward looking statements are subject to certain risks, uncertainties and assumptions that are difficult to predict with regard to, among other things, timing, extent, likelihood and degree of occurrence, which could cause actual results to differ materially from anticipated results. Such risks, uncertainties and assumptions, include, among others, the following: (1) economic volatility risk, including as a result of monetary, fiscal, and trade law policies, such as tariffs, and inflation, potentially resulting in higher rates, deterioration in the credit markets, greater than expected noninterest expenses, excessive loan losses, or on the other hand lower rates, which also may have other negative consequences, which risks could be exacerbated by potential negative economic developments resulting from federal spending cuts and/or one or more federal budget-related impasses or actions; (2) risks related to the ability of the Company to pursue its strategic plans which depend upon certain growth goals in our lines of business; (3) risks related to the merger and integration of SouthState and Independent including, among others, (i) the risk that the cost savings and any revenue synergies from the merger may not be fully realized or may take longer than anticipated to be realized, (ii) the risk that the integration of Independent’s operations into SouthState’s operations will be materially delayed or will be more costly or difficult than expected or that the parties are otherwise unable to successfully integrate Independent’s businesses into SouthState’s businesses, (iii) the amount of the costs, fees, expenses and charges related to the merger, and (iv) reputational risk and the reaction of each company's customers, suppliers, employees or other business partners to the merger; (4) risks relating to the ability to retain our culture and attract and retain qualified people as we grow and are located in new markets, and being able to offer competitive salaries and benefits, including flexibility of working remotely or in the office; (5) deposit attrition, client loss or revenue loss following completed mergers or acquisitions that may be greater than anticipated; (6) credit risks associated with an obligor’s failure to meet the terms of any contract with the Bank or otherwise fail to perform as agreed under the terms of any loan-related document; (7) interest rate risk primarily resulting from our inability to effectively manage the risk, and their impact on the Bank’s earnings, including from the correspondent and mortgage divisions, housing demand, the market value of the Bank’s loan and securities portfolios, and the market value of SouthState’s equity; (8) inflationary risks negatively impacting our business and profitability, earnings and budgetary projections, or demand for our products and services; (9) a decrease in our net interest income due to the interest rate environment; (10) liquidity risk affecting the Bank’s ability to meet its obligations when they come due; (11) unexpected outflows of uninsured deposits may require us to sell investment securities at a loss; (12) potential deterioration in real estate values; (13) the loss of value of our investment portfolio could negatively impact market perceptions of us and could lead to deposit withdrawals; (14) price risk focusing on changes in market factors that may affect the value of traded instruments in “mark-to-market” portfolios; (15) transaction risk arising from problems with service or product delivery; (16) the impact of increasing digitization of the banking industry and movement of customers to on-line platforms, and the possible impact on the Bank’s results of operations, customer base, expenses, suppliers and operations; (17) controls and procedures risk, including the potential failure or circumvention of our controls and procedures or failure to comply with regulations related to controls and procedures; (18) volatility in the financial services industry (including failures or rumors of failures of other depository institutions), along with actions taken by governmental agencies to address such turmoil, could affect the ability of depository institutions, including us, to attract and retain depositors and to borrow or raise capital; (19) the impact of competition with other financial institutions, including deposit and loan pricing pressures and the resulting impact, including as a result of compression to net interest margin; (20) compliance risk involving risk to earnings or capital resulting from violations of or nonconformance with laws, rules, regulations, prescribed practices, or ethical standards, and contractual obligations regarding data privacy and cybersecurity; (21) regulatory change risk resulting from new laws, rules, regulations, accounting principles, proscribed practices or ethical standards, including, without limitation, the possibility that regulatory agencies may require higher levels of capital above the current regulatory-mandated minimums and including the impact of special FDIC assessments, the Consumer Financial Protection Bureau regulations or other guidance, and the possibility of changes in accounting standards, policies, principles and practices; (22) risks related to the legal, regulatory, and supervisory environment, including changes in financial services legislation, regulation, policies, or government officials or other personnel; (23) strategic risk resulting from adverse business decisions or improper implementation of business decisions; (24) reputation risk that adversely affects earnings or capital arising from negative public opinion including the effects of social media on market perceptions of us and banks generally; (25) cybersecurity risk related to the dependence of SouthState on internal computer systems and the technology of outside service providers, as well as the potential impacts of internal or external security breaches, which may subject the Company to potential business disruptions or financial losses resulting from deliberate attacks or unintentional events; (26) reputational and operational risks associated with environment, social and governance (ESG) matters, including the impact of changes in federal and state laws, regulations and guidance relating to climate change; (27) excessive loan losses; (28) reputational risk and possible higher than estimated reduced revenue from previously announced or proposed regulatory changes in the Bank’s consumer programs and products; (29) operational, technological, cultural, regulatory, legal, credit and other risks associated with the exploration, consummation and integration of potential future acquisitions, whether involving stock or cash consideration; (30) catastrophic events \n4\nsuch as hurricanes, tornados, earthquakes, floods or other natural or human disasters, including public health crises and infectious disease outbreaks, as well as any government actions in response to such events, and the related disruption to local, regional and global economic activity and financial markets, and the impact that any of the foregoing may have on SouthState and its customers and other constituencies; (31) geopolitical risk from terrorist activities and armed conflicts that may result in economic and supply disruptions, and loss of market and consumer confidence; (32) the risks of fluctuations in market prices for SouthState common stock that may or may not reflect economic condition or performance of SouthState; (33) the payment of dividends on SouthState common stock, which is subject to legal and regulatory limitations as well as the discretion of the board of directors of SouthState, SouthState’s performance and other factors; (34) ownership dilution risk associated with potential acquisitions in which SouthState’s stock may be issued as consideration for an acquired company; and (35) other factors that may affect future results of SouthState, as disclosed in SouthState’s Annual Report on Form 10-K, Quarterly Reports on Form 10-Q, and Current Reports on Form 8-K, filed by SouthState with the U.S.",
+        "history": [],
+        "takeaway": "SSB's AI narrative shows a sharp increase in hedging, signaling potential unquantified risks; watch for specific AI exposure details in future filings."
+      },
+      {
+        "theme": "ai",
+        "category": "disclosure_nlp",
+        "bank_ticker": "ALLY",
+        "severity": "medium",
+        "headline": "Hedging language up 1.6× YoY",
+        "detail": "Uncertainty word density 3.88% → 6.08% in ai narrative.",
+        "metric_value": 0.06076950737144912,
+        "peer_median": null,
+        "z_score": 1.5645410782951237,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 9138,
+            "label": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "bank_ticker": "ALLY",
+            "quarter": null,
+            "document_id": 64
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Sales of new light motor vehicles remain below the pre-pandemic annual pace of 17.0 million in 2019, which has limited incoming used vehicle supply and supported used vehicle values. Our baseline forecast utilized in calculating the quantitative allowance for loan losses as of September 30, 2025, anticipated the unemployment rate peaking at approximately 4.6% in the second quarter of 2026, before reverting to the historical mean of approximately 5.8% by the third quarter of 2028. Additionally, our baseline forecast anticipated deceleration of GDP growth as measured on a quarter-over-quarter seasonally adjusted annualized rate basis through the fourth quarter of 2025, followed by increases in GDP growth through the second quarter of 2026, before reverting to the historical mean of approximately 2.1% by the second quarter of 2028, and increases in new light vehicle sales on a seasonally adjusted annualized rate basis from more than 15 million units in the third quarter of 2025, to approximately 16 million units by the first quarter of 2027, before reverting to the historical mean of 15 million units by the third quarter of 2028. We also maintain a qualitative allowance framework to account for ongoing risks and volatility in the macroeconomic environment, including the impacts from tariffs, inflation, consumer financial health, and geopolitical uncertainty, that could adversely impact frequency of loss and LGD.",
+        "history": [],
+        "takeaway": "ALLY's increased uncertainty language is flagged for AI, but the provided excerpt lacks AI context. Watch for specific AI exposure details next quarter."
+      }
+    ],
+    "events_8k": [],
+    "valuation_marks": [
+      {
+        "theme": "ai",
+        "category": "valuation_marks",
+        "bank_ticker": "AXP",
+        "severity": "high",
+        "headline": "AI intangible / impairment language",
+        "detail": "propriate governance and controls, which may not be as burdensome to our competitors, and which may impair our implementation or impose additional risks. The complexity of these technologies can make it difficult to assess proper operation, reduce error, or understand and explain their outputs. Adverse consequences of AI & ML remain uncer…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 11791,
+            "label": "Item 1a. RISK FACTORS",
+            "bank_ticker": "AXP",
+            "quarter": null,
+            "document_id": 92
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The use of AI & ML technologies, including generative AI and agentic commerce, has increased rapidly and may be transformative to the payments industry, heightening the risks described herein and others in ways that may be unpredictable and disadvantageous to us. Our and our partners’ use of AI & ML is subject to various and evolving risks, including flaws in models or datasets that may result in biased or inaccurate results, especially as generative AI has been known to produce false or “hallucinatory” inferences or outputs. The use of AI may also result in unintended or unexpected outcomes, present significant ethical challenges and heighten risks related to information security, the infringement of intellectual property rights and exposure of proprietary or personal information. We may also face challenges in our ability to safely deploy AI systems and implement appropriate governance and controls, which may not be as burdensome to our competitors, and which may impair our implementation or impose additional risks. The complexity of these technologies can make it difficult to assess proper operation, reduce error, or understand and explain their outputs. Adverse consequences of AI & ML remain uncertain but could include flaws in the decisions, predictions, outputs or analysis such technologies produce, subjecting us to competitive harm, legal liability, heightened regulatory scrutiny, greater prevalence of surcharging or other negative point-of-sale practices and brand or reputational harm, as well as decreased demand for our products and services or increased costs.",
+        "history": [],
+        "takeaway": "AXP's extensive AI risk disclosure, citing potential impairment and competitive disadvantage, signals internal challenges; watch for related write-downs next quarter."
+      },
+      {
+        "theme": "ai",
+        "category": "valuation_marks",
+        "bank_ticker": "KEY",
+        "severity": "medium",
+        "headline": "AI intangible / impairment language",
+        "detail": "be able to sufficiently mitigate or detect any of the foregoing risks given the emerging nature of AI technology. Additionally, inappropriate or controversial data practices by third party AI developers and \n37\nTable of contents\ntheir end-users could adversely affect public opinion of AI and ultimately impair acceptance of AI, including t…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 60257,
+            "label": "Item 1a. RISKFACTORS",
+            "bank_ticker": "KEY",
+            "quarter": null,
+            "document_id": 434
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The limited transparency into the underlying complexity of AI and associated models that we rely on makes reproducing the connection between input and output, at times, difficult or impossible. If the AI that we leverage is flawed in such ways, we may make inaccurate or ineffective decisions and otherwise incur operational inefficiencies, compliance issues, competitive and reputational harm, adverse legal and regulatory actions, or other adverse impacts to our business and operations. We may not be able to sufficiently mitigate or detect any of the foregoing risks given the emerging nature of AI technology. Additionally, inappropriate or controversial data practices by third party AI developers and \n37\nTable of contents\ntheir end-users could adversely affect public opinion of AI and ultimately impair acceptance of AI, including those incorporated into our business and operations. V. Compliance Risk\nWe are subject to extensive government regulation, supervision, and tax legislation. As a financial services institution, we are subject to extensive federal and state regulation, supervision, and tax legislation. Banking regulations are primarily intended to protect depositors’ funds, the DIF, consumers, taxpayers, and the banking system as a whole, not our debtholders or shareholders.",
+        "history": [],
+        "takeaway": "KEY flags significant, hard-to-mitigate AI risks that could impair future intangible asset values; watch for specific risk management disclosures."
+      }
+    ],
+    "structural": [],
+    "macro_divergence": [
+      {
+        "theme": "ai",
+        "category": "macro_divergence",
+        "bank_ticker": "-",
+        "severity": "low",
+        "headline": "Macro reference series not yet ingested",
+        "detail": "AI equity basket and AI capex-vs-revenue references are not yet ingested. This category will flag banks claiming AI productivity gains while the macro signal disagrees.",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "inconclusive",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "Macro AI reference data is not yet available; monitor for ingestion next quarter to enable divergence analysis against bank AI claims."
+      }
+    ]
+  },
+  "counts": {
+    "exposure": 6,
+    "credit_quality": 5,
+    "peer_deviation": 5,
+    "disclosure_nlp": 2,
+    "events_8k": 0,
+    "valuation_marks": 2,
+    "structural": 0,
+    "macro_divergence": 1
+  },
+  "total": 21
+}

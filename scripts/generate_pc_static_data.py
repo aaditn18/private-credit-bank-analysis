@@ -192,8 +192,10 @@ def main() -> None:
           f"pullbacks={len(tr.get('pullbacks',[]))}")
     print(f"      {n/1024:.1f} KB")
 
-    # 4) /anomalies/private-credit -------------------------------------------
-    print("[4/6] /anomalies/private-credit ...")
+    # 4) /anomalies/{theme} for PC + DA + AI ---------------------------------
+    # All three anomaly endpoints are snapshot now so the running app never
+    # opens a SQLite connection — see the ticket "remove DB at runtime".
+    print("[4/9] /anomalies/private-credit ...")
     an_path = "/anomalies/private-credit"
     if args.quarter:
         an_path += f"?quarter={args.quarter}"
@@ -202,8 +204,36 @@ def main() -> None:
     print(f"      total={an.get('total')} per-cat={an.get('counts')}")
     print(f"      {n/1024:.1f} KB")
 
+    print("[5/9] /anomalies/digital-assets ...")
+    da_path = "/anomalies/digital-assets"
+    if args.quarter:
+        da_path += f"?quarter={args.quarter}"
+    da = _fetch(backend, da_path, timeout=180)
+    n = _write_json(out_dir, "da_anomalies.json", da)
+    print(f"      total={da.get('total')} per-cat={da.get('counts')}")
+    print(f"      {n/1024:.1f} KB")
+
+    print("[6/9] /anomalies/ai ...")
+    ai_path = "/anomalies/ai"
+    if args.quarter:
+        ai_path += f"?quarter={args.quarter}"
+    ai = _fetch(backend, ai_path, timeout=180)
+    n = _write_json(out_dir, "ai_anomalies.json", ai)
+    print(f"      total={ai.get('total')} per-cat={ai.get('counts')}")
+    print(f"      {n/1024:.1f} KB")
+
+    # 4.5) /overview — home page cross-sector chart + sector cards ----------
+    print("[7/9] /overview ...")
+    ov = _fetch(backend, "/overview", timeout=120)
+    n = _write_json(out_dir, "pc_overview.json", ov)
+    themes = ov.get("themes") or {}
+    print(f"      themes={list(themes.keys())} latest_quarter={ov.get('latest_quarter')} "
+          f"mentions_quarters={len(ov.get('mentions_by_quarter',[]))} "
+          f"multi_theme_banks={len(ov.get('multi_theme_banks',[]))}")
+    print(f"      {n/1024:.1f} KB")
+
     # 5) /timeline/{ticker} for every bank -----------------------------------
-    print(f"[5/6] /timeline/{{ticker}} for all {len(tickers)} banks ...")
+    print(f"[8/9] /timeline/{{ticker}} for all {len(tickers)} banks ...")
     timelines = _per_ticker(
         backend,
         "/timeline/{t}",
@@ -222,7 +252,7 @@ def main() -> None:
     print(f"      {n/1024:.1f} KB")
 
     # 6) /findings/{ticker} for every bank -----------------------------------
-    print(f"[6/6] /findings/{{ticker}} for all {len(tickers)} banks ...")
+    print(f"[9/9] /findings/{{ticker}} for all {len(tickers)} banks ...")
     findings = _per_ticker(
         backend,
         "/findings/{t}",
@@ -231,6 +261,7 @@ def main() -> None:
         timeout=60,
         workers=args.workers,
     )
+
     # Frontend's pc_findings.json is keyed by ticker (matches our shape).
     n = _write_json(out_dir, "pc_findings.json", findings)
     nonempty = sum(
@@ -244,8 +275,24 @@ def main() -> None:
     print(f"      {n/1024:.1f} KB")
 
     print()
-    print("Done. Wrote 6 JSON files to:")
+    print("Done. Wrote 9 JSON files to:")
     print(f"  {out_dir}")
+    print("    pc_banks.json       (50 banks)")
+    print("    pc_rankings.json    (composite + 6 metrics × 50 banks)")
+    print("    pc_trends.json      (industry + peer trends + pullback list)")
+    print("    pc_anomalies.json   (PC anomaly engine output)")
+    print("    da_anomalies.json   (DA anomaly engine output)")
+    print("    ai_anomalies.json   (AI anomaly engine output)")
+    print("    pc_overview.json    (cross-sector home-page data)")
+    print("    pc_timelines.json   (per-ticker timeline + stock + news)")
+    print("    pc_findings.json    (per-ticker LLM-extracted strategy + quotes)")
+    print()
+    print("If you want fresh anomaly takeaways too, run:")
+    print("    python app/backend/scripts/annotate_anomaly_takeaways.py --rerun")
+    print("    python app/backend/scripts/annotate_anomaly_takeaways.py "
+          "--input app/frontend/public/data/da_anomalies.json --rerun")
+    print("    python app/backend/scripts/annotate_anomaly_takeaways.py "
+          "--input app/frontend/public/data/ai_anomalies.json --rerun")
 
 
 if __name__ == "__main__":

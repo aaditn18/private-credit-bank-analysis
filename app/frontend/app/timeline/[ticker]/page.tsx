@@ -145,48 +145,30 @@ export default function TimelinePage() {
   const [data, setData] = useState<TimelineData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [stockLoading, setStockLoading] = useState(false);
-  const [newsLoading, setNewsLoading] = useState(false);
 
-  // Load main timeline data
+  // Single static-JSON read replaces three previous backend calls
+  // (/timeline/{ticker} + /stock/{ticker} + /news/{ticker}). The combined
+  // payload — filings, metrics_by_quarter, stock_prices, news — is
+  // pre-bundled per ticker in pc_timelines.json by the JSON generator,
+  // so the timeline page renders without ever opening a SQLite connection.
   useEffect(() => {
     if (!ticker) return;
     setLoading(true);
-    fetch(`/api/backend/timeline/${ticker}`)
+    fetch('/data/pc_timelines.json')
       .then((r) => {
-        if (!r.ok) throw new Error(`Failed to load timeline for ${ticker}`);
-        return r.json();
+        if (!r.ok) throw new Error(`Failed to load pc_timelines.json`);
+        return r.json() as Promise<Record<string, TimelineData>>;
       })
-      .then((d: TimelineData) => setData(d))
+      .then((all) => {
+        const t = all?.[ticker];
+        if (!t) {
+          throw new Error(`Ticker ${ticker} not found in pc_timelines.json`);
+        }
+        setData(t);
+      })
       .catch((e) => setError(e instanceof Error ? e.message : String(e)))
       .finally(() => setLoading(false));
   }, [ticker]);
-
-  // Auto-load stock prices when main data arrives and stock prices are empty
-  useEffect(() => {
-    if (!data || data.stock_prices.length > 0 || stockLoading) return;
-    setStockLoading(true);
-    fetch(`/api/backend/stock/${ticker}`)
-      .then((r) => r.ok ? r.json() : [])
-      .then((prices: StockPrice[]) => {
-        setData((prev) => (prev ? { ...prev, stock_prices: prices } : prev));
-      })
-      .catch(() => {})
-      .finally(() => setStockLoading(false));
-  }, [data, ticker, stockLoading]);
-
-  // Auto-load news when main data arrives and news is empty
-  useEffect(() => {
-    if (!data || data.news.length > 0 || newsLoading) return;
-    setNewsLoading(true);
-    fetch(`/api/backend/news/${ticker}`)
-      .then((r) => r.ok ? r.json() : [])
-      .then((articles: NewsArticle[]) => {
-        setData((prev) => (prev ? { ...prev, news: articles } : prev));
-      })
-      .catch(() => {})
-      .finally(() => setNewsLoading(false));
-  }, [data, ticker, newsLoading]);
 
   // Derived data
   const quarters = useMemo(() => data ? Object.keys(data.metrics_by_quarter).sort() : [], [data]);
@@ -325,14 +307,6 @@ export default function TimelinePage() {
                 Compare stock direction against the NBFI ratio trend below to assess whether markets are pricing in private credit strategy shifts.
               </Insight>
             </>
-          ) : stockLoading ? (
-            <div className="flex items-center justify-center h-48 gap-2">
-              <svg className="animate-spin h-5 w-5 text-indigo-500" viewBox="0 0 24 24" fill="none">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-              </svg>
-              <span className="text-sm text-neutral-400">Loading stock data...</span>
-            </div>
           ) : (
             <div className="flex items-center justify-center h-48 text-sm text-neutral-400">
               Stock price data unavailable for {data.ticker}
@@ -433,15 +407,7 @@ export default function TimelinePage() {
             <p className="text-xs text-neutral-400 mt-0.5">Alpha Vantage news analysis</p>
           </div>
           <div className="p-6">
-            {newsLoading ? (
-              <div className="flex items-center justify-center h-32 gap-2">
-                <svg className="animate-spin h-4 w-4 text-indigo-500" viewBox="0 0 24 24" fill="none">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-                </svg>
-                <span className="text-xs text-neutral-400">Loading news...</span>
-              </div>
-            ) : newsSentiment ? (
+            {newsSentiment ? (
               <div className="space-y-4">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-neutral-900">
@@ -487,15 +453,7 @@ export default function TimelinePage() {
             </p>
           </div>
           <div className="divide-y divide-neutral-100 max-h-[420px] overflow-y-auto">
-            {newsLoading ? (
-              <div className="px-6 py-8 text-center">
-                <svg className="animate-spin h-5 w-5 text-indigo-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-                </svg>
-                <p className="text-sm text-neutral-400">Fetching news from Alpha Vantage...</p>
-              </div>
-            ) : data.news.length === 0 ? (
+            {data.news.length === 0 ? (
               <div className="px-6 py-8 text-center text-sm text-neutral-400">
                 No recent news articles found for {data.ticker}
               </div>

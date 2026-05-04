@@ -1,0 +1,297 @@
+{
+  "latest_quarter": "2025Q4",
+  "themes": {
+    "private_credit": {
+      "theme": "private_credit",
+      "chunk_count": 79823,
+      "bank_count": 50,
+      "anomaly_total": 126,
+      "anomaly_severity": {
+        "high": 45,
+        "medium": 35,
+        "low": 46
+      }
+    },
+    "ai": {
+      "theme": "ai",
+      "chunk_count": 3873,
+      "bank_count": 50,
+      "anomaly_total": 21,
+      "anomaly_severity": {
+        "high": 6,
+        "medium": 10,
+        "low": 5
+      }
+    },
+    "digital_assets": {
+      "theme": "digital_assets",
+      "chunk_count": 35365,
+      "bank_count": 50,
+      "anomaly_total": 26,
+      "anomaly_severity": {
+        "high": 19,
+        "medium": 5,
+        "low": 2
+      }
+    }
+  },
+  "mentions_by_quarter": [
+    {
+      "quarter": "2022Q3",
+      "private_credit": 93,
+      "ai": 3,
+      "digital_assets": 36
+    },
+    {
+      "quarter": "2023Q1",
+      "private_credit": 74,
+      "ai": 2,
+      "digital_assets": 38
+    },
+    {
+      "quarter": "2023Q2",
+      "private_credit": 6751,
+      "ai": 144,
+      "digital_assets": 2604
+    },
+    {
+      "quarter": "2023Q3",
+      "private_credit": 7131,
+      "ai": 144,
+      "digital_assets": 2719
+    },
+    {
+      "quarter": "2023Q4",
+      "private_credit": 7490,
+      "ai": 624,
+      "digital_assets": 3859
+    },
+    {
+      "quarter": "2024Q1",
+      "private_credit": 6171,
+      "ai": 142,
+      "digital_assets": 2383
+    },
+    {
+      "quarter": "2024Q2",
+      "private_credit": 6792,
+      "ai": 167,
+      "digital_assets": 2536
+    },
+    {
+      "quarter": "2024Q3",
+      "private_credit": 6926,
+      "ai": 167,
+      "digital_assets": 2581
+    },
+    {
+      "quarter": "2024Q4",
+      "private_credit": 12953,
+      "ai": 1312,
+      "digital_assets": 6755
+    },
+    {
+      "quarter": "2025Q1",
+      "private_credit": 5816,
+      "ai": 124,
+      "digital_assets": 2177
+    },
+    {
+      "quarter": "2025Q2",
+      "private_credit": 6511,
+      "ai": 183,
+      "digital_assets": 2458
+    },
+    {
+      "quarter": "2025Q3",
+      "private_credit": 6736,
+      "ai": 155,
+      "digital_assets": 2683
+    },
+    {
+      "quarter": "2025Q4",
+      "private_credit": 6066,
+      "ai": 701,
+      "digital_assets": 3715
+    },
+    {
+      "quarter": "2026Q1",
+      "private_credit": 302,
+      "ai": 5,
+      "digital_assets": 808
+    },
+    {
+      "quarter": "2026Q2",
+      "private_credit": 11,
+      "ai": 0,
+      "digital_assets": 13
+    }
+  ],
+  "multi_theme_banks": [
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 3274,
+        "ai": 320,
+        "digital_assets": 1693
+      },
+      "total": 5287
+    },
+    {
+      "ticker": "GS",
+      "name": "The Goldman Sachs Group",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 2647,
+        "ai": 268,
+        "digital_assets": 1646
+      },
+      "total": 4561
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 3345,
+        "ai": 63,
+        "digital_assets": 971
+      },
+      "total": 4379
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc.",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 2534,
+        "ai": 181,
+        "digital_assets": 1079
+      },
+      "total": 3794
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One Financial",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 2312,
+        "ai": 140,
+        "digital_assets": 914
+      },
+      "total": 3366
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corporation",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 1705,
+        "ai": 156,
+        "digital_assets": 1261
+      },
+      "total": 3122
+    },
+    {
+      "ticker": "ALLY",
+      "name": "Ally Financial Inc.",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 2339,
+        "ai": 122,
+        "digital_assets": 601
+      },
+      "total": 3062
+    },
+    {
+      "ticker": "FITB",
+      "name": "Fifth Third Bancorp",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 2015,
+        "ai": 47,
+        "digital_assets": 921
+      },
+      "total": 2983
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America Corporation",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 2143,
+        "ai": 76,
+        "digital_assets": 687
+      },
+      "total": 2906
+    },
+    {
+      "ticker": "FCNCA",
+      "name": "First Citizens BancShares",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1968,
+        "ai": 60,
+        "digital_assets": 809
+      },
+      "total": 2837
+    },
+    {
+      "ticker": "SF",
+      "name": "Stifel Financial Corp.",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1648,
+        "ai": 51,
+        "digital_assets": 1097
+      },
+      "total": 2796
+    },
+    {
+      "ticker": "SSB",
+      "name": "SouthState Corporation",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1776,
+        "ai": 110,
+        "digital_assets": 844
+      },
+      "total": 2730
+    },
+    {
+      "ticker": "KEY",
+      "name": "KeyCorp",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1517,
+        "ai": 68,
+        "digital_assets": 1028
+      },
+      "total": 2613
+    },
+    {
+      "ticker": "PNFP",
+      "name": "Pinnacle Financial Partners",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1729,
+        "ai": 69,
+        "digital_assets": 726
+      },
+      "total": 2524
+    },
+    {
+      "ticker": "PNC",
+      "name": "The PNC Financial Services Group",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 1858,
+        "ai": 75,
+        "digital_assets": 583
+      },
+      "total": 2516
+    }
+  ]
+}

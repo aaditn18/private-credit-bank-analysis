@@ -1,6 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { ChatBotMount } from '@/components/ChatBotMount';
 import { HeaderSectorNav } from '@/components/HeaderSectorNav';
 
 export const metadata: Metadata = {
@@ -38,7 +37,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </header>
           <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">{children}</main>
-          <ChatBotMount />
           <footer className="border-t border-white/5 mt-12">
             <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-neutral-500 leading-relaxed">
               Proxy definition: C&amp;I loans to nondepository financial institutions

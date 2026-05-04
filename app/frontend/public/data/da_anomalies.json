@@ -1,0 +1,655 @@
+{
+  "theme": "digital_assets",
+  "theme_slug": "digital-assets",
+  "quarter": "2025Q4",
+  "peer_group": null,
+  "categories": {
+    "exposure": [
+      {
+        "theme": "digital_assets",
+        "category": "exposure",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Digital-asset exposure language disclosed",
+        "detail": "atory changes, technical developments and shifts in overall market sentiment. Historically, certain crypto assets have experienced high levels of price fluctuation, as measured by the annualized standard deviation of daily price returns. We manage our exposure to these price fluctuations through exposure monitoring and internal inventory …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90770,
+            "label": "Item 7a. Quantitative and Qualitative Disclosures About Market Risk",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "As of December 31, 2025, the fair value of our crypto assets held for operational purposes was immaterial to our overall consolidated financial condition. The crypto asset market is characterized by significant price volatility and is sensitive to factors such as regulatory changes, technical developments and shifts in overall market sentiment. Historically, certain crypto assets have experienced high levels of price fluctuation, as measured by the annualized standard deviation of daily price returns. We manage our exposure to these price fluctuations through exposure monitoring and internal inventory limits. Given that our holdings are incidental, short-term in nature and immaterial, a hypothetical significant increase or decrease in the market price of crypto assets as of December 31, 2025, would not have a material impact on our consolidated results of operations. Interest Rate Risk\nWe are exposed to the risk of loss to future earnings, values or future cash flows that may result from changes in market discount rates or overall market conditions, such as instability in the banking and financial services sectors. We are subject to interest rate risk associated with our loans, securitization investments (comprised of residual investments and asset-backed bonds), servicing rights and investments in AFS debt securities, which are measured at fair value on a recurring basis using a discounted cash flow methodology in which the discount rate represents an estimate of the required rate of return by market participants.",
+        "history": [],
+        "takeaway": "SOFI's currently immaterial digital asset exposure warrants close monitoring for future growth, given the market's inherent volatility and regulatory uncertainty."
+      }
+    ],
+    "credit_quality": [],
+    "peer_deviation": [
+      {
+        "theme": "digital_assets",
+        "category": "peer_deviation",
+        "bank_ticker": "KEY",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "1028 digital assets-tagged chunks vs peer median 587. P94.",
+        "metric_value": 1028.0,
+        "peer_median": 587.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "KEY's digital asset disclosure intensity, well above peers, signals a potentially material exposure; watch for specific balance sheet quantification in future filings."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "peer_deviation",
+        "bank_ticker": "SF",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "1097 digital assets-tagged chunks vs peer median 587. P96.",
+        "metric_value": 1097.0,
+        "peer_median": 587.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "SF's significantly higher digital asset disclosure intensity suggests material exposure; monitor for specific risk management and performance metrics next quarter."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "peer_deviation",
+        "bank_ticker": "SOFI",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "1693 digital assets-tagged chunks vs peer median 587. P99.",
+        "metric_value": 1693.0,
+        "peer_median": 587.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "SOFI's top-tier digital asset disclosure intensity signals a large, potentially complex exposure; watch for specific risk management and loss recognition details."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "peer_deviation",
+        "bank_ticker": "GS",
+        "severity": "medium",
+        "headline": "Disclosure intensity in peer-group top tier (trust-ib)",
+        "detail": "1646 digital assets-tagged chunks vs peer median 758. P93.",
+        "metric_value": 1646.0,
+        "peer_median": 758.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "GS's digital asset disclosure intensity, double its peers, signals significant exposure; watch for detailed risk management and capital allocation in upcoming reports."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "peer_deviation",
+        "bank_ticker": "FITB",
+        "severity": "low",
+        "headline": "Disclosure intensity in peer-group top tier (regional)",
+        "detail": "921 digital assets-tagged chunks vs peer median 587. P91.",
+        "metric_value": 921.0,
+        "peer_median": 587.0,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "negative",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "FITB's high digital asset disclosure suggests a significant, potentially unquantified, exposure; watch for specific risk metrics next quarter."
+      }
+    ],
+    "disclosure_nlp": [
+      {
+        "theme": "digital_assets",
+        "category": "disclosure_nlp",
+        "bank_ticker": "WBS",
+        "severity": "medium",
+        "headline": "Hedging language up 1.8× YoY",
+        "detail": "Uncertainty word density 1.05% → 1.88% in digital assets narrative.",
+        "metric_value": 0.018812564722126338,
+        "peer_median": null,
+        "z_score": 1.784867363717008,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 114740,
+            "label": "Item 1. 01 ENTRY INTO A MATERIAL DEFINITIVE AGREEMENT",
+            "bank_ticker": "WBS",
+            "quarter": null,
+            "document_id": 846
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "In addition, at the Merger Effective Time, each outstanding share (other than shares held in treasury) of (1) 5.25% Non-Cumulative Perpetual Preferred Stock, Series F, par value $0.01 per share, of Webster (the “Webster Series F Preferred Stock”) and (2) 6.50% Non-Cumulative Perpetual Preferred Stock, Series G, par value $0.01 per share, of Webster (the “Webster Series G Preferred Stock” and, together with the Webster Series F Preferred Stock, the “Webster Preferred Stock”) will be converted into the right to receive one share of newly created series of preferred stock of the Webster Subsidiary having substantially the same terms as the Webster Preferred Stock. Share Exchange. Immediately after the Merger Effective Time (the “Exchange Effective Time”), by virtue of the Share Exchange, each outstanding share of the Subsidiary Common Stock will be exchanged for the right to receive 2.0548 ordinary shares of Banco Santander, of 50 euro-cents nominal value each (“Ordinary Shares”), which may be delivered in the form of American Depositary Receipts representing such ordinary shares (“ADSs”) and $48.75 in cash, without interest (the “Exchange Consideration”). Treatment of Equity Awards \nSubject to the terms and conditions of the Transaction Agreement, no later than four business days prior to the Merger Effective Time, (1) all time-based restricted stock awards of Webster held by non-employee directors, (2) 50% of time-based restricted stock awards of Webster granted prior to February 3, 2026 which are not held by non-employee directors and (3) all performance-based restricted stock awards of Webster will fully vest and become shares of Webster Common Stock, and as of the Merger Effective Time, will be treated as described in the foregoing paragraph.",
+        "history": [],
+        "takeaway": "WBS's digital asset narrative shows a sharp rise in uncertainty language; watch next quarter for specific disclosures on exposure or risk management."
+      }
+    ],
+    "events_8k": [],
+    "valuation_marks": [
+      {
+        "theme": "digital_assets",
+        "category": "valuation_marks",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Digital-asset fair-value language",
+        "detail": "member transactions and provide liquidity for the platform, we maintain an incidental inventory of crypto assets for operational purposes, none of which are held as long-term speculative investments. As of December 31, 2025, the fair value of our crypto assets held for operational purposes was immaterial to our overall consolidated financ…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90769,
+            "label": "Item 7a. Quantitative and Qualitative Disclosures About Market Risk",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Item 7A. Quantitative and Qualitative Disclosures About Market Risk\nIn the normal course of business, we are subject to a variety of market-related risks that can affect our operations and profitability. We broadly define these areas of risk as interest rate risk, credit risk, counterparty risk and operational risk. Historically, substantially all of our revenue and operating expenses were denominated in United States dollars. We may in the future be subject to increasing foreign currency exchange rate risk with our acquisition of a foreign company. Foreign currency exchange rate risk is the risk that our financial position or results of operations could be positively or negatively impacted by fluctuations in exchange rates. Exchange rate risk was not a material risk for us during the years presented. During the fourth quarter of 2025, we launched SoFi Crypto which provides our members the ability to buy, sell and hold digital assets. To facilitate these member transactions and provide liquidity for the platform, we maintain an incidental inventory of crypto assets for operational purposes, none of which are held as long-term speculative investments. As of December 31, 2025, the fair value of our crypto assets held for operational purposes was immaterial to our overall consolidated financial condition.",
+        "history": [],
+        "takeaway": "SOFI's immaterial crypto holdings are noted; watch for operational growth or future fair-value risk disclosures given the explicit mention."
+      }
+    ],
+    "structural": [
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "The launch of digital asset trading in the U.S. and Hong Kong and use of blockchain technology in our product offerings, subjects us to laws and regulations relating to cryptocurrencies and blockchain technology in various jurisdictions where we conduct our business, and to other risks. Such laws an…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90319,
+            "label": "Item 1a. Risk Factors",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "The launch of digital asset trading in the U.S. and Hong Kong and use of blockchain technology in our product offerings, subjects us to laws and regulations relating to cryptocurrencies and blockchain technology in various jurisdictions where we conduct our business, and to other risks. Such laws and regulations can be complex, are subject to change, and complying with them across various jurisdictions imposes operational, time, and cost constraints on our business. Our actual or perceived failure to comply with such obligations or to address other risks related to these technologies could harm our business and/or result in reputational harm, loss of customers, material financial penalties and legal liabilities. In 2025, we launched SoFi Crypto in the U.S. and digital asset trading in Hong Kong, allowing our members to buy, sell and hold digital assets, which, along with any additional cryptocurrency products and other products that utilize blockchain technology that we may offer in the future, subjects us to additional regulations, licensing requirements, and other obligations. Compliance with any such regulations, requirements, or obligations may be complex and costly. Cryptocurrencies are not considered legal tender, are not backed by most governments, and have experienced technological flaws and various law enforcement and regulatory interventions.",
+        "history": [],
+        "takeaway": "SOFI's digital asset expansion faces complex regulatory risks, including potential stablecoin reserve requirements; watch for compliance costs and future operational impacts."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "Among other requirements, the GENIUS Act prohibits Permitted Issuers from paying interest or yield solely in connection with the holding, use, or retention of a payment stablecoin of the Permitted Issuer, requires Permitted Issuers to maintain reserves fully backing payment stablecoin obligations, l…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90210,
+            "label": "Item 1. Business",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Among other requirements, the GENIUS Act prohibits Permitted Issuers from paying interest or yield solely in connection with the holding, use, or retention of a payment stablecoin of the Permitted Issuer, requires Permitted Issuers to maintain reserves fully backing payment stablecoin obligations, limits the assets permissible for payment stablecoin issuers to hold as reserves and generally requires that reserve assets be maintained free from encumbrances, establishes capital, liquidity and risk management requirements for Permitted Issuers, treats Permitted Issuers as financial institutions required to implement an effective anti-money laundering \n23\nSoFi Technologies, Inc. TABLE OF CONTENTS\nprogram under the BSA, as amended by the USA PATRIOT Act, limits the permissible activities of Permitted Issuers, and specifies certain periodic disclosure requirements. As noted above, the laws and regulations governing digital assets, including stablecoin, are rapidly evolving and increasing in scope. We are monitoring legislative and administrative updates, including Executive Orders that may affect the stablecoin industry, to promptly implement any compliance measures as may be necessary to support the use of SoFiUSD.",
+        "history": [],
+        "takeaway": "SOFI's digital asset strategy faces new capital and operational burdens from the GENIUS Act's stablecoin requirements; watch for disclosure on compliance costs."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "Such laws and regulations can be complex, are subject to change, and complying with them across various jurisdictions imposes operational, time, and cost constraints on our business. Our actual or perceived failure to comply with such obligations or to address other risks related to these technologi…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 94355,
+            "label": "Item 1a. Risk Factors",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 675
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Such laws and regulations can be complex, are subject to change, and complying with them across various jurisdictions imposes operational, time, and cost constraints on our business. Our actual or perceived failure to comply with such obligations or to address other risks related to these technologies could harm our business and/or result in reputational harm, loss of customers, material financial penalties and legal liabilities. We may in the future offer cryptocurrency products and other products that utilize blockchain technology which could subject us to additional regulations, licensing requirements, or other obligations. Compliance with any such regulations, requirements, or obligations may be complex and costly. Cryptocurrencies are not considered legal tender, are not backed by most governments, and have experienced technological flaws and various law enforcement and regulatory interventions. In addition, in the U.S. and certain other jurisdictions, certain cryptocurrencies may be deemed to be securities and subject to the securities laws of the relevant jurisdictions. The rapidly evolving regulatory landscape with respect to cryptocurrencies may subject us to registrations, inquiries, or investigations from regulators and governmental authorities; require us to make product changes; restrict or discontinue product offerings; and implement additional and potentially costly controls.",
+        "history": [],
+        "takeaway": "SOFI's broad digital asset regulatory risk disclosure signals rising compliance costs and operational hurdles; watch for impacts on product rollout and future profitability."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "Dollar\nFX\nForeign exchange\nVaR\nValue-at-Risk\nGAAP\nGenerally accepted accounting principles\nGBP\nBritish Pound Sterling\nG-SIB\nGlobal systemically important bank\n(1) As defined by the applicable U.S. regulations. State Street Corporation | 86\nGLOSSARY\nAsset-backed securities: A financial security backe…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 100330,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 711
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Dollar\nFX\nForeign exchange\nVaR\nValue-at-Risk\nGAAP\nGenerally accepted accounting principles\nGBP\nBritish Pound Sterling\nG-SIB\nGlobal systemically important bank\n(1) As defined by the applicable U.S. regulations. State Street Corporation | 86\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly.",
+        "history": [],
+        "takeaway": "STT's filings reference stablecoin/digital-asset reserve composition; watch for specific disclosures on underlying asset quality and risk management in future reports."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "Cryptocurrencies are not considered legal tender, are not backed by most governments, and have experienced technological flaws and various law enforcement and regulatory interventions. In addition, in the U.S. and certain other jurisdictions, certain cryptocurrencies may be deemed to be securities a…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90320,
+            "label": "Item 1a. Risk Factors",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "Cryptocurrencies are not considered legal tender, are not backed by most governments, and have experienced technological flaws and various law enforcement and regulatory interventions. In addition, in the U.S. and certain other jurisdictions, certain cryptocurrencies may be deemed to be securities and subject to the securities laws of the relevant jurisdictions. Furthermore, our crypto offering in Hong Kong is subject to evolving regulatory requirements under Hong Kong’s licensing and virtual asset regime. Although Hong Kong has established a licensing framework for virtual asset trading platforms and related services, these rules are complex, subject to change, and may impose additional compliance obligations on firms engaging in crypto activities. The rapidly evolving regulatory landscape with respect to cryptocurrencies may subject us to registrations, inquiries, or \n47\nSoFi Technologies, Inc. TABLE OF CONTENTS\ninvestigations from regulators and governmental authorities; require us to make product changes; restrict or discontinue product offerings; and implement additional and potentially costly controls. If we fail to comply with regulations, requirements, prohibitions or other obligations applicable to us, we could face regulatory or other enforcement actions and potential fines or reputational harm, be forced to cease offering cryptocurrency products, and other consequences, including significant financial losses.",
+        "history": [],
+        "takeaway": "SOFI's extensive crypto risk language flags evolving regulatory uncertainty; watch for increased compliance costs or asset reclassification, particularly in Hong Kong."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 81\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 100106,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 710
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 81\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit (CD): A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's glossary definitions for digital asset-related terms indicate foundational involvement; watch for specific stablecoin reserve composition and exposure details next quarter."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "EWBC",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "In addition, it includes various revenue-raising measures, including changes to certain Inflation Reduction Act clean energy tax credits and various limits on business and individual tax deductions, that are intended to offset part of the cost of the legislation. The Company is currently evaluating …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 40576,
+            "label": "Item 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "bank_ticker": "EWBC",
+            "quarter": null,
+            "document_id": 316
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "In addition, it includes various revenue-raising measures, including changes to certain Inflation Reduction Act clean energy tax credits and various limits on business and individual tax deductions, that are intended to offset part of the cost of the legislation. The Company is currently evaluating the impact of the OBBBA on its business and consolidated financial statements. In July 2025, the Guiding and Establishing National Innovation for U.S. Stablecoins Act, or the “GENIUS Act,” was signed into law, establishing a federal licensing and supervisory framework for payment stablecoins and their issuers. The GENIUS Act may accelerate and increase the competition that non-traditional financial institutions pose to banks’ payment services, but may also create opportunities for banks to hold stablecoin reserve assets, custody stablecoins, or issue stablecoins. Several key provisions of the GENIUS Act require federal regulatory agencies to adopt implementing regulations, and the Act will take effect the earlier of 18 months after its enactment or 120 days after the agencies issue final implementing regulations. In June 2025, California enacted Senate Bill No. 132 (“SB 132”), requiring banks and financial institutions to adopt a single sales factor for income apportionment, effective for tax years beginning on or after January 1, 2025.",
+        "history": [],
+        "takeaway": "EWBC is evaluating the GENIUS Act's impact; watch for specific strategies to leverage stablecoin reserve opportunities or mitigate competition next quarter."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 181\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 98063,
+            "label": "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 703
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 181\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's stablecoin/digital-asset reserve language is a high-severity concern; watch for specific disclosures on composition and associated risk management in future filings."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 93\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 98912,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 705
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 93\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's stablecoin/digital-asset reserve composition language is flagged high severity; locate the specific disclosure to assess underlying risk."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 90\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 99634,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 708
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 90\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "Despite the high-severity flag, STT's specific stablecoin/digital-asset reserve language is absent; analysts must find the full disclosure to assess risk."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 83\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 99389,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 707
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 83\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's stablecoin/digital-asset reserve language is flagged, but specific composition details are absent; watch next quarter's filings for clarity on exposure."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 94\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 99155,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 706
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 94\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's flagged stablecoin/digital-asset reserve language is concerning; watch next quarter for specific disclosures on composition and risk management."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SOFI",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "The GENIUS Act permits the primary federal payment stablecoin regulators to waive the application of certain requirements of GENIUS Act for a period not to exceed 12 months beginning on the effective date of the GENIUS Act, with respect to a subsidiary of an insured depository institution, if the in…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 90209,
+            "label": "Item 1. Business",
+            "bank_ticker": "SOFI",
+            "quarter": null,
+            "document_id": 668
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "The GENIUS Act permits the primary federal payment stablecoin regulators to waive the application of certain requirements of GENIUS Act for a period not to exceed 12 months beginning on the effective date of the GENIUS Act, with respect to a subsidiary of an insured depository institution, if the insured depository institution has an application pending on the effective date of the GENIUS Act for the subsidiary to become a Permitted Issuer. SoFi Bank expects to request approval of the OCC to form a subsidiary that will become a Permitted Issuer with respect to SoFiUSD. The GENIUS Act establishes certain prudential standards applicable to Permitted Issuers. Among other requirements, the GENIUS Act prohibits Permitted Issuers from paying interest or yield solely in connection with the holding, use, or retention of a payment stablecoin of the Permitted Issuer, requires Permitted Issuers to maintain reserves fully backing payment stablecoin obligations, limits the assets permissible for payment stablecoin issuers to hold as reserves and generally requires that reserve assets be maintained free from encumbrances, establishes capital, liquidity and risk management requirements for Permitted Issuers, treats Permitted Issuers as financial institutions required to implement an effective anti-money laundering \n23\nSoFi Technologies, Inc.",
+        "history": [],
+        "takeaway": "SOFI's early pursuit of a regulated stablecoin, SoFiUSD, positions it uniquely; watch for OCC approval and the strategic impact on its business model."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "State Street Corporation | 91\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping …",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 99889,
+            "label": "CONTROLS AND PROCEDURES",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 709
+          }
+        ],
+        "sentiment": "negative",
+        "full_detail": "State Street Corporation | 91\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients. To the extent that we provide more than one AUC/A service (including back and middle office services) for a client’s assets, the value of the asset is only counted once in the total amount of AUC/A. Assets under management: The total market value of client assets for which we provide investment management strategy services, advisory services and/or distribution services generating management fees based on a percentage of the assets’ market values. These client assets are not included on our balance sheet. Assets under management include managed assets lost but not liquidated. Lost business occurs from time to time and it is difficult to predict the timing of client behavior in transitioning these assets as the timing can vary significantly. Certificates of deposit: A savings certificate with a fixed maturity date, specified fixed interest rate and can be issued in any denomination aside from minimum investment requirements.",
+        "history": [],
+        "takeaway": "STT's filing provides only general glossary terms, not specific stablecoin or digital-asset reserve composition; watch for explicit disclosures next quarter."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "EWBC",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "Stablecoins Act, or the “GENIUS Act,” was signed into law, establishing a federal licensing and supervisory framework for payment stablecoins and their issuers. The GENIUS Act may accelerate and increase the competition that non-traditional financial institutions pose to banks’ payment services, but…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 40415,
+            "label": "Item 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+            "bank_ticker": "EWBC",
+            "quarter": null,
+            "document_id": 315
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "Stablecoins Act, or the “GENIUS Act,” was signed into law, establishing a federal licensing and supervisory framework for payment stablecoins and their issuers. The GENIUS Act may accelerate and increase the competition that non-traditional financial institutions pose to banks’ payment services, but may also create opportunities for banks to hold stablecoin reserve assets, custody stablecoins, or issue stablecoins. Several key provisions of the GENIUS Act require federal regulatory agencies to adopt implementing regulations, and the Act will take effect the earlier of 18 months after its enactment or 120 days after the agencies issue final implementing regulations. In June 2025, California enacted Senate Bill No. 132 (“SB 132”), requiring banks and financial institutions to adopt a single sales factor for income apportionment, effective for tax years beginning on or after January 1, 2025. Prior to SB 132, financial institutions had been required to use an equally weighted three-factor apportionment formula, which considered property, payroll and sales equally in apportioning income for California tax purposes. Refer to Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations (“MD&A”) — Income Taxes for more details.",
+        "history": [],
+        "takeaway": "EWBC views the GENIUS Act as a positive opportunity for stablecoin services; watch for strategic moves into digital asset management as regulations finalize."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "SSB",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "We compete with commercial banks, credit unions, mortgage banking firms, consumer finance companies, securities brokerage firms, insurance companies, money market funds, and other mutual funds, as well as other super-regional, national and international financial institutions and fintech or e-commer…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 95521,
+            "label": "Risk Factors",
+            "bank_ticker": "SSB",
+            "quarter": null,
+            "document_id": 686
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "We compete with commercial banks, credit unions, mortgage banking firms, consumer finance companies, securities brokerage firms, insurance companies, money market funds, and other mutual funds, as well as other super-regional, national and international financial institutions and fintech or e-commerce companies that operate in our primary market areas and elsewhere. Some of these competitors may have a long history of successful operation in our markets, greater ties to local businesses and more expansive banking relationships, as well as better established depositor bases. Competitors with greater resources or more advanced technology may possess an advantage by being capable of maintaining numerous and more convenient banking locations, easy to use and available mobile and computer apps or Internet platforms, operating more ATMs and conducting extensive promotional and advertising campaigns.\n​\n52\nTable of Contents\nIn addition, fintechs and other technology-driven platforms are expanding their presence, offering a wide variety of products and services that challenge traditional banking models. The growing experimentation with and adoption of technologies such as artificial intelligence, quantum computing, blockchain, stablecoins, and other digital currencies—including the potential issuance, acceptance, and integration of central bank digital currencies—have the potential to fundamentally reshape the financial services landscape.",
+        "history": [],
+        "takeaway": "SSB's filing mentions competition but lacks specific stablecoin or digital-asset reserve composition details; watch for future disclosures."
+      },
+      {
+        "theme": "digital_assets",
+        "category": "structural",
+        "bank_ticker": "STT",
+        "severity": "high",
+        "headline": "Stablecoin / digital-asset reserve composition language",
+        "detail": "European Union\nSPOE Strategy\nSingle Point of Entry Strategy\nEVE\nEconomic value of equity\nSSIF\nState Street Intermediate Funding, LLC\nFDIC\nFederal Deposit Insurance Corporation\nTLAC(1)\nTotal loss-absorbing capacity\nFHLB\nFederal Home Loan Bank of Boston\nTMRC\nTrading and Markets Risk Committee\nFICC\nFix…",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [
+          {
+            "kind": "chunk",
+            "ref_id": 98652,
+            "label": "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS",
+            "bank_ticker": "STT",
+            "quarter": null,
+            "document_id": 704
+          }
+        ],
+        "sentiment": "positive",
+        "full_detail": "European Union\nSPOE Strategy\nSingle Point of Entry Strategy\nEVE\nEconomic value of equity\nSSIF\nState Street Intermediate Funding, LLC\nFDIC\nFederal Deposit Insurance Corporation\nTLAC(1)\nTotal loss-absorbing capacity\nFHLB\nFederal Home Loan Bank of Boston\nTMRC\nTrading and Markets Risk Committee\nFICC\nFixed Income Clearing Corporation\nTOPS\nTechnology and Operations Committee\nFTE\nFully taxable-equivalent\nTORC\nTechnology and Operational Risk Committee\nFSOC\nFinancial Stability Oversight Council\nUCITS\nUndertakings for Collective Investments in Transferable Securities\nFX\nForeign exchange\nU.K. United Kingdom\nGAAP\nGenerally accepted accounting principles\nUOM\nUnit of measure\nGBP\nBritish Pound Sterling\nU.S. United States of America\nGCR\nGlobal credit review\nUSD\nU.S. dollar\nGDPR\nGeneral data protection regulation\nVaR\nValue-at-Risk\nG-SIB\nGlobal systemically important bank\nVIE\nVariable interest entity\n(1) As defined by the applicable U.S. regulations. State Street Corporation | 176\nGLOSSARY\nAsset-backed securities: A financial security backed by collateralized assets, other than real estate or mortgage backed securities. Assets under custody and/or administration: Assets that we hold directly or indirectly on behalf of clients under a safekeeping or custody arrangement or for which we provide administrative services for clients.",
+        "history": [],
+        "takeaway": "STT's positive, high-severity flag for stablecoin/digital-asset reserve language suggests a material disclosure; review filings for specific details on composition and strategy."
+      }
+    ],
+    "macro_divergence": [
+      {
+        "theme": "digital_assets",
+        "category": "macro_divergence",
+        "bank_ticker": "-",
+        "severity": "low",
+        "headline": "Macro reference series not yet ingested",
+        "detail": "BTC/ETH prices, stablecoin market cap, and on-chain volume reference series are not yet ingested. This category will flag decoupling between bank crypto exposure and the macro signal.",
+        "metric_value": null,
+        "peer_median": null,
+        "z_score": null,
+        "quarter": null,
+        "citations": [],
+        "sentiment": "inconclusive",
+        "full_detail": null,
+        "history": [],
+        "takeaway": "Macro divergence analysis for digital asset exposure is currently unavailable; await ingestion of BTC/ETH and on-chain volume data for bank-specific insights."
+      }
+    ]
+  },
+  "counts": {
+    "exposure": 1,
+    "credit_quality": 0,
+    "peer_deviation": 5,
+    "disclosure_nlp": 1,
+    "events_8k": 0,
+    "valuation_marks": 1,
+    "structural": 17,
+    "macro_divergence": 1
+  },
+  "total": 26
+}

@@ -64,7 +64,17 @@ export function AnomaliesPanel({ slug }: { slug: ThemeSlug }) {
     setLoading(true);
     setError(null);
     setData(null);
-    fetch(slug === 'private-credit' ? '/data/pc_anomalies.json' : `/api/backend/anomalies/${slug}`, { signal: controller.signal })
+    // All three themes now read from pre-generated static JSON snapshots —
+    // no backend round-trip. Slug → file mapping:
+    //   private-credit → /data/pc_anomalies.json
+    //   digital-assets → /data/da_anomalies.json
+    //   ai             → /data/ai_anomalies.json
+    const SLUG_TO_FILE: Record<string, string> = {
+      'private-credit': '/data/pc_anomalies.json',
+      'digital-assets': '/data/da_anomalies.json',
+      'ai':             '/data/ai_anomalies.json',
+    };
+    fetch(SLUG_TO_FILE[slug], { signal: controller.signal })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return (await res.json()) as AnomaliesResponse;
