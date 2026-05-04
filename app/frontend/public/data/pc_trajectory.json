@@ -1,0 +1,1625 @@
+{
+  "as_of": "2025Q4",
+  "method": {
+    "trajectory": "Quant-grounded label from QoQ relative change in the bank's NBFI loan ratio (pc_trends.json quarter_movers). Thresholds: \u2264\u221210% \u2192 Pulling Back, \u221210% to \u22123% \u2192 Contracting, \u22123% to +3% \u2192 Stable, \u2265+3% \u2192 Expanding. NOT a sentiment label \u2014 it measures book direction, not management's tone of language. The LLM's narrative sentiment from pc_findings.json is preserved per-bank as `narrative_sentiment` for cross-reference but does not drive the bucket.",
+    "rating": "Quintile (1\u20135) of the 6-metric PC composite \u2014 same weighted-norm score used by the Rankings page, ComparePanel, and PCPositioningQuadrant. Weights: NBFI ratio 35, NBFI commitment 25, NBFI growth 15, C&I ratio 10, PE exposure 10, loan scale 5. Because growth is in the composite, banks pulling back materially get demoted automatically.",
+    "exposure": "NBFI exposure proxy from FFIEC Call Reports: total_loans \u00d7 (RCON1766 + RCONJ457) / RCON2122. For banks where RCON1766 is confidential, RCONJ457 alone is reported (exposure_source='commitment_proxy'). 'Private credit' is not a Call Report line \u2014 this is the same proxy the Rankings page uses.",
+    "strategies": "Multi-label deterministic regex classification over each bank's key_themes + strategic_initiatives + perceived_risks + notable_quotes from pc_findings.json, mapped to a fixed 8-category taxonomy. A bank can appear in multiple strategies. Unmapped themes are listed in the diagnostics block."
+  },
+  "taxonomy": [
+    "Direct Lending",
+    "Sponsor Coverage",
+    "Partnership / JV",
+    "BDC Investment",
+    "Warehouse / Fund Finance",
+    "CLO / Leveraged Finance",
+    "Distribution / Syndication",
+    "Pulling Back"
+  ],
+  "trajectory_colors": {
+    "Expanding": "#10b981",
+    "Stable": "#3b82f6",
+    "Contracting": "#f59e0b",
+    "Pulling Back": "#dc2626"
+  },
+  "trajectory_counts": {
+    "Expanding": 13,
+    "Stable": 23,
+    "Contracting": 10,
+    "Pulling Back": 4
+  },
+  "total_banks": 50,
+  "banks": [
+    {
+      "ticker": "ALLY",
+      "name": "Ally Financial Inc.",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0278,
+      "narrative_sentiment": "positive",
+      "rating": 3,
+      "composite_score": 0.3305,
+      "trajectory_rationale": "NBFI ratio -0.4 pp QoQ (-2.8% relative) \u2014 stable bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "Ally Financial is strategically focused on prudently growing its Corporate Finance lending portfolio, emphasizing a disciplined and selective approach to credit quality, particularly with a greater focus on asset-based loans. The bank aims to expand relationships with private equity sponsors and asset managers, and is growing its lender finance business. Additionally, Ally leverages loan syndication to provide larger financing commitments, generate fee income, and reduce single obligor risk exposure.",
+      "exposure_billions": 19.798,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 19.798
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Sponsor Coverage",
+        "CLO / Leveraged Finance",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "BKU",
+      "name": "BankUnited, Inc.",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0104,
+      "narrative_sentiment": "cautious",
+      "rating": 2,
+      "composite_score": 0.3216,
+      "trajectory_rationale": "NBFI ratio -0.2 pp QoQ (-1.0% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "BankUnited is strategically repositioning its balance sheet by de-emphasizing growth in municipal, franchise, and equipment finance segments. This move is driven by their current risk/return profile and the lack of significant deposit business associated with these customers. The bank explicitly states it does not expect significant new loan originations in these areas.",
+      "exposure_billions": 7.196,
+      "exposure_breakdown": {
+        "funded": 4.804,
+        "commitments": 2.392
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": []
+    },
+    {
+      "ticker": "BK",
+      "name": "The Bank of New York Mellon",
+      "peer_group": "trust-ib",
+      "trajectory": "Pulling Back",
+      "trajectory_rel_change": -0.1196,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.4662,
+      "trajectory_rationale": "NBFI ratio -3.8 pp QoQ (-12.0% relative) \u2014 pulling back bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "",
+      "exposure_billions": 10.386,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 10.386
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Sponsor Coverage",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "BPOP",
+      "name": "Popular, Inc.",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0066,
+      "narrative_sentiment": "cautious",
+      "rating": 2,
+      "composite_score": 0.2821,
+      "trajectory_rationale": "NBFI ratio -0.1 pp QoQ (-0.7% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "Popular, Inc. is expanding its commercial banking operations in New York through direct loan origination and participation in loans originated by Popular Bank. Nationally, it offers personal loans (E-Loan brand, third-party purchased) and gathers institutional deposits. The bank is also experiencing loan growth in its healthcare and community association lending businesses and continues to retain FHA-guaranteed mortgage loans in its portfolio.",
+      "exposure_billions": 2.714,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 2.714
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "AXP",
+      "name": "American Express Company",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0021,
+      "narrative_sentiment": "neutral",
+      "rating": 2,
+      "composite_score": 0.2583,
+      "trajectory_rationale": "NBFI ratio -0.0 pp QoQ (-0.2% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "The bank is evolving its product offerings, including the expansion of lending features on its charge card portfolio, and is focused on growing its direct deposit program to diversify funding sources. It also aims to extend the reach of its global network through licensing agreements with third-party card issuers.",
+      "exposure_billions": 7.247,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 7.247
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "BOKF",
+      "name": "BOK Financial Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0293,
+      "narrative_sentiment": "neutral",
+      "rating": 5,
+      "composite_score": 0.5549,
+      "trajectory_rationale": "NBFI ratio +1.0 pp QoQ (+2.9% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 19.728,
+      "exposure_breakdown": {
+        "funded": 8.782,
+        "commitments": 10.946
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "ASB",
+      "name": "Associated Banc-Corp",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0434,
+      "narrative_sentiment": "neutral",
+      "rating": 3,
+      "composite_score": 0.4032,
+      "trajectory_rationale": "NBFI ratio +1.1 pp QoQ (+4.3% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "The bank is actively growing its commercial and business lending portfolio, which includes asset-based lending. This segment has been a primary driver of overall loan growth, with average loans increasing by 3% in 2025. The bank's strategy involves expanding this key lending area to large corporations, middle market companies, and small businesses.",
+      "exposure_billions": 13.675,
+      "exposure_breakdown": {
+        "funded": 8.202,
+        "commitments": 5.473
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America Corporation",
+      "peer_group": "GSIB",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0757,
+      "narrative_sentiment": "cautious",
+      "rating": 5,
+      "composite_score": 0.5837,
+      "trajectory_rationale": "NBFI ratio +2.7 pp QoQ (+7.6% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank utilizes syndications of exposure to third parties, loan sales, hedging, and other risk mitigation techniques to manage the size and risk profile of its commercial credit portfolio. It also continuously monitors the ability of borrowers and counterparties to perform under their obligations, using risk rating aggregations to evaluate concentrations within portfolios. Management of deteriorating commercial exposures is transferred to independent special asset officers as credits enter criticized categories.",
+      "exposure_billions": 407.559,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 407.559
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Warehouse / Fund Finance",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc.",
+      "peer_group": "GSIB",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0746,
+      "narrative_sentiment": "positive",
+      "rating": 5,
+      "composite_score": 0.6006,
+      "trajectory_rationale": "NBFI ratio -3.6 pp QoQ (-7.5% relative) \u2014 contracting bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "",
+      "exposure_billions": 221.228,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 221.228
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Warehouse / Fund Finance",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "CFR",
+      "name": "Cullen/Frost Bankers",
+      "peer_group": "regional",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0578,
+      "narrative_sentiment": "neutral",
+      "rating": 4,
+      "composite_score": 0.4277,
+      "trajectory_rationale": "NBFI ratio -1.6 pp QoQ (-5.8% relative) \u2014 contracting bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 11.587,
+      "exposure_breakdown": {
+        "funded": 5.557,
+        "commitments": 6.03
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": []
+    },
+    {
+      "ticker": "CMA",
+      "name": "Comerica Incorporated",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0383,
+      "narrative_sentiment": "cautious",
+      "rating": 5,
+      "composite_score": 0.5724,
+      "trajectory_rationale": "NBFI ratio +1.3 pp QoQ (+3.8% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "",
+      "exposure_billions": 18.059,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 18.059
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Sponsor Coverage",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "CFG",
+      "name": "Citizens Financial Group",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0134,
+      "narrative_sentiment": "positive",
+      "rating": 4,
+      "composite_score": 0.419,
+      "trajectory_rationale": "NBFI ratio +0.3 pp QoQ (+1.3% relative) \u2014 stable bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "Citizens Financial Group is actively growing its \"Secured private credit finance\" portfolio, which increased from $2.9 billion to $3.9 billion in the past year. The bank also provides \"acquisition and follow-on financing for new and recapitalized portfolio companies of key sponsors, with services meeting the unique and time-sensitive needs of private equity firms, management companies and funds.\" Additionally, the bank is undertaking a \"Private Bank and Private Wealth build-out\" which involves hiring and investments.",
+      "exposure_billions": 35.935,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 35.935
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "COLB",
+      "name": "Columbia Banking System",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0316,
+      "narrative_sentiment": "cautious",
+      "rating": 2,
+      "composite_score": 0.3109,
+      "trajectory_rationale": "NBFI ratio +0.5 pp QoQ (+3.2% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank is focused on relationship-driven commercial loan growth and line utilization, operating under a \"Business Bank of Choice operating strategy.\" It is also strategically remixing its portfolio by reducing transactional multifamily and residential loans and selling existing loans with higher charge-off potential. Additionally, the bank recalibrated its commercial CECL model to better reflect its post-Merger loan portfolio.",
+      "exposure_billions": 12.629,
+      "exposure_breakdown": {
+        "funded": 7.69,
+        "commitments": 4.939
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": []
+    },
+    {
+      "ticker": "FHN",
+      "name": "First Horizon Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0028,
+      "narrative_sentiment": "cautious",
+      "rating": 3,
+      "composite_score": 0.3745,
+      "trajectory_rationale": "NBFI ratio -0.1 pp QoQ (-0.3% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "",
+      "exposure_billions": 24.666,
+      "exposure_breakdown": {
+        "funded": 15.291,
+        "commitments": 9.375
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One Financial",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0114,
+      "narrative_sentiment": "neutral",
+      "rating": 1,
+      "composite_score": 0.2406,
+      "trajectory_rationale": "NBFI ratio -0.1 pp QoQ (-1.1% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 23.857,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 23.857
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "FCNCA",
+      "name": "First Citizens BancShares",
+      "peer_group": "regional",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0448,
+      "narrative_sentiment": "cautious",
+      "rating": 2,
+      "composite_score": 0.3114,
+      "trajectory_rationale": "NBFI ratio -0.6 pp QoQ (-4.5% relative) \u2014 contracting bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The SVBB Acquisition significantly expanded their exposure to technology, life science, healthcare, and private equity/venture capital clients. They also have a joint venture, CIT Northbridge Credit LLC, for asset-based lending to middle-market companies. The bank is actively growing its global fund banking portfolio and seeing strong loan originations in TMT and healthcare verticals.",
+      "exposure_billions": 17.9,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 17.9
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Sponsor Coverage",
+        "Partnership / JV"
+      ]
+    },
+    {
+      "ticker": "DFS",
+      "name": "Discover Financial Services",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": null,
+      "narrative_sentiment": "cautious",
+      "rating": 1,
+      "composite_score": 0.0,
+      "trajectory_rationale": "No prior-quarter NBFI ratio available.",
+      "strategic_initiatives": "The bank is actively divesting its private student loan portfolio, classifying it as held-for-sale and recognizing gains from the first closing of the sale. This move is expected to improve net interest margin and reduce total loans, aligning with a broader strategy to manage its loan portfolio mix. The bank also considers future strategic acquisitions or divestitures of businesses, loan portfolios, or technologies.",
+      "exposure_billions": 0.0,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 0.0
+      },
+      "exposure_source": "unavailable",
+      "strategies": []
+    },
+    {
+      "ticker": "FITB",
+      "name": "Fifth Third Bancorp",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0514,
+      "narrative_sentiment": "neutral",
+      "rating": 5,
+      "composite_score": 0.5494,
+      "trajectory_rationale": "NBFI ratio +1.7 pp QoQ (+5.1% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 43.43,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 43.43
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "CLO / Leveraged Finance",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "EWBC",
+      "name": "East West Bancorp",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0058,
+      "narrative_sentiment": "neutral",
+      "rating": 1,
+      "composite_score": 0.2402,
+      "trajectory_rationale": "NBFI ratio -0.0 pp QoQ (-0.6% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 3.196,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 3.196
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "FLG",
+      "name": "Flagstar Financial",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0179,
+      "narrative_sentiment": "positive",
+      "rating": 2,
+      "composite_score": 0.2578,
+      "trajectory_rationale": "NBFI ratio -0.1 pp QoQ (-1.8% relative) \u2014 stable bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "Flagstar Financial is strategically diversifying its loan portfolio by shifting away from multi-family loans towards commercial and industrial, including specialty finance. This involves adding experienced banking professionals and credit personnel. The bank is also running off certain non-core specialty finance loans while focusing new originations on broader customer relationships.",
+      "exposure_billions": 4.859,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 4.859
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "FNB",
+      "name": "F.N.B. Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0041,
+      "narrative_sentiment": "neutral",
+      "rating": 3,
+      "composite_score": 0.3624,
+      "trajectory_rationale": "NBFI ratio +0.1 pp QoQ (+0.4% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 14.23,
+      "exposure_breakdown": {
+        "funded": 6.873,
+        "commitments": 7.356
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": []
+    },
+    {
+      "ticker": "GS",
+      "name": "The Goldman Sachs Group",
+      "peer_group": "trust-ib",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0787,
+      "narrative_sentiment": "positive",
+      "rating": 5,
+      "composite_score": 0.7664,
+      "trajectory_rationale": "NBFI ratio -5.7 pp QoQ (-7.9% relative) \u2014 contracting bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "Goldman Sachs formed the Capital Solutions Group in Global Banking & Markets in January 2025 to offer a more comprehensive suite of financing, origination, structuring, and risk management across public and private markets. This group expands coverage to financial sponsors and alternative asset management firms, including an alternatives origination group for private credit and private equity clients. The bank also targets growing its total credit alternative assets to $300 billion by the end of 2028.",
+      "exposure_billions": 147.895,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 147.895
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Sponsor Coverage",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "NTRS",
+      "name": "Northern Trust Corporation",
+      "peer_group": "trust-ib",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0046,
+      "narrative_sentiment": "neutral",
+      "rating": 4,
+      "composite_score": 0.4779,
+      "trajectory_rationale": "NBFI ratio +0.2 pp QoQ (+0.5% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 13.226,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 13.226
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "CLO / Leveraged Finance",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "KEY",
+      "name": "KeyCorp",
+      "peer_group": "regional",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0711,
+      "narrative_sentiment": "cautious",
+      "rating": 5,
+      "composite_score": 0.5251,
+      "trajectory_rationale": "NBFI ratio -2.7 pp QoQ (-7.1% relative) \u2014 contracting bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "KeyCorp is increasing its specialty finance lending within its commercial and industrial portfolio, which contributed to a 9.0% increase in C&I loans. The bank is also investing an additional $100 million in technology for customer-facing capabilities and adding nearly 10% to its frontline banker staff across various commercial segments. These moves aim to build targeted scale and competitive advantage in distinct product capabilities.",
+      "exposure_billions": 38.506,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 38.506
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "ONB",
+      "name": "Old National Bancorp",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0776,
+      "narrative_sentiment": "neutral",
+      "rating": 3,
+      "composite_score": 0.357,
+      "trajectory_rationale": "NBFI ratio +1.2 pp QoQ (+7.8% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "Old National Bancorp's strategy involves remaining on offense with its growth strategy, investing in client-facing and key support talent, and remaining opportunistic for new acquisitions. This includes significant acquisitions like CapStar and Bremer, which have driven substantial loan and asset growth. The bank also emphasizes disciplined loan production balanced across its market footprint and product lines, alongside organic growth of fee-based businesses.",
+      "exposure_billions": 8.156,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 8.156
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "MTB",
+      "name": "M&T Bank Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.018,
+      "narrative_sentiment": "cautious",
+      "rating": 3,
+      "composite_score": 0.342,
+      "trajectory_rationale": "NBFI ratio -0.3 pp QoQ (-1.8% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The Company executed various strategies to lessen its relative concentration of commercial real estate loans and to reduce the amount of criticized loans in this category throughout 2024 and 2025. This shift in portfolio composition implies a strategic reallocation of lending focus, though not explicitly an expansion of private credit.",
+      "exposure_billions": 20.955,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 20.955
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "BDC Investment",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "HBAN",
+      "name": "Huntington Bancshares",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0299,
+      "narrative_sentiment": "positive",
+      "rating": 3,
+      "composite_score": 0.3831,
+      "trajectory_rationale": "NBFI ratio -0.6 pp QoQ (-3.0% relative) \u2014 stable bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "The bank is expanding product offerings and leveraging partnerships with manufacturers, dealers, and third-party sources to drive origination, particularly in lease financing. They are pursuing organic growth, complemented by acquisitions like Veritex, and are focused on entering new markets while maintaining high credit quality standards.",
+      "exposure_billions": 29.072,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 29.072
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "peer_group": "trust-ib",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.059,
+      "narrative_sentiment": "cautious",
+      "rating": 5,
+      "composite_score": 0.8055,
+      "trajectory_rationale": "NBFI ratio +4.0 pp QoQ (+5.9% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "Morgan Stanley is strategically focused on the ongoing growth of eligible assets, as evidenced by the approximately $75 billion increase in total loans and lending commitments in 2025, driven by securities-based loans, secured lending facilities, and relationship corporate lending. A concrete step in this direction was the merger of Morgan Stanley Capital Services LLC's fixed income derivatives business into MSBNA on February 14, 2026, to further grow eligible assets within its U.S. Bank Subsidiaries.",
+      "exposure_billions": 72.85,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 72.85
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "peer_group": "GSIB",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0367,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.4533,
+      "trajectory_rationale": "NBFI ratio -1.0 pp QoQ (-3.7% relative) \u2014 contracting bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank has seen significant loan growth, with loans increasing by $121.1 billion, predominantly driven by higher loans in CIB, primarily in Markets, and higher securities-based lending in AWM. This expansion is associated with higher client demand, indicating a responsive approach to market opportunities in these areas.",
+      "exposure_billions": 363.652,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 363.652
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "RF",
+      "name": "Regions Financial Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0113,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.4738,
+      "trajectory_rationale": "NBFI ratio +0.3 pp QoQ (+1.1% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "Regions' strategy remains primarily centered around larger, existing clients and slowing originations of smaller trucking deals at this point in the cycle. The Company also ceased originating new loans related to certain third-party lending businesses prior to 2020, with these portfolios now in run-off, and sold substantially all of its unsecured consumer loans in this portfolio in the fourth quarter of 2023.",
+      "exposure_billions": 28.242,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 28.242
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "PB",
+      "name": "Prosperity Bancshares",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0072,
+      "narrative_sentiment": "cautious",
+      "rating": 1,
+      "composite_score": 0.236,
+      "trajectory_rationale": "NBFI ratio -0.1 pp QoQ (-0.7% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The Company maintains specialty commercial lending lines of business, including mortgage warehouse lending, staffed by bankers with specific expertise. It strategically targets unaffiliated mortgage originators for their experienced management teams and analyzes their business models for long-term profitability. The Company also intends to continue seeking opportunities to expand its market share through internal growth and a disciplined acquisition strategy.",
+      "exposure_billions": 3.17,
+      "exposure_breakdown": {
+        "funded": 1.842,
+        "commitments": 1.328
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "RJF",
+      "name": "Raymond James Financial",
+      "peer_group": "trust-ib",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0759,
+      "narrative_sentiment": "neutral",
+      "rating": 1,
+      "composite_score": 0.1835,
+      "trajectory_rationale": "NBFI ratio -0.2 pp QoQ (-7.6% relative) \u2014 contracting bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "Raymond James Financial's strategy for managing its substantial bank loan portfolio, which includes exposures to private credit entities, focuses on well-defined credit policies, uniform underwriting criteria, and ongoing risk monitoring. This involves diversification across loan types, geographies, industries, and clients. The bank also utilizes loan sales and other risk mitigation techniques to manage the size and risk profile of its corporate bank loans.",
+      "exposure_billions": 0.882,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 0.882
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Warehouse / Fund Finance",
+        "Distribution / Syndication"
+      ]
+    },
+    {
+      "ticker": "SCHW",
+      "name": "The Charles Schwab Corporation",
+      "peer_group": "trust-ib",
+      "trajectory": "Stable",
+      "trajectory_rel_change": null,
+      "narrative_sentiment": "neutral",
+      "rating": 1,
+      "composite_score": 0.1005,
+      "trajectory_rationale": "No prior-quarter NBFI ratio available.",
+      "strategic_initiatives": "",
+      "exposure_billions": 0.0,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 0.0
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "PNFP",
+      "name": "Pinnacle Financial Partners",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0061,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.4305,
+      "trajectory_rationale": "NBFI ratio +0.2 pp QoQ (+0.6% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "BHG, in which Pinnacle Bank has a 49% ownership interest, is expanding its operations to include commercial lending to other professional service firms, licensed professionals, patient financing, and point-of-sale consumer lending. BHG also anticipates completing additional securitizations or establishing other borrowing facilities to retain more loans on its balance sheet. Pinnacle Bank participates in a $150.0 million revolving line of credit for BHG.",
+      "exposure_billions": 18.363,
+      "exposure_breakdown": {
+        "funded": 12.526,
+        "commitments": 5.837
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Sponsor Coverage",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "SF",
+      "name": "Stifel Financial Corp.",
+      "peer_group": "regional",
+      "trajectory": "Pulling Back",
+      "trajectory_rel_change": -0.6484,
+      "narrative_sentiment": "cautious",
+      "rating": 1,
+      "composite_score": 0.201,
+      "trajectory_rationale": "NBFI ratio -37.3 pp QoQ (-64.8% relative) \u2014 pulling back bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank intends to grow its investment banking business by leveraging industry expertise, product knowledge, capital markets strength, and a middle-market focus. It plans to seek opportunities to capitalize on consolidation among middle-market firms to increase market share. A recent acquisition of Bryan, Garnier & Co. is expected to expand its European focus, including private and public growth financing solutions.",
+      "exposure_billions": 2.786,
+      "exposure_breakdown": {
+        "funded": 1.559,
+        "commitments": 1.228
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Direct Lending",
+        "Warehouse / Fund Finance",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "SNV",
+      "name": "Synovus Financial Corp.",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0914,
+      "narrative_sentiment": "neutral",
+      "rating": 3,
+      "composite_score": 0.3975,
+      "trajectory_rationale": "NBFI ratio +1.9 pp QoQ (+9.1% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "Synovus' 2025 strategic plan includes accelerated growth investments across the franchise, with a particular focus on specialty lending, middle market banking, CIB, and wealth services, involving relationship manager recruitment and hiring. Concurrently, the bank is undertaking a continued strategic run-off of its third-party lending portfolio, particularly in consumer loans. This indicates a strategic re-allocation of resources within its lending activities.",
+      "exposure_billions": 18.259,
+      "exposure_breakdown": {
+        "funded": 10.195,
+        "commitments": 8.064
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": []
+    },
+    {
+      "ticker": "PNC",
+      "name": "The PNC Financial Services Group",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0412,
+      "narrative_sentiment": "cautious",
+      "rating": 5,
+      "composite_score": 0.6179,
+      "trajectory_rationale": "NBFI ratio +1.7 pp QoQ (+4.1% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "PNC aims to grow its market share and drive higher returns by delivering value-added solutions to clients, focusing on attractive risk-return profiles. The bank's Business Credit segment specifically provides asset-based lending and equipment financing solutions. Commercial Banking also offers lending, treasury management, and capital markets products to corporate and middle market clients.",
+      "exposure_billions": 142.901,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 142.901
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending"
+      ]
+    },
+    {
+      "ticker": "SSB",
+      "name": "SouthState Corporation",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0403,
+      "narrative_sentiment": "neutral",
+      "rating": 2,
+      "composite_score": 0.2945,
+      "trajectory_rationale": "NBFI ratio +0.6 pp QoQ (+4.0% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "The Company began purchasing guaranteed portions of SBA loans from third-party originators in 2024, with the strategic intent to aggregate these into pools and create securities through the SBA\u2019s fiscal transfer agent. This line of business became more established in 2025, leading to an increase in SBA loans held for sale.",
+      "exposure_billions": 11.091,
+      "exposure_breakdown": {
+        "funded": 7.03,
+        "commitments": 4.061
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies",
+      "peer_group": "regional",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0885,
+      "narrative_sentiment": "cautious",
+      "rating": 1,
+      "composite_score": 0.1403,
+      "trajectory_rationale": "NBFI ratio -0.0 pp QoQ (-8.8% relative) \u2014 contracting bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "SoFi acquired Wyndham in 2023 to expand its home loan business and capabilities. The bank is actively growing its Loan Platform Business, originating loans on behalf of third-party partners and referring pre-qualified borrowers. A key focus is on increasing overall loan origination volume and member activity, supported by a diversified funding strategy.",
+      "exposure_billions": 0.005,
+      "exposure_breakdown": {
+        "funded": 0.004,
+        "commitments": 0.001
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corporation",
+      "peer_group": "trust-ib",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0799,
+      "narrative_sentiment": "cautious",
+      "rating": 1,
+      "composite_score": 0.2344,
+      "trajectory_rationale": "NBFI ratio -0.2 pp QoQ (-8.0% relative) \u2014 contracting bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "State Street is actively growing its lending portfolio, with a particular focus on Collateralized Loan Obligations (CLOs) and fund finance loans. Its investment strategy involves generally limiting exposure to larger, more liquid credits underwritten by major global financial institutions, applying internal credit analysis, and diversifying by counterparty and industry segment.",
+      "exposure_billions": 0.904,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 0.904
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "BDC Investment",
+        "Warehouse / Fund Finance",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "SYF",
+      "name": "Synchrony Financial",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": null,
+      "narrative_sentiment": "positive",
+      "rating": 1,
+      "composite_score": 0.0362,
+      "trajectory_rationale": "No prior-quarter NBFI ratio available.",
+      "strategic_initiatives": "Synchrony Financial expanded its existing Lowe's commercial program and announced the acquisition of the Lowe's commercial co-branded credit card portfolio, expected to close in the first half of 2026. The bank also continued to expand and diversify its portfolios with the addition or renewal of more than 75 partners, including new strategic technology partnerships with Adit Practice Management Software and ServiceTitan. Additionally, it entered into a relationship with Atlanticus Holdings Corporation to deliver a preferred second look.",
+      "exposure_billions": 0.0,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 0.0
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "TFC",
+      "name": "Truist Financial",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.0115,
+      "narrative_sentiment": "neutral",
+      "rating": 4,
+      "composite_score": 0.5148,
+      "trajectory_rationale": "NBFI ratio +0.4 pp QoQ (+1.1% relative) \u2014 stable bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "Consumer loans and credit cards increased $632 million during 2024 primarily due to a $748 million increase in other consumer primarily due to growth of higher-return point-of-sale lending portfolios (Service Finance and Sheffield), and a $362 million increase in indirect auto primarily due to higher production. The bank also originates unsecured loans via third-party partnerships.",
+      "exposure_billions": 112.12,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 112.12
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "UMBF",
+      "name": "UMB Financial Corporation",
+      "peer_group": "regional",
+      "trajectory": "Pulling Back",
+      "trajectory_rel_change": -0.2113,
+      "narrative_sentiment": "neutral",
+      "rating": 3,
+      "composite_score": 0.3891,
+      "trajectory_rationale": "NBFI ratio -6.3 pp QoQ (-21.1% relative) \u2014 pulling back bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 9.128,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 9.128
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "VLY",
+      "name": "Valley National Bancorp",
+      "peer_group": "regional",
+      "trajectory": "Pulling Back",
+      "trajectory_rel_change": -0.1303,
+      "narrative_sentiment": "positive",
+      "rating": 2,
+      "composite_score": 0.2767,
+      "trajectory_rationale": "NBFI ratio -2.1 pp QoQ (-13.0% relative) \u2014 pulling back bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "Valley National Bancorp is strategically targeting growth in specialty nationwide business lines, specifically healthcare and capital-call facilities in the fund finance market, due to their attractive credit risk-adjusted profiles. Concurrently, the bank is proactively diversifying its loan portfolio by reducing new originations of certain types of transactional commercial real estate lending and has completed the sale of its commercial premium finance lending division.",
+      "exposure_billions": 6.866,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 6.866
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "USB",
+      "name": "U.S. Bancorp",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.056,
+      "narrative_sentiment": "neutral",
+      "rating": 5,
+      "composite_score": 0.5155,
+      "trajectory_rationale": "NBFI ratio +1.8 pp QoQ (+5.6% relative) \u2014 expanding bucket. LLM narrative sentiment: neutral.",
+      "strategic_initiatives": "",
+      "exposure_billions": 130.1,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 130.1
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": []
+    },
+    {
+      "ticker": "WAL",
+      "name": "Western Alliance Bancorporation",
+      "peer_group": "regional",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0672,
+      "narrative_sentiment": "cautious",
+      "rating": 2,
+      "composite_score": 0.3259,
+      "trajectory_rationale": "NBFI ratio +1.1 pp QoQ (+6.7% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "Western Alliance Bancorporation provides specialized banking services to sophisticated commercial institutions and investors within niche industries through its Commercial segment. The bank operates a national platform of specialized financial services, including mortgage banking services via AmeriHome, and has grown its Equity fund resources and Mortgage finance loan categories, indicating an ongoing focus on these areas.",
+      "exposure_billions": 16.29,
+      "exposure_breakdown": {
+        "funded": 11.263,
+        "commitments": 5.027
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Sponsor Coverage",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "WBS",
+      "name": "Webster Financial Corporation",
+      "peer_group": "regional",
+      "trajectory": "Contracting",
+      "trajectory_rel_change": -0.0553,
+      "narrative_sentiment": "positive",
+      "rating": 2,
+      "composite_score": 0.2993,
+      "trajectory_rationale": "NBFI ratio -1.0 pp QoQ (-5.5% relative) \u2014 contracting bucket. LLM narrative sentiment: positive.",
+      "strategic_initiatives": "The Company, through its subsidiary MW Advisor Holding, LLC, entered into an agreement with Marathon Asset Management and formed MW Advisors, LLC, a private credit joint venture. This new entity will deliver direct lending solutions for sponsor-backed middle market companies across the country. The Company and Marathon Asset Management each own 50 percent of MW Advisors, LLC, with activities expected to begin in the first half of 2025.",
+      "exposure_billions": 14.957,
+      "exposure_breakdown": {
+        "funded": 9.945,
+        "commitments": 5.011
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Direct Lending",
+        "Sponsor Coverage",
+        "Partnership / JV",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "name": "Wells Fargo & Company",
+      "peer_group": "GSIB",
+      "trajectory": "Expanding",
+      "trajectory_rel_change": 0.0348,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.4637,
+      "trajectory_rationale": "NBFI ratio +0.9 pp QoQ (+3.5% relative) \u2014 expanding bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank has seen increased originations and loan draws in its commercial and industrial loans and lease financing portfolio, particularly within the 'Financials except banks' category. It also reported a $253 million gain associated with a merchant services joint venture acquisition in the second quarter of 2025.",
+      "exposure_billions": 244.111,
+      "exposure_breakdown": {
+        "funded": 0.0,
+        "commitments": 244.111
+      },
+      "exposure_source": "commitment_proxy",
+      "strategies": [
+        "Direct Lending",
+        "Partnership / JV",
+        "Warehouse / Fund Finance",
+        "CLO / Leveraged Finance"
+      ]
+    },
+    {
+      "ticker": "WTFC",
+      "name": "Wintrust Financial Corporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": -0.0218,
+      "narrative_sentiment": "cautious",
+      "rating": 4,
+      "composite_score": 0.431,
+      "trajectory_rationale": "NBFI ratio -0.8 pp QoQ (-2.2% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "Wintrust actively offers various niche lending products through its bank subsidiaries, including community advantage, mortgage warehouse, insurance agency finance, and franchise lending programs. The bank also operates Wintrust Commercial Finance for direct leasing and Wintrust Business Credit for asset-based lending. In premium finance, the company leverages approved insurance agents and brokers for origination and focuses on effective marketing and customer servicing to drive portfolio growth.",
+      "exposure_billions": 3.943,
+      "exposure_breakdown": {
+        "funded": 2.709,
+        "commitments": 1.234
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "Direct Lending",
+        "Warehouse / Fund Finance"
+      ]
+    },
+    {
+      "ticker": "ZION",
+      "name": "Zions Bancorporation",
+      "peer_group": "regional",
+      "trajectory": "Stable",
+      "trajectory_rel_change": 0.025,
+      "narrative_sentiment": "cautious",
+      "rating": 3,
+      "composite_score": 0.3903,
+      "trajectory_rationale": "NBFI ratio +0.6 pp QoQ (+2.5% relative) \u2014 stable bucket. LLM narrative sentiment: cautious.",
+      "strategic_initiatives": "The bank has disclosed an increased emphasis in risk grading on current cash flows, and less emphasis on the adequacy of collateral values and the strength of guarantors and sponsors, particularly for multifamily and industrial CRE loan portfolios. This represents a shift in its risk assessment methodology.",
+      "exposure_billions": 24.876,
+      "exposure_breakdown": {
+        "funded": 14.635,
+        "commitments": 10.241
+      },
+      "exposure_source": "funded_plus_commitments",
+      "strategies": [
+        "CLO / Leveraged Finance"
+      ]
+    }
+  ],
+  "strategy_pairs": {
+    "Direct Lending": [
+      {
+        "ticker": "ALLY",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "BPOP",
+        "rating": 2,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "ASB",
+        "rating": 3,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "CMA",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "FHN",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "FCNCA",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "FITB",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "EWBC",
+        "rating": 1,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "FLG",
+        "rating": 2,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "KEY",
+        "rating": 5,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "HBAN",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "SF",
+        "rating": 1,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "PNC",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "TFC",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "VLY",
+        "rating": 2,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "WBS",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "WFC",
+        "rating": 4,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "WTFC",
+        "rating": 4,
+        "trajectory": "Stable"
+      }
+    ],
+    "Sponsor Coverage": [
+      {
+        "ticker": "ALLY",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "BK",
+        "rating": 4,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "CMA",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "FCNCA",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "GS",
+        "rating": 5,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "PNFP",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "WAL",
+        "rating": 2,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "WBS",
+        "rating": 2,
+        "trajectory": "Contracting"
+      }
+    ],
+    "Partnership / JV": [
+      {
+        "ticker": "FCNCA",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "WBS",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "WFC",
+        "rating": 4,
+        "trajectory": "Expanding"
+      }
+    ],
+    "BDC Investment": [
+      {
+        "ticker": "MTB",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "STT",
+        "rating": 1,
+        "trajectory": "Contracting"
+      }
+    ],
+    "Warehouse / Fund Finance": [
+      {
+        "ticker": "BK",
+        "rating": 4,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "BOKF",
+        "rating": 5,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "BAC",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "C",
+        "rating": 5,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "CFG",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "MTB",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "PB",
+        "rating": 1,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "RJF",
+        "rating": 1,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "SF",
+        "rating": 1,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "STT",
+        "rating": 1,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "VLY",
+        "rating": 2,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "WAL",
+        "rating": 2,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "WBS",
+        "rating": 2,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "WFC",
+        "rating": 4,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "WTFC",
+        "rating": 4,
+        "trajectory": "Stable"
+      }
+    ],
+    "CLO / Leveraged Finance": [
+      {
+        "ticker": "ALLY",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "AXP",
+        "rating": 2,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "C",
+        "rating": 5,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "CMA",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "FITB",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "GS",
+        "rating": 5,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "NTRS",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "HBAN",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "JPM",
+        "rating": 4,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "PNFP",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "SF",
+        "rating": 1,
+        "trajectory": "Pulling Back"
+      },
+      {
+        "ticker": "SSB",
+        "rating": 2,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "SOFI",
+        "rating": 1,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "STT",
+        "rating": 1,
+        "trajectory": "Contracting"
+      },
+      {
+        "ticker": "TFC",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "WFC",
+        "rating": 4,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "ZION",
+        "rating": 3,
+        "trajectory": "Stable"
+      }
+    ],
+    "Distribution / Syndication": [
+      {
+        "ticker": "ALLY",
+        "rating": 3,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "BAC",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "COF",
+        "rating": 1,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "FITB",
+        "rating": 5,
+        "trajectory": "Expanding"
+      },
+      {
+        "ticker": "EWBC",
+        "rating": 1,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "NTRS",
+        "rating": 4,
+        "trajectory": "Stable"
+      },
+      {
+        "ticker": "RJF",
+        "rating": 1,
+        "trajectory": "Contracting"
+      }
+    ],
+    "Pulling Back": []
+  },
+  "diagnostics": {
+    "unmapped_themes": {
+      "credit risk management": 15,
+      "commercial and industrial lending": 5,
+      "commercial real estate exposure": 4,
+      "commercial real estate lending": 4,
+      "competition from non-bank lenders": 3,
+      "loan portfolio growth": 3,
+      "corporate lending": 3,
+      "commercial and industrial loans": 3,
+      "credit quality deterioration": 2,
+      "equipment and lease financing": 2,
+      "portfolio diversification": 2,
+      "equipment financing": 2,
+      "commercial real estate": 2,
+      "securities-based lending": 2,
+      "commercial real estate risk": 2,
+      "lender finance": 1,
+      "credit quality": 1,
+      "de-emphasis on specialized lending": 1,
+      "risk/return profile management": 1,
+      "municipal finance": 1,
+      "franchise and equipment finance": 1,
+      "balance sheet repositioning": 1,
+      "collateralized lending": 1,
+      "investment grade credit strategy": 1,
+      "broker-dealer financing": 1,
+      "Puerto Rico government exposure": 1,
+      "consumer loan portfolio management": 1,
+      "credit quality and NPLs": 1,
+      "equipment leasing and financing": 1,
+      "macroeconomic risk monitoring": 1,
+      "consumer and small business lending": 1,
+      "commercial credit risk management": 1,
+      "network partnership strategy": 1,
+      "funding diversification": 1,
+      "lending product evolution": 1,
+      "partner competition": 1,
+      "commercial and business lending": 1,
+      "floating rate exposure": 1,
+      "commercial credit exposure": 1,
+      "commercial real estate office risk": 1,
+      "macroeconomic challenges": 1,
+      "risk mitigation techniques": 1,
+      "asset-backed financing": 1,
+      "margin lending": 1,
+      "asset managers and funds exposure": 1,
+      "energy lending": 1,
+      "large credit relationships": 1,
+      "loan portfolio concentrations": 1,
+      "non-depository financial institutions": 1,
+      "risk mitigation strategies": 1,
+      "underwriting standards": 1,
+      "secured private credit finance": 1,
+      "private equity firm partnerships": 1,
+      "private wealth management": 1,
+      "commercial loan growth": 1,
+      "credit quality normalization": 1,
+      "SBA portfolio performance": 1,
+      "relationship banking focus": 1,
+      "loans to mortgage companies": 1,
+      "finance and insurance industry exposure": 1,
+      "competition from non-traditional providers": 1,
+      "TRUPs": 1,
+      "consumer finance lending": 1,
+      "commercial banking": 1,
+      "finance industry exposure": 1,
+      "capital markets activities": 1,
+      "credit quality assessment": 1,
+      "innovation banking": 1,
+      "private equity and venture capital lending": 1,
+      "global fund banking": 1,
+      "early-stage company financing": 1,
+      "private student loan divestment": 1,
+      "regulatory environment": 1,
+      "economic conditions impact": 1,
+      "funding costs": 1,
+      "strategic acquisitions and divestitures": 1,
+      "commercial real estate finance": 1,
+      "commercial business lending": 1,
+      "project finance": 1,
+      "capital call lending": 1,
+      "risk mitigation": 1,
+      "floating rate loans": 1,
+      "private credit strategies": 1,
+      "alternative asset growth": 1,
+      "wealth management lending": 1,
+      "absence from secondary loan markets": 1,
+      "no private equity sponsored company lending": 1,
+      "risk management": 1,
+      "competition from NBFIs": 1,
+      "multifamily housing oversupply": 1,
+      "mergers and acquisitions": 1,
+      "regional market focus": 1,
+      "competition from FinTechs": 1,
+      "NDFI lending exposure": 1,
+      "subscription credit facilities": 1,
+      "credit quality of financial intermediaries": 1,
+      "financial sponsor lending": 1,
+      "secured lending facilities": 1,
+      "ultra-high net worth lending": 1,
+      "wholesale credit quality": 1,
+      "loan growth": 1,
+      "sector-specific credit risk": 1,
+      "borrower fraud": 1,
+      "commercial lending": 1,
+      "investor real estate": 1,
+      "asset quality": 1,
+      "portfolio concentrations": 1,
+      "exit strategies": 1,
+      "lending to non-bank financial institutions": 1,
+      "real estate market fluctuations": 1,
+      "competitive landscape": 1,
+      "acquisition strategy": 1,
+      "loan funds": 1,
+      "private equity investments": 1,
+      "BHG partnership and loan sales": 1,
+      "highly leveraged transactions": 1,
+      "funding facilities with asset managers": 1,
+      "regulatory scrutiny and compliance costs": 1,
+      "new lending product expansion": 1,
+      "loan quality and underwriting": 1,
+      "fund banking / capital call lines": 1,
+      "private placements": 1,
+      "investment banking growth through acquisitions": 1,
+      "specialty lending expansion": 1,
+      "third-party consumer lending contraction": 1,
+      "asset quality concerns": 1,
+      "strategic portfolio re-allocation": 1,
+      "third-party loan origination": 1,
+      "loan origination growth": 1,
+      "diversified funding strategy": 1,
+      "regulatory compliance risks": 1,
+      "credit quality and default risk": 1,
+      "third-party loan platform": 1,
+      "acquisition integration": 1,
+      "subscription finance": 1,
+      "partner relationships": 1,
+      "consumer installment loans": 1,
+      "sales platforms": 1,
+      "promotional financing": 1,
+      "point-of-sale lending": 1,
+      "trading business exposure": 1,
+      "commercial portfolio risk management": 1,
+      "third-party lending partnerships": 1,
+      "specialty lending": 1,
+      "capital-call facilities": 1,
+      "healthcare lending": 1,
+      "specialty business lines": 1,
+      "commercial real estate concentration management": 1,
+      "specialized financial services": 1,
+      "concentration risk": 1,
+      "liquidity event dependence": 1,
+      "private credit expansion": 1,
+      "middle market finance": 1,
+      "strategic partnerships": 1,
+      "commercial finance": 1,
+      "premium finance lending": 1,
+      "niche business growth": 1,
+      "credit quality and delinquency": 1,
+      "collateral valuation risk": 1,
+      "geographic diversification": 1,
+      "regulatory compliance": 1,
+      "concentration limits": 1,
+      "loan portfolio quality": 1
+    }
+  }
+}
