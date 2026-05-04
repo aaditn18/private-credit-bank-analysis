@@ -7,16 +7,45 @@ import {
   DEPLOYMENT_LABELS,
   EmptyAIState,
   EvidenceList,
+  FACTOR_DEFINITIONS,
   FactorBars,
   formatPercent,
   GOVERNANCE_LABELS,
+  InfoTip,
   QuadrantMap,
 } from '@/components/ai/AIShared';
+import { getAIEvidenceByIds } from '@/lib/ai-data';
 
 type PeerFilter = 'all' | string;
 
 function strongestFactor(bundle: AIBankBundle) {
-  return bundle.bars?.factors.toSorted((a, b) => (b.peer_percentile ?? 0) - (a.peer_percentile ?? 0))[0] ?? null;
+  return [...(bundle.bars?.factors ?? [])].sort((a, b) => (b.peer_percentile ?? 0) - (a.peer_percentile ?? 0))[0] ?? null;
+}
+
+function factorPercentile(bundle: AIBankBundle, factorId: string): number {
+  return bundle.bars?.factors.find((factor) => factor.factor_id === factorId)?.peer_percentile ?? 0;
+}
+
+function weightedAverage(values: Array<[number, number]>): number {
+  const totalWeight = values.reduce((total, [, weight]) => total + weight, 0);
+  if (totalWeight === 0) return 0;
+  return values.reduce((total, [value, weight]) => total + value * weight, 0) / totalWeight;
+}
+
+function quadrantStrength(bundle: AIBankBundle) {
+  return {
+    deployment: weightedAverage([
+      [factorPercentile(bundle, 'strategic_implementation'), 0.6],
+      [factorPercentile(bundle, 'growth_profitability'), 0.25],
+      [factorPercentile(bundle, 'leadership_acumen'), 0.15],
+    ]),
+    governance: weightedAverage([
+      [factorPercentile(bundle, 'board_governance'), 0.6],
+      [factorPercentile(bundle, 'risk_management'), 0.25],
+      [factorPercentile(bundle, 'compliance'), 0.15],
+    ]),
+    citations: bundle.quadrant?.evidence_ids.length ?? bundle.score.evidence_ids.length,
+  };
 }
 
 export function AIRankingsPanel({
@@ -43,24 +72,31 @@ export function AIRankingsPanel({
     [bundles, peerFilter],
   );
 
-  const active = bundles.find((bundle) => bundle.score.ticker === activeTicker) ?? filtered[0] ?? null;
+  const filteredQuadrants = useMemo(
+    () => quadrants.filter((record) => peerFilter === 'all' || record.peer_group === peerFilter),
+    [peerFilter, quadrants],
+  );
+
+  const strengthByTicker = useMemo(
+    () => Object.fromEntries(filtered.map((bundle) => [bundle.score.ticker, quadrantStrength(bundle)])),
+    [filtered],
+  );
+
+  const active = filtered.find((bundle) => bundle.score.ticker === activeTicker) ?? filtered[0] ?? null;
   const activeEvidence = focusedEvidence ?? active?.topEvidence ?? [];
 
   if (bundles.length === 0) {
-    return <EmptyAIState message="No generated AI data files were found under /data/ai." />;
+    return <EmptyAIState message="No AI evidence data is available." />;
   }
 
   return (
     <div className="space-y-5">
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
-        <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Static Team 1 AI outputs</div>
+        <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI evidence overview</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
           This view ranks rows only by strongest peer-relative disclosed factor so analysts can scan the
           evidence. It is not a definitive AI risk ranking, and high AI involvement is not automatically
           high AI risk.
-        </p>
-        <p className="mt-2 text-xs text-neutral-500">
-          Methodology validation: {methodology.validation_summary.status} · generated {methodology.generation_date.slice(0, 10)}
         </p>
       </section>
 
@@ -145,7 +181,10 @@ export function AIRankingsPanel({
                       </td>
                       <td className="px-4 py-3 text-xs text-neutral-300">{bundle.score.peer_group}</td>
                       <td className="px-4 py-3">
-                        <div className="text-xs text-neutral-100">{factor?.factor_name ?? 'No factor evidence'}</div>
+                        <div className="flex items-center gap-1.5 text-xs text-neutral-100">
+                          <span>{factor?.factor_name ?? 'No factor evidence'}</span>
+                          {factor && <InfoTip label={factor.factor_name} description={FACTOR_DEFINITIONS[factor.factor_id]} />}
+                        </div>
                         <div className="text-[11px] text-neutral-500">Peer percentile {formatPercent(factor?.peer_percentile)}</div>
                       </td>
                       <td className="px-4 py-3">
@@ -181,7 +220,7 @@ export function AIRankingsPanel({
                 <FactorBars
                   factors={active.bars.factors}
                   onEvidenceClick={(ids) => {
-                    const evidence = active.topEvidence.filter((item) => ids.includes(item.evidence_id));
+                    const evidence = getAIEvidenceByIds(ids);
                     setFocusedEvidence(evidence.length > 0 ? evidence : null);
                   }}
                 />
@@ -209,7 +248,15 @@ export function AIRankingsPanel({
         </aside>
       </div>
 
-      <QuadrantMap quadrants={quadrants} activeTicker={active?.score.ticker} />
+      <QuadrantMap
+        quadrants={filteredQuadrants}
+        strengthByTicker={strengthByTicker}
+        activeTicker={active?.score.ticker}
+        onSelectTicker={(ticker) => {
+          setActiveTicker(ticker);
+          setFocusedEvidence(null);
+        }}
+      />
     </div>
   );
 }

@@ -32,7 +32,7 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
   }
 
   if (bundles.length === 0) {
-    return <EmptyAIState message="No generated AI comparison data is available." />;
+    return <EmptyAIState message="No AI comparison data is available." />;
   }
 
   return (
@@ -40,8 +40,7 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI peer comparison</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          Compare banks by factor evidence, 2x2 placement, disclosure timeline, confidence, and missing evidence.
-          No composite AI ranking is calculated here.
+          Compare banks by factor evidence, 2x2 placement, disclosure timeline, confidence, and evidence gaps.
         </p>
       </section>
 
@@ -77,7 +76,7 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
       ) : (
         <div className="grid gap-5 xl:grid-cols-2">
           {selectedBundles.map((bundle) => {
-            const latestPosture = bundle.timeline?.quarters.toReversed().find((quarter) => quarter.disclosure_posture !== 'absent');
+            const latestPosture = bundle.timeline?.quarters.slice().reverse().find((quarter) => quarter.disclosure_posture !== 'absent');
             return (
               <article key={bundle.score.ticker} className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <div className="mb-4 flex items-start justify-between gap-3">
@@ -126,7 +125,7 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
                 ) : null}
 
                 <p className="mt-3 text-[11px] text-neutral-500">
-                  Max factor percentile: {formatPercent(bundle.score.peer_percentile)}. This field supports schema compatibility and is not used as a composite rank.
+                  Strongest peer-relative factor percentile: {formatPercent(bundle.score.peer_percentile)}.
                 </p>
               </article>
             );

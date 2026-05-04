@@ -9,7 +9,6 @@ import {
   EvidenceList,
   formatPercent,
   GOVERNANCE_LABELS,
-  POSTURE_LABELS,
 } from '@/components/ai/AIShared';
 
 type AIAnomalyKind = 'missing_evidence' | 'low_confidence' | 'strategic_risk' | 'governance_gap' | 'generic_disclosure';
@@ -68,7 +67,8 @@ function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
   const strategicRisk = bundle.bars?.factors.find((factor) => factor.factor_id === 'strategic_risk');
   const governance = bundle.bars?.factors.find((factor) => factor.factor_id === 'board_governance');
   const latestGeneric = bundle.timeline?.quarters
-    .toReversed()
+    .slice()
+    .reverse()
     .find((quarter) => quarter.disclosure_posture === 'generic');
 
   const severeGaps = severeEvidenceGaps(bundle);
@@ -93,7 +93,7 @@ function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
       kind: 'low_confidence',
       severity: 'high',
       title: `${bundle.score.ticker} requires review before relying on AI classification`,
-      detail: 'The generated static AI output carries low confidence and should be reviewed against cited excerpts before downstream use.',
+      detail: 'The AI output carries low confidence and should be reviewed against cited excerpts before downstream use.',
       evidenceIds: bundle.score.evidence_ids.slice(0, 6),
     });
   }
@@ -139,7 +139,7 @@ function buildAIAnomalies(bundle: AIBankBundle): AIAnomaly[] {
       kind: 'governance_gap',
       severity: 'medium',
       title: `${bundle.score.ticker} deployment evidence is ahead of board-governance evidence`,
-      detail: `Placement is ${DEPLOYMENT_LABELS[quadrant.deployment_stage]} / ${GOVERNANCE_LABELS[quadrant.governance_maturity]}, while Board Governance factor percentile is ${formatPercent(governance?.peer_percentile)}.`,
+      detail: `${DEPLOYMENT_LABELS[quadrant.deployment_stage]} deployment appears stronger than board-governance evidence. Board Governance is at peer percentile ${formatPercent(governance?.peer_percentile)}.`,
       evidenceIds: quadrant.evidence_ids,
     });
   }
@@ -168,7 +168,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
     () =>
       bundles
         .flatMap(buildAIAnomalies)
-        .toSorted((a, b) => {
+        .sort((a, b) => {
           const order = { high: 0, medium: 1, low: 2 };
           return order[a.severity] - order[b.severity] || a.ticker.localeCompare(b.ticker);
         }),
@@ -197,13 +197,13 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
   );
 
   if (bundles.length === 0) {
-    return <EmptyAIState message="No static AI data is available for anomaly review." />;
+    return <EmptyAIState message="No AI data is available for anomaly review." />;
   }
 
   return (
     <div className="space-y-5">
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
-        <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Static AI anomaly review</div>
+        <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI anomaly review</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
           Flags highlight severe evidence gaps, low-confidence rows, strategic-risk disclosure concentration, governance gaps, and generic-only disclosures.
         </p>
@@ -233,7 +233,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="text-base font-semibold text-white">AI Anomaly Flags</h2>
-                <p className="text-xs text-neutral-500">Showing {visible.length} of {anomalies.length} static review flags.</p>
+                <p className="text-xs text-neutral-500">Showing {visible.length} of {anomalies.length} review flags.</p>
               </div>
               {kind !== 'all' && (
                 <button
@@ -298,18 +298,6 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
           )}
         </aside>
       </div>
-
-      <section className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-        <h2 className="text-sm font-semibold text-white">Disclosure posture context</h2>
-        <div className="mt-3 grid gap-3 md:grid-cols-5">
-          {['absent', 'generic', 'emerging', 'specific', 'mature'].map((posture) => (
-            <div key={posture} className="rounded-lg border border-white/10 bg-black/20 p-3">
-              <p className="text-[10px] uppercase tracking-wide text-neutral-500">{POSTURE_LABELS[posture as keyof typeof POSTURE_LABELS]}</p>
-              <p className="mt-1 text-xs text-neutral-400">Static timeline label</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

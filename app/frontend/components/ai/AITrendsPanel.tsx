@@ -2,7 +2,15 @@
 
 import { useMemo, useState } from 'react';
 import type { AIBankBundle, AIEvidenceRecord } from '@/lib/ai-types';
-import { ConfidenceBadge, EmptyAIState, EvidenceList, POSTURE_LABELS } from '@/components/ai/AIShared';
+import {
+  ConfidenceBadge,
+  EmptyAIState,
+  EvidenceList,
+  InfoTip,
+  POSTURE_DEFINITIONS,
+  POSTURE_LABELS,
+} from '@/components/ai/AIShared';
+import { getAIEvidenceByIds } from '@/lib/ai-data';
 
 const POSTURE_STYLE = {
   absent: 'border-neutral-700 bg-neutral-900 text-neutral-500',
@@ -20,14 +28,15 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
   const quarters = active?.timeline?.quarters ?? [];
   const selectedQuarter =
     quarters.find((quarter) => quarter.period === activePeriod) ??
-    quarters.toReversed().find((quarter) => quarter.disclosure_posture !== 'absent') ??
+    quarters.slice().reverse().find((quarter) => quarter.disclosure_posture !== 'absent') ??
     quarters[0] ??
     null;
 
   const evidence = useMemo<AIEvidenceRecord[]>(() => {
-    if (!active || !selectedQuarter) return [];
-    return active.topEvidence.filter((item) => selectedQuarter.evidence_ids.includes(item.evidence_id));
-  }, [active, selectedQuarter]);
+    if (!selectedQuarter) return [];
+    return getAIEvidenceByIds(selectedQuarter.evidence_ids);
+  }, [selectedQuarter]);
+  const selectedQuarterCitationCount = evidence.length;
 
   const postureCounts = useMemo(() => {
     const counts = { absent: 0, generic: 0, emerging: 0, specific: 0, mature: 0 };
@@ -38,7 +47,7 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
   }, [bundles]);
 
   if (bundles.length === 0) {
-    return <EmptyAIState message="No generated AI timeline data is available." />;
+    return <EmptyAIState message="No AI timeline data is available." />;
   }
 
   return (
@@ -46,15 +55,20 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Eight-quarter AI disclosure timeline</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          Timeline posture is inferred from cited Stage 1 evidence. Absent quarters are retained explicitly
-          so missing disclosure is visible instead of silently omitted.
+          Timeline posture is inferred from cited evidence. Absent quarters are retained so missing disclosure remains visible.
         </p>
       </section>
 
       <section className="grid gap-4 md:grid-cols-5">
         {Object.entries(postureCounts).map(([posture, count]) => (
           <div key={posture} className={`rounded-xl border p-4 ${POSTURE_STYLE[posture as keyof typeof POSTURE_STYLE]}`}>
-            <p className="text-[11px] uppercase tracking-wide opacity-80">{POSTURE_LABELS[posture as keyof typeof POSTURE_LABELS]}</p>
+            <div className="flex items-center gap-1.5">
+              <p className="text-[11px] uppercase tracking-wide opacity-80">{POSTURE_LABELS[posture as keyof typeof POSTURE_LABELS]}</p>
+              <InfoTip
+                label={POSTURE_LABELS[posture as keyof typeof POSTURE_LABELS]}
+                description={POSTURE_DEFINITIONS[posture as keyof typeof POSTURE_DEFINITIONS]}
+              />
+            </div>
             <p className="mt-1 text-2xl font-semibold">{count}</p>
           </div>
         ))}
@@ -108,8 +122,16 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
                     }`}
                   >
                     <p className="font-mono text-xs font-semibold">{quarter.period}</p>
-                    <p className="mt-2 text-sm font-semibold">{POSTURE_LABELS[quarter.disclosure_posture]}</p>
-                    <p className="mt-2 text-[10px] opacity-75">{quarter.evidence_ids.length} citations</p>
+                    <div className="mt-2 flex items-center gap-1.5">
+                      <p className="text-sm font-semibold">{POSTURE_LABELS[quarter.disclosure_posture]}</p>
+                      <InfoTip
+                        label={POSTURE_LABELS[quarter.disclosure_posture]}
+                        description={POSTURE_DEFINITIONS[quarter.disclosure_posture]}
+                      />
+                    </div>
+                    <p className="mt-2 text-[10px] opacity-75">
+                      {getAIEvidenceByIds(quarter.evidence_ids).length} citations
+                    </p>
                   </button>
                 );
               })}
@@ -121,7 +143,10 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
               <section className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <h3 className="text-sm font-semibold text-white">{selectedQuarter.period} rationale</h3>
-                  <ConfidenceBadge confidence={selectedQuarter.confidence} />
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-neutral-500">{selectedQuarterCitationCount} citations</span>
+                    <ConfidenceBadge confidence={selectedQuarter.confidence} />
+                  </div>
                 </div>
                 <p className="text-sm leading-relaxed text-neutral-300">{selectedQuarter.posture_reason}</p>
                 {selectedQuarter.regulatory_events.length > 0 && (
