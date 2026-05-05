@@ -8,8 +8,8 @@ import {
   EmptyAIState,
   EvidenceList,
   formatPercent,
-  GOVERNANCE_LABELS,
 } from '@/components/ai/AIShared';
+import { getAIEvidenceByIds } from '@/lib/ai-data';
 
 type AIAnomalyKind = 'missing_evidence' | 'low_confidence' | 'strategic_risk' | 'governance_gap' | 'generic_disclosure';
 
@@ -37,6 +37,33 @@ const SEVERITY_CLASS = {
   medium: 'border-amber-400/30 bg-amber-400/10 text-amber-200',
   low: 'border-white/10 bg-white/[0.04] text-neutral-300',
 } as const;
+
+const SEVERITY_DOT = {
+  high: 'bg-rose-300',
+  medium: 'bg-amber-300',
+  low: 'bg-neutral-400',
+} as const;
+
+const KIND_ACCENT: Record<AIAnomalyKind, string> = {
+  missing_evidence: 'bg-rose-300',
+  low_confidence: 'bg-purple-300',
+  strategic_risk: 'bg-amber-300',
+  governance_gap: 'bg-sky-300',
+  generic_disclosure: 'bg-slate-300',
+};
+
+const KIND_DESCRIPTION: Record<AIAnomalyKind, string> = {
+  missing_evidence: 'Severe gaps that block confident placement.',
+  low_confidence: 'Rows requiring manual review before use.',
+  strategic_risk: 'High peer-relative strategic-risk disclosure.',
+  governance_gap: 'Deployment evidence ahead of board governance.',
+  generic_disclosure: 'Recent AI language remains boilerplate.',
+};
+
+function percentValue(numerator: number, denominator: number): number {
+  if (denominator === 0) return 0;
+  return Math.round((numerator / denominator) * 100);
+}
 
 function severeEvidenceGaps(bundle: AIBankBundle): string[] {
   const quadrant = bundle.quadrant;
@@ -176,11 +203,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
   );
 
   const visible = anomalies.filter((item) => kind === 'all' || item.kind === kind);
-  const activeEvidence = active
-    ? bundles
-        .find((bundle) => bundle.score.ticker === active.ticker)
-        ?.topEvidence.filter((item) => active.evidenceIds.includes(item.evidence_id)) ?? []
-    : [];
+  const activeEvidence = active ? getAIEvidenceByIds(active.evidenceIds) : [];
 
   const counts = anomalies.reduce<Record<AIAnomalyKind, number>>(
     (acc, item) => {
@@ -196,43 +219,203 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
     },
   );
 
+  const severityCounts = anomalies.reduce(
+    (acc, item) => {
+      acc[item.severity] += 1;
+      return acc;
+    },
+    { high: 0, medium: 0, low: 0 },
+  );
+
+  const impactedBanks = new Set(anomalies.map((item) => item.ticker)).size;
+  const maxKindCount = Math.max(...Object.values(counts), 1);
+
+  const topBanks = Object.values(
+    anomalies.reduce<Record<string, { ticker: string; bankName: string; total: number; high: number; medium: number; low: number }>>(
+      (acc, item) => {
+        acc[item.ticker] ??= { ticker: item.ticker, bankName: item.bankName, total: 0, high: 0, medium: 0, low: 0 };
+        acc[item.ticker].total += 1;
+        acc[item.ticker][item.severity] += 1;
+        return acc;
+      },
+      {},
+    ),
+  )
+    .sort((a, b) => b.total - a.total || b.high - a.high || a.ticker.localeCompare(b.ticker))
+    .slice(0, 8);
+
+  const peerRows = Object.values(
+    anomalies.reduce<Record<string, { peer: string; total: number; high: number; medium: number; low: number }>>((acc, item) => {
+      const peer = bundles.find((bundle) => bundle.score.ticker === item.ticker)?.score.peer_group ?? 'unknown';
+      acc[peer] ??= { peer, total: 0, high: 0, medium: 0, low: 0 };
+      acc[peer].total += 1;
+      acc[peer][item.severity] += 1;
+      return acc;
+    }, {}),
+  ).sort((a, b) => b.total - a.total);
+
+  const maxPeerCount = Math.max(...peerRows.map((row) => row.total), 1);
+
   if (bundles.length === 0) {
     return <EmptyAIState message="No AI data is available for anomaly review." />;
   }
 
   return (
     <div className="space-y-5">
-      <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
-        <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI anomaly review</div>
-        <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          Flags highlight severe evidence gaps, low-confidence rows, strategic-risk disclosure concentration, governance gaps, and generic-only disclosures.
-        </p>
+      <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-5">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="max-w-3xl">
+            <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI anomaly review</div>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-300">
+              Review flags show where AI disclosures need analyst attention: evidence gaps, generic language,
+              strategic-risk concentration, and deployment/governance mismatch.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-2 text-center">
+            {(['high', 'medium', 'low'] as const).map((severity) => (
+              <div key={severity} className={`min-w-16 rounded-lg border px-3 py-2 ${SEVERITY_CLASS[severity]}`}>
+                <p className="text-lg font-semibold tabular-nums">{severityCounts[severity]}</p>
+                <p className="text-[10px] uppercase tracking-wide">{severity}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="grid gap-3 md:grid-cols-5">
-        {(Object.keys(counts) as AIAnomalyKind[]).map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => setKind(kind === item ? 'all' : item)}
-            className={`rounded-xl border p-4 text-left transition ${
-              kind === item
-                ? 'border-emerald-300 bg-emerald-300 text-black'
-                : 'border-white/10 bg-white/[0.02] text-neutral-300 hover:border-emerald-300/40'
-            }`}
-          >
-            <p className="text-[10px] uppercase tracking-wide opacity-75">{KIND_LABEL[item]}</p>
-            <p className="mt-1 text-2xl font-semibold">{counts[item]}</p>
-          </button>
-        ))}
+      <section className="grid gap-4 md:grid-cols-4">
+        <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <p className="text-[11px] uppercase tracking-wide text-neutral-500">Review flags</p>
+          <p className="mt-1 text-3xl font-semibold text-white">{anomalies.length}</p>
+          <p className="mt-2 text-xs text-neutral-500">{impactedBanks} banks have at least one flag.</p>
+        </div>
+        <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <p className="text-[11px] uppercase tracking-wide text-neutral-500">Most common flag</p>
+          <p className="mt-1 text-lg font-semibold text-white">
+            {KIND_LABEL[(Object.entries(counts).sort(([, a], [, b]) => b - a)[0]?.[0] ?? 'generic_disclosure') as AIAnomalyKind]}
+          </p>
+          <p className="mt-2 text-xs text-neutral-500">
+            {Math.max(...Object.values(counts))} occurrences across the review queue.
+          </p>
+        </div>
+        <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <p className="text-[11px] uppercase tracking-wide text-neutral-500">High-priority items</p>
+          <p className="mt-1 text-3xl font-semibold text-rose-200">{severityCounts.high}</p>
+          <p className="mt-2 text-xs text-neutral-500">High severity flags appear first in the queue.</p>
+        </div>
+        <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <p className="text-[11px] uppercase tracking-wide text-neutral-500">Active filter</p>
+          <p className="mt-1 text-lg font-semibold text-white">{kind === 'all' ? 'All flags' : KIND_LABEL[kind]}</p>
+          <p className="mt-2 text-xs text-neutral-500">Showing {visible.length} matching review items.</p>
+        </div>
       </section>
 
-      <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1fr)_380px]">
-        <section className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02]">
+      <section className="grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+        <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+          <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-base font-semibold text-white">Flag Mix</h2>
+              <p className="text-xs text-neutral-500">Click any category to filter the review queue.</p>
+            </div>
+            {kind !== 'all' && (
+              <button
+                type="button"
+                onClick={() => setKind('all')}
+                className="rounded-md border border-white/10 px-3 py-1 text-xs text-neutral-300 hover:border-emerald-300/50"
+              >
+                Clear filter
+              </button>
+            )}
+          </div>
+          <div className="space-y-3">
+            {(Object.keys(counts) as AIAnomalyKind[]).map((item) => {
+              const isActive = kind === item;
+              return (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => setKind(isActive ? 'all' : item)}
+                  className={`w-full rounded-lg border p-3 text-left transition ${
+                    isActive
+                      ? 'border-emerald-300 bg-emerald-300/10'
+                      : 'border-white/10 bg-black/20 hover:border-emerald-300/40'
+                  }`}
+                >
+                  <div className="mb-2 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className={`h-2.5 w-2.5 rounded-full ${KIND_ACCENT[item]}`} />
+                      <span className="text-sm font-semibold text-white">{KIND_LABEL[item]}</span>
+                    </div>
+                    <span className="font-mono text-sm font-semibold text-neutral-200">{counts[item]}</span>
+                  </div>
+                  <p className="mb-2 text-xs text-neutral-500">{KIND_DESCRIPTION[item]}</p>
+                  <div className="h-2 rounded-full bg-white/10">
+                    <div className={`h-2 rounded-full ${KIND_ACCENT[item]}`} style={{ width: `${percentValue(counts[item], maxKindCount)}%` }} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="grid gap-4">
+          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+            <h2 className="text-base font-semibold text-white">Peer-Group Concentration</h2>
+            <p className="mt-1 text-xs text-neutral-500">Review load by peer group, stacked by severity.</p>
+            <div className="mt-4 space-y-3">
+              {peerRows.map((row) => (
+                <div key={row.peer} className="space-y-1.5">
+                  <div className="flex items-center justify-between gap-3 text-xs">
+                    <span className="font-mono font-semibold text-neutral-200">{row.peer}</span>
+                    <span className="text-neutral-500">{row.total} flags</span>
+                  </div>
+                  <div className="flex h-2 overflow-hidden rounded-full bg-white/10" style={{ width: `${Math.max(12, percentValue(row.total, maxPeerCount))}%` }}>
+                    {(['high', 'medium', 'low'] as const).map((severity) => (
+                      <div
+                        key={severity}
+                        className={SEVERITY_DOT[severity]}
+                        style={{ width: `${percentValue(row[severity], row.total)}%` }}
+                        title={`${row.peer}: ${row[severity]} ${severity} flags`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+            <h2 className="text-base font-semibold text-white">Most Flagged Banks</h2>
+            <p className="mt-1 text-xs text-neutral-500">Banks with the densest anomaly review queue.</p>
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
+              {topBanks.map((bank) => (
+                <button
+                  key={bank.ticker}
+                  type="button"
+                  onClick={() => setActive(anomalies.find((item) => item.ticker === bank.ticker) ?? null)}
+                  className="rounded-lg border border-white/10 bg-black/20 p-3 text-left transition hover:border-emerald-300/40"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="font-mono text-sm font-semibold text-emerald-300">{bank.ticker}</span>
+                    <span className="text-xs font-semibold text-white">{bank.total}</span>
+                  </div>
+                  <div className="mt-2 flex h-1.5 overflow-hidden rounded-full bg-white/10">
+                    {(['high', 'medium', 'low'] as const).map((severity) => (
+                      <div key={severity} className={SEVERITY_DOT[severity]} style={{ width: `${percentValue(bank[severity], bank.total)}%` }} />
+                    ))}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1fr)_420px]">
+        <section className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
           <div className="border-b border-white/10 p-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h2 className="text-base font-semibold text-white">AI Anomaly Flags</h2>
+                <h2 className="text-base font-semibold text-white">Review Queue</h2>
                 <p className="text-xs text-neutral-500">Showing {visible.length} of {anomalies.length} review flags.</p>
               </div>
               {kind !== 'all' && (
@@ -246,7 +429,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
               )}
             </div>
           </div>
-          <div className="divide-y divide-white/10">
+          <div className="grid gap-3 p-4 lg:grid-cols-2">
             {visible.length === 0 ? (
               <EmptyAIState message="No AI anomaly flags match the current filter." />
             ) : (
@@ -255,14 +438,24 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
                   key={item.id}
                   type="button"
                   onClick={() => setActive(item)}
-                  className="block w-full p-4 text-left transition hover:bg-white/[0.03]"
+                  className={`block w-full rounded-xl border p-4 text-left transition ${
+                    active?.id === item.id
+                      ? 'border-emerald-300 bg-emerald-300/10'
+                      : 'border-white/10 bg-black/20 hover:border-emerald-300/40'
+                  }`}
                 >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-mono text-xs font-bold text-emerald-300">{item.ticker}</span>
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <span className="font-mono text-sm font-bold text-emerald-300">{item.ticker}</span>
+                      <p className="mt-0.5 truncate text-[11px] text-neutral-500">{item.bankName}</p>
+                    </div>
                     <span className={`rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wide ${SEVERITY_CLASS[item.severity]}`}>
                       {item.severity}
                     </span>
-                    <span className="rounded bg-white/10 px-2 py-0.5 text-[10px] text-neutral-300">{KIND_LABEL[item.kind]}</span>
+                  </div>
+                  <div className="mt-3 inline-flex items-center gap-1.5 rounded bg-white/10 px-2 py-1 text-[10px] text-neutral-300">
+                    <span className={`h-1.5 w-1.5 rounded-full ${KIND_ACCENT[item.kind]}`} />
+                    {KIND_LABEL[item.kind]}
                   </div>
                   <p className="mt-2 text-sm font-semibold text-white">{item.title}</p>
                   <p className="mt-1 text-xs leading-relaxed text-neutral-400">{item.detail}</p>
@@ -272,12 +465,23 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
           </div>
         </section>
 
-        <aside className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02] p-4">
+        <aside className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02] p-4 xl:sticky xl:top-4 xl:self-start">
           {active ? (
             <>
-              <div className="mb-3">
-                <p className="font-mono text-sm font-semibold text-emerald-300">{active.ticker}</p>
-                <h3 className="mt-1 text-base font-semibold text-white">{active.bankName}</h3>
+              <div className="mb-4 rounded-lg border border-white/10 bg-black/20 p-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="font-mono text-sm font-semibold text-emerald-300">{active.ticker}</p>
+                    <h3 className="mt-1 text-base font-semibold text-white">{active.bankName}</h3>
+                  </div>
+                  <span className={`rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wide ${SEVERITY_CLASS[active.severity]}`}>
+                    {active.severity}
+                  </span>
+                </div>
+                <div className="mt-3 inline-flex items-center gap-1.5 rounded bg-white/10 px-2 py-1 text-[10px] text-neutral-300">
+                  <span className={`h-1.5 w-1.5 rounded-full ${KIND_ACCENT[active.kind]}`} />
+                  {KIND_LABEL[active.kind]}
+                </div>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-400">{active.detail}</p>
               </div>
               <EvidenceList evidence={activeEvidence} />
