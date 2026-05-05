@@ -261,9 +261,9 @@ export function AIRankingsPanel({
         </div>
       </section>
 
-      <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-        <section className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
-          <div className="border-b border-white/10 p-4">
+      <div className="grid min-w-0 items-start gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
+        <section className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)]">
+          <div className="shrink-0 border-b border-white/10 p-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="text-base font-semibold text-white">Peer-Relative AI Factor Posture</h2>
@@ -287,7 +287,7 @@ export function AIRankingsPanel({
               </div>
             </div>
           </div>
-          <div className="overflow-x-auto">
+          <div className="min-h-0 overflow-auto">
             <table className="w-full min-w-[760px] text-sm">
               <thead>
                 <tr className="border-b border-white/10 text-[11px] uppercase tracking-wide text-neutral-500">

@@ -227,33 +227,39 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
                 <p className="text-xs text-neutral-500">Peer percentiles by factor. Dark cells mean limited or no cited evidence.</p>
               </div>
               <div className="overflow-x-auto">
-                <div className="min-w-[620px]">
-                  <div className="grid grid-cols-[84px_repeat(7,minmax(60px,1fr))] gap-1 text-[10px]">
+                <div className="min-w-[520px]">
+                  <div
+                    className="grid gap-1 text-[10px]"
+                    style={{ gridTemplateColumns: `minmax(170px, 1.35fr) repeat(${selectedBundles.length}, minmax(72px, 1fr))` }}
+                  >
                     <div />
-                    {FACTOR_ORDER.map((factorId) => (
-                      <div key={factorId} className="flex items-center justify-center gap-1 rounded-md bg-white/[0.03] px-1 py-2 text-center leading-tight text-neutral-400">
-                        <span>{factorId.split('_').map((part) => part[0]?.toUpperCase()).join('')}</span>
-                        <InfoTip label={factorId} description={FACTOR_DEFINITIONS[factorId]} />
-                      </div>
-                    ))}
                     {selectedBundles.map((bundle) => (
-                      <div key={bundle.score.ticker} className="contents">
-                        <div className="rounded-md bg-white/[0.03] px-2 py-2 font-mono text-xs font-semibold text-emerald-200">
-                          {bundle.score.ticker}
-                        </div>
-                        {FACTOR_ORDER.map((factorId) => {
-                          const value = factorPercentile(bundle, factorId);
-                          return (
-                            <div
-                              key={`${bundle.score.ticker}-${factorId}`}
-                              className={`rounded-md border px-2 py-2 text-center font-mono text-xs ${heatmapCellClass(value)}`}
-                            >
-                              {formatPercent(value)}
-                            </div>
-                          );
-                        })}
+                      <div key={bundle.score.ticker} className="rounded-md bg-white/[0.03] px-2 py-2 text-center font-mono text-xs font-semibold text-emerald-200">
+                        {bundle.score.ticker}
                       </div>
                     ))}
+                    {FACTOR_ORDER.map((factorId) => {
+                      const factorName = selectedBundles[0]?.bars?.factors.find((factor) => factor.factor_id === factorId)?.factor_name ?? factorId;
+                      return (
+                        <div key={factorId} className="contents">
+                          <div className="flex min-w-0 items-center gap-1.5 rounded-md bg-white/[0.03] px-2 py-2 text-neutral-300">
+                            <span className="truncate">{factorName}</span>
+                            <InfoTip label={factorName} description={FACTOR_DEFINITIONS[factorId]} />
+                          </div>
+                          {selectedBundles.map((bundle) => {
+                            const value = factorPercentile(bundle, factorId);
+                            return (
+                              <div
+                                key={`${factorId}-${bundle.score.ticker}`}
+                                className={`rounded-md border px-2 py-2 text-center font-mono text-xs ${heatmapCellClass(value)}`}
+                              >
+                                {formatPercent(value)}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

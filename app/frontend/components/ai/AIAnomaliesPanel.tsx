@@ -413,9 +413,9 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
         </div>
       </section>
 
-      <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1fr)_420px]">
-        <section className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
-          <div className="border-b border-white/10 p-4">
+      <div className="grid min-w-0 items-start gap-5 xl:grid-cols-[minmax(0,1fr)_420px]">
+        <section className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)]">
+          <div className="shrink-0 border-b border-white/10 p-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="text-base font-semibold text-white">Review Queue</h2>
@@ -432,7 +432,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
               )}
             </div>
           </div>
-          <div className="grid gap-3 p-4 lg:grid-cols-2">
+          <div className="grid min-h-0 gap-3 overflow-y-auto p-4 pr-3 lg:grid-cols-2">
             {visible.length === 0 ? (
               <EmptyAIState message="No AI anomaly flags match the current filter." />
             ) : (
@@ -468,10 +468,10 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
           </div>
         </section>
 
-        <aside className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02] p-4 xl:sticky xl:top-4 xl:self-start">
+        <aside className="min-w-0 rounded-xl border border-white/10 bg-white/[0.02] p-4 xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:self-start xl:overflow-hidden">
           {active ? (
-            <>
-              <div className="mb-4 rounded-lg border border-white/10 bg-black/20 p-3">
+            <div className="flex min-h-0 flex-col xl:max-h-[calc(100vh-4rem)]">
+              <div className="mb-4 shrink-0 rounded-lg border border-white/10 bg-black/20 p-3">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="font-mono text-sm font-semibold text-emerald-300">{active.ticker}</p>
@@ -487,8 +487,10 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-400">{active.detail}</p>
               </div>
-              <EvidenceList evidence={activeEvidence} />
-            </>
+              <div className="min-h-0 overflow-y-auto pr-1 xl:max-h-[calc(100vh-15rem)]">
+                <EvidenceList evidence={activeEvidence} />
+              </div>
+            </div>
           ) : (
             <div className="space-y-3">
               <h3 className="text-base font-semibold text-white">Select a flag</h3>

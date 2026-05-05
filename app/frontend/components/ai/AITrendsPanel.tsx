@@ -621,7 +621,7 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
           </div>
 
           {selectedQuarter && (
-            <div className="grid gap-5 xl:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]">
+            <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]">
               <section className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <h3 className="text-sm font-semibold text-white">{selectedQuarter.period} rationale</h3>
@@ -642,9 +642,14 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
                   </div>
                 )}
               </section>
-              <section className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                <h3 className="mb-3 text-sm font-semibold text-white">Quarter Evidence</h3>
-                <EvidenceList evidence={evidence} />
+              <section className="flex min-h-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-4 xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)]">
+                <div className="mb-3 flex shrink-0 items-center justify-between gap-3">
+                  <h3 className="text-sm font-semibold text-white">Quarter Evidence</h3>
+                  <span className="text-[10px] text-neutral-500">{selectedQuarterCitationCount} citations</span>
+                </div>
+                <div className="min-h-0 overflow-y-auto pr-1">
+                  <EvidenceList evidence={evidence} />
+                </div>
               </section>
             </div>
           )}
