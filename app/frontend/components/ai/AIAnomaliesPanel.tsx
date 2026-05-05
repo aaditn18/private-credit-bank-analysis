@@ -255,6 +255,8 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
   ).sort((a, b) => b.total - a.total);
 
   const maxPeerCount = Math.max(...peerRows.map((row) => row.total), 1);
+  const mostCommonKind = (Object.entries(counts).sort(([, a], [, b]) => b - a)[0]?.[0] ?? 'generic_disclosure') as AIAnomalyKind;
+  const kindRows = (Object.keys(counts) as AIAnomalyKind[]).sort((a, b) => counts[b] - counts[a] || KIND_LABEL[a].localeCompare(KIND_LABEL[b]));
 
   if (bundles.length === 0) {
     return <EmptyAIState message="No AI data is available for anomaly review." />;
@@ -267,8 +269,11 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
           <div className="max-w-3xl">
             <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI anomaly review</div>
             <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-              Review flags show where AI disclosures need analyst attention: evidence gaps, generic language,
-              strategic-risk concentration, and deployment/governance mismatch.
+              Primary finding: {KIND_LABEL[mostCommonKind].toLowerCase()} is the most common review pattern,
+              and {impactedBanks} banks have at least one disclosure item that needs analyst attention.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+              Flags focus on evidence gaps, generic language, strategic-risk concentration, and deployment/governance mismatch.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-2 text-center">
@@ -290,9 +295,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
         </div>
         <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
           <p className="text-[11px] uppercase tracking-wide text-neutral-500">Most common flag</p>
-          <p className="mt-1 text-lg font-semibold text-white">
-            {KIND_LABEL[(Object.entries(counts).sort(([, a], [, b]) => b - a)[0]?.[0] ?? 'generic_disclosure') as AIAnomalyKind]}
-          </p>
+          <p className="mt-1 text-lg font-semibold text-white">{KIND_LABEL[mostCommonKind]}</p>
           <p className="mt-2 text-xs text-neutral-500">
             {Math.max(...Object.values(counts))} occurrences across the review queue.
           </p>
@@ -309,7 +312,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
         </div>
       </section>
 
-      <section className="grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+      <section className="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
         <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
           <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
             <div>
@@ -327,7 +330,7 @@ export function AIAnomaliesPanel({ bundles }: { bundles: AIBankBundle[] }) {
             )}
           </div>
           <div className="space-y-3">
-            {(Object.keys(counts) as AIAnomalyKind[]).map((item) => {
+            {kindRows.map((item) => {
               const isActive = kind === item;
               return (
                 <button

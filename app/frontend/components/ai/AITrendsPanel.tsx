@@ -315,21 +315,28 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
     return <EmptyAIState message="No AI timeline data is available." />;
   }
 
+  const totalTimelineQuarters = Object.values(postureCounts).reduce((total, count) => total + count, 0);
+  const concreteTimelineQuarters = postureCounts.specific + postureCounts.mature;
+
   return (
     <div className="space-y-5">
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">Eight-quarter AI disclosure timeline</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          Timeline posture is inferred from cited evidence. Absent quarters are retained so missing disclosure remains visible.
+          Primary finding: concrete AI disclosure is broad but episodic, with {formatShare(concreteTimelineQuarters, totalTimelineQuarters)} of
+          bank-quarters labeled specific or mature across the eight-quarter window.
+        </p>
+        <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+          Timeline posture is inferred from cited evidence. Absent quarters remain visible so silence is part of the signal.
         </p>
       </section>
 
-      <section className="grid gap-4 lg:grid-cols-3">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {findings.map((finding) => (
           <article
             key={`${finding.eyebrow}-${finding.title}`}
             className={`rounded-xl border border-white/10 bg-white/[0.02] p-4 ${
-              finding.visual === 'periodSpark' ? 'lg:col-span-3' : ''
+              finding.visual === 'periodSpark' ? 'md:col-span-2 xl:col-span-3' : ''
             }`}
           >
             <p className="text-[11px] font-mono uppercase tracking-wider text-emerald-300">{finding.eyebrow}</p>

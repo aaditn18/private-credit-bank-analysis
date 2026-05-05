@@ -103,7 +103,11 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI peer comparison</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          Compare banks by factor evidence, 2x2 placement, disclosure timeline, confidence, and evidence gaps.
+          Primary finding: in the current selection, {compareStats.widestGap?.bundle.score.ticker ?? 'one bank'} has the largest
+          deployment-governance spread and {compareStats.byEvidence?.score.ticker ?? 'one bank'} has the deepest citation base.
+        </p>
+        <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+          Use this tab to compare factor evidence, 2x2 placement, disclosure posture, confidence, and cited support side by side.
         </p>
       </section>
 
@@ -138,7 +142,7 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
         <EmptyAIState message="Select at least two banks to compare." />
       ) : (
         <>
-          <section className="grid gap-4 lg:grid-cols-4">
+          <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
               <p className="text-[11px] uppercase tracking-wide text-neutral-500">Deployment leader</p>
               <p className="mt-1 font-mono text-2xl font-semibold text-white">{compareStats.byDeployment?.score.ticker ?? '--'}</p>

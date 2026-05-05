@@ -133,14 +133,18 @@ export function AIRankingsPanel({
     return <EmptyAIState message="No AI evidence data is available." />;
   }
 
+  const leadingFactor = rankingStats.topFactorCounts[0];
+
   return (
     <div className="space-y-5">
       <section className="rounded-xl border border-emerald-400/20 bg-emerald-400/5 p-4">
         <div className="text-xs font-mono uppercase tracking-wider text-emerald-300">AI evidence overview</div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-          This view ranks rows only by strongest peer-relative disclosed factor so analysts can scan the
-          evidence. It is not a definitive AI risk ranking, and high AI involvement is not automatically
-          high AI risk.
+          Primary finding: {leadingFactor?.name ?? 'AI factor evidence'} is the most common leading factor in this view,
+          but disclosed AI posture is spread across multiple pillars rather than one simple league table.
+        </p>
+        <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+          Rows are sorted by strongest peer-relative factor percentile. High AI involvement is not automatically high AI risk.
         </p>
       </section>
 
@@ -164,7 +168,7 @@ export function AIRankingsPanel({
         </div>
       </section>
 
-      <section className="grid gap-4 xl:grid-cols-3">
+      <section className="grid gap-4 md:grid-cols-3">
         <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
           <div className="mb-3">
             <h2 className="text-sm font-semibold text-white">Strongest Factor Mix</h2>
