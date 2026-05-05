@@ -1,0 +1,310 @@
+{
+  "latest_quarter": "2025Q4",
+  "themes": {
+    "private_credit": {
+      "theme": "private_credit",
+      "chunk_count": 3552,
+      "bank_count": 37,
+      "anomaly_total": 23,
+      "anomaly_severity": {
+        "high": 2,
+        "medium": 7,
+        "low": 14
+      }
+    },
+    "ai": {
+      "theme": "ai",
+      "chunk_count": 1600,
+      "bank_count": 50,
+      "anomaly_total": 0,
+      "anomaly_severity": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "digital_assets": {
+      "theme": "digital_assets",
+      "chunk_count": 384,
+      "bank_count": 16,
+      "anomaly_total": 0,
+      "anomaly_severity": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    }
+  },
+  "mentions_by_quarter": [
+    {
+      "quarter": "2024Q1",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2024Q2",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2024Q3",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2024Q4",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2025Q1",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2025Q2",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2025Q3",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    },
+    {
+      "quarter": "2025Q4",
+      "private_credit": 444,
+      "ai": 200,
+      "digital_assets": 48
+    }
+  ],
+  "multi_theme_banks": [
+    {
+      "ticker": "BAC",
+      "name": "Bank of America Corporation",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "BK",
+      "name": "The Bank of New York Mellon",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc.",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "GS",
+      "name": "The Goldman Sachs Group",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "NTRS",
+      "name": "Northern Trust Corporation",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "PNC",
+      "name": "The PNC Financial Services Group",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corporation",
+      "peer_group": "trust-ib",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "USB",
+      "name": "U.S. Bancorp",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "WFC",
+      "name": "Wells Fargo & Company",
+      "peer_group": "GSIB",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 6
+      },
+      "total": 110
+    },
+    {
+      "ticker": "ALLY",
+      "name": "Ally Financial Inc.",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "ASB",
+      "name": "Associated Banc-Corp",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "BOKF",
+      "name": "BOK Financial Corporation",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "BPOP",
+      "name": "Popular, Inc.",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "CFG",
+      "name": "Citizens Financial Group",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "CFR",
+      "name": "Cullen/Frost Bankers",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "CMA",
+      "name": "Comerica Incorporated",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "COLB",
+      "name": "Columbia Banking System",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    },
+    {
+      "ticker": "EWBC",
+      "name": "East West Bancorp",
+      "peer_group": "regional",
+      "themes": {
+        "private_credit": 96,
+        "ai": 8,
+        "digital_assets": 0
+      },
+      "total": 104
+    }
+  ]
+}

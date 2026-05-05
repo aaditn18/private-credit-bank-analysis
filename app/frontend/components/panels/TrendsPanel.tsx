@@ -608,12 +608,16 @@ export function TrendsPanel() {
       )}
 
       {/* 3. Sentiment × NBFI exposure scatter — single 2D view that crosses
-            narrative tone with actual book size. */}
+            narrative tone with actual book size. Involvement rating is the
+            same 6-metric composite as Rankings (quantitative, grounded).
+            Sentiment blends LLM prose tone with QoQ direction. */}
       {findings && rankings && data && (
         <SentimentExposureScatter
           banks={data.banks}
           findings={findings}
           rankingsBanks={rankings.banks}
+          metrics={rankings.metrics}
+          quarterMovers={data.quarter_movers}
         />
       )}
 

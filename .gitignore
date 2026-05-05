@@ -24,6 +24,15 @@ Semantic_similarity_method/private_credit_output/
 # Generated plot images (regenerate with Plots/generate_*.py)
 Plots/**/*.png
 
+# Node / Next.js
+node_modules/
+.next/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
 # OS / IDE
 .DS_Store
 .idea/
