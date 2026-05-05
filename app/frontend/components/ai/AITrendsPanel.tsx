@@ -38,6 +38,28 @@ const FACTOR_SHORT_LABELS = {
   strategic_risk: 'Strategic risk',
 } as const;
 
+const EVENT_LABELS: Record<string, string> = {
+  'EU AI Act entered into force': 'EU AI Act',
+  'Federal banking agencies final rule on automated valuation model quality-control standards': 'OCC / FDIC AVM rule',
+  'White House Executive Order removing barriers to U.S. AI leadership': 'White House EO',
+};
+
+const EVENT_STYLES: Record<string, string> = {
+  'EU AI Act': 'bg-sky-300',
+  'OCC / FDIC AVM rule': 'bg-amber-300',
+  'White House EO': 'bg-purple-300',
+};
+
+const EVENT_MARKERS: Record<string, string> = {
+  'EU AI Act': 'EU',
+  'OCC / FDIC AVM rule': 'AVM',
+  'White House EO': 'EO',
+};
+
+function shortEventLabel(event: string): string {
+  return EVENT_LABELS[event] ?? event;
+}
+
 function formatShare(numerator: number, denominator: number): string {
   if (denominator === 0) return '0%';
   return `${Math.round((numerator / denominator) * 100)}%`;
@@ -92,6 +114,7 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
     let banksWithSpecificOrMatureDisclosure = 0;
     let totalQuarters = 0;
     const periodCounts = new Map<string, { absent: number; generic: number; emerging: number; specific: number; mature: number }>();
+    const periodEvents = new Map<string, Set<string>>();
     const peerGroups = new Map<
       string,
       { banks: number; production: number; board: number; specificBanks: number; citations: number; strongestTotal: number }
@@ -169,6 +192,10 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
           periodCounts.set(quarter.period, { absent: 0, generic: 0, emerging: 0, specific: 0, mature: 0 });
         }
         periodCounts.get(quarter.period)![quarter.disclosure_posture] += 1;
+        if (quarter.regulatory_events.length > 0) {
+          if (!periodEvents.has(quarter.period)) periodEvents.set(quarter.period, new Set());
+          for (const event of quarter.regulatory_events) periodEvents.get(quarter.period)!.add(shortEventLabel(event));
+        }
       }
       if (quartersForBank.some((quarter) => quarter.disclosure_posture === 'specific' || quarter.disclosure_posture === 'mature')) {
         banksWithSpecificOrMatureDisclosure += 1;
@@ -235,6 +262,7 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
           concrete,
           nonAbsent,
           concretePct: percentValue(concrete, bundles.length),
+          events: Array.from(periodEvents.get(period) ?? []).sort(),
         };
       });
     const peakPeriod = [...periodRows].sort((a, b) => b.concrete - a.concrete)[0] ?? null;
@@ -503,9 +531,22 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
             )}
             {finding.visual === 'periodSpark' && finding.periodRows && (
               <div className="mt-4">
-                <div className="flex h-28 items-end gap-1.5 rounded-lg border border-white/10 bg-black/20 p-3">
+                <div className="flex h-40 items-end gap-1.5 rounded-lg border border-white/10 bg-black/20 p-3">
                   {finding.periodRows.map((row) => (
-                    <div key={row.period} className="flex h-full flex-1 flex-col justify-end gap-1">
+                    <div key={row.period} className="flex h-full flex-1 flex-col justify-end gap-1.5">
+                      <div className="flex min-h-11 flex-col items-center justify-end gap-0.5">
+                        {row.events.map((event) => (
+                          <span
+                            key={event}
+                            className={`inline-flex h-4 min-w-8 items-center justify-center rounded-full px-1 text-[8px] font-black leading-none text-black ${
+                              EVENT_STYLES[event] ?? 'bg-neutral-400'
+                            }`}
+                            title={`${row.period}: ${event}`}
+                          >
+                            {EVENT_MARKERS[event] ?? 'EVT'}
+                          </span>
+                        ))}
+                      </div>
                       <div className="relative flex flex-1 items-end">
                         <div
                           className="w-full rounded-t bg-white/10"
@@ -518,7 +559,7 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
                           title={`${row.period}: ${row.concrete} specific or mature disclosures`}
                         />
                       </div>
-                      <span className="-rotate-45 origin-top-left translate-y-2 text-[9px] text-neutral-500">{row.period.replace('20', '')}</span>
+                      <span className="text-center text-[10px] font-mono text-neutral-500">{row.period.replace('20', '')}</span>
                     </div>
                   ))}
                 </div>
@@ -531,6 +572,12 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
                     <span className="h-2 w-2 rounded-sm bg-white/20" />
                     Any disclosure
                   </span>
+                  {Array.from(new Set(finding.periodRows.flatMap((row) => row.events))).map((event) => (
+                    <span key={event} className="inline-flex items-center gap-1.5">
+                      <span className={`h-2 w-4 rounded-full ${EVENT_STYLES[event] ?? 'bg-neutral-400'}`} />
+                      {event}
+                    </span>
+                  ))}
                 </div>
               </div>
             )}

@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type {
   AIConfidence,
   AIDisclosurePosture,
@@ -222,6 +222,52 @@ export function QuadrantMap({
   const [hoveredTicker, setHoveredTicker] = useState<string | null>(null);
 
   const visibleQuadrants = quadrants;
+  const quadrantCounts = useMemo(
+    () => ({
+      experimentingBoard: visibleQuadrants.filter(
+        (record) => record.deployment_stage === 'experimenting_piloting' && record.governance_maturity === 'board_level',
+      ).length,
+      productionBoard: visibleQuadrants.filter(
+        (record) => record.deployment_stage === 'production_scaled' && record.governance_maturity === 'board_level',
+      ).length,
+      experimentingOperational: visibleQuadrants.filter(
+        (record) => record.deployment_stage === 'experimenting_piloting' && record.governance_maturity === 'operational_ownership_only',
+      ).length,
+      productionOperational: visibleQuadrants.filter(
+        (record) => record.deployment_stage === 'production_scaled' && record.governance_maturity === 'operational_ownership_only',
+      ).length,
+    }),
+    [visibleQuadrants],
+  );
+  const labeledTickers = useMemo(() => {
+    const recognizableOrder = ['JPM', 'BAC', 'GS', 'C', 'WFC', 'USB', 'AXP', 'SOFI'];
+    const byTicker = new Map(visibleQuadrants.map((record) => [record.ticker, record]));
+    const topByCitation = [...visibleQuadrants].sort(
+      (a, b) =>
+        (strengthByTicker?.[b.ticker]?.citations ?? b.evidence_ids.length) -
+        (strengthByTicker?.[a.ticker]?.citations ?? a.evidence_ids.length),
+    );
+    const tickers = [
+      ...recognizableOrder.filter((ticker) => byTicker.has(ticker)),
+      ...topByCitation.map((record) => record.ticker),
+      ...(activeTicker && byTicker.has(activeTicker) ? [activeTicker] : []),
+    ];
+    return new Set(Array.from(new Set(tickers)).slice(0, 8));
+  }, [activeTicker, strengthByTicker, visibleQuadrants]);
+  const highlightedTickers = useMemo(
+    () =>
+      new Set(
+        [...visibleQuadrants]
+          .sort(
+            (a, b) =>
+              (strengthByTicker?.[b.ticker]?.citations ?? b.evidence_ids.length) -
+              (strengthByTicker?.[a.ticker]?.citations ?? a.evidence_ids.length),
+          )
+          .slice(0, 3)
+          .map((record) => record.ticker),
+      ),
+    [strengthByTicker, visibleQuadrants],
+  );
 
   const position = (record: AIQuadrantRecord, index: number) => {
     const strength = strengthByTicker?.[record.ticker] ?? { deployment: 50, governance: 50, citations: record.evidence_ids.length };
@@ -264,7 +310,7 @@ export function QuadrantMap({
         <div>
           <h3 className="text-sm font-semibold text-white">AI 2x2 Positioning</h3>
           <p className="text-xs text-neutral-500">
-            Dots are placed within each block by peer-relative deployment and governance evidence strength; larger dots have more citations.
+            Counts show the current peer filter; labeled banks are reference points, with high-citation examples highlighted.
           </p>
         </div>
         <span className="text-[10px] uppercase tracking-wide text-neutral-500">{visibleQuadrants.length} banks</span>
@@ -275,14 +321,26 @@ export function QuadrantMap({
         <div className="absolute left-3 top-3 max-w-[170px] text-[10px] leading-snug text-neutral-500">
           Experimenting / piloting<br />Board-level governance
         </div>
+        <div className="absolute left-[45%] top-3 rounded-full border border-white/10 bg-white/10 px-2 py-0.5 font-mono text-[10px] font-semibold text-white">
+          {quadrantCounts.experimentingBoard}
+        </div>
         <div className="absolute right-3 top-3 max-w-[170px] text-right text-[10px] leading-snug text-neutral-500">
           Production scaled<br />Board-level governance
+        </div>
+        <div className="absolute right-3 top-12 rounded-full border border-emerald-300/20 bg-emerald-300/10 px-2 py-0.5 font-mono text-[10px] font-semibold text-emerald-100">
+          {quadrantCounts.productionBoard}
         </div>
         <div className="absolute bottom-3 left-3 max-w-[170px] text-[10px] leading-snug text-neutral-500">
           Experimenting / piloting<br />Operational ownership
         </div>
+        <div className="absolute bottom-12 left-[45%] rounded-full border border-sky-300/20 bg-sky-300/10 px-2 py-0.5 font-mono text-[10px] font-semibold text-sky-100">
+          {quadrantCounts.experimentingOperational}
+        </div>
         <div className="absolute bottom-3 right-3 max-w-[170px] text-right text-[10px] leading-snug text-neutral-500">
           Production scaled<br />Operational ownership
+        </div>
+        <div className="absolute bottom-12 right-3 rounded-full border border-sky-300/20 bg-sky-300/10 px-2 py-0.5 font-mono text-[10px] font-semibold text-sky-100">
+          {quadrantCounts.productionOperational}
         </div>
         {visibleQuadrants.length === 0 && (
           <div className="absolute inset-0 flex items-center justify-center px-6 text-center text-sm text-neutral-500">
@@ -292,9 +350,18 @@ export function QuadrantMap({
         {visibleQuadrants.map((record, index) => {
           const isActive = activeTicker === record.ticker;
           const isHovered = hoveredTicker === record.ticker;
+          const isLabeled = labeledTickers.has(record.ticker);
+          const isHighlighted = highlightedTickers.has(record.ticker);
           const { x, style, strength } = position(record, index);
           const markerSize = Math.max(12, Math.min(18, 10 + Math.log2(Math.max(1, strength.citations)) * 2));
-          const labelSideClass = x > 65 ? 'right-7' : 'left-7';
+          const labelOnLeft = x > 65;
+          const labelSideClass = labelOnLeft ? 'right-8' : 'left-8';
+          const connectorSideClass = labelOnLeft ? 'right-5' : 'left-5';
+          const connectorColorClass = isActive
+            ? 'bg-emerald-300'
+            : isHighlighted
+              ? 'bg-amber-300'
+              : 'bg-white/50';
           return (
             <div
               key={record.ticker}
@@ -322,20 +389,36 @@ export function QuadrantMap({
                     'block rounded-full border shadow-sm transition',
                     isActive
                       ? 'border-emerald-100 bg-emerald-300 ring-4 ring-emerald-300/25'
-                      : 'border-white/20 bg-neutral-500/70 hover:border-emerald-300/50 hover:bg-emerald-300',
+                      : isHighlighted
+                        ? 'border-amber-100 bg-amber-300 ring-2 ring-amber-300/20 hover:border-emerald-100 hover:bg-emerald-300'
+                        : 'border-white/20 bg-neutral-500/70 hover:border-emerald-300/50 hover:bg-emerald-300',
                   )}
                   style={{ height: `${isActive ? markerSize + 3 : markerSize}px`, width: `${isActive ? markerSize + 3 : markerSize}px` }}
                 />
               </button>
-              {isActive ? (
-                <span
-                  className={clsx(
-                    'pointer-events-none absolute top-1/2 z-30 -translate-y-1/2 whitespace-nowrap rounded-md border border-emerald-300/40 bg-black/90 px-2 py-1 font-mono text-[10px] font-bold text-emerald-100 shadow-lg',
-                    labelSideClass,
-                  )}
-                >
-                  {record.ticker}
-                </span>
+              {isActive || isLabeled ? (
+                <>
+                  <span
+                    className={clsx(
+                      'pointer-events-none absolute top-1/2 z-20 h-px w-3 -translate-y-1/2 shadow-sm',
+                      connectorColorClass,
+                      connectorSideClass,
+                    )}
+                  />
+                  <span
+                    className={clsx(
+                      'pointer-events-none absolute top-1/2 z-30 -translate-y-1/2 whitespace-nowrap rounded-md border px-2 py-1 font-mono text-[10px] font-bold shadow-lg',
+                      isActive
+                        ? 'border-emerald-300/70 bg-black/95 text-emerald-100'
+                        : isHighlighted
+                          ? 'border-amber-200 bg-amber-300 text-black'
+                          : 'border-white/20 bg-black/85 text-neutral-100',
+                      labelSideClass,
+                    )}
+                  >
+                    {record.ticker}
+                  </span>
+                </>
               ) : (
                 <span className="sr-only">{record.ticker}</span>
               )}
