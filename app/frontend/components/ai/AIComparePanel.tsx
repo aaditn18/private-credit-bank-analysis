@@ -221,12 +221,12 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
               </div>
             </div>
 
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <div className="mb-4">
+            <div className="flex min-h-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-4 xl:max-h-[640px]">
+              <div className="mb-4 shrink-0">
                 <h2 className="text-base font-semibold text-white">Factor Comparison Map</h2>
                 <p className="text-xs text-neutral-500">Peer percentiles by factor, shown as bank tiles with mini bars.</p>
               </div>
-              <div className="space-y-3">
+              <div className="min-h-0 space-y-3 overflow-y-auto pr-1">
                 {FACTOR_ORDER.map((factorId) => {
                   const factorName = selectedBundles[0]?.bars?.factors.find((factor) => factor.factor_id === factorId)?.factor_name ?? factorId;
                   return (
