@@ -223,45 +223,37 @@ export function AIComparePanel({ bundles }: { bundles: AIBankBundle[] }) {
 
             <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
               <div className="mb-4">
-                <h2 className="text-base font-semibold text-white">Factor Heatmap</h2>
-                <p className="text-xs text-neutral-500">Peer percentiles by factor. Dark cells mean limited or no cited evidence.</p>
+                <h2 className="text-base font-semibold text-white">Factor Comparison Map</h2>
+                <p className="text-xs text-neutral-500">Peer percentiles by factor, shown as bank tiles with mini bars.</p>
               </div>
-              <div className="overflow-x-auto">
-                <div className="min-w-[520px]">
-                  <div
-                    className="grid gap-1 text-[10px]"
-                    style={{ gridTemplateColumns: `minmax(170px, 1.35fr) repeat(${selectedBundles.length}, minmax(72px, 1fr))` }}
-                  >
-                    <div />
-                    {selectedBundles.map((bundle) => (
-                      <div key={bundle.score.ticker} className="rounded-md bg-white/[0.03] px-2 py-2 text-center font-mono text-xs font-semibold text-emerald-200">
-                        {bundle.score.ticker}
+              <div className="space-y-3">
+                {FACTOR_ORDER.map((factorId) => {
+                  const factorName = selectedBundles[0]?.bars?.factors.find((factor) => factor.factor_id === factorId)?.factor_name ?? factorId;
+                  return (
+                    <article key={factorId} className="rounded-lg border border-white/10 bg-black/20 p-3">
+                      <div className="mb-3 flex min-w-0 items-center gap-1.5">
+                        <h3 className="truncate text-xs font-semibold text-white">{factorName}</h3>
+                        <InfoTip label={factorName} description={FACTOR_DEFINITIONS[factorId]} />
                       </div>
-                    ))}
-                    {FACTOR_ORDER.map((factorId) => {
-                      const factorName = selectedBundles[0]?.bars?.factors.find((factor) => factor.factor_id === factorId)?.factor_name ?? factorId;
-                      return (
-                        <div key={factorId} className="contents">
-                          <div className="flex min-w-0 items-center gap-1.5 rounded-md bg-white/[0.03] px-2 py-2 text-neutral-300">
-                            <span className="truncate">{factorName}</span>
-                            <InfoTip label={factorName} description={FACTOR_DEFINITIONS[factorId]} />
-                          </div>
-                          {selectedBundles.map((bundle) => {
-                            const value = factorPercentile(bundle, factorId);
-                            return (
-                              <div
-                                key={`${factorId}-${bundle.score.ticker}`}
-                                className={`rounded-md border px-2 py-2 text-center font-mono text-xs ${heatmapCellClass(value)}`}
-                              >
-                                {formatPercent(value)}
+                      <div className="grid gap-2 sm:grid-cols-2">
+                        {selectedBundles.map((bundle) => {
+                          const value = factorPercentile(bundle, factorId);
+                          return (
+                            <div key={`${factorId}-${bundle.score.ticker}`} className={`rounded-md border p-2 ${heatmapCellClass(value)}`}>
+                              <div className="flex items-center justify-between gap-2">
+                                <span className="font-mono text-[11px] font-semibold">{bundle.score.ticker}</span>
+                                <span className="font-mono text-[11px]">{formatPercent(value)}</span>
                               </div>
-                            );
-                          })}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+                              <div className="mt-2 h-1.5 rounded-full bg-black/30">
+                                <div className="h-1.5 rounded-full bg-current opacity-80" style={{ width: `${Math.max(value > 0 ? 4 : 0, value)}%` }} />
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </section>

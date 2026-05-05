@@ -287,75 +287,82 @@ export function AIRankingsPanel({
               </div>
             </div>
           </div>
-          <div className="min-h-0 overflow-auto">
-            <table className="w-full min-w-[760px] text-sm">
-              <thead>
-                <tr className="border-b border-white/10 text-[11px] uppercase tracking-wide text-neutral-500">
-                  <th className="px-4 py-3 text-left">Bank</th>
-                  <th className="px-4 py-3 text-left">Peer</th>
-                  <th className="px-4 py-3 text-left">Strongest factor</th>
-                  <th className="px-4 py-3 text-left">2x2 placement</th>
-                  <th className="px-4 py-3 text-left">Confidence</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filtered.map((bundle) => {
-                  const factor = strongestFactor(bundle);
-                  const isActive = bundle.score.ticker === active?.score.ticker;
-                  return (
-                    <tr
-                      key={bundle.score.ticker}
-                      onClick={() => {
-                        setActiveTicker(bundle.score.ticker);
-                        setFocusedEvidence(null);
-                      }}
-                      className={`cursor-pointer border-b border-white/5 transition last:border-0 ${
-                        isActive ? 'bg-emerald-400/10' : 'hover:bg-white/[0.03]'
-                      }`}
-                    >
-                      <td className="px-4 py-3">
-                        <div className="font-mono font-semibold text-emerald-300">{bundle.score.ticker}</div>
-                        <div className="flex max-w-[260px] items-center gap-2">
-                          <div className="truncate text-xs text-neutral-400">{bundle.score.bank_name}</div>
-                          <a
-                            href={`/timeline/${bundle.score.ticker}`}
-                            onClick={(event) => event.stopPropagation()}
-                            className="shrink-0 rounded border border-white/10 px-1.5 py-0.5 text-[10px] text-neutral-300 transition hover:border-emerald-300/50 hover:text-emerald-100"
-                          >
-                            Profile
-                          </a>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3 text-xs text-neutral-300">{bundle.score.peer_group}</td>
-                      <td className="px-4 py-3">
-                        <div className="flex items-center gap-1.5 text-xs text-neutral-100">
-                          <span>{factor?.factor_name ?? 'No factor evidence'}</span>
-                          {factor && <InfoTip label={factor.factor_name} description={FACTOR_DEFINITIONS[factor.factor_id]} />}
-                        </div>
-                        <div className="text-[11px] text-neutral-500">Peer percentile {formatPercent(factor?.peer_percentile)}</div>
-                        <div className="mt-1 h-1.5 w-32 rounded-full bg-white/10">
+          <div className="min-h-0 space-y-2 overflow-x-hidden overflow-y-auto p-3">
+            {filtered.map((bundle) => {
+              const factor = strongestFactor(bundle);
+              const isActive = bundle.score.ticker === active?.score.ticker;
+              return (
+                <div
+                  key={bundle.score.ticker}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    setActiveTicker(bundle.score.ticker);
+                    setFocusedEvidence(null);
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      setActiveTicker(bundle.score.ticker);
+                      setFocusedEvidence(null);
+                    }
+                  }}
+                  className={`cursor-pointer rounded-xl border p-3 text-left transition ${
+                    isActive
+                      ? 'border-emerald-300/60 bg-emerald-300/10'
+                      : 'border-white/10 bg-black/20 hover:border-emerald-300/40 hover:bg-white/[0.03]'
+                  }`}
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="font-mono text-sm font-semibold text-emerald-300">{bundle.score.ticker}</span>
+                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-neutral-300">{bundle.score.peer_group}</span>
+                      </div>
+                      <div className="mt-1 flex min-w-0 items-center gap-2">
+                        <span className="truncate text-xs text-neutral-400">{bundle.score.bank_name}</span>
+                        <a
+                          href={`/timeline/${bundle.score.ticker}`}
+                          onClick={(event) => event.stopPropagation()}
+                          className="shrink-0 rounded border border-white/10 px-1.5 py-0.5 text-[10px] text-neutral-300 transition hover:border-emerald-300/50 hover:text-emerald-100"
+                        >
+                          Profile
+                        </a>
+                      </div>
+                    </div>
+                    <ConfidenceBadge confidence={bundle.score.confidence} />
+                  </div>
+
+                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                    <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.02] p-3">
+                      <p className="text-[10px] uppercase tracking-wide text-neutral-500">Strongest factor</p>
+                      <div className="mt-1 flex min-w-0 items-center gap-1.5 text-xs text-neutral-100">
+                        <span className="truncate">{factor?.factor_name ?? 'No factor evidence'}</span>
+                        {factor && <InfoTip label={factor.factor_name} description={FACTOR_DEFINITIONS[factor.factor_id]} />}
+                      </div>
+                      <div className="mt-1 flex items-center gap-2">
+                        <div className="h-1.5 flex-1 rounded-full bg-white/10">
                           <div
                             className="h-1.5 rounded-full bg-gradient-to-r from-emerald-400 to-teal-300"
                             style={{ width: `${Math.max(factor?.peer_percentile ? 4 : 0, factor?.peer_percentile ?? 0)}%` }}
                           />
                         </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <div className="text-xs text-neutral-100">
-                          {bundle.quadrant ? DEPLOYMENT_LABELS[bundle.quadrant.deployment_stage] : 'Missing'}
-                        </div>
-                        <div className="text-[11px] text-neutral-500">
-                          {bundle.quadrant ? GOVERNANCE_LABELS[bundle.quadrant.governance_maturity] : 'No quadrant output'}
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <ConfidenceBadge confidence={bundle.score.confidence} />
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                        <span className="w-10 text-right font-mono text-[11px] text-neutral-400">{formatPercent(factor?.peer_percentile)}</span>
+                      </div>
+                    </div>
+                    <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.02] p-3">
+                      <p className="text-[10px] uppercase tracking-wide text-neutral-500">2x2 placement</p>
+                      <p className="mt-1 truncate text-xs text-neutral-100">
+                        {bundle.quadrant ? DEPLOYMENT_LABELS[bundle.quadrant.deployment_stage] : 'Missing'}
+                      </p>
+                      <p className="mt-0.5 truncate text-[11px] text-neutral-500">
+                        {bundle.quadrant ? GOVERNANCE_LABELS[bundle.quadrant.governance_maturity] : 'No quadrant output'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 

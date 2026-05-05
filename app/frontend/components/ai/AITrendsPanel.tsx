@@ -556,10 +556,10 @@ export function AITrendsPanel({ bundles }: { bundles: AIBankBundle[] }) {
         ))}
       </section>
 
-      <div className="grid gap-5 lg:grid-cols-[280px_minmax(0,1fr)]">
-        <aside className="rounded-xl border border-white/10 bg-white/[0.02] p-3">
-          <p className="mb-3 px-1 text-xs uppercase tracking-wide text-neutral-500">Banks</p>
-          <div className="max-h-[560px] space-y-1 overflow-y-auto pr-1">
+      <div className="grid items-start gap-5 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <aside className="flex min-h-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-3 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)]">
+          <p className="mb-3 shrink-0 px-1 text-xs uppercase tracking-wide text-neutral-500">Banks</p>
+          <div className="min-h-0 flex-1 space-y-1 overflow-y-auto pr-1">
             {bundles.map((bundle) => (
               <button
                 key={bundle.score.ticker}
