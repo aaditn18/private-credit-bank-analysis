@@ -72,24 +72,6 @@ export function DARiskPanel() {
 
   return (
     <div className="space-y-4">
-      {/* Team 6 attribution */}
-      <div className="rounded-xl border border-blue-500/20 bg-blue-500/5 px-4 py-3 flex items-center justify-between gap-4">
-        <div>
-          <span className="text-xs font-mono uppercase tracking-wider text-blue-400">
-            Team 6 — Digital Asset Risk Profile & Exposure
-          </span>
-          <p className="text-xs text-neutral-500 mt-0.5">
-            Weighted Composite ={' '}
-            <span className="text-neutral-300">R1 Financial Resilience × 40% + R2 Governance Quality × 35% + R3 DA Risk Exposure × 25%</span>
-            . All dimensions scored 0–100. Higher = safer bank for digital asset operations.
-          </p>
-        </div>
-        <div className="font-mono text-right flex-shrink-0">
-          <div className="text-[10px] text-neutral-500">Team Lead</div>
-          <div className="text-xs text-white">Vedanta Gawande</div>
-        </div>
-      </div>
-
       {/* Tab strip */}
       <div className="flex gap-1 border-b border-white/5">
         {TABS.map(t => (
@@ -134,7 +116,7 @@ function OverviewView({
       {/* Project framing */}
       <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
         <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-2">
-          BUFN403 Capstone — Project Question
+          Research Question
         </div>
         <p className="text-base text-neutral-200 leading-relaxed">
           {METHODOLOGY_CONTENT.question}
@@ -436,7 +418,7 @@ function ClusterLegend() {
   return (
     <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
       <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 mb-2">
-        Team 5 Engagement Clusters
+        Engagement Clusters
       </div>
       <div className="flex flex-wrap gap-3">
         {(['A','B','C','D','E'] as Cluster[]).map(c => (
@@ -461,7 +443,7 @@ function FalsePositiveValidationCard({ onBankClick }: { onBankClick: (t: string)
             Independent Methodology Validation
           </div>
           <p className="text-xs text-neutral-400 leading-relaxed">
-            Team 5 identified four banks as false positives based on idiomatic language patterns
+            Four banks were identified as false positives based on idiomatic language patterns
             (&quot;circle back&quot;, &quot;full circle&quot;, &quot;strategic investment&quot;).
             Our governance and exposure scoring &mdash; using a completely independent methodology based on
             formal filing quality and operational risk &mdash; independently scores all four banks at near-zero.
@@ -516,7 +498,7 @@ function MatrixView({ onBankClick }: { onBankClick: (t: string) => void }) {
         Joint Matrix shows continuous position; 2×2 Grid shows categorical regulatory readiness.
         False positives excluded from both.
         <span className="block mt-2 text-neutral-500">
-          Joint Matrix axes: <span className="font-mono">X = Team 5 engagement (0-100), Y = Team 6 weighted composite (0-100), bubble size = R4 systemic footprint</span>.
+          Joint Matrix axes: <span className="font-mono">X = Engagement Composite (0-100), Y = Safety Composite (0-100), bubble size = R4 systemic footprint</span>.
           Midpoints at 50.
         </span>
       </div>
@@ -636,7 +618,7 @@ function JointMatrixScatter({ onBankClick }: { onBankClick: (t: string) => void 
               domain={[0, 100]}
               stroke="#888"
               tick={{ fontSize: 11, fill: '#888' }}
-              label={{ value: 'Team 5 Engagement Composite (0-100)', position: 'bottom', offset: 25, fill: '#666', fontSize: 11 }}
+              label={{ value: 'Engagement Composite (0-100)', position: 'bottom', offset: 25, fill: '#666', fontSize: 11 }}
             />
             <YAxis
               type="number"
@@ -674,7 +656,7 @@ function JointMatrixScatter({ onBankClick }: { onBankClick: (t: string) => void 
       <div className="mt-3 p-3 rounded-lg border border-amber-500/20 bg-amber-500/5 text-[11px] text-amber-200/90 leading-relaxed">
         <span className="font-mono text-amber-400">*</span>{' '}
         <span className="font-medium">Schwab note:</span> Position reflects Q4 2025 governance posture.
-        Schwab Crypto launched April 16, 2026 — Team 5&apos;s NLP analysis predicted this 10 months in advance.
+        Schwab Crypto launched April 16, 2026 — our NLP analysis predicted this 10 months in advance.
         Our framework correctly flagged Schwab for Targeted Examination based on the pre-launch governance gap.
       </div>
     </div>
@@ -1144,14 +1126,14 @@ function MethodologyContent() {
 
       <div>
         <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-2">
-          Team 5 Engagement Composite
+          Engagement Composite
         </div>
         <p className="text-sm text-neutral-400 leading-relaxed">{METHODOLOGY_CONTENT.team5Summary}</p>
       </div>
 
       <div>
         <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-3">
-          Team 6 Risk Framework
+          Risk Framework
         </div>
         <div className="space-y-2">
           {METHODOLOGY_CONTENT.ourFramework.map(d => (
@@ -1696,10 +1678,10 @@ function BankProfileDrawer({ ticker, onClose }: { ticker: string; onClose: () =>
             )}
           </div>
 
-          {/* Team 5 engagement context */}
+          {/* Engagement context */}
           <div className="rounded-lg border border-white/5 bg-white/[0.02] p-4">
             <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 mb-2">
-              Team 5 Engagement Context
+              Engagement Context
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-[11px]">
               <div>

@@ -29,30 +29,17 @@ export function DALeaderboardPanel() {
   return (
     <div className="space-y-4">
 
-      {/* Validation banner */}
-      <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-4">
-        <div className="text-xs font-mono uppercase tracking-wider text-amber-400 mb-1">
-          Methodology Validation · April 16, 2026
-        </div>
-        <p className="text-sm text-neutral-300 leading-relaxed">
-          Our NLP model scored Charles Schwab at{' '}
-          <span className="font-semibold text-white">19.81 in Q2 2025</span> — highest in
-          the dataset. On April 16, 2026,{' '}
-          <span className="font-semibold text-white">Schwab launched "Schwab Crypto"</span> — direct
-          BTC/ETH at 75bps. The model flagged this intent{' '}
-          <span className="font-semibold text-white">10 months before product launch</span>.
-          Bank profiles and cluster analysis are on the <strong className="text-white">Trends</strong> tab.
-        </p>
-      </div>
-
       {/* Leaderboard */}
       <div className="rounded-xl border border-white/5 bg-white/[0.02] p-4">
-        <p className="text-xs text-neutral-400 mb-3 leading-relaxed">
-          Banks ranked by <span className="text-white font-medium">composite score (0–100)</span>{' '}
-          combining four independent dimensions (D1–D4, each 0–25). Goldman Sachs ranks 11th in
-          NLP but Tier 3 due to strong external research (D4=22).{' '}
-          <span className="text-rose-400">FP = confirmed false positive</span>.
-        </p>
+        <div className="mb-3">
+          <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-1">
+            Engagement Score Rankings
+          </div>
+          <p className="text-xs text-neutral-400 leading-relaxed">
+            16 banks ranked by <span className="text-white font-medium">4-dimensional engagement composite (0–100)</span> — measuring how actively each bank is participating in digital assets, not how safely. Safety analysis is on the <strong className="text-white">Risk</strong> tab.{' '}
+            <span className="text-rose-400">FP = confirmed false positive</span>.
+          </p>
+        </div>
 
         {/* Tier filters */}
         <div className="flex flex-wrap gap-2 mb-4">
@@ -144,6 +131,54 @@ export function DALeaderboardPanel() {
         the word "circle" appearing in idiomatic phrases ("circle back," "full circle"). Manual
         excerpt review confirmed none reference Circle Financial. NLP scores zeroed; D4 trajectory
         signals retained. TD Bank's "strategic investment" refers to its Schwab stake.
+      </div>
+
+      {/* D1–D4 scoring dimensions reference */}
+      <div className="rounded-xl border border-white/5 bg-white/[0.02] overflow-hidden">
+        <div className="px-4 py-3 border-b border-white/5">
+          <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
+            How the Engagement Score is Built — 4 Dimensions (D1–D4, each 0–25)
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-0 divide-x divide-y divide-white/5">
+          {[
+            {
+              dim: 'D1', color: '#3b82f6',
+              label: 'NLP Engagement',
+              formula: 'min(25, log(adj_peak+1) / log(21) × 25)',
+              desc: 'Log-normalised adjusted NLP peak score from 128 Q&A earnings sessions. Log scale prevents outliers from dominating — Schwab 19.81 → 24.9, BNY 9.70 → 19.5.',
+            },
+            {
+              dim: 'D2', color: '#10b981',
+              label: 'Specificity & Depth',
+              formula: 'min(10, terms×0.85) + specificity×10 + consistency×5',
+              desc: 'Rewards infrastructure-specific vocabulary over generic volume. State Street specificity=1.0 (100% Custodial). PNC specificity=0.048 (90% General — reactive, not operational).',
+            },
+            {
+              dim: 'D3', color: '#a78bfa',
+              label: 'Disclosure Mode',
+              formula: 'Q&A/Full-transcript ratio → 0–25',
+              desc: 'Proactive discloser if Q&A ratio >2.0x. Goldman 0.23x — discusses DA 4× more in prepared remarks than Q&A. Citi 3.40x — fully proactive. Captures systematic underdisclosers.',
+            },
+            {
+              dim: 'D4', color: '#f59e0b',
+              label: 'External Research',
+              formula: 'products_launched(0–10) + infra_depth(0–8) + trajectory(0–7)',
+              desc: 'Analyst-judged. Compensates for underdisclosers like Goldman (D1=8.6 → composite 39.9) using GS DAP spin-out, tokenized MMF with BNY, EIB digital bond, $135M DA investment.',
+            },
+          ].map(d => (
+            <div key={d.dim} className="p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="font-mono font-bold text-lg" style={{ color: d.color }}>{d.dim}</span>
+                <span className="text-xs font-medium text-neutral-300">{d.label}</span>
+              </div>
+              <div className="font-mono text-[10px] px-2 py-1 rounded mb-2" style={{ background: `${d.color}10`, color: d.color }}>
+                {d.formula}
+              </div>
+              <p className="text-[11px] text-neutral-500 leading-relaxed">{d.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
     </div>

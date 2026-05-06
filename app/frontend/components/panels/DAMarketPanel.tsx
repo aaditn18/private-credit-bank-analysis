@@ -265,52 +265,6 @@ export function DAMarketPanel() {
         </div>
       </div>
 
-      {/* Methodology */}
-      <div className="rounded-xl border border-white/5 bg-white/[0.02] overflow-hidden">
-        <div className="px-5 py-4 border-b border-white/5">
-          <h3 className="font-semibold text-white">4-Dimensional Scoring Methodology</h3>
-          <p className="text-xs text-neutral-500 mt-0.5">Why four dimensions beat single-score NLP</p>
-        </div>
-        <div className="p-5 space-y-4">
-          <p className="text-xs text-neutral-400 leading-relaxed">
-            A four-dimensional composite scoring system addresses the fundamental weakness of single-metric NLP:
-            it cannot distinguish a bank that says "crypto" 200 times from one that uses 12 specific product-level terms,
-            and it misses operationally-live banks that underdisclose in Q&A. Each dimension scored 0–25; composite 0–100.
-          </p>
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              {
-                dim: 'D1 · NLP Engagement (0–25)',
-                formula: 'min(25, log(adj_peak+1) / log(21) × 25)',
-                desc: "Log-normalised adjusted NLP peak. Prevents Schwab's 19.81 from dominating — maps to 24.9, while BNY's 9.70 maps to 19.5, preserving meaningful spread.",
-              },
-              {
-                dim: 'D2 · Specificity & Depth (0–25)',
-                formula: 'min(10, terms×0.85) + specificity×10 + consistency×5',
-                desc: 'Rewards breadth and product-specific vocabulary over volume. State Street specificity=1.0 (100% Custodial). PNC: 0.048 (90% General — reactive, not operational).',
-              },
-              {
-                dim: 'D3 · Disclosure Mode (0–25)',
-                formula: 'Citi ratio 3.40x → D3=25 · Goldman 0.23x → D3=5.8',
-                desc: 'Q&A/Full-transcript ratio >2.0 = proactive discloser. Goldman discusses DA 4× more in prepared remarks than Q&A — systematically invisible to pure Q&A NLP.',
-              },
-              {
-                dim: 'D4 · External Research (0–25)',
-                formula: 'products_launched(0–10) + infra_depth(0–8) + trajectory(0–7)',
-                desc: 'Analyst-judged. Allows Goldman (D1=8.6) to reach composite 39.9 — GS DAP spin-out, tokenized MMF with BNY, EIB digital bond, $135M DA investment.',
-              },
-            ].map(d => (
-              <div key={d.dim} className="rounded-lg border border-white/5 bg-white/[0.02] p-3">
-                <div className="text-xs font-medium text-white mb-1">{d.dim}</div>
-                <div className="font-mono text-[10px] text-amber-400 bg-amber-400/5 rounded px-2 py-1 mb-2">
-                  {d.formula}
-                </div>
-                <p className="text-[11px] text-neutral-500 leading-relaxed">{d.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
     </div>
   );
